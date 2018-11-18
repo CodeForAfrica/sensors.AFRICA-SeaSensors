@@ -1,4 +1,49 @@
 .carousel .control-dots .dot {
-    border-radius:0;
-    width:8em;
+  border-radius: 0;
+  width: 8em;
+  float: left;
+  height: 0.3em;
+}
+
+.carousel {
+  height: 80vh;
+}
+.gridSize {
+  position: absolute;
+  width: 9% !important;
+  top: 4em;
+  right: 0;
+  margin-right: 3em;
+}
+
+.gridSize img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mapSize {
+  width: 90em;
+  height: 50.625em;
+}
+
+.gridParent {
+  position: relative;
+  width: 100%;
+  filter: hue-rotate(10deg);
+  background-size: cover;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  background-position: center center;
+}
+
+.carousel-2 {
+  filter: hue-rotate(10deg);
+  background-size: contain;
+}
+
+.carouselImg {
+  width: 100%;
+  margin: 0 auto;
+  background-size: contain;
 }
