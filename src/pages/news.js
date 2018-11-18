@@ -1,12 +1,12 @@
-import React from 'react'
-import Button from '@material-ui/core/Button';
+import React, {Component} from 'react'
 
-const NewsPage = () => {
-  return (
-    <Button variant="contained" color="primary">
-      News
-    </Button>
-  );
+class NewsPage extends Component {
+  render() {
+    return <div>
+      News Page
+    </div>
+  }
+
 }
 
 export default NewsPage

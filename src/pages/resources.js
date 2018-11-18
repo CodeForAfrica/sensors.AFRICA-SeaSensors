@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-const ResourcesPage = () => {
-  return (
-      <div>
-        About page
-      </div>
-  );
+class ResourcesPage extends Component {
+  render() {
+    return <div>
+      Resources Page
+    </div>
+  }
+
 }
 
 export default ResourcesPage
