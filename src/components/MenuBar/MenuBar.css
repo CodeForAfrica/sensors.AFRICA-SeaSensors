@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app {
+  background: transparent;
+  box-shadow: none;
+}
