@@ -28,17 +28,21 @@ class Stories extends Component {
         stories
     }
     render() {
-        return <div className="card">
-            {this
-                .state
-                .stories
-                .map(story => <MediaCard
-                    key={story.title}
-                    title={story.title}
-                    image={story.image}
-                    bodyField={story.bodyField}
-                    linkText={story.linkText}/>)}
-        </div>
+        return (
+            <div className="">
+                <div className="card">
+                    {this
+                        .state
+                        .stories
+                        .map(story => <MediaCard
+                            key={story.title}
+                            title={story.title}
+                            image={story.image}
+                            bodyField={story.bodyField}
+                            linkText={story.linkText}/>)}
+                </div>
+            </div>
+        )
     }
 }
 
