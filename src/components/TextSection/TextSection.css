@@ -1,33 +1,37 @@
-.textGrid {
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
+text1Grid {
+  width: 1440px !important;
+  height: 8545px !important;
+  background-color: #ffffff !important;
 }
 
-.MuiTypography-h1-111 {
+.What-is-Blast-Fishin {
   width: 495.9px;
   height: 153px;
-  font-family: Oswald;
-  font-size: 52px;
-  font-weight: bold;
+  font-family: Oswald !important;
+  font-size: 52px !important;
+  font-weight: bold !important;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.13;
-  letter-spacing: 0.7px;
-  color: #023256;
+  line-height: 1.13 !important;
+  letter-spacing: 0.7px !important;
+  color: #023256 !important;
+  margin-top: 125px !important;
+  margin-left: 123px !important;
 }
 
 .What-is-blast-fishin {
-  width: 600.1px;
-  height: 251.3px;
+  width: 600.1px !important;
+  height: 251.3px !important;
   opacity: 0.6;
-  font-family: Montserrat;
-  font-size: 15px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 2.5;
-  letter-spacing: 0.7px;
+  font-family: Montserrat !important;
+  font-size: 15px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 2.5 !important;
+  letter-spacing: 0.7px !important;
   text-align: justify;
-  color: #023256;
+  color: #023256 !important;
+  margin-top: 125px !important;
+  margin-right: 113px !important;
 }

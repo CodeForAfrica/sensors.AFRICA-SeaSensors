@@ -3,6 +3,7 @@ import MediaCard from './Cards'
 import artem from '../../assets/artem.png'
 import scuba from '../../assets/scuba.png'
 import drone from '../../assets/drone.png'
+import './Cards.css'
 
 const stories = [
     {
@@ -29,7 +30,10 @@ class Stories extends Component {
     }
     render() {
         return (
-            <div className="">
+            <div className="Mask">
+                <h1 className="Sea-Sensors-Stories">
+                    Sea Sensors Stories.
+                </h1>
                 <div className="card">
                     {this
                         .state
