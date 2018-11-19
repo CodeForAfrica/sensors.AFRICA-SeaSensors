@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles, Paper, Grid, Typography} from '@material-ui/core';
+import './TextSection'
 
 const styles = theme => ({
   root: {
@@ -12,14 +13,14 @@ function FullWidthGrid(props) {
   const {classes} = props;
 
   return (
-    <div className={classes.root}>
+    <div className="textGrid">
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h1">
+          <Typography variant="h1" className="MuiTypography-h1-111">
             Lorem ipsum dolor sit amet.
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} className="What-is-blast-fishin">
           <Typography variant="body2">
             What is blast fishing and what is its impact? A brief description here informing
             the viewer a little more about blast fishing. Lorem ipsum dolor sit amet,
