@@ -14,7 +14,7 @@ import './Cards.css'
 
 const styles = {
     card: {
-        width: 390
+        width: 300
     },
     media: {
         height: 300

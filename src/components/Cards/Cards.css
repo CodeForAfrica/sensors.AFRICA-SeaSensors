@@ -1,12 +1,28 @@
-.cardContainer {
+.Mask {
   width: 1440px;
-  height: 1049px;
-  opacity: 0.05;
-  background-color: #000000;
+  height: auto;
+  padding: 35px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 102.2px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
+
+}
+
+.Sea-Sensors-Stories {
+  width: 596.3px;
+  height: 112.5px;
+  font-family: Oswald;
+  font-size: 52px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.7px;
+  color: #023256;
 }
