@@ -46,4 +46,6 @@
   width: 100%;
   margin: 0 auto;
   background-size: contain;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }

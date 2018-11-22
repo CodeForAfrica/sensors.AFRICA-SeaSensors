@@ -2,9 +2,8 @@ import React, {Component} from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
 import map from '../../assets/map.png'
+import HeaderImage2 from '../../assets/HeaderImage2.png'
 import grid from '../../assets/grid.png'
-import SimpleTabs from '../MenuBar/MenuBar'
-import HeaderText from '../HeaderText/HeaderText';
 import './Header.css'
 
 class HeaderCarousel extends Component {
@@ -20,7 +19,7 @@ class HeaderCarousel extends Component {
                     </div>
                 </div>
                 <div>
-                    <img src={map} alt="" className="carousel-2"/>
+                    <img src={HeaderImage2} alt="" className="carousel-2"/>
                 </div>
             </Carousel>
         </div>
