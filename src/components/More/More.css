@@ -1,0 +1,29 @@
+.more-text {
+  width: 563.3px !important;
+  height: 174px !important;
+  opacity: 0.6 !important;
+  font-family: Montserrat !important;
+  font-size: 15px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 2.5 !important;
+  letter-spacing: 0.7px !important;
+  text-align: justify !important;
+  color: #023256 !important;
+  margin-top: 125px !important;
+  margin-left: 113px !important;
+}
+
+.read-more {
+  width: 292.5px !important;
+  height: 75px !important;
+  box-shadow: 0 23px 60px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.moreContainer {
+    width: auto;
+    height: auto;
+    background-color: #ffffff !important;
+  }
+  
