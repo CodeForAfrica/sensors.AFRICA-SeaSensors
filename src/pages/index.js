@@ -5,6 +5,9 @@ import Video from '../components/Video/Video';
 import Works from '../components/TextSection/HowItWorks';
 import Stories from '../components/Cards/Stories';
 import TopStory from '../components/TopStory/TopStory';
+import Scuba from '../components/Scuba/Scuba';
+import More from '../components/More//More';
+import Partners from '../components/Partners/Partners';
 import '../assets/css/main.css';
 
 class IndexPage extends Component {
@@ -15,7 +18,10 @@ class IndexPage extends Component {
       <BlastFishing/>
       <Video/>
       <Works/>
+      <Scuba/>
+      <More/>
       <Stories/>
+      <Partners/>
     </Fragment>
   }
 }
