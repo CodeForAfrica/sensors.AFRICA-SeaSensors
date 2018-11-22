@@ -11,7 +11,6 @@
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.05);
-
 }
 
 .Sea-Sensors-Stories {
@@ -25,4 +24,5 @@
   line-height: normal;
   letter-spacing: 0.7px;
   color: #023256;
+  margin-left: 10%;
 }
