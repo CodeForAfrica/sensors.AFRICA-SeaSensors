@@ -1,20 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-p {
-  width: 269px !important;
-  height: 99px !important;
-  font-family: Montserrat !important;
-  font-size: 15px !important;
-  font-weight: normal !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  line-height: 2.5 !important;
-  letter-spacing: 1px !important;
-  color: #023256 !important;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-body {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
+.main-container {
+  min-height: 100%;
 }
