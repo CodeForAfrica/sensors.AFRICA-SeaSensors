@@ -1,0 +1,64 @@
+.parentFooter {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to bottom, #001525, #001525);
+  padding-left: 40px;
+  padding-top: 8em;
+}
+
+.parentFooter__image {
+  width: 100%;
+  height: 16em;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logoGrid {
+  margin-bottom: 3em !important;
+}
+
+.logoImg {
+  width: 89px;
+  height: auto;
+}
+
+.footerText {
+  font-family: Montserrat;
+  font-size: 11px !important;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.5 !important;
+  letter-spacing: 0.6px;
+  color: #ffffff !important;
+  opacity: 0.87;
+}
+
+.text-style-1 {
+  letter-spacing: 0.7px;
+  color: #00a5dc;
+}
+.text-style-2 {
+  color: #00a5dc;
+}
+
+.seaLogo{
+  height: 4em;
+  width: 4em;
+}
+
+.footerIconContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.footerIcon{
+  font-size: 14px;
+  width: 1em;
+  height: 1em;
+}

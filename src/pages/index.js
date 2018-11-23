@@ -7,12 +7,13 @@ import Stories from '../components/Cards/Stories';
 import TopStory from '../components/TopStory/TopStory';
 import Scuba from '../components/Scuba/Scuba';
 import More from '../components/More//More';
+import Footer from '../components/Footer/Footer';
 import Partners from '../components/Partners/Partners';
 import '../assets/css/main.css';
 
 class IndexPage extends Component {
   render() {
-    return <Fragment>
+    return <div className="main-container">
       <HeaderCarousel/>
       <TopStory/>
       <BlastFishing/>
@@ -22,7 +23,8 @@ class IndexPage extends Component {
       <More/>
       <Stories/>
       <Partners/>
-    </Fragment>
+      <Footer />
+    </div>
   }
 }
 
