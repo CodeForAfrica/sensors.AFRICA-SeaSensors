@@ -14,15 +14,17 @@
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.11",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.12",
+    "gatsby-plugin-sharp": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "material-ui-icons": "^1.0.0-beta.36",
+    "mdbreact": "^4.8.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-player": "^1.7.0",
     "react-responsive-carousel": "^3.1.43",
+    "react-wavesurfer": "^0.8.6",
     "webfontloader": "^1.6.28"
   },
   "keywords": [
