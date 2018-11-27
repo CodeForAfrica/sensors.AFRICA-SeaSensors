@@ -5,11 +5,13 @@
   align-items: center;
   justify-content: center;
   margin-top: 102.2px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #F2F2F2;
 }
 .card {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  background-color:none; 
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.05);
 }
 
