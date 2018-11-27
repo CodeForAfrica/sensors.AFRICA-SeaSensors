@@ -1,3 +1,23 @@
-import React from "react"
+import React from 'react';
+import {Link} from "gatsby";
+import './MenuBar.css';
 
-export default () => <h1>This is a header.</h1>
+const ListLink = props => (
+    <li className="li-nav">
+        <Link to={props.to}>{props.children}</Link>
+    </li>
+)
+
+export default({children}) => (
+    <div className="parent-nav">
+    <header>
+            <ul className="ul-nav">
+                <ListLink to="/">Logo.</ListLink>
+                <ListLink to="/about/">About.</ListLink>
+                <ListLink to="/news/">News.</ListLink>
+                <ListLink to="/resources/">Resources.</ListLink>
+            </ul>
+        </header>
+        {children}
+    </div>
+)
