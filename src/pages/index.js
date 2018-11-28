@@ -9,12 +9,14 @@ import Scuba from '../components/Scuba/Scuba';
 import More from '../components/More//More';
 import Footer from '../components/Footer/Footer';
 import Partners from '../components/Partners/Partners';
+import Blasts from '../components/Blasts/Blasts';
 import '../assets/css/main.css';
 
 class IndexPage extends Component {
   render() {
     return <div className="main-container">
       <HeaderCarousel/>
+      <Blasts/>
       <TopStory/>
       <BlastFishing/>
       <Video/>
@@ -23,7 +25,7 @@ class IndexPage extends Component {
       <More/>
       <Stories/>
       <Partners/>
-      <Footer />
+      <Footer/>
     </div>
   }
 }

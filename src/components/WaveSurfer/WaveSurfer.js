@@ -1,20 +1,30 @@
-import React from 'react';
-import Wavesurfer from 'react-wavesurfer';
-import 'react-wavesurfer'
+require('wavesurfer.js');
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Wavesurfer from 'react-wavesurfer';
 
 class WaveSurferRadio extends React.Component {
-    state = {
-        playing: false,
-        pos: 0
-    };
+    constructor(props) {
+        super(props);
 
-    handleTogglePlay = () => {
+        this.state = {
+            playing: false,
+            pos: 0
+        };
+        this.handleTogglePlay = this
+            .handleTogglePlay
+            .bind(this);
+        this.handlePosChange = this
+            .handlePosChange
+            .bind(this);
+    }
+    handleTogglePlay() {
         this.setState({
             playing: !this.state.playing
         });
     }
-    handlePosChange = (e) => {
+    handlePosChange(e) {
         this.setState({pos: e.originalArgs[0]});
     }
     render() {
