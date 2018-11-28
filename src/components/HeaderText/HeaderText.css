@@ -1,28 +1,19 @@
-.headerText{
-    position: absolute;
-    z-index: 5;
-    top: 17%;
-    opacity: 0.2;
-    background-color: #ffffff;
-    width: 46.875em;
-    height:26.250em
+.content {
+  width: 40em;
+  height: 22em;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.headerFont{
-    font-family: Oswald;
-    font-size: 65px;
-    color: #ffffff;
+.content__header {
+  width: 500.3px;
+  height: 177.8px;
+  font-family: Oswald;
+  font-size: 65px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  z-index: 2;
 }
-
-.Lorem-Ipsum-Dolor-si {
-    width: 500.3px;
-    height: 177.8px;
-    font-family: Oswald;
-    font-size: 65px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.27;
-    letter-spacing: 0.8px;
-    color: #ffffff;
-  }
