@@ -36,6 +36,7 @@ class HeaderCarousel extends Component {
                         </View>
                         <MDBCarouselCaption>
                             <NavBar/>
+                            <HeaderText/>
                         </MDBCarouselCaption>
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId="2">

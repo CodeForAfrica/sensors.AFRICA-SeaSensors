@@ -1,11 +1,10 @@
 .carousel .control-dots .dot {
   border-radius: 0;
   width: 8em;
-  float: left;
   height: 0.3em;
 }
 
-.logo{
+.logo {
   width: 15px;
   height: 35px;
   background-color: #ffffff;
@@ -13,6 +12,10 @@
 
 .carousel {
   height: 80vh;
+}
+
+.carousel-control-prev {
+  display: none !important;
 }
 .gridSize {
   position: absolute;
