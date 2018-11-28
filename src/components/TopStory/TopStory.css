@@ -1,9 +1,14 @@
 .parentContainer {
   width: 1440px;
   height: 615px;
-  opacity: 0.35;
-  background-color: #000000;
+  background-color: rgb(5, 2, 2, 1.0);
+  background-image: url('../../assets/topStory.png');
 }
+
+/* .text-grid{
+
+} */
+
 .SEA-SENSORS-TOP-STOR {
   width: 294px !important;
   height: 24px !important;
@@ -23,7 +28,7 @@
   width: 600px !important;
   height: 153px !important;
   font-family: Oswald !important;
-  font-size: 52px !important;
+  font-size: 35px !important;
   font-weight: bold !important;
   font-style: normal !important;
   font-stretch: normal !important;
@@ -44,7 +49,7 @@
   line-height: 2.5 !important;
   letter-spacing: 0.7px !important;
   text-align: justify !important;
-  color: #ffffff !important;
+  color: #F9F8F8 !important;
   margin-top: 136.5px !important;
   margin-right: 120px !important;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles, Paper, Grid, Typography} from '@material-ui/core';
-import topStoryImage from '../../assets/topStory.png'
 import arrow from '../../assets/arrow.png';
 import './TopStory.css'
 
@@ -15,12 +14,8 @@ function TopStory(props) {
     const {classes} = props;
 
     return (
-        <div
-            className="textGrid"
-            style={{
-            backgroundImage: `url(${topStoryImage})`
-        }}>
-            <Grid container spacing={24} className="parentContainer">
+        <div className="parentContainer">
+            <Grid container spacing={24}>
                 <Grid item xs={12} sm={6}>
                     <Typography variant="caption" className="SEA-SENSORS-TOP-STOR">
                         SEA SENSORS TOP STORY
