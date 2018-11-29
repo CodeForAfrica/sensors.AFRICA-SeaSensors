@@ -4,6 +4,18 @@
   height: 0.3em;
 }
 
+.carousel .carousel-indicators li{
+  position: relative;
+  right: 34em;
+}
+
+.carousel-parent{
+  display: flex;
+  height: 615px;
+  max-height: 615px;
+  width: 100%;
+}
+
 .logo {
   width: 15px;
   height: 35px;
@@ -11,7 +23,7 @@
 }
 
 .carousel {
-  height: 80vh;
+  height: 615px;
 }
 
 .carousel-control-prev {

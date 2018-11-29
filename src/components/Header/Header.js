@@ -21,34 +21,36 @@ import './Header.css'
 class HeaderCarousel extends Component {
     render() {
         return (
-            <MDBCarousel
-                activeItem={1}
-                length={2}
-                showControls={true}
-                showIndicators={true}
-                interval={18000000}
-                className="z-depth-1">
-                <MDBCarouselInner>
-                    <MDBCarouselItem itemId="1">
-                        <View>
-                            <img className="d-block w-100" src={map} alt="First slide"/>
-                            <Mask overlay="black-light"/>
-                        </View>
-                        <MDBCarouselCaption>
-                            <NavBar/>
-                            <HeaderText/>
-                        </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId="2">
-                        <View>
-                            <img className="d-block w-100" src={HeaderImage2} alt="Second slide"/>
-                        </View>
-                        <MDBCarouselCaption>
-                            <NavBar/>
-                        </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                </MDBCarouselInner>
-            </MDBCarousel>
+            <div className="carousel-parent">
+                <MDBCarousel
+                    activeItem={1}
+                    length={2}
+                    showControls={true}
+                    showIndicators={true}
+                    interval={18000000}
+                    className="z-depth-1">
+                    <MDBCarouselInner>
+                        <MDBCarouselItem itemId="1">
+                            <View>
+                                <img className="d-block w-100" src={map} alt="First slide"/>
+                                <Mask overlay="black-light"/>
+                            </View>
+                            <MDBCarouselCaption>
+                                <NavBar/>
+                                <HeaderText/>
+                            </MDBCarouselCaption>
+                        </MDBCarouselItem>
+                        <MDBCarouselItem itemId="2">
+                            <View>
+                                <img className="d-block w-100" src={HeaderImage2} alt="Second slide"/>
+                            </View>
+                            <MDBCarouselCaption>
+                                <NavBar/>
+                            </MDBCarouselCaption>
+                        </MDBCarouselItem>
+                    </MDBCarouselInner>
+                </MDBCarousel>
+            </div>
         );
     }
 }
