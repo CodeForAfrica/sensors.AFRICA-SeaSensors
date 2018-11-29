@@ -64,33 +64,33 @@ function Footer(props) {
                 <Grid item xs={4} className="logoGridContainer">
                     <Grid container spacing={12}>
                         <Grid item xs={6} className="logoGrid">
-                            <img src={cfaLogo} className="logoImg"/>
+                            <img src={cfaLogo} className="logoImg" alt="logoImg"/>
                         </Grid>
                         <Grid item xs={6} className="logoGrid">
-                            <img src={oNImg} className="logoImg"/>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={12}>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={usdoImg} className="logoImg"/>
-                        </Grid>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={billMelindaImg} className="logoImg"/>
+                            <img src={oNImg} className="logoImg" alt="logoImg"/>
                         </Grid>
                     </Grid>
                     <Grid container spacing={12}>
                         <Grid item xs={6} className="logoGrid">
-                            <img src={icfjImg} className="logoImg"/>
+                            <img src={usdoImg} className="logoImg" alt="logoImg"/>
                         </Grid>
                         <Grid item xs={6} className="logoGrid">
-                            <img src={uniStAndrewsImg} className="logoImg"/>
+                            <img src={billMelindaImg} className="logoImg" alt="logoImg"/>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={12}>
+                        <Grid item xs={6} className="logoGrid">
+                            <img src={icfjImg} className="logoImg" alt="logoImg"/>
+                        </Grid>
+                        <Grid item xs={6} className="logoGrid">
+                            <img src={uniStAndrewsImg} className="logoImg" alt="logoImg"/>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
             <Grid container spacing={12}>
                 <Grid item xs={8}>
-                    <img src={seaLogoImg} className="seaLogo"/>
+                    <img src={seaLogoImg} className="seaLogo" alt="seaLogo"/>
                     <span>©Sea Sensors. All rights reserved, 2018.
                         <br/>
                         <bold>Terms & Conditions</bold>
