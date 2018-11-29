@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "gatsby";
+import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
 import './MenuBar.css';
 
 const ListLink = props => (
@@ -10,9 +11,9 @@ const ListLink = props => (
 
 export default({children}) => (
     <div className="parent-nav">
-    <header>
+        <header>
             <ul className="ul-nav">
-                <ListLink to="/">Logo.</ListLink>
+                <ListLink to="/"><img src={seaLogoImg} className="seaLogoHeader" alt="seaLogo"/></ListLink>
                 <ListLink to="/about/">About.</ListLink>
                 <ListLink to="/news/">News.</ListLink>
                 <ListLink to="/resources/">Resources.</ListLink>

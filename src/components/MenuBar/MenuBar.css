@@ -47,6 +47,11 @@
   left: 3em;
 }
 
+.seaLogoHeader {
+  height: 5em;
+  width: 5em;
+}
+
 .carousel-fade .carousel-item {
   transition: none !important;
 }
