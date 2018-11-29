@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import MediaCard from './Cards'
 import artem from '../../assets/artem.png'
 import scuba from '../../assets/scuba.png'
