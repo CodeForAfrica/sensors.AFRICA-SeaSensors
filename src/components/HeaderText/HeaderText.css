@@ -2,6 +2,9 @@
   width: 40em;
   height: 22em;
   background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  bottom: 5.8em;
+  right: 14em;
 }
 
 .content__header {
