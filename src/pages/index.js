@@ -14,7 +14,7 @@ import '../assets/css/main.css';
 
 class IndexPage extends Component {
   render() {
-    return <div className="main-container">
+    return <div className="main-container-parent">
       <HeaderCarousel/>
       <Blasts/>
       <TopStory/>

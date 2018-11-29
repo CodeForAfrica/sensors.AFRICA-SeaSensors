@@ -21,7 +21,7 @@ text1Grid {
 
 .What-is-blast-fishin {
   width: 600.1px !important;
-  height: 251.3px !important;
+  height: 20em !important;
   opacity: 0.6;
   font-family: Montserrat !important;
   font-size: 15px !important;
@@ -32,6 +32,5 @@ text1Grid {
   letter-spacing: 0.7px !important;
   text-align: justify;
   color: #023256 !important;
-  margin-top: 125px !important;
-  margin-right: 113px !important;
+  margin-top: 5em !important;
 }
