@@ -7,8 +7,8 @@ body {
   height: 100%;
 }
 
-.main-container {
+.main-container-parent {
   display: flex;
-  min-height: 100%;
+  height: auto;
   flex-direction: column;
 }
