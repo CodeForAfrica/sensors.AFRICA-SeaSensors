@@ -18,6 +18,8 @@ import {
 } from "mdbreact";
 import './Header.css'
 
+const Image = () => <div><img src={grid}/></div>
+
 class HeaderCarousel extends Component {
     render() {
         return (
@@ -38,6 +40,9 @@ class HeaderCarousel extends Component {
                             <MDBCarouselCaption>
                                 <NavBar/>
                                 <HeaderText/>
+                            </MDBCarouselCaption>
+                            <MDBCarouselCaption>
+                                <Image/>
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
                         <MDBCarouselItem itemId="2">
