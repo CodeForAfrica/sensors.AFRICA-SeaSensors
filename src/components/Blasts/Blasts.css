@@ -58,7 +58,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index:999;
+  z-index: 999;
+  transform: translateX(-386px);
 }
 
 .recorded__blasts__figures {
