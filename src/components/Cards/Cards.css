@@ -1,18 +1,18 @@
 .Mask {
-  width: 1440px;
+  width: 100%;
   height: auto;
   padding: 35px;
   align-items: center;
   justify-content: center;
   margin-top: 102.2px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 .card {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color:#F2F2F2 !important;
-  box-shadow:none !important;
+  background-color: #f2f2f2 !important;
+  box-shadow: none !important;
 }
 
 .Sea-Sensors-Stories {
