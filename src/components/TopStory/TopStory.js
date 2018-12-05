@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles, Paper, Grid, Typography} from '@material-ui/core';
+import {withStyles, Grid, Typography} from '@material-ui/core';
 import arrow from '../../assets/arrow.png';
 import './TopStory.css'
 
-const styles = theme => ({
+const styles = () => ({
     root: {
         flexGrow: 1
     }
 });
 
-function TopStory(props) {
-    const {classes} = props;
-
+function TopStory() {
     return (
         <div className="parentContainer">
             <Grid container spacing={24}>
