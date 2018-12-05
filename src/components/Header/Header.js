@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import map from '../../assets/map.png'
 import HeaderImage2 from '../../assets/HeaderImage2.png'
 import grid from '../../assets/grid.png'
-import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
 import NavBar from '../MenuBar/NavBar.js';
 import HeaderText from '../HeaderText/HeaderText';
 import 'font-awesome/css/font-awesome.min.css';
@@ -18,7 +17,7 @@ import {
 } from "mdbreact";
 import './Header.css'
 
-const Image = () => <div><img src={grid}/></div>
+const Image = () => <div><img src={grid} alt="grid"/></div>
 
 class HeaderCarousel extends Component {
     render() {
