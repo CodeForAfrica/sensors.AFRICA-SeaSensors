@@ -5,13 +5,11 @@ import './More.css'
 
 const styles = theme => ({
     root: {
-        flexGrow: 1,
+        flexGrow: 1
     }
 });
 
-function More(props) {
-    const {classes} = props;
-
+function More() {
     return (
         <div className="moreContainer">
             <Grid container spacing={24}>
