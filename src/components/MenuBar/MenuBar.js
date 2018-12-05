@@ -39,7 +39,12 @@ class SimpleTabs extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static"  style={{ background: 'transparent', boxShadow: 'none'}}>
+        <AppBar
+          position="static"
+          style={{
+          background: 'transparent',
+          boxShadow: 'none'
+        }}>
           <Tabs value={value} onChange={this.handleChange} className="content">
             <Tab label="News."/>
             <Tab label="About us."/>
