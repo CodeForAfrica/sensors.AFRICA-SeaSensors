@@ -22,7 +22,6 @@ const styles = {
 };
 
 function MediaCard(props) {
-    console.log(props)
     const {classes} = props;
     return (
         <Card className={classes.card}>
