@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles, Grid, Typography} from '@material-ui/core';
-import footerMap from '../../assets/footer-map.png';
 import cfaLogo from '../../assets/cfa.png';
 import billMelindaImg from '../../assets/b-m-gf.png';
 import oNImg from '../../assets/on.png';
@@ -9,22 +8,18 @@ import uniStAndrewsImg from '../../assets/uo-sa.png';
 import usdoImg from '../../assets/us-do-s.png';
 import icfjImg from '../../assets/icfj.png';
 import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
-import Icon, {Stack} from '@mdi/react';
-import {mdiTwitter, mdiAccount, mdiBlockHelper} from '@mdi/js';
 import './Footer.css';
 
-const styles = theme => ({
+const styles = () => ({
     root: {
         flexGrow: 1
     }
 });
 
-function Footer(props) {
-    const {classes} = props;
-
+function Footer() {
     return (
         <div className="parentFooter">
-            <Grid container spacing={12} className="footerWrapper">
+            <Grid container spacing={16} className="footerWrapper">
                 <Grid item xs={8} className="mainFooterText">
                     <Typography className="footerText">
                         <span className="text-style-2">Sea Sensors
@@ -88,7 +83,7 @@ function Footer(props) {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container spacing={12}>
+            <Grid container spacing={16}>
                 <Grid item xs={8}>
                     <img src={seaLogoImg} className="seaLogo" alt="seaLogo"/>
                     <span>©Sea Sensors. All rights reserved, 2018.
