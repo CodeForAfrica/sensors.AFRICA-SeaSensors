@@ -4,12 +4,8 @@ import Blast from './data';
 
 class BlastFishing extends Component {
     render() {
-        console.log(Blast.Blast.title)
         return <Fragment>
-            <FullWidthGrid
-                title = {Blast.Blast.title}
-                text = {Blast.Blast.text}
-            />
+            <FullWidthGrid title={Blast.Blast.title} text={Blast.Blast.text}/>
         </Fragment>
     }
 
