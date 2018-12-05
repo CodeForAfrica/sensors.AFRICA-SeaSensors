@@ -4,20 +4,19 @@ import {withStyles, Grid, Typography} from '@material-ui/core'
 import partners from '../../assets/partners.png'
 import './Partners.css'
 
-const styles = theme => ({
+const styles = () => ({
     root: {
         flexGrow: 1
     }
 });
 
-function Partners(props) {
-    const {classes} = props;
+function Partners() {
 
     return (
         <div className="partner-parent">
             <Grid container spacing={24}>
                 <Grid item xs={12} sm={6}>
-                    <img src={partners} className="partner-image"/>
+                    <img src={partners} className="partner-image" alt=""/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Typography variant="caption" className="our-partners">
