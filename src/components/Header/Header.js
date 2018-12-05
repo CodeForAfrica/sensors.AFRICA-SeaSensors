@@ -47,7 +47,13 @@ class HeaderCarousel extends Component {
                         </MDBCarouselItem>
                         <MDBCarouselItem itemId="2">
                             <View>
-                                <img className="d-block w-100" src={HeaderImage2} alt="Second slide"/>
+                                <img
+                                    className="d-block w-100"
+                                    src={HeaderImage2}
+                                    alt="Second slide"
+                                    style={{
+                                    width: "100%"
+                                }}/>
                             </View>
                             <MDBCarouselCaption>
                                 <NavBar/>
