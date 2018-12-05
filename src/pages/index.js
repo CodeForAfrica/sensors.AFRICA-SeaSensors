@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import HeaderCarousel from '../components/Header/Header';
 import BlastFishing from '..//components/TextSection/BlastFishing';
 import Video from '../components/Video/Video';
@@ -10,7 +10,6 @@ import More from '../components/More//More';
 import Footer from '../components/Footer/Footer';
 import Partners from '../components/Partners/Partners';
 import Blasts from '../components/Blasts/Blasts';
-import HeaderCarousel2 from '../components/Carousel/Carousel';
 import '../assets/css/main.css';
 
 class IndexPage extends Component {
