@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles, Paper, Grid, Typography} from '@material-ui/core';
+import {withStyles, Grid, Typography} from '@material-ui/core';
 import './TextSection.css'
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     flexGrow: 1
   }
 });
 
 function FullWidthGrid(props) {
-  const {classes} = props;
-
   return (
     <div className="text1Grid">
       <Grid container spacing={24}>
