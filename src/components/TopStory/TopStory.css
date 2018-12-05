@@ -1,7 +1,7 @@
 .parentContainer {
-  width: 1440px;
+  width: 100%;
   height: 615px;
-  background-color: rgb(5, 2, 2, 1.0);
+  background-color: rgb(5, 2, 2, 1);
   background-image: url('../../assets/topStory.png');
 }
 
@@ -49,7 +49,7 @@
   line-height: 2.5 !important;
   letter-spacing: 0.7px !important;
   text-align: justify !important;
-  color: #F9F8F8 !important;
+  color: #f9f8f8 !important;
   margin-top: 136.5px !important;
   margin-right: 120px !important;
 }
