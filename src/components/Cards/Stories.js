@@ -43,7 +43,7 @@ class Stories extends Component {
                             title={story.title}
                             image={story.image}
                             bodyField={story.bodyField}
-                            linkText={story.linkText}/>)}
+                            link={story.link}/>)}
                 </div>
             </div>
         )
