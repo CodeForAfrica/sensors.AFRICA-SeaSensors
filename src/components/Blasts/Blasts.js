@@ -5,27 +5,29 @@ import './Blasts.css'
 class Blasts extends Component {
     render() {
         return (
-            <div className="blast-size">
-                <div className="blast-size__text-left">
-                    <div className="blast-size__text-left__1">
-                        <h3 className="Blasts-Recorded">Blasts Recorded.</h3>
-                        <hr/>
+            <div className="blast">
+                <div className="blast-intro">
+                    <h3 className="Blasts-Recorded">Blasts Recorded.</h3>
+                </div>
+                <div className="blast-info">
+                    <div className="blast-grid">
                         <p className="Blast-data-is-collec">
                             Blast data is collected<br/>
                             every X months, analysed,<br/>
                             and uploaded to the map.
                         </p>
                     </div>
-                    <div className="blast-size__text-left__2">
-                        Learn more.
+                    <div className="blast-grid blast-image-info">
+                        <BlastsSvg/>
+                        <div className="blast-grid-text">
+                            <p className="recorded__blasts__figures">12 562</p>
+                            <p className="recorded__blasts__text">Recorded blasts</p>
+                        </div>
+                    </div>
+                    <div className="blast-grid">
+                        <p className="recorded__blasts__text">1234</p>
                     </div>
                 </div>
-                <div><BlastsSvg/></div>
-                <div className="recorded__blasts">
-                    <div className="recorded__blasts__figures">12 562</div>
-                    <div className="recorded__blasts__text">Recorded Blasts</div>
-                </div>
-                <div className="blast-size__text-right"></div>
             </div>
         )
     }
