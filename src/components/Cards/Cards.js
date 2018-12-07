@@ -10,7 +10,6 @@ import {
     Button,
     Typography
 } from '@material-ui/core'
-import './Cards.css'
 
 const styles = {
     card: {
@@ -19,6 +18,7 @@ const styles = {
     media: {
         height: 300
     }
+
 };
 
 function MediaCard(props) {
