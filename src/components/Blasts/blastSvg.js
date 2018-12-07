@@ -1,10 +1,11 @@
 import React from 'react';
+import './Blasts.css';
 
 const BlastsSvg = () => <svg
-    width='500'
-    height='600'
+    width='600'
+    height='800'
     viewBox='0 0 1253 1331'
-    className="svg-propertie"
+    className="svg-properties"
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'>
     <defs>
