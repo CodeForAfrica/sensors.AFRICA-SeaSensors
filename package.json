@@ -19,7 +19,6 @@
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "material-auto-rotating-carousel": "^2.1.0",
-    "material-ui-icons": "^1.0.0-beta.36",
     "mdbreact": "^4.8.4",
     "nuka-carousel": "^4.4.3",
     "react": "^16.5.1",
@@ -41,7 +40,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "deploy": "export NODE_ENV=production && gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && gh-pages -d public",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
