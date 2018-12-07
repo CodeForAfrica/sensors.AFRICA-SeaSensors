@@ -41,7 +41,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "deploy": "export NODE_ENV=production && gatsby build && gh-pages -d public -b gh-pages",
+    "deploy": "export NODE_ENV=production && gatsby build && gh-pages -d public -b master",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
