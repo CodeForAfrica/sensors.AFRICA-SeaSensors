@@ -1,5 +1,4 @@
 import React from 'react';
-import './Blasts.css';
 
 const BlastsSvg = () => <svg
     width='600'
