@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import MediaCard from './Cards'
+import CssBaseline from '@material-ui/core/CssBaseline';
 import artem from '../../assets/artem.png'
 import scuba from '../../assets/scuba.png'
 import drone from '../../assets/drone.png'
@@ -24,7 +25,7 @@ const stories = [
 ]
 
 const styles = {
-    Mask: {
+    mask: {
         width: '100%',
         height: 'auto',
         padding: '35px',
@@ -33,7 +34,7 @@ const styles = {
         marginTop: '102.2px',
         backgroundColor: '#f2f2f2'
     },
-    Card: {
+    card: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
@@ -62,22 +63,25 @@ class Stories extends Component {
     }
     render() {
         return (
-            <div style={styles.Mask}>
-                <h1 style={styles.seaSensorsStories}>
-                    Sea Sensors Stories.
-                </h1>
-                <div style={styles.Card}>
-                    {this
-                        .state
-                        .stories
-                        .map(story => <MediaCard
-                            key={story.title}
-                            title={story.title}
-                            image={story.image}
-                            bodyField={story.bodyField}
-                            link={story.link}/>)}
+            <React.Fragment>
+                <CssBaseline/>
+                <div style={styles.mask}>
+                    <h1 style={styles.seaSensorsStories}>
+                        Sea Sensors Stories.
+                    </h1>
+                    <div style={styles.card}>
+                        {this
+                            .state
+                            .stories
+                            .map(story => <MediaCard
+                                key={story.title}
+                                title={story.title}
+                                image={story.image}
+                                bodyField={story.bodyField}
+                                link={story.link}/>)}
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
