@@ -1,11 +1,39 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles, Grid, Typography} from '@material-ui/core';
-import './TextSection.css'
+import {Grid, Typography} from '@material-ui/core';
+import {withStyles, createStyles} from '@material-ui/styles';
 
-const styles = () => ({
+const styles = createStyles({
   root: {
     flexGrow: 1
+  },
+  blastFishsingTitle: {
+    width: "495.9px",
+    height: "153px",
+    fontFamily: "Oswald",
+    fontSize: "52px",
+    fontWeight: "bold",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "1.13",
+    letterSpacing: "0.7px",
+    color: "#023256",
+    marginTop: "125px",
+    marginLeft: "123px"
+  },
+  blastFishingText: {
+    width: "600.1px ",
+    height: "20em",
+    opacity: "0.6",
+    fontFamily: "Montserrat",
+    fontSize: "15px ",
+    fontWeight: "normal",
+    fontStyle: " normal",
+    fontStretch: "normal",
+    lineHeight: "2.5",
+    letterSpacing: "0.7px",
+    textAlign: "justify",
+    color: "#023256",
+    marginTop: "5em"
   }
 });
 
@@ -14,12 +42,12 @@ function FullWidthGrid(props) {
     <div className="text1Grid">
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h1" className="What-is-Blast-Fishin">
+          <Typography variant="h1" className={props.classes.blastFishsingTitle}>
             {props.title}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="body2" className="What-is-blast-fishin">
+          <Typography variant="body2" className={props.classes.blastFishingText}>
             {props.text}
           </Typography>
         </Grid>
@@ -27,9 +55,5 @@ function FullWidthGrid(props) {
     </div>
   );
 }
-
-FullWidthGrid.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(FullWidthGrid);
