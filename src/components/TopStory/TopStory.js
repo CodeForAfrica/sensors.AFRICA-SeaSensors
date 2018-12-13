@@ -19,7 +19,7 @@ function TopStory() {
                         SEA SENSORS TOP STORY
                     </Typography>
                     <Typography variant="h4" className="The-effects-of-blast">
-                        The effects of blast fishing on the local community.
+                        The effects of blast fishing <br/>on the local community.
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
