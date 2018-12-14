@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles, Grid, Typography} from '@material-ui/core';
+import {Grid, Typography} from '@material-ui/core';
+import {withStyles, createStyles} from '@material-ui/styles';
 import cfaLogo from '../../assets/cfa.png';
 import billMelindaImg from '../../assets/b-m-gf.png';
 import oNImg from '../../assets/on.png';
@@ -8,46 +8,83 @@ import uniStAndrewsImg from '../../assets/uo-sa.png';
 import usdoImg from '../../assets/us-do-s.png';
 import icfjImg from '../../assets/icfj.png';
 import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
-import './Footer.css';
 
-const styles = () => ({
+const styles = createStyles({
     root: {
         flexGrow: 1
+    },
+    parentFooter: {
+        position: "relative",
+        bottom: "0",
+        width: "100%",
+        backgroundBlendMode: "multiply",
+        backgroundImage: "linear-gradient(to bottom, #001525, #001525)",
+        paddingLeft: "40px",
+        paddingTop: "8em"
+    },
+    footerWrapper: {
+        display: "flex",
+        justifyContent: "space - evenly"
+    },
+    footerText: {
+        fontFamily: "Montserrat",
+        fontSize: "11px",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "3.5",
+        letterSpacing: "0.6px",
+        color: "#ffffff",
+        opacity: "0.87"
+    },
+    textStyle: {
+        color: "#00a5dc"
+    },
+    logoGrid: {
+        marginBottom: "3em"
+    },
+    LogoImg: {
+        width: "89px",
+        height: "auto"
+    },
+    seaLogo: {
+        height: "4em",
+        width: "4em"
     }
 });
 
-function Footer() {
+function Footer(props) {
     return (
-        <div className="parentFooter">
-            <Grid container spacing={16} className="footerWrapper">
-                <Grid item xs={8} className="mainFooterText">
-                    <Typography className="footerText">
-                        <span className="text-style-2">Sea Sensors
+        <div className={props.classes.parentFooter}>
+            <Grid container spacing={24} className={props.classes.footerWrapper}>
+                <Grid item xs={8}>
+                    <Typography className={props.classes.footerText}>
+                        <span className={props.classes.textStyle}>Sea Sensors
                         </span>
                         is an acoustic data project that collects underwater blast data to help xx
                     </Typography>
-                    <Typography className="footerText">
+                    <Typography className={props.classes.footerText}>
                         The project is funded through
-                        <span className="text-style-2">Code for Africa
+                        <span className={props.classes.textStyle}>Code for Africa
                         </span>’s
-                        <span className="text-style-2">innovateAFRICA
+                        <span className={props.classes.textStyle}>innovateAFRICA
                         </span>
                         programme.
                     </Typography>
 
-                    <Typography className="footerText">
-                        <span className="text-style-2">Code for Africa
+                    <Typography className={props.classes.footerText}>
+                        <span className={props.classes.textStyle}>Code for Africa
                         </span>
                         (CfAfrica) is Africa&apos;s largest data journalism and civic technology
                         initiative, operating
-                        <span className="text-style-2">
+                        <span className={props.classes.textStyle}>
                             CitizenLabs
                         </span><br/>
                         across the continent to help fast-track digital innovation to drive social
                         change.
                     </Typography>
-                    <Typography className="footerText">
-                        <span className="text-style-2">innovateAFRICA
+                    <Typography className={props.classes.footerText}>
+                        <span className={props.classes.textStyle}>innovateAFRICA
                         </span>
                         is the continent’s largest fund for supporting civic media experimentation and
                         digital news
@@ -56,48 +93,44 @@ function Footer() {
                         to newsroom management,
                         <br/>audience engagement, digital convergence, and media business models.</Typography>
                 </Grid>
-                <Grid item xs={4} className="logoGridContainer">
-                    <Grid container spacing={12}>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={cfaLogo} className="logoImg" alt="logoImg"/>
+                <Grid item xs={4}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={cfaLogo} className={props.classes.logoImg} alt="logoImgAlt"/>
                         </Grid>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={oNImg} className="logoImg" alt="logoImg"/>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={12}>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={usdoImg} className="logoImg" alt="logoImg"/>
-                        </Grid>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={billMelindaImg} className="logoImg" alt="logoImg"/>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={oNImg} className={props.classes.logoImg} alt="logoImgAlt"/>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={12}>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={icfjImg} className="logoImg" alt="logoImg"/>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={usdoImg} className={props.classes.logoImg} alt="logoImgAlt"/>
                         </Grid>
-                        <Grid item xs={6} className="logoGrid">
-                            <img src={uniStAndrewsImg} className="logoImg" alt="logoImg"/>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={billMelindaImg} className={props.classes.logoImg} alt="logoImgAlt"/>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={icfjImg} className={props.classes.logoImg} alt="logoImgAlt"/>
+                        </Grid>
+                        <Grid item xs={6} className={props.classes.logoGrid}>
+                            <img src={uniStAndrewsImg} className={props.classes.logoImg} alt="logoImgAlt"/>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container spacing={16}>
+            <Grid container spacing={24}>
                 <Grid item xs={8}>
-                    <img src={seaLogoImg} className="seaLogo" alt="seaLogo"/>
+                    <img src={seaLogoImg} className={props.classes.seaLogo} alt="seaLogo"/>
                     <span>©Sea Sensors. All rights reserved, 2018.
                         <br/>
-                        <bold>Terms & Conditions</bold>
+                        <b>Terms & Conditions</b>
                     </span>
                 </Grid>
             </Grid>
         </div>
     );
 }
-
-Footer.propTypes = {
-    classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(Footer);
