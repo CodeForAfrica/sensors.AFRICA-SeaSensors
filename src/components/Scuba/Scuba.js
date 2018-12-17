@@ -1,14 +1,23 @@
-import React, {Component} from 'react'
+import React from 'react'
+import {withStyles, createStyles} from '@material-ui/styles'
 import ScubaImg from '../../assets/ScubaImg.png'
-import './Scuba.css'
 
-class Scuba extends Component {
-    render() {
-        return <div>
-            <img className="image-style" src={ScubaImg} alt=""/>
-        </div>
+const styles = createStyles({
+    imageStyle: {
+        width: "80%",
+        height: "783px",
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto"
     }
+})
 
+function Scuba(props) {
+    return (
+        <div>
+            <img className={props.classes.imageStyle} src={ScubaImg} alt="ScubaImage"/>
+        </div>
+    )
 }
 
-export default Scuba
+export default withStyles(styles)(Scuba);

@@ -6,6 +6,11 @@ const styles = createStyles({
   root: {
     flexGrow: 1
   },
+  textGrid: {
+    height: "28em",
+    backgroundColor: "#ffffff",
+    width: "100%"
+  },
   blastFishsingTitle: {
     width: "495.9px",
     height: "153px",
@@ -39,7 +44,7 @@ const styles = createStyles({
 
 function FullWidthGrid(props) {
   return (
-    <div className="text1Grid">
+    <div className={props.classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h1" className={props.classes.blastFishsingTitle}>
