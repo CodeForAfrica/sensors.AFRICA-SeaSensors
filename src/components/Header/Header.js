@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {withStyles, createStyles} from '@material-ui/styles'
 import HeaderImage1 from '../../assets/map.png'
 import HeaderImage2 from '../../assets/HeaderImage2.png'
 import grid from '../../assets/grid.png'
-import NavBar from '../MenuBar/NavBar.js';
+import NavBar from '../NavBar/NavBar';
 import HeaderText from '../HeaderText/HeaderText';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
