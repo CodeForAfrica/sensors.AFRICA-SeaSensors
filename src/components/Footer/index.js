@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, Typography} from '@material-ui/core';
-import {withStyles, createStyles} from '@material-ui/styles';
+import {withStyles, createStyles} from '@material-ui/core/styles';
+import footerMap from '../../assets/footer-map.png'
 import cfaLogo from '../../assets/cfa.png';
 import billMelindaImg from '../../assets/b-m-gf.png';
 import oNImg from '../../assets/on.png';

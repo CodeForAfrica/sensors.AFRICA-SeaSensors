@@ -1,9 +1,9 @@
 import React from 'react';
 
 const BlastsSvg = () => <svg
-    width='600'
-    height='800'
-    viewBox='0 0 1253 1331'
+    width='900'
+    height='700'
+    viewBox='300 0 900 1400'
     className="svg-properties"
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'>

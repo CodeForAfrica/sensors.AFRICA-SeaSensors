@@ -12,6 +12,7 @@ const styles = createStyles({
         width: "100%",
         height: "615px",
         backgroundImage: `url(${topStoryImage})`,
+        backgroundSize: "cover",
         opacity: "1"
     },
     topStoryTitle: {

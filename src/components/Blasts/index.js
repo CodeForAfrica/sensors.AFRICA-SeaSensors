@@ -1,7 +1,9 @@
-import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import {withStyles, createStyles} from '@material-ui/styles';
+import React from 'react'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import {withStyles, createStyles} from '@material-ui/styles'
 import BlastsSvg from './blastSvg'
+import lastUpload from '../../assets/last_upload.png'
+import creatTime from '../../assets/current_time.png'
 
 const styles = createStyles({
     blast: {
@@ -62,9 +64,9 @@ const styles = createStyles({
         left: "11em"
     },
     recordedBlastFigures: {
-        width: "403.5px",
-        fontFamily: "DIN",
-        fontSize: "4.1em",
+        width: "9.3em",
+        fontFamily: "Abel, 'sans-serif'",
+        fontSize: "4em",
         fontWeight: "bold",
         fontStyle: "normal",
         fontStretch: "semi-condensed",
@@ -72,17 +74,43 @@ const styles = createStyles({
         textAlign: "center",
         color: "#023256"
     },
-    recordedBlastsText: {
+    blastText: {
         height: "69.8px",
         opacity: "0.6",
         fontFamily: "Oswald, sans-serif",
-        fontSize: "0.8em",
+        fontSize: "1em",
         fontWeight: "300",
         fontStyle: "normal",
         fontStretch: "normal",
-        lineHeight: "1.35",
-        lettersSpacing: "1.2px",
+        lineHeight: "0.35",
         textAlign: "center",
+        color: "#023256"
+    },
+    currentTime: {
+        position: "absolute",
+        bottom: "0.5em",
+        left: "31.5em",
+        display: "flex"
+    },
+    lastUpload: {
+        display: "flex",
+        left: "31.5em",
+        top: "8.5em",
+        position: "absolute"
+    },
+    Timings: {
+        paddingLeft: " 0.7em"
+    },
+    dateTime: {
+        width: "102px",
+        height: "40px",
+        fontFamily: "Abel, 'sans-serif'",
+        fontSize: "35px",
+        fontWeight: "bold",
+        fontStyle: "normal",
+        fontStretch: "condensed",
+        lineHeight: "normal",
+        letterSpacing: "0.2px",
         color: "#023256"
     }
 })
@@ -105,12 +133,22 @@ function Blasts(props) {
                         <BlastsSvg/>
                         <div className={props.classes.blastGridText}>
                             <p className={props.classes.recordedBlastFigures}>12 562</p>
-                            <p className={props.classes.recordedBlastsText}>Recorded blasts</p>
+                            <p className={props.classes.blastText}>Recorded Blasts</p>
+                            <div className={props.classes.currentTime}>
+                                <div><img src={creatTime} alt="current time"/></div>
+                                <div className={props.classes.Timings}>
+                                    <p className={props.classes.dateTime}>16:06</p>
+                                    <p className={props.classes.blastText}>Current Time</p>
+                                </div>
+                            </div>
+                            <div className={props.classes.lastUpload}>
+                                <div><img src={lastUpload} alt="last uploaded"/></div>
+                                <div className={props.classes.Timings}>
+                                    <p className={props.classes.dateTime}>20.10.18</p>
+                                    <p className={props.classes.blastText}>Last Uploaded</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="rightBlast">
-                        <p>16:06</p>
-                        <p>20.10.18</p>
                     </div>
                 </div>
             </div>

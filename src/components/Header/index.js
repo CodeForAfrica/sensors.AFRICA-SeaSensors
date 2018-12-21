@@ -17,8 +17,6 @@ import {
     Mask
 } from "mdbreact";
 
-const Image = () => <div><img src={grid} alt="grid"/></div>
-
 const styles = createStyles({
     carouselParent: {
         height: "615px",
@@ -29,8 +27,17 @@ const styles = createStyles({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain"
+    },
+    grid: {
+        position: "absolute",
+        bottom: "23em",
+        left: "65em"
     }
 })
+
+const Image = () => <div><img src={grid} style={{
+    height: "8em"
+}} alt="grid"/></div>
 
 function HeaderCarousel(props) {
     return (
@@ -56,7 +63,7 @@ function HeaderCarousel(props) {
                             <HeaderText/>
                         </MDBCarouselCaption>
                         <MDBCarouselCaption>
-                            <Image/>
+                            <div className={props.classes.grid}><Image/></div>
                         </MDBCarouselCaption>
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId="2">
