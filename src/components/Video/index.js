@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import {withStyles, createStyles} from '@material-ui/styles'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 
 const styles = createStyles({
     backgroundVideo: {

@@ -1,10 +1,10 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/styles'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 import HeaderImage1 from '../../assets/map.png'
 import HeaderImage2 from '../../assets/HeaderImage2.png'
 import grid from '../../assets/grid.png'
-import NavBar from '../NavBar/NavBar';
-import HeaderText from '../HeaderText/HeaderText';
+import NavBar from '../NavBar';
+import HeaderText from '../HeaderText';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';

@@ -1,5 +1,5 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/styles'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 import {Link} from "gatsby"
 import seaLogoImg from '../../assets/SeaSensors_Logo-10.png'
 

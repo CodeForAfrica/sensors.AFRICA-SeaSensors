@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, Typography} from '@material-ui/core';
-import {withStyles, createStyles} from '@material-ui/styles'
+import {Grid, Typography} from '@material-ui/core'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 
 const styles = createStyles({
     root: {

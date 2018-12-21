@@ -1,6 +1,6 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import {withStyles, createStyles} from '@material-ui/styles'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 import BlastsSvg from './blastSvg'
 import lastUpload from '../../assets/last_upload.png'
 import creatTime from '../../assets/current_time.png'

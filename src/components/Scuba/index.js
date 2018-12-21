@@ -1,5 +1,5 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/styles'
+import {withStyles, createStyles} from '@material-ui/core/styles'
 import ScubaImg from '../../assets/ScubaImg.png'
 
 const styles = createStyles({
