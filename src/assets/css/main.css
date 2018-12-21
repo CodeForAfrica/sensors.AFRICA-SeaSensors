@@ -4,12 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Wire+One');
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .main-container-parent {
   display: flex;
   height: auto;
