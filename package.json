@@ -5,7 +5,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
-    "@material-ui/styles": "^3.0.0-alpha.3",
     "@mdi/font": "^3.0.39",
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
