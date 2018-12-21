@@ -1,8 +1,7 @@
 import React from 'react';
-import {Grid, Typography} from '@material-ui/core'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {Grid, Typography, withStyles} from '@material-ui/core'
 
-const styles = createStyles({
+const styles = {
     root: {
         flexGrow: 1
     },
@@ -32,7 +31,7 @@ const styles = createStyles({
         height: "75px",
         boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)"
     }
-})
+}
 
 function More(props) {
     return (

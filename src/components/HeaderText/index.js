@@ -1,7 +1,7 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {withStyles} from '@material-ui/core'
 
-const styles = createStyles({
+const styles = {
   content: {
     width: "40em",
     height: "22em",
@@ -41,7 +41,7 @@ const styles = createStyles({
     marginRight: "5.2em",
     color: "#ffffff"
   }
-})
+}
 
 function HeaderText(props) {
   return (

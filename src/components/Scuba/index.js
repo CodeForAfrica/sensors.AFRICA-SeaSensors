@@ -1,8 +1,8 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {withStyles} from '@material-ui/core'
 import ScubaImg from '../../assets/ScubaImg.png'
 
-const styles = createStyles({
+const styles = {
     imageStyle: {
         width: "80%",
         height: "783px",
@@ -10,7 +10,7 @@ const styles = createStyles({
         marginLeft: "auto",
         marginRight: "auto"
     }
-})
+}
 
 function Scuba(props) {
     return (

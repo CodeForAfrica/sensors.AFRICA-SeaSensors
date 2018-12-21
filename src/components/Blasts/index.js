@@ -1,11 +1,10 @@
 import React from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {CssBaseline, withStyles} from '@material-ui/core'
 import BlastsSvg from './blastSvg'
 import lastUpload from '../../assets/last_upload.png'
 import creatTime from '../../assets/current_time.png'
 
-const styles = createStyles({
+const styles = {
     blast: {
         width: '100%',
         margin: '0 auto',
@@ -113,7 +112,7 @@ const styles = createStyles({
         letterSpacing: "0.2px",
         color: "#023256"
     }
-})
+}
 
 function Blasts(props) {
     return (

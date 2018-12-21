@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {withStyles} from '@material-ui/core'
 
-const styles = createStyles({
+const styles = {
     backgroundVideo: {
         height: "644px !important",
         width: "100% !important",
@@ -11,7 +11,7 @@ const styles = createStyles({
         padding: "none",
         background: "cover"
     }
-})
+}
 
 function Video(props) {
     return (<ReactPlayer

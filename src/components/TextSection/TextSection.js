@@ -1,8 +1,7 @@
 import React from 'react';
-import {Grid, Typography} from '@material-ui/core';
-import {withStyles, createStyles} from '@material-ui/core/styles';
+import {Grid, Typography, withStyles} from '@material-ui/core';
 
-const styles = createStyles({
+const styles = {
   root: {
     flexGrow: 1
   },
@@ -40,7 +39,7 @@ const styles = createStyles({
     color: "#023256",
     marginTop: "5em"
   }
-});
+};
 
 function FullWidthGrid(props) {
   return (

@@ -3,7 +3,7 @@ import {withStyles, createStyles} from '@material-ui/core/styles'
 import {Link} from "gatsby"
 import seaLogoImg from '../../assets/SeaSensors_Logo-10.png'
 
-const styles = createStyles({
+const styles = {
     liNav: {
         display: "inline-block",
         marginRight: "4rem",
@@ -38,7 +38,7 @@ const styles = createStyles({
         marginRight: "auto"
     }
 
-})
+}
 
 const ListLink = props => (
     <li className={props.listClass}>

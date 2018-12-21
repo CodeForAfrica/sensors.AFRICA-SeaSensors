@@ -1,10 +1,9 @@
 import React from 'react'
-import {Grid, Typography} from '@material-ui/core'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {Grid, Typography, withStyles} from '@material-ui/core'
 import arrow from '../../assets/arrow.png'
 import topStoryImage from '../../assets/topStory.png'
 
-const styles = createStyles({
+const styles = {
     root: {
         flexGrow: 1
     },
@@ -79,7 +78,7 @@ const styles = createStyles({
     arrow: {
         color: "#ffffff"
     }
-})
+}
 
 function TopStory(props) {
     return (

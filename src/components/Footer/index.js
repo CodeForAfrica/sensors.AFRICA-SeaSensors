@@ -1,6 +1,5 @@
 import React from 'react'
-import {Grid, Typography} from '@material-ui/core'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {Grid, Typography, withStyles} from '@material-ui/core'
 import footerMap from '../../assets/footer-map.png'
 import cfaLogo from '../../assets/cfa.png'
 import billMelindaImg from '../../assets/b-m-gf.png'
@@ -10,7 +9,7 @@ import usdoImg from '../../assets/us-do-s.png'
 import icfjImg from '../../assets/icfj.png'
 import seaLogoImg from '../../assets/SeaSensors_Logo-10.png'
 
-const styles = createStyles({
+const styles = {
     root: {
         flexGrow: 1
     },
@@ -52,7 +51,7 @@ const styles = createStyles({
         height: "4em",
         width: "4em"
     }
-});
+};
 
 function Footer(props) {
     return (

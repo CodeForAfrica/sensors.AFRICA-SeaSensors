@@ -1,9 +1,8 @@
 import React from 'react'
-import {Grid, Typography} from '@material-ui/core'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {Grid, Typography, withStyles} from '@material-ui/core'
 import partners from '../../assets/partners.png'
 
-const styles = createStyles({
+const styles = {
     partnerParent: {
         width: "auto",
         height: "100%",
@@ -56,7 +55,7 @@ const styles = createStyles({
         color: "#023256"
     }
 
-})
+}
 
 function Partners(props) {
     return (

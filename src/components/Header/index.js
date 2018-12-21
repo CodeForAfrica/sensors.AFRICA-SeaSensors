@@ -1,5 +1,5 @@
 import React from 'react'
-import {withStyles, createStyles} from '@material-ui/core/styles'
+import {withStyles} from '@material-ui/core'
 import HeaderImage1 from '../../assets/map.png'
 import HeaderImage2 from '../../assets/HeaderImage2.png'
 import grid from '../../assets/grid.png'
@@ -17,7 +17,7 @@ import {
     Mask
 } from "mdbreact";
 
-const styles = createStyles({
+const styles = {
     carouselParent: {
         height: "615px",
         maxHeight: "615px",
@@ -33,7 +33,7 @@ const styles = createStyles({
         bottom: "23em",
         left: "65em"
     }
-})
+}
 
 const Image = () => <div><img src={grid} style={{
     height: "8em"

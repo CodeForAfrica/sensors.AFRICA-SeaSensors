@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
 import {
     Card,
     CardActionArea,
@@ -8,7 +7,8 @@ import {
     CardContent,
     CardMedia,
     Button,
-    Typography
+    Typography,
+    withStyles
 } from '@material-ui/core'
 
 const styles = {
