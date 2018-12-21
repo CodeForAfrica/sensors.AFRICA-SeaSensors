@@ -1,5 +1,6 @@
 import React from 'react'
 import {CssBaseline, withStyles} from '@material-ui/core'
+import {loadCSS} from 'fg-loadcss/src/loadCSS'
 import BlastsSvg from './blastSvg'
 import lastUpload from '../../assets/last_upload.png'
 import creatTime from '../../assets/current_time.png'
@@ -114,45 +115,52 @@ const styles = {
     }
 }
 
-function Blasts(props) {
-    return (
-        <React.Fragment>
-            <CssBaseline/>
-            <div className={props.classes.blast}>
-                <div className={props.classes.blastInfo}>
-                    <div className={props.classes.blastGrid}>
-                        <h3 className={props.classes.blastsRecorded}>Blasts Recorded.</h3>
-                        <p className={props.classes.blastDataCollected}>
-                            Blast data is collected<br/>
-                            every X months, analysed,<br/>
-                            and uploaded to the map.
-                        </p>
-                    </div>
-                    <div className={props.classes.blastImageInfo}>
-                        <BlastsSvg/>
-                        <div className={props.classes.blastGridText}>
-                            <p className={props.classes.recordedBlastFigures}>12 562</p>
-                            <p className={props.classes.blastText}>Recorded Blasts</p>
-                            <div className={props.classes.currentTime}>
-                                <div><img src={creatTime} alt="current time"/></div>
-                                <div className={props.classes.Timings}>
-                                    <p className={props.classes.dateTime}>16:06</p>
-                                    <p className={props.classes.blastText}>Current Time</p>
+class Blasts extends React.Component {
+    componentDidMount() {
+        loadCSS('https://use.fontawesome.com/releases/v5.1.0/css/all.css', document.querySelector('#insertion-point-jss'),);
+    }
+
+    render() {
+        const {classes} = this.props;
+        return (
+            <React.Fragment>
+                <CssBaseline/>
+                <div className={classes.blast}>
+                    <div className={classes.blastInfo}>
+                        <div className={classes.blastGrid}>
+                            <h3 className={classes.blastsRecorded}>Blasts Recorded.</h3>
+                            <p className={classes.blastDataCollected}>
+                                Blast data is collected<br/>
+                                every 4 months, analysed,<br/>
+                                and uploaded to the map.
+                            </p>
+                        </div>
+                        <div className={classes.blastImageInfo}>
+                            <BlastsSvg/>
+                            <div className={classes.blastGridText}>
+                                <p className={classes.recordedBlastFigures}>12 562</p>
+                                <p className={classes.blastText}>Recorded Blasts</p>
+                                <div className={classes.currentTime}>
+                                    <div><img src={creatTime} alt="current time"/></div>
+                                    <div className={classes.Timings}>
+                                        <p className={classes.dateTime}>16:06</p>
+                                        <p className={classes.blastText}>Current Time</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={props.classes.lastUpload}>
-                                <div><img src={lastUpload} alt="last uploaded"/></div>
-                                <div className={props.classes.Timings}>
-                                    <p className={props.classes.dateTime}>20.10.18</p>
-                                    <p className={props.classes.blastText}>Last Uploaded</p>
+                                <div className={classes.lastUpload}>
+                                    <div><img src={lastUpload} alt="last uploaded"/></div>
+                                    <div className={classes.Timings}>
+                                        <p className={classes.dateTime}>01.06.18</p>
+                                        <p className={classes.blastText}>Last Uploaded</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </React.Fragment>
-    );
+            </React.Fragment>
+        )
+    }
 }
 
 export default withStyles(styles)(Blasts);

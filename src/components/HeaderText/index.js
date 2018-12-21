@@ -27,6 +27,18 @@ const styles = {
     letterSpacing: "0.8px",
     color: "#ffffff"
   },
+  contentSubHeader: {
+    width: "500.3px",
+    height: "177.8px",
+    fontFamily: "Oswald",
+    fontSize: "41px",
+    fontWeight: "bold",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "1.27",
+    letterSpacing: "0.8px",
+    color: "#ffffff"
+  },
   contentText: {
     width: "412px",
     height: "88.5px",
@@ -46,11 +58,12 @@ const styles = {
 function HeaderText(props) {
   return (
     <div className={props.classes.content}>
-      <p className={props.classes.contentHeader}>Lorem ipsum
-        <br/>
-        dolor sitan amet.</p>
-      <p className={props.classes.contentText}>Sea Sensors is an acoustic data project that<br/>
-        collects underwater blast data to help xx
+      <p className={props.classes.contentHeader}>Sea Sensors</p>
+      <p className={props.classes.contentSubHeader}>Mapping fishing with explosives along the coast of East Africa
+        <br/></p>
+      <p className={props.classes.contentText}>Environmentally destructive fishing
+        using explosives has been conducted illegally along the coast of Tanzania for
+        decades.
       </p>
     </div>
   );

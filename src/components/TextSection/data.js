@@ -1,10 +1,13 @@
 const Blast = {
     'title': "What is Blast Fishing?",
-    'text': "What is blast fishing and what is its impact? A brief description here informing" +
-            " the viewer a little more about blast fishing. Lorem ipsum dolor sit amet, conse" +
-            "ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mag" +
-            "na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ni" +
-            "si ut aliquip ex ea commodo consequat abore et dolore magna."
+    'text': "Blast fishing, also termed dynamite fishing, involves fishers using explosives a" +
+            "s a quick andeasy way to kill fish. Explosives can be home-made or sourced illeg" +
+            "ally, and when detonated theunderwater shock wave kills indiscriminately all mar" +
+            "ine creatures within a certain radius as wellas shattering the underlying coral " +
+            "reef. Not only does it kill many creatures that are never usedby fishers, it als" +
+            "o kills the young and juveniles, and damaged coral can take decades to recover.U" +
+            "ltimately, widespread blast fishing reduces the overall productivity and diversi" +
+            "ty of the areawith long-term impacts on both the ecosystem and fisheries."
 }
 
 const HowItWorks = {

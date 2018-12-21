@@ -26,10 +26,10 @@ const styles = {
   },
   blastFishingText: {
     width: "600.1px ",
-    height: "20em",
+    height: "25em",
     opacity: "0.6",
     fontFamily: "Montserrat",
-    fontSize: "15px ",
+    fontSize: "14px ",
     fontWeight: "normal",
     fontStyle: " normal",
     fontStretch: "normal",
