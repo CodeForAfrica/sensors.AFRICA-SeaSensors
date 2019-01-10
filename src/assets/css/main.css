@@ -29,7 +29,25 @@
 .carousel-control-next,
 .carousel-item-prev,
 .carousel-item-next {
-  margin: 50px 0 50px 0;
+  margin: 100px 0 100px 0;
+}
+
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.carousel-control-next-icon {
+  padding: 20px;
+  background-color: aquamarine;
+}
+
+.arrow-left {
+  transform: rotate(180deg);
+}
+
+.clicked > .carousel-control-next-icon {
+  transform: rotate(180deg);
+  filter: grayscale(100%);
 }
 
 .carousel .carousel-indicators li {
@@ -39,6 +57,7 @@
   border-radius: 0% !important;
   display: flex;
   align-items: flex-start;
+  content: '02';
 }
 
 .carousel-fade .carousel-item {
