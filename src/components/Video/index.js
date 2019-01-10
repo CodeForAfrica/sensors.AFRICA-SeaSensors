@@ -15,7 +15,7 @@ const styles = {
 
 function Video(props) {
     return (<ReactPlayer
-        url='https://www.youtube.com/watch?v=CWSqYpx32Dk&t=117s'
+        url='https://www.youtube.com/watch?v=gUJqdCq50EE'
         className={props.classes.backgroundVideo}/>)
 }
 

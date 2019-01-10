@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from 'react'
-import FullWidthGrid from './TextSection.js'
-import Blast from './data';
+import TextSection from './TextSection.js'
+import {Blast} from './data';
 
 class BlastFishing extends Component {
     render() {
         return <Fragment>
-            <FullWidthGrid title={Blast.Blast.title} text={Blast.Blast.text}/>
+            <TextSection title={Blast.title} text={Blast.text}/>
         </Fragment>
     }
 
