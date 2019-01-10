@@ -1,13 +1,15 @@
 {
   "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "description": "Sea Sensors",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "@material-ui/core": "^3.4.0",
     "@mdi/font": "^3.0.39",
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
+    "core-js": "^2.6.1",
     "fg-loadcss": "^2.1.0",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
@@ -19,16 +21,11 @@
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "mdbreact": "^4.8.4",
-    "nuka-carousel": "^4.4.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-player": "^1.7.0",
-    "react-responsive-carousel": "^3.1.43",
-    "react-slick": "^0.23.2",
-    "react-swipeable-views": "^0.13.0",
     "react-wavesurfer": "^0.8.6",
-    "slick-carousel": "^1.8.1",
     "webfontloader": "^1.6.28"
   },
   "keywords": [
