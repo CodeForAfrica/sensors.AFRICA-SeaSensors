@@ -41,17 +41,18 @@ const styles = {
   }
 };
 
-function FullWidthGrid(props) {
+function TextSection(props) {
+  const {classes} = props
   return (
-    <div className={props.classes.root}>
+    <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h1" className={props.classes.blastFishsingTitle}>
+          <Typography variant="h1" className={classes.blastFishsingTitle}>
             {props.title}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="body2" className={props.classes.blastFishingText}>
+          <Typography variant="body2" className={classes.blastFishingText}>
             {props.text}
           </Typography>
         </Grid>
@@ -60,4 +61,4 @@ function FullWidthGrid(props) {
   );
 }
 
-export default withStyles(styles)(FullWidthGrid);
+export default withStyles(styles)(TextSection);

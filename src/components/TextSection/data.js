@@ -1,4 +1,4 @@
-const Blast = {
+export const Blast = {
     'title': "What is Blast Fishing?",
     'text': "Blast fishing, also termed dynamite fishing, involves fishers using explosives a" +
             "s a quick andeasy way to kill fish. Explosives can be home-made or sourced illeg" +
@@ -10,7 +10,7 @@ const Blast = {
             "ty of the areawith long-term impacts on both the ecosystem and fisheries."
 }
 
-const HowItWorks = {
+export const HowItWorks = {
     'title': "How it Works",
     'text': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i" +
             "ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru" +
@@ -19,7 +19,3 @@ const HowItWorks = {
             "ulla pariatur. Excepteur sint occaecat cupidatat."
 }
 
-export default {
-    Blast,
-    HowItWorks
-};
