@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import TextSection from './TextSection';
-import { HowItWorks } from './data';
+import { Works } from './data';
 
-class Works extends Component {
+class HowItWorks extends Component {
   render() {
     return (
       <Fragment>
-        <TextSection title={HowItWorks.title} text={HowItWorks.text} />
+        <TextSection title={Works.title} text={Works.text} />
       </Fragment>
     );
   }
 }
 
-export default Works;
+export default HowItWorks;

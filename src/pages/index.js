@@ -1,10 +1,10 @@
 import React from 'react';
-import HeaderCarousel from '../components/Header';
+import IndexHeaderCarousel from '../components/IndexHeader';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
 import BlastFishing from '../components/TextSection';
 import Video from '../components/Video';
-import Works from '../components/TextSection/HowItWorks';
+import HowItWorks from '../components/TextSection/HowItWorks';
 import Scuba from '../components/Scuba';
 import More from '../components/More';
 import Stories from '../components/Stories';
@@ -15,12 +15,12 @@ import '../assets/css/main.css';
 function IndexPage() {
   return (
     <div className="main-container-parent">
-      {typeof window !== 'undefined' && <HeaderCarousel />}
+      {typeof window !== 'undefined' && <IndexHeaderCarousel />}
       <Blasts />
       <TopStory />
       <BlastFishing />
       <Video />
-      <Works />
+      <HowItWorks />
       <Scuba />
       <More />
       <Stories />

@@ -10,7 +10,7 @@ export const Blast = {
             ty of the areawith long-term impacts on both the ecosystem and fisheries.`,
 };
 
-export const HowItWorks = {
+export const Works = {
   title: 'How it Works',
   text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
