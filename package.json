@@ -9,8 +9,10 @@
     "@mdi/font": "^3.0.39",
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
+    "bootstrap-css-only": "^4.2.1",
     "core-js": "^2.6.1",
     "fg-loadcss": "^2.1.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -41,6 +43,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "gatsby-plugin-eslint": "^2.0.1",
     "gh-pages": "^2.0.1",
     "prettier": "^1.14.2"
   },
