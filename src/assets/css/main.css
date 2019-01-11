@@ -29,11 +29,29 @@
 .carousel-control-next,
 .carousel-item-prev,
 .carousel-item-next {
-  margin: 100px 0 100px 0;
+  margin: 18em 2em 0 0;
+  width: 1.250em;
+  height:1.250em;
+  opacity: 1;
 }
 
 .carousel-control-prev-icon {
   display: none;
+}
+
+.carousel .carousel-control-next-icon {
+  background-image: none;
+  background-color: #fff;
+  padding: 2em;
+}
+
+.carousel .carousel-control-next-icon::before {
+  content: "\203A";
+  color: #000;
+  font-size: 2em;
+  position: relative;
+  bottom: 0.8em;
+  right: 0.2em;
 }
 
 .arrow-left {
@@ -52,7 +70,6 @@
   border-radius: 0% !important;
   display: flex;
   align-items: flex-start;
-  content: '02';
 }
 
 .carousel-fade .carousel-item {
