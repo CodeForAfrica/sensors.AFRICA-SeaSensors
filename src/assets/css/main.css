@@ -36,11 +36,6 @@
   display: none;
 }
 
-.carousel-control-next-icon {
-  padding: 20px;
-  background-color: aquamarine;
-}
-
 .arrow-left {
   transform: rotate(180deg);
 }
