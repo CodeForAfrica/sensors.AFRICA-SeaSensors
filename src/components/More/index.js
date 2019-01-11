@@ -46,7 +46,7 @@ function More({ classes }) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <span className={classes.readMore}>
-                        Read More
+            Read More
           </span>
         </Grid>
       </Grid>

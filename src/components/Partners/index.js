@@ -67,18 +67,18 @@ function Partners(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="caption" className={classes.ourPartners}>
-                        OUR PARTNERS
+            OUR PARTNERS
           </Typography>
           <Typography variant="h4" className={classes.thankYouText}>
-                        A big thanks to all our partners involved.
+            A big thanks to all our partners involved.
           </Typography>
           <Typography className={classes.seaSensorsText}>
-                Sea Sensors is headed by marine scientist, Gill Braulik and was granted funding
-                through Code for Africa’s innovateAFRICA programme in 2017. The project would
-                not be possible without the help of our partners, Jamie Macaulay, St. Andrews
-                University, Jason Rubens, Sound Ocean Ltd, Tanzania Blast Monitoring Network,
-                Mwambao Coastal Community Network, Marine Parks and Reserves Unit, Tanzania
-                Fisheries Research Institute (TAFIRI) and Nukta Africa Ltd.
+            Sea Sensors is headed by marine scientist, Gill Braulik and was granted funding
+            through Code for Africa’s innovateAFRICA programme in 2017. The project would
+            not be possible without the help of our partners, Jamie Macaulay, St. Andrews
+            University, Jason Rubens, Sound Ocean Ltd, Tanzania Blast Monitoring Network,
+            Mwambao Coastal Community Network, Marine Parks and Reserves Unit, Tanzania
+            Fisheries Research Institute (TAFIRI) and Nukta Africa Ltd.
           </Typography>
         </Grid>
       </Grid>
