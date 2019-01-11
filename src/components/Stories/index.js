@@ -53,6 +53,7 @@ const styles = {
     letterSpacing: '0.7 px',
     color: ' #023256',
     marginLeft: '10 %',
+    marginBottom: '2em',
   },
 
 };
@@ -69,7 +70,7 @@ class Stories extends Component {
           <CssBaseline />
           <div style={styles.mask}>
             <h1 style={styles.seaSensorsStories}>
-                        Sea Sensors Stories.
+              Sea Sensors Stories.
             </h1>
             <div style={styles.card}>
               {stories
