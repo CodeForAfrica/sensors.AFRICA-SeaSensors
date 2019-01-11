@@ -34,6 +34,18 @@ const styles = {
     bottom: '23em',
     left: '65em',
   },
+  parentSlider: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    position: 'absolute',
+    color: '#ffffff',
+    top: '34.6em',
+    zIndex: '999',
+    left: '3.1em',
+  },
+  firstSlider: {
+    marginRight: '7em',
+  },
 };
 
 const Image = () => (
@@ -45,7 +57,6 @@ const Image = () => (
       }}
       alt="grid"
     />
-
   </div>
 );
 
@@ -78,7 +89,12 @@ class IndexHeaderCarousel extends Component {
 
     render() {
       const { classes } = this.props;
-      const { headerImage, grid } = classes;
+      const {
+        headerImage,
+        grid,
+        firstSlider,
+        parentSlider,
+      } = classes;
       return (
         <div className="carousel-parent">
           <MDBCarousel
@@ -89,6 +105,10 @@ class IndexHeaderCarousel extends Component {
             interval={18000000}
             className="z-depth-1"
           >
+            <div className={parentSlider}>
+              <div className={firstSlider}>01</div>
+              <div>02</div>
+            </div>
             <MDBCarouselInner>
               <MDBCarouselItem itemId="1">
                 <View>
