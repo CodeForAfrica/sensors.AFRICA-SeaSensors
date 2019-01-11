@@ -62,24 +62,16 @@ class IndexHeaderCarousel extends Component {
 
         button.onclick = () => {
           if (button.classList.contains('arrow-left')) {
-            button
-              .classList
-              .remove('arrow-left');
+            button.classList.remove('arrow-left');
           } else {
-            button
-              .classList
-              .add('arrow-left');
+            button.classList.add('arrow-left');
           }
         };
         indicator1.onclick = () => {
-          button
-            .classList
-            .remove('arrow-left');
+          button.classList.remove('arrow-left');
         };
         indicator2.onclick = () => {
-          button
-            .classList
-            .add('arrow-left');
+          button.classList.add('arrow-left');
         };
       }
     };
