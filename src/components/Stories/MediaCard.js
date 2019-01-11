@@ -13,11 +13,14 @@ import {
 const styles = {
   card: {
     width: 300,
+    paddingLeft: '50px',
   },
   media: {
     height: 300,
   },
-
+  launch: {
+    color: '#12A6DD',
+  },
 };
 
 function MediaCard({
@@ -41,7 +44,7 @@ function MediaCard({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" className={classes.launch}>
           {link}
         </Button>
       </CardActions>
