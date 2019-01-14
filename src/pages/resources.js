@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const ResourcesPage = () => {
+function ResourcesPage() {
   return (
-      <div>
-        About page
-      </div>
+    <div>
+    Resources Page
+    </div>
   );
 }
 
-export default ResourcesPage
+export default ResourcesPage;
