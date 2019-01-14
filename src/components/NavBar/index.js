@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
-import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
+import seaLogoImg from '../../assets/SeaSensors_Logo-15.png';
 
 const styles = {
   liNav: {
@@ -20,8 +20,9 @@ const styles = {
     left: '3em',
   },
   seaLogo: {
-    height: '5em',
-    width: '5em',
+    height: '14em',
+    bottom: '6em',
+    position: 'relative',
   },
   parentNav: {
     position: 'fixed',
