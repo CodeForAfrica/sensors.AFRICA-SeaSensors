@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{137:function(e,n,t){"use strict";t.r(n);var u=t(0),a=t.n(u);n.default=function(){return a.a.createElement("div",null,"Resources Page")}}}]);
-//# sourceMappingURL=component---src-pages-resources-js-17d3424c99232e39b655.js.map
