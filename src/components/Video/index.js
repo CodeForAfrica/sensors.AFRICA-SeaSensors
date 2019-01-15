@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import { withStyles } from '@material-ui/core';
 
 const styles = {
@@ -13,10 +12,16 @@ const styles = {
   },
 };
 
-function Video({ classes }) {
+function Video({ classes, origin }) {
   return (
-    <ReactPlayer
-      url="https://www.youtube.com/watch?v=gUJqdCq50EE"
+    <iframe
+      id="ytplayer"
+      title="Installing acoustic sensors onto the sea bed, Tanzania"
+      type="text/html"
+      width="100%"
+      height="644"
+      src={`https://www.youtube.com/embed/gUJqdCq50EE?origin=${origin}`}
+      frameBorder="0"
       className={classes.backgroundVideo}
     />
   );
