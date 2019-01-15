@@ -12,14 +12,14 @@ import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 import '../assets/css/main.css';
 
-function IndexPage() {
+function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
       {typeof window !== 'undefined' && <IndexHeaderCarousel />}
       <Blasts />
       <TopStory />
       <BlastFishing />
-      <Video />
+      <Video origin={location.origin} />
       <HowItWorks />
       <Scuba />
       <More />
