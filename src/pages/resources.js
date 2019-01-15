@@ -1,5 +1,7 @@
 import React from 'react';
 
+import withRoot from '../withRoot';
+
 function ResourcesPage() {
   return (
     <div>
@@ -8,4 +10,4 @@ function ResourcesPage() {
   );
 }
 
-export default ResourcesPage;
+export default withRoot(ResourcesPage);

@@ -1,4 +1,6 @@
 import React from 'react';
+
+import withRoot from '../withRoot';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
 import BlastFishing from '../components/TextSection';
@@ -28,5 +30,4 @@ function IndexPage({ location }) {
   );
 }
 
-
-export default IndexPage;
+export default withRoot(IndexPage);

@@ -20,8 +20,9 @@ function Video({ classes, origin }) {
       type="text/html"
       width="100%"
       height="644"
-      src={`https://www.youtube.com/embed/gUJqdCq50EE?origin=${origin}`}
+      src={`https://www.youtube-nocookie.com/embed/gUJqdCq50EE?origin=${origin}`}
       frameBorder="0"
+      allowFullScreen
       className={classes.backgroundVideo}
     />
   );
