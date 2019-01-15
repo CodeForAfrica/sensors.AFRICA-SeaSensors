@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sensors.AFRICA-SeaSensors",
   "description": "Sea Sensors",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Code for Africa <support@codeforafrica.com>",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@material-ui/core": "^3.4.0",
@@ -31,16 +31,18 @@
     "webfontloader": "^1.6.28"
   },
   "keywords": [
-    "gatsby"
+    "SeaSensors",
+    "sensors.AFRICA"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "deploy": "gatsby build && gh-pages -d public",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "gatsby build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -54,6 +56,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/CodeForAfricaLabs/sensors.AFRICA-SeaSensors"
   }
 }
