@@ -1,5 +1,7 @@
 import React from 'react';
 
+import withRoot from '../withRoot';
+
 function NewsPage() {
   return (
     <div>
@@ -8,4 +10,4 @@ function NewsPage() {
   );
 }
 
-export default NewsPage;
+export default withRoot(NewsPage);

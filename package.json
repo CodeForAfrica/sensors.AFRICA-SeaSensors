@@ -22,10 +22,12 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
+    "jss": "^9.8.7",
     "mdbreact": "^4.8.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-jss": "^8.6.1",
     "react-player": "^1.7.0",
     "react-wavesurfer": "^0.8.6",
     "webfontloader": "^1.6.28"

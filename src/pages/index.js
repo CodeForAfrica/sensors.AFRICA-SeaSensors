@@ -1,5 +1,6 @@
 import React from 'react';
-import IndexHeaderCarousel from '../components/IndexHeader';
+
+import withRoot from '../withRoot';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
 import BlastFishing from '../components/TextSection';
@@ -15,7 +16,6 @@ import '../assets/css/main.css';
 function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
-      {typeof window !== 'undefined' && <IndexHeaderCarousel />}
       <Blasts />
       <TopStory />
       <BlastFishing />
@@ -30,5 +30,4 @@ function IndexPage({ location }) {
   );
 }
 
-
-export default IndexPage;
+export default withRoot(IndexPage);
