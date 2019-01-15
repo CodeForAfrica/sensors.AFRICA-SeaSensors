@@ -9,6 +9,7 @@ import Scuba from '../components/Scuba';
 import More from '../components/More';
 import Stories from '../components/Stories';
 import Partners from '../components/Partners';
+import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
 import '../assets/css/main.css';
 
@@ -25,6 +26,7 @@ function IndexPage() {
       <More />
       <Stories />
       <Partners />
+      <GetInvolved />
       <Footer />
     </div>
   );
