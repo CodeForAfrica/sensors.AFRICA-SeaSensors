@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, Typography, withStyles } from '@material-ui/core';
+import TextArrowButton from '../ReusableComponents/TextArrowButton';
+import arrow from '../../assets/arrow_2.png';
 
 const styles = {
   root: {
@@ -7,7 +9,7 @@ const styles = {
   },
   moreContainer: {
     width: 'auto',
-    height: 'auto',
+    height: '30em',
     backgroundColor: '#ffffff',
   },
   moreText: {
@@ -31,6 +33,33 @@ const styles = {
     height: '75px',
     boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
   },
+  textArrowButtonParent: {
+    width: '244.5px',
+    height: '45px',
+    border: '3px #023256 solid',
+    paddingLeft: '1rem',
+    boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
+    display: 'flex',
+    position: 'relative',
+    top: '22em',
+    left: '8em',
+  },
+  textArrowButtonText: {
+    width: '144px',
+    height: '24px',
+    fontFamily: 'Oswald',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: '3.2px',
+    color: '#023256',
+    marginTop: '0.3em',
+  },
+  textArrowButtonArrow: {
+    marginTop: '0.3em',
+  },
 };
 
 function More({ classes }) {
@@ -45,9 +74,11 @@ function More({ classes }) {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <span className={classes.readMore}>
-            Read More
-          </span>
+          <TextArrowButton
+            className={classes}
+            text="FIND OUT MORE"
+            image={arrow}
+          />
         </Grid>
       </Grid>
     </div>
