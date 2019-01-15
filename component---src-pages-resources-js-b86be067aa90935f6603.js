@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{136:function(n,e,t){"use strict";t.r(e);var r=t(7),o=t.n(r),u=t(0),i=t.n(u),p=function(n){function e(){return n.apply(this,arguments)||this}return o()(e,n),e.prototype.render=function(){return i.a.createElement("div",null,"Resources Page")},e}(u.Component);e.default=p}}]);
-//# sourceMappingURL=component---src-pages-resources-js-b86be067aa90935f6603.js.map
