@@ -4,6 +4,7 @@ import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import BlastsSvg from './blastSvg';
 import lastUpload from '../../assets/last_upload.png';
 import creatTime from '../../assets/current_time.png';
+import learnMoreArrow from '../../assets/arrow_3.png';
 
 const styles = {
   blast: {
@@ -113,6 +114,25 @@ const styles = {
     letterSpacing: '0.2px',
     color: '#023256',
   },
+  learnMoreParent: {
+    display: 'flex',
+    position: 'relative',
+    top: '8em',
+  },
+  learnMoreText: {
+    marginTop: '1.5em',
+    marginLeft: '1em',
+    width: '118.5px',
+    height: '36.8px',
+    fontFamily: 'Oswald',
+    fontSize: '16px',
+    fontWeight: '600',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.97',
+    letterSpacing: '0.6px',
+    color: '#023256',
+  },
 };
 
 class Blasts extends React.Component {
@@ -136,6 +156,14 @@ class Blasts extends React.Component {
                 <br />
                 and uploaded to the map.
               </p>
+              <div className={classes.learnMoreParent}>
+                <span className={classes.learnMoreArrow}>
+                  <img src={learnMoreArrow} alt="Arrow" />
+                </span>
+                <span className={classes.learnMoreText}>
+                  Learn More
+                </span>
+              </div>
             </div>
             <div className={classes.blastImageInfo}>
               <BlastsSvg />
