@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography, withStyles } from '@material-ui/core';
-import arrow from '../../assets/arrow.png';
+import TextArrowButton from '../ReusableComponents/TextArrowButton';
+import arrow from '../../assets/arrow_4.png';
 import topStoryImage from '../../assets/topStory.png';
 
 const styles = {
@@ -56,15 +57,17 @@ const styles = {
     color: ' #f9f8f8',
     marginTop: '136.5px',
     marginRight: '120px',
+    marginBottom: '4.5em',
   },
-  readMoreParent: {
-    width: '292.5px',
+  textArrowButtonParent: {
+    width: '244.5px',
     height: '45px',
     border: '3px #ffffff solid',
     paddingLeft: '1rem',
     boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
+    display: 'flex',
   },
-  readMoreText: {
+  textArrowButtonText: {
     height: '24px',
     fontFamily: 'Oswald',
     fontSize: '16px',
@@ -74,9 +77,12 @@ const styles = {
     lineHeight: 'normal',
     letterSpacing: '3.2px',
     color: '#ffffff',
+    marginTop: '0.3em',
+    marginRight: '3.5em',
   },
-  arrow: {
+  textArrowButtonArrow: {
     color: '#ffffff',
+    marginTop: '0.3em',
   },
 };
 
@@ -101,12 +107,11 @@ function TopStory({ classes }) {
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna.
           </Typography>
-          <div className={classes.readMoreParent}>
-            <span className={classes.readMoreText}>READ MORE</span>
-            <span className={classes.arrow}>
-              <img src={arrow} alt="Arrow" />
-            </span>
-          </div>
+          <TextArrowButton
+            className={classes}
+            text="READ MORE"
+            image={arrow}
+          />
         </Grid>
       </Grid>
     </div>
