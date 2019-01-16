@@ -41,7 +41,7 @@ const styles = {
     color: '#ffffff',
     top: '34.6em',
     zIndex: '999',
-    left: '3.1em',
+    left: '8.1em',
   },
   firstSlider: {
     marginRight: '7em',
