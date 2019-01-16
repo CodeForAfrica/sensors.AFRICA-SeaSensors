@@ -1,6 +1,7 @@
 import React from 'react';
 import { CssBaseline, withStyles } from '@material-ui/core';
-import { loadCSS } from 'fg-loadcss/src/loadCSS';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import BlastsSvg from './blastSvg';
 import lastUpload from '../../assets/last_upload.png';
 import creatTime from '../../assets/current_time.png';
@@ -141,13 +142,45 @@ const styles = {
   currentTimePointer: {
     marginTop: '73px',
   },
+  socialsParent: {
+    display: 'flex',
+  },
+  shareIcons: {
+    position: 'relative',
+    left: '2em',
+    top: '20em',
+  },
+  socials: {
+    width: '81px',
+    height: '81px',
+    border: '1px #00a5dc solid',
+    paddingLeft: '24px',
+    paddingTop: '24px',
+    marginRight: '13px',
+  },
+  twitterIcon: {
+    marginTop: '19px',
+    marginLeft: '26px',
+  },
+  shareText: {
+    width: '105px',
+    height: '42px',
+    fontFamily: 'Oswald',
+    fontSize: '20px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.69',
+    letterSpacing: '1px',
+    color: '#00a5dc',
+  },
+  socialIcon: {
+    marginTop: '20px',
+    marginLeft: '20px',
+  },
 };
 
 class Blasts extends React.Component {
-  componentDidMount() {
-    loadCSS('https://use.fontawesome.com/releases/v5.1.0/css/all.css', document.querySelector('#insertion-point-jss'));
-  }
-
   render() {
     const { classes } = this.props;
     return (
@@ -183,6 +216,17 @@ class Blasts extends React.Component {
                   <div className={classes.Timings}>
                     <p className={classes.dateTime}>16:06</p>
                     <p className={classes.blastText}>Current Time</p>
+                  </div>
+                  <div className={classes.shareIcons}>
+                    <p className={classes.shareText}>Share</p>
+                    <div className={classes.socialsParent}>
+                      <div className={classes.socials}>
+                        <FontAwesomeIcon icon={faTwitter} color="#00a5dc" size="2x" />
+                      </div>
+                      <div className={classes.socials}>
+                        <FontAwesomeIcon icon={faFacebookF} color="#00a5dc" size="2x" />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className={classes.lastUpload}>
