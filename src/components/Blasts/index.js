@@ -65,9 +65,10 @@ const styles = {
     left: '11em',
   },
   recordedBlastFigures: {
-    width: '9.3em',
-    fontFamily: "Abel, 'sans-serif'",
-    fontSize: '4em',
+    width: '598px',
+    height: '85.4px',
+    fontFamily: 'Oswald',
+    fontSize: '71px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'semi-condensed',
@@ -78,40 +79,41 @@ const styles = {
   blastText: {
     height: '69.8px',
     opacity: '0.6',
-    fontFamily: 'Oswald, sans-serif',
-    fontSize: '1em',
+    fontFamily: 'Oswald',
+    fontSize: '1.3em',
     fontWeight: '300',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '0.35',
+    lineHeight: '1.2',
     textAlign: 'center',
     color: '#023256',
   },
   currentTime: {
     position: 'absolute',
     bottom: '0.5em',
-    left: '31.5em',
+    left: '31.8em',
     display: 'flex',
   },
   lastUpload: {
     display: 'flex',
     left: '31.5em',
-    top: '8.5em',
+    top: '6.2em',
     position: 'absolute',
   },
   Timings: {
-    paddingLeft: ' 0.7em',
+    paddingLeft: '0.7em',
+    marginBottom: '45px',
   },
   dateTime: {
     width: '102px',
-    height: '40px',
-    fontFamily: "Abel, 'sans-serif'",
-    fontSize: '35px',
+    height: '47px',
+    fontFamily: 'Oswald',
+    fontSize: '48px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'condensed',
     lineHeight: 'normal',
-    letterSpacing: '0.2px',
+    letterSpacing: '1.2px',
     color: '#023256',
   },
   learnMoreParent: {
@@ -132,6 +134,12 @@ const styles = {
     lineHeight: '1.97',
     letterSpacing: '0.6px',
     color: '#023256',
+  },
+  lastUploadPointer: {
+    marginTop: '38px',
+  },
+  currentTimePointer: {
+    marginTop: '73px',
   },
 };
 
@@ -171,14 +179,14 @@ class Blasts extends React.Component {
                 <p className={classes.recordedBlastFigures}>12 562</p>
                 <p className={classes.blastText}>Recorded Blasts</p>
                 <div className={classes.currentTime}>
-                  <div><img src={creatTime} alt="current time" /></div>
+                  <div><img src={creatTime} className={classes.currentTimePointer} alt="current time" /></div>
                   <div className={classes.Timings}>
                     <p className={classes.dateTime}>16:06</p>
                     <p className={classes.blastText}>Current Time</p>
                   </div>
                 </div>
                 <div className={classes.lastUpload}>
-                  <div><img src={lastUpload} alt="last uploaded" /></div>
+                  <div><img src={lastUpload} alt="last uploaded" className={classes.lastUploadPointer} /></div>
                   <div className={classes.Timings}>
                     <p className={classes.dateTime}>01.06.18</p>
                     <p className={classes.blastText}>Last Uploaded</p>
