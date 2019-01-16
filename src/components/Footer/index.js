@@ -1,5 +1,13 @@
 import React from 'react';
 import { Grid, Typography, withStyles } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faTwitter,
+  faFacebookF,
+  faYoutube,
+  faGithub,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 import cfaLogo from '../../assets/cfa.png';
 import billMelindaImg from '../../assets/b-m-gf.png';
 import oNImg from '../../assets/on.png';
@@ -81,6 +89,16 @@ const styles = {
     letterSpacing: '0.6px',
     color: ' #ffffff',
   },
+  parentSocial: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    position: 'relative',
+    paddingRight: '50px',
+    top: '80px',
+  },
+  email: {
+    color: '#ffffff',
+  },
 };
 
 function Footer({ classes }) {
@@ -156,6 +174,14 @@ function Footer({ classes }) {
             <Grid item xs={6} className={classes.logoGrid}>
               <img src={uniStAndrewsImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
+          </Grid>
+          <Grid container spacing={24} className={classes.parentSocial}>
+            <a href="email.com" className={classes.email}>info@seasensors.org</a>
+            <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
+            <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
+            <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
+            <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
+            <FontAwesomeIcon icon={faInstagram} color="#ffffff" size="2x" />
           </Grid>
         </Grid>
       </Grid>
