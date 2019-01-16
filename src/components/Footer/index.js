@@ -6,7 +6,8 @@ import oNImg from '../../assets/on.png';
 import uniStAndrewsImg from '../../assets/uo-sa.png';
 import usdoImg from '../../assets/us-do-s.png';
 import icfjImg from '../../assets/icfj.png';
-import seaLogoImg from '../../assets/SeaSensors_Logo-10.png';
+import seaLogoImg from '../../assets/SeaSensors_Logo-05.png';
+import footerMap from '../../assets/footer-map.png';
 
 const styles = {
   root: {
@@ -47,8 +48,38 @@ const styles = {
     height: 'auto',
   },
   seaLogo: {
-    height: '4em',
-    width: '4em',
+    height: '8em',
+    width: 'auto',
+  },
+  mapImage: {
+    height: '476px',
+    position: 'absolute',
+    bottom: '0',
+    left: '2px',
+  },
+  copyrightParent: {
+    display: 'flex',
+  },
+  copyright: {
+    marginTop: '2.6em',
+    marginLeft: '-2em',
+  },
+  rightsReservedText: {
+    width: '369px',
+    height: '69.8px',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.47',
+    letterSpacing: '0.8px',
+    color: ' #ffffff',
+  },
+  termsConditionsText: {
+    fontWeight: 'bold',
+    letterSpacing: '0.6px',
+    color: ' #ffffff',
   },
 };
 
@@ -56,6 +87,7 @@ function Footer({ classes }) {
   return (
     <div className={classes.parentFooter}>
       <Grid container spacing={24} className={classes.footerWrapper}>
+        <img src={footerMap} alt="Footer Map" className={classes.mapImage} />
         <Grid item xs={8}>
           <Typography className={classes.footerText}>
             <span className={classes.textStyle}>
@@ -128,13 +160,17 @@ function Footer({ classes }) {
         </Grid>
       </Grid>
       <Grid container spacing={24}>
-        <Grid item xs={8}>
+        <Grid item xs={8} className={classes.copyrightParent}>
           <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogo" />
-          <span>
-            ©Sea Sensors. All rights reserved, 2018.
+          <div className={classes.copyright}>
+            <span
+              className={classes.rightsReservedText}
+            >
+              &copy; Sea Sensors. All rights reserved, 2018.
+            </span>
             <br />
-            <b>Terms & Conditions</b>
-          </span>
+            <span className={classes.termsConditionsText}>Terms & Conditions</span>
+          </div>
         </Grid>
       </Grid>
     </div>
