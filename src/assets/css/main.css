@@ -38,6 +38,11 @@
 .carousel-control-prev-icon {
   display: none;
 }
+.carousel-caption {
+  right:0;
+  left:0;
+  width:100%
+}
 
 .carousel .carousel-control-next-icon {
   background-image: none;
