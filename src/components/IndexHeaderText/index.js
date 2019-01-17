@@ -8,7 +8,6 @@ const styles = {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     position: 'relative',
     bottom: '5.8em',
-    right: '14em',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
