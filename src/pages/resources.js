@@ -1,9 +1,17 @@
 import React from 'react';
+import ResourcesHeader from '../components/ResourcesHeader';
+import GetInvolved from '../components/GetInvolved';
+import Footer from '../components/Footer';
+import ResourceVideos from '../components/ResourceCards';
+import '../assets/css/main.css';
 
 function ResourcesPage() {
   return (
-    <div>
-    Resources Page
+    <div className="main-container-parent">
+      <ResourcesHeader />
+      <ResourceVideos />
+      <GetInvolved />
+      <Footer />
     </div>
   );
 }
