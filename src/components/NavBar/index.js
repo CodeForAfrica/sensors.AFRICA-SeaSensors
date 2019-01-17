@@ -9,7 +9,7 @@ const styles = {
     marginRight: '4rem',
     textDecoration: 'none',
     fontFamily: 'Oswald',
-    fontSize: '0.9em',
+    fontSize: '1.2em',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
@@ -18,14 +18,22 @@ const styles = {
     textAlign: 'right',
     color: '#ffffff',
     left: '3em',
+    padding: '25px',
+    '&:hover': {
+      padding: '25px',
+      background: 'rgba(255, 255, 255, 0.1)',
+      borderLeft: '6px solid white',
+      color: 'white',
+    },
+
   },
   seaLogo: {
     height: '14em',
-    bottom: '6em',
+    bottom: '4em',
     position: 'relative',
   },
   parentNav: {
-    position: 'fixed',
+    position: 'relative',
     top: '3em',
     width: '100%',
     left: '0',
@@ -33,7 +41,7 @@ const styles = {
   ulNav: {
     listStyle: 'none',
     display: 'flex',
-    zIndex: '999',
+    zIndex: '3',
   },
   firstChild: {
     marginRight: 'auto',
@@ -50,19 +58,22 @@ const ListLink = ({
 );
 
 export default withStyles(styles)((props) => {
-  const image = <img src={seaLogoImg} className={props.classes.seaLogo} alt="seaLogoImage" />;
+  const {
+    classes,
+  } = props;
+  const image = <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />;
 
   return (
-    <div className={props.classes.parentNav}>
+    <div className={classes.parentNav}>
       <header>
-        <ul className={props.classes.ulNav}>
-          <ListLink to="/" linkText={image} listClass={props.classes.firstChild} />
-          <ListLink to="/about/" linkText="About." customClass={props.classes.liNav} />
-          <ListLink to="/news/" linkText="News." customClass={props.classes.liNav} />
+        <ul className={classes.ulNav}>
+          <ListLink to="/" linkText={image} listClass={classes.firstChild} />
+          <ListLink to="/about/" linkText="About." customClass={classes.liNav} />
+          <ListLink to="/news/" linkText="News." customClass={classes.liNav} />
           <ListLink
             to="/resources/"
             linkText="Resources."
-            customClass={props.classes.liNav}
+            customClass={classes.liNav}
           />
         </ul>
       </header>
