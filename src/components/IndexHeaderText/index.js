@@ -13,6 +13,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'left',
+    right: '240px',
   },
   contentHeader: {
     width: '500.3px',
