@@ -68,7 +68,7 @@ export default withStyles(styles)((props) => {
       <header>
         <ul className={classes.ulNav}>
           <ListLink to="/" linkText={image} listClass={classes.firstChild} />
-          <ListLink to="/about/" linkText="About." customClass={classes.liNav} />
+          <ListLink to="/about/" linkText="About Us." customClass={classes.liNav} />
           <ListLink to="/news/" linkText="News." customClass={classes.liNav} />
           <ListLink
             to="/resources/"
