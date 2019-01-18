@@ -36,7 +36,7 @@
 }
 
 .carousel-control-prev-icon {
-  display: none;
+  display: none !important;
 }
 .carousel-caption {
   right:0;
