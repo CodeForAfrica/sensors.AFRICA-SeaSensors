@@ -1,8 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import Nav from '../NavBar';
+import ResourceAboutHeader from '../ReusableComponents/ResourceAboutHeader';
 import turtleResourceImage from '../../assets/artem@3x.png';
-import arrowBack from '../../assets/arrow_6.png';
 
 const styles = {
   resourceImage: {
@@ -65,17 +64,11 @@ const styles = {
 
 function ResourcesHeader({ classes }) {
   return (
-    <div className={classes.resourceImage}>
-      <Nav />
-      <div className={classes.subTitle}>
-        <div className={classes.subtitleRule} />
-        <p className={classes.subtitleText}>Lorem Ipsum Dolor sit.</p>
-      </div>
-      <p className={classes.mediaResources}>Media Resources.</p>
-      <div className={classes.arrowBack}>
-        <img src={arrowBack} alt="Arrow back" />
-      </div>
-    </div>
+    <ResourceAboutHeader
+      className={classes}
+      subtitleTexts="Lorem Ipsum Dolor sit."
+      mediaResources="Media Resources."
+    />
   );
 }
 
