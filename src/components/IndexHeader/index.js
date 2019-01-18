@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core';
 import HeaderImage1 from '../../assets/map.png';
 import HeaderImage2 from '../../assets/HeaderImage2.png';
 import gridImage from '../../assets/grid.png';
-import NavBar from '../NavBar';
+import IndexNav from '../IndexNav';
 import IndexHeaderText from '../IndexHeaderText';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -120,7 +120,7 @@ class IndexHeaderCarousel extends Component {
                   <Mask overlay="black-light" />
                 </View>
                 <MDBCarouselCaption>
-                  <NavBar />
+                  <IndexNav />
                   <IndexHeaderText />
                 </MDBCarouselCaption>
                 <MDBCarouselCaption>
@@ -136,7 +136,7 @@ class IndexHeaderCarousel extends Component {
                   />
                 </View>
                 <MDBCarouselCaption>
-                  <NavBar />
+                  <IndexNav />
                 </MDBCarouselCaption>
               </MDBCarouselItem>
             </MDBCarouselInner>
