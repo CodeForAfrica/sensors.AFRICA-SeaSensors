@@ -4,6 +4,9 @@ import boat from '../../assets/boat.png';
 import scubaDive from '../../assets/ScubaDive.png';
 
 const styles = {
+  parentContainer: {
+    height: '1138px',
+  },
   date: {
     width: '229.5px',
     height: '37.5px',
@@ -63,9 +66,6 @@ const styles = {
     top: '2319px',
     left: '1275px',
     position: 'absolute',
-  },
-  parentContainer: {
-    height: '1000px',
   },
 };
 
