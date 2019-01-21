@@ -32,14 +32,14 @@ const styles = {
   grid: {
     position: 'absolute',
     bottom: '23em',
-    left: '65em',
+    right: '8%',
   },
   parentSlider: {
     display: 'flex',
     justifyContent: 'flex-start',
     position: 'absolute',
     color: '#ffffff',
-    top: '34.6em',
+    top: '45.6em',
     zIndex: '999',
     left: '8.1em',
   },
@@ -53,7 +53,9 @@ const Image = () => (
     <img
       src={gridImage}
       style={{
-        height: '8em',
+        height: '12em',
+        marginBottom: '4em',
+        marginLeft: '4em',
       }}
       alt="grid"
     />
