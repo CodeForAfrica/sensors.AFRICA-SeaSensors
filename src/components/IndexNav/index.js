@@ -34,7 +34,7 @@ const styles = {
   },
   parentNav: {
     position: 'fixed',
-    top: '1em',
+    top: '3em',
     width: '100%',
     left: '0',
   },
