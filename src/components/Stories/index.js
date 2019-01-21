@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import MediaCard from './MediaCard';
 import artem from '../../assets/artem.png';
 import scuba from '../../assets/scuba.png';
@@ -67,7 +66,6 @@ class Stories extends Component {
       const { stories } = this.state;
       return (
         <React.Fragment>
-          <CssBaseline />
           <div style={styles.mask}>
             <h1 style={styles.seaSensorsStories}>
               Sea Sensors Stories.

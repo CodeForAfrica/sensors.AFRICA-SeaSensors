@@ -1,5 +1,5 @@
 import React from 'react';
-import { CssBaseline, withStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import BlastsSvg from './blastSvg';
@@ -185,7 +185,6 @@ class Blasts extends React.Component {
     const { classes } = this.props;
     return (
       <React.Fragment>
-        <CssBaseline />
         <div className={classes.blast}>
           <div className={classes.blastInfo}>
             <div className={classes.blastGrid}>

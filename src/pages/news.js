@@ -4,6 +4,8 @@ import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
 
+import withRoot from '../withRoot';
+
 function NewsPage() {
   return (
     <div className="main-container-parent">
@@ -15,4 +17,4 @@ function NewsPage() {
   );
 }
 
-export default NewsPage;
+export default withRoot(NewsPage);

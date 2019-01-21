@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'SeaSensors | sensors.AFRICA'
   },
-  plugins: ['gatsby-plugin-eslint'],
+  plugins: ['gatsby-plugin-eslint']
 };

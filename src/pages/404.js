@@ -1,5 +1,7 @@
 import React from 'react';
 
+import withRoot from '../withRoot';
+
 const NotFoundPage = () => (
   <div>
     <h1>NOT FOUND</h1>
@@ -7,4 +9,4 @@ const NotFoundPage = () => (
   </div>
 );
 
-export default NotFoundPage;
+export default withRoot(NotFoundPage);

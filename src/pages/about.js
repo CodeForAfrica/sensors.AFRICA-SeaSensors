@@ -7,6 +7,8 @@ import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
 import '../assets/css/main.css';
 
+import withRoot from '../withRoot';
+
 function AboutPage() {
   return (
     <div className="main-container-parent">
@@ -20,4 +22,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default withRoot(AboutPage);
