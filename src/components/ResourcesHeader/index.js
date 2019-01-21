@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import ResourceAboutHeader from '../ReusableComponents/ResourceAboutHeader';
+import SharedHeader from '../ReusableComponents/SharedHeader';
 import turtleResourceImage from '../../assets/artem@3x.png';
 
 const styles = {
@@ -64,7 +64,7 @@ const styles = {
 
 function ResourcesHeader({ classes }) {
   return (
-    <ResourceAboutHeader
+    <SharedHeader
       className={classes}
       subtitleTexts="Lorem Ipsum Dolor sit."
       mediaResources="Media Resources."

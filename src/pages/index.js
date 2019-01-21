@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexHeaderCarousel from '../components/IndexHeader';
+import IndexHeaderCarousel from '../components/IndexHeaderCarousel';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
 import BlastFishing from '../components/TextSection';

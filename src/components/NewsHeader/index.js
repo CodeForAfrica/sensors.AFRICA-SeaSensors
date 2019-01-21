@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import ResourceAboutHeader from '../ReusableComponents/ResourceAboutHeader';
+import SharedHeader from '../ReusableComponents/SharedHeader';
 import NewsHeaderImage from '../../assets/NewsHeaderImage.png';
 
 const styles = {
@@ -64,7 +64,7 @@ const styles = {
 
 function NewsHeader({ classes }) {
   return (
-    <ResourceAboutHeader
+    <SharedHeader
       className={classes}
       subtitleTexts="Lorem Ipsum Dolor sit."
       mediaResources="News Showcase Page."

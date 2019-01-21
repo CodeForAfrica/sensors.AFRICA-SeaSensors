@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../NavBar';
 import arrowBack from '../../assets/arrow_6.png';
 
-function ResourcesHeader(props) {
+function SharedHeader(props) {
   const { className, subtitleTexts, mediaResources } = props;
   return (
     <div className={className.resourceImage}>
@@ -19,4 +19,4 @@ function ResourcesHeader(props) {
   );
 }
 
-export default ResourcesHeader;
+export default SharedHeader;

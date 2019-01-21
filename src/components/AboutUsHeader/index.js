@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import ResourceAboutHeader from '../ReusableComponents/ResourceAboutHeader';
+import ResourceAboutHeader from '../ReusableComponents/SharedHeader';
 import HeaderImage from '../../assets/HeaderImage.png';
 
 const styles = {
