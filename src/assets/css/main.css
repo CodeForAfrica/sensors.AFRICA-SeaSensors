@@ -22,7 +22,7 @@
 }
 
 .carousel {
-  height: 615px;
+  height: 786px;
 }
 
 .carousel-control-prev,
@@ -40,7 +40,7 @@
 }
 .carousel-caption {
   right:0;
-  left:0;
+  left:0 !important;
   width:100%
 }
 
@@ -48,6 +48,9 @@
   background-image: none;
   background-color: #fff;
   padding: 2em;
+  position: relative;
+  top: 7em;
+  left: 7.5em;
 }
 
 .carousel .carousel-control-next-icon::before {
