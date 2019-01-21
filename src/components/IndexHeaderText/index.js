@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core';
 
 const styles = {
   content: {
-    width: '40em',
-    height: '22em',
+    width: '750px',
+    padding: '4.5em',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     position: 'relative',
     bottom: '5.8em',
@@ -13,11 +13,9 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'left',
-    right: '240px',
   },
   contentHeader: {
     width: '500.3px',
-    height: '177.8px',
     fontFamily: 'Oswald',
     fontSize: '65px',
     fontWeight: 'bold',
@@ -29,7 +27,6 @@ const styles = {
   },
   contentSubHeader: {
     width: '500.3px',
-    height: '177.8px',
     fontFamily: 'Oswald',
     fontSize: '41px',
     fontWeight: 'bold',
@@ -41,7 +38,6 @@ const styles = {
   },
   contentText: {
     width: '412px',
-    height: '88.5px',
     opacity: '0.6',
     fontFamily: 'Montserrat',
     fontSize: '15px',
@@ -58,14 +54,13 @@ const styles = {
 function IndexHeaderText({ classes }) {
   return (
     <div className={classes.content}>
-      <p className={classes.contentHeader}>Sea Sensors</p>
-      <p className={classes.contentSubHeader}>
-Mapping fishing with explosives along the coast of East Africa
+      <h2 className={classes.contentHeader}>Sea Sensors</h2>
+      <h3 className={classes.contentSubHeader}>
+        Mapping fishing with explosives along the coast of East Africa
         <br />
-
-      </p>
+      </h3>
       <p className={classes.contentText}>
-Environmentally destructive fishing
+        Environmentally destructive fishing
         using explosives has been conducted illegally along the coast of Tanzania for
         decades.
       </p>
