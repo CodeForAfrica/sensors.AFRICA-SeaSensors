@@ -37,7 +37,6 @@
     "react-player": "^1.7.0",
     "react-wavesurfer": "^0.8.6",
     "webfontloader": "^1.6.28",
-    "yarn": "^1.13.0"
   },
   "keywords": [
     "SeaSensors",
@@ -61,7 +60,8 @@
     "eslint-plugin-react": "^7.12.3",
     "gatsby-plugin-eslint": "^2.0.1",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "yarn": "^1.13.0"
   },
   "repository": {
     "type": "git",
