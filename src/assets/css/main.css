@@ -83,3 +83,17 @@
 .carousel-fade .carousel-item {
   transition: none !important;
 }
+
+.carousel-indicators{
+    position: absolute;
+    right: inherit !important;
+    bottom: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    left: 42em !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
