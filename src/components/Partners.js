@@ -10,8 +10,8 @@ const styles = {
     paddingTop: '10%',
   },
   partnerImage: {
-    width: '450px',
-    height: '400px',
+    width: '500px',
+    height: '500px',
     display: 'inline',
     marginLeft: '20%',
   },
