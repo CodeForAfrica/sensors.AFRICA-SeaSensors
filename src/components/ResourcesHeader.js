@@ -55,17 +55,16 @@ const styles = {
   },
   arrowBack: {
     transform: 'rotate(180deg)',
-    position: 'relative',
-    right: '1415px',
-    top: '145px',
-
+    position: 'absolute',
+    left: '7em',
+    top: '40em',
   },
 };
 
 function ResourcesHeader({ classes }) {
   return (
     <SharedHeader
-      className={classes}
+      classes={classes}
       subtitleTexts="Lorem Ipsum Dolor sit."
       mediaResources="Media Resources."
     />

@@ -5,16 +5,16 @@ import arrowBack from '../assets/arrow_6.png';
 
 
 function SharedHeader(props) {
-  const { className, subtitleTexts, mediaResources } = props;
+  const { classes, subtitleTexts, mediaResources } = props;
   return (
-    <div className={className.resourceImage}>
+    <div className={classes.resourceImage}>
       <MainNav />
-      <div className={className.subTitle}>
-        <div className={className.subtitleRule} />
-        <Typography variant="body1" gutterBottom className={className.subtitleText}>{subtitleTexts}</Typography>
+      <div className={classes.subTitle}>
+        <div className={classes.subtitleRule} />
+        <Typography variant="body1" gutterBottom className={classes.subtitleText}>{subtitleTexts}</Typography>
       </div>
-      <Typography variant="body1" gutterBottom className={className.mediaResources}>{mediaResources}</Typography>
-      <div className={className.arrowBack}>
+      <Typography variant="body1" gutterBottom className={classes.mediaResources}>{mediaResources}</Typography>
+      <div className={classes.arrowBack}>
         <img src={arrowBack} alt="Arrow back" />
       </div>
     </div>
