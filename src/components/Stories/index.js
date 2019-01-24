@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 import MediaCard from './MediaCard';
 import artem from '../../assets/artem.png';
 import scuba from '../../assets/scuba.png';
@@ -67,9 +68,9 @@ class Stories extends Component {
       return (
         <React.Fragment>
           <div style={styles.mask}>
-            <h1 style={styles.seaSensorsStories}>
+            <Typography component="h2" variant="h2" gutterBottom style={styles.seaSensorsStories}>
               Sea Sensors Stories.
-            </h1>
+            </Typography>
             <div style={styles.card}>
               {stories
                 .map(story => (

@@ -1,10 +1,13 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 import withRoot from '../withRoot';
 
 const NotFoundPage = () => (
   <div>
-    <h1>NOT FOUND</h1>
+    <Typography variant="h1">
+      NOT FOUND
+    </Typography>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </div>
 );
