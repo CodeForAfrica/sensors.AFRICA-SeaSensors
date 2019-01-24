@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import Gill from '../../assets/gill.png';
+import Gill from '../assets/gill.png';
 
 const styles = {
   parentContainer: {

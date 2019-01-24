@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography, withStyles } from '@material-ui/core';
-import TextArrowButton from '../ReusableComponents/TextArrowButton';
-import arrow from '../../assets/arrow_2.png';
+import TextArrowButton from './TextArrowButton';
+import arrow from '../assets/arrow_2.png';
 
 const styles = {
   root: {

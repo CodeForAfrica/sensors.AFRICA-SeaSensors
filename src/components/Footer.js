@@ -8,14 +8,14 @@ import {
   faGithub,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import cfaLogo from '../../assets/cfa.png';
-import billMelindaImg from '../../assets/b-m-gf.png';
-import oNImg from '../../assets/on.png';
-import uniStAndrewsImg from '../../assets/uo-sa.png';
-import usdoImg from '../../assets/us-do-s.png';
-import icfjImg from '../../assets/icfj.png';
-import seaLogoImg from '../../assets/SeaSensors_Logo-05.png';
-import footerMap from '../../assets/footer-map.png';
+import cfaLogo from '../assets/cfa.png';
+import billMelindaImg from '../assets/b-m-gf.png';
+import oNImg from '../assets/on.png';
+import uniStAndrewsImg from '../assets/uo-sa.png';
+import usdoImg from '../assets/us-do-s.png';
+import icfjImg from '../assets/icfj.png';
+import seaLogoImg from '../assets/SeaSensors_Logo-05.png';
+import footerMap from '../assets/footer-map.png';
 
 const styles = {
   root: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-import boat from '../../assets/boat.png';
-import scubaDive from '../../assets/ScubaDive.png';
+import boat from '../assets/boat.png';
+import scubaDive from '../assets/ScubaDive.png';
 
 const styles = {
   parentContainer: {
