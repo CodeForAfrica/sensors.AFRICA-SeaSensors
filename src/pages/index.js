@@ -17,7 +17,7 @@ import '../assets/css/main.css';
 function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
-      {typeof window !== 'undefined' && <IndexHeaderCarousel />}
+      <IndexHeaderCarousel />
       <Blasts />
       <TopStory />
       <BlastFishing />
