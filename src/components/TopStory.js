@@ -16,8 +16,6 @@ const styles = {
     opacity: '1',
   },
   topStoryTitle: {
-    width: '294px',
-    height: '24px',
     fontFamily: 'Oswald',
     fontSize: '10px',
     fontWeight: '500',
@@ -30,10 +28,8 @@ const styles = {
     marginLeft: '134px',
   },
   topStorySubTitle: {
-    width: '600px',
-    height: '153px',
     fontFamily: 'Oswald',
-    fontSize: '35px',
+    fontSize: '52px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
@@ -60,12 +56,15 @@ const styles = {
     marginBottom: '4.5em',
   },
   textArrowButtonParent: {
-    width: '244.5px',
-    height: '45px',
+    width: '252.5px',
+    height: '57px',
     border: '3px #ffffff solid',
     paddingLeft: '1rem',
     boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
     display: 'flex',
+    position: 'relative',
+    top: '2em',
+    left: '0',
   },
   textArrowButtonText: {
     height: '24px',
@@ -77,12 +76,24 @@ const styles = {
     lineHeight: 'normal',
     letterSpacing: '3.2px',
     color: '#ffffff',
-    marginTop: '0.3em',
+    marginTop: '0.7em',
     marginRight: '3.5em',
   },
   textArrowButtonArrow: {
     color: '#ffffff',
-    marginTop: '0.3em',
+    marginTop: '0.7em',
+  },
+  subtitleRule: {
+    width: '30px',
+    height: '0.8px',
+    backgroundColor: '#ffffff',
+    position: 'relative',
+    top: '230px',
+    left: '100px',
+  },
+  titleContainer: {
+    display: 'flex',
+    marginLeft: '60px',
   },
 };
 
@@ -91,9 +102,12 @@ function TopStory({ classes }) {
     <div className={classes.parentContainer}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="caption" className={classes.topStoryTitle}>
+          <div className={classes.titleContainer}>
+            <div className={classes.subtitleRule} />
+            <Typography variant="caption" className={classes.topStoryTitle}>
               SEA SENSORS TOP STORY
-          </Typography>
+            </Typography>
+          </div>
           <Typography variant="h4" className={classes.topStorySubTitle}>
             The effects of blast fishing
             <br />
