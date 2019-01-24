@@ -12,8 +12,9 @@ import {
 
 const styles = {
   card: {
-    width: 300,
+    width: 401,
     paddingLeft: '50px',
+    height: '500px',
   },
   media: {
     height: 300,
