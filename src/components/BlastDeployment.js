@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import boat from '../assets/boat.png';
 import scubaDive from '../assets/ScubaDive.png';
 
@@ -74,26 +74,26 @@ function BlastDeployment({ classes }) {
     <div className={classes.parentContainer}>
       <img src={scubaDive} alt="Scuba dive" className={classes.scubaDive} />
       <div className={classes.recordDeploy}>
-        <p className={classes.date}>24.09.2017</p>
-        <p className={classes.recordersText}>Deployment of Blast Recorders</p>
+        <Typography variant="body1" gutterBottom className={classes.date}>24.09.2017</Typography>
+        <Typography variant="body1" gutterBottom className={classes.recordersText}>Deployment of Blast Recorders</Typography>
       </div>
       <div>
         <img src={boat} alt="Boat" className={classes.boat} />
       </div>
       <div>
-        <p className={classes.blastDeploymentText}>
-          <p>
+        <Typography variant="body1" gutterBottom className={classes.blastDeploymentText}>
+          <Typography variant="body1" gutterBottom>
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             ut aliquip ex ea commodo consequat.
-          </p>
-          <p>
+          </Typography>
+          <Typography variant="body1" gutterBottom>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
             eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim.
-          </p>
-        </p>
+          </Typography>
+        </Typography>
       </div>
     </div>
   );

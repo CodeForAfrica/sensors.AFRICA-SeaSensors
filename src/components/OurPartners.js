@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { Typography, withStyles } from '@material-ui/core';
 import cfaLogo from '../assets/CFA 2.png';
 import UoSA from '../assets/UoSA.png';
 import Mwambao from '../assets/logo2.png';
@@ -147,10 +147,10 @@ function OurPartners(props) {
   return (
     <div className={classes.parentContainer}>
       <div className={classes.titleText}>
-        <p className={classes.partnerTitle}>Our Partners.</p>
-        <p className={classes.partnersubTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+        <Typography variant="body1" gutterBottom className={classes.partnerTitle}>Our Partners.</Typography>
+        <Typography variant="body1" gutterBottom className={classes.partnersubTitle}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Typography>
       </div>
       <div className={classes.flexGrid}>
         <div className={classes.cardInfo}>
@@ -160,12 +160,14 @@ function OurPartners(props) {
           <img src={UoSA} className={classes.UoSALogo} alt="logoImgAlt" />
         </div>
         <div className={classes.cardInfo}>
-          <p className={classes.partnerTexts}>SOUND OCEAN LTD.</p>
+          <Typography variant="body1" gutterBottom className={classes.partnerTexts}>SOUND OCEAN LTD.</Typography>
         </div>
       </div>
       <div className={classes.flexGrid}>
         <div className={classes.cardInfo}>
-          <p className={classes.partnerTexts}>Tanzania Blast Monitoring Network</p>
+          <Typography variant="body1" gutterBottom className={classes.partnerTexts}>
+            Tanzania Blast Monitoring Network
+          </Typography>
         </div>
         <div className={classes.cardInfo}>
           <img src={Mwambao} className={classes.mwambaoImg} alt="Mwambao Castal" />
@@ -180,12 +182,12 @@ function OurPartners(props) {
         </div>
         <div className={classes.cardInfo}>
           <img src={Bitmap} className={classes.bitMapLogo} alt="Nuka Carousel" />
-          <p className={classes.nuktaTitle}>Nukta Africa Ltd  </p>
-          <p className={classes.nuktaText}>
+          <Typography variant="body1" gutterBottom className={classes.nuktaTitle}>Nukta Africa Ltd </Typography>
+          <Typography variant="body1" gutterBottom className={classes.nuktaText}>
             Lorem ipsum dolor sit amet,
             <br />
             consectetur adipiscing elit.
-          </p>
+          </Typography>
           <a className={classes.email} href="https://nukta.co.tz/">https://nukta.co.tz/</a>
           <br />
           <a href="email.com" className={classes.email}>info@nuktaafricaltd</a>

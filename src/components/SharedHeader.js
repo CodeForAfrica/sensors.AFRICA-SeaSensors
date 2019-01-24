@@ -1,6 +1,8 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 import MainNav from './MainNav';
 import arrowBack from '../assets/arrow_6.png';
+
 
 function SharedHeader(props) {
   const { className, subtitleTexts, mediaResources } = props;
@@ -9,9 +11,9 @@ function SharedHeader(props) {
       <MainNav />
       <div className={className.subTitle}>
         <div className={className.subtitleRule} />
-        <p className={className.subtitleText}>{subtitleTexts}</p>
+        <Typography variant="body1" gutterBottom className={className.subtitleText}>{subtitleTexts}</Typography>
       </div>
-      <p className={className.mediaResources}>{mediaResources}</p>
+      <Typography variant="body1" gutterBottom className={className.mediaResources}>{mediaResources}</Typography>
       <div className={className.arrowBack}>
         <img src={arrowBack} alt="Arrow back" />
       </div>

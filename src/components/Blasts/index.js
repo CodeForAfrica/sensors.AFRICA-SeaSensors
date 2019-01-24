@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import BlastsSvg from './blastSvg';
@@ -188,14 +188,16 @@ class Blasts extends React.Component {
         <div className={classes.blast}>
           <div className={classes.blastInfo}>
             <div className={classes.blastGrid}>
-              <h3 className={classes.blastsRecorded}>Blasts Recorded.</h3>
-              <p className={classes.blastDataCollected}>
+              <Typography component="h3" variant="h3" gutterBottom className={classes.blastsRecorded}>
+                Blasts Recorded.
+              </Typography>
+              <Typography variant="body1" gutterBottom className={classes.blastDataCollected}>
                 Blast data is collected
                 <br />
                 every 4 months, analysed,
                 <br />
                 and uploaded to the map.
-              </p>
+              </Typography>
               <div className={classes.learnMoreParent}>
                 <span className={classes.learnMoreArrow}>
                   <img src={learnMoreArrow} alt="Arrow" />
@@ -208,16 +210,16 @@ class Blasts extends React.Component {
             <div className={classes.blastImageInfo}>
               <BlastsSvg />
               <div className={classes.blastGridText}>
-                <p className={classes.recordedBlastFigures}>12 562</p>
-                <p className={classes.blastText}>Recorded Blasts</p>
+                <Typography variant="body1" gutterBottom className={classes.recordedBlastFigures}>12 562</Typography>
+                <Typography variant="body1" gutterBottom className={classes.blastText}>Recorded Blasts</Typography>
                 <div className={classes.currentTime}>
                   <div><img src={creatTime} className={classes.currentTimePointer} alt="current time" /></div>
                   <div className={classes.Timings}>
-                    <p className={classes.dateTime}>16:06</p>
-                    <p className={classes.blastText}>Current Time</p>
+                    <Typography variant="body1" gutterBottom className={classes.dateTime}>16:06</Typography>
+                    <Typography variant="body1" gutterBottom className={classes.blastText}>Current Time</Typography>
                   </div>
                   <div className={classes.shareIcons}>
-                    <p className={classes.shareText}>Share</p>
+                    <Typography variant="body1" gutterBottom className={classes.shareText}>Share</Typography>
                     <div className={classes.socialsParent}>
                       <div className={classes.socials}>
                         <FontAwesomeIcon icon={faTwitter} color="#00a5dc" size="2x" />
@@ -231,8 +233,8 @@ class Blasts extends React.Component {
                 <div className={classes.lastUpload}>
                   <div><img src={lastUpload} alt="last uploaded" className={classes.lastUploadPointer} /></div>
                   <div className={classes.Timings}>
-                    <p className={classes.dateTime}>01.06.18</p>
-                    <p className={classes.blastText}>Last Uploaded</p>
+                    <Typography variant="body1" gutterBottom className={classes.dateTime}>01.06.18</Typography>
+                    <Typography variant="body1" gutterBottom className={classes.blastText}>Last Uploaded</Typography>
                   </div>
                 </div>
               </div>

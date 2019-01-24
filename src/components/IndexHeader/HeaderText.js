@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core';
+import { withStyles, Typography } from '@material-ui/core';
 
 const styles = {
   content: {
@@ -54,16 +54,18 @@ const styles = {
 function HeaderText({ classes }) {
   return (
     <div className={classes.content}>
-      <h2 className={classes.contentHeader}>Sea Sensors</h2>
-      <h3 className={classes.contentSubHeader}>
+      <Typography component="h2" variant="h1" gutterBottom className={classes.contentHeader}>
+        Sea Sensors
+      </Typography>
+      <Typography component="h3" variant="h1" gutterBottom className={classes.contentSubHeader}>
         Mapping fishing with explosives along the coast of East Africa
         <br />
-      </h3>
-      <p className={classes.contentText}>
+      </Typography>
+      <Typography variant="body1" gutterBottom className={classes.contentText}>
         Environmentally destructive fishing
         using explosives has been conducted illegally along the coast of Tanzania for
         decades.
-      </p>
+      </Typography>
     </div>
   );
 }
