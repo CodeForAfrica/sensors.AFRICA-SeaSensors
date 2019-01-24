@@ -34,7 +34,7 @@ const styles = {
   },
   parentNav: {
     position: 'relative',
-    top: '3em',
+    top: '2em',
     width: '100%',
     left: '0',
   },
@@ -50,10 +50,10 @@ const styles = {
 };
 
 const ListLink = ({
-  listClass, to, customClass, linkText,
+  listClass, to, customClass, children,
 }) => (
   <li className={listClass}>
-    <Link to={to} className={customClass}>{linkText}</Link>
+    <Link to={to} className={customClass}>{children}</Link>
   </li>
 );
 
@@ -67,14 +67,10 @@ export default withStyles(styles)((props) => {
     <div className={classes.parentNav}>
       <header>
         <ul className={classes.ulNav}>
-          <ListLink to="/" linkText={image} listClass={classes.firstChild} />
-          <ListLink to="/about/" linkText="About Us." customClass={classes.liNav} />
-          <ListLink to="/news/" linkText="News." customClass={classes.liNav} />
-          <ListLink
-            to="/resources/"
-            linkText="Resources."
-            customClass={classes.liNav}
-          />
+          <ListLink to="/" listClass={classes.firstChild}>{image}</ListLink>
+          <ListLink to="/about/" customClass={classes.liNav}>About Us.</ListLink>
+          <ListLink to="/news/" customClass={classes.liNav}>News.</ListLink>
+          <ListLink to="/resources/" customClass={classes.liNav}>Resources</ListLink>
         </ul>
       </header>
     </div>
