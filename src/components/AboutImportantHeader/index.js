@@ -77,15 +77,14 @@ const styles = {
 
 function AboutImportantHeader({ classes }) {
   return (
-    <div>
-      <div className={classes.parentContainer}>
-        <div>
-          <div className={classes.important}>
+    <div className={classes.parentContainer}>
+      <div>
+        <div className={classes.important}>
             Why we believe it
-            <br />
+          <br />
             is important.
-          </div>
-          <div className={classes.importantText}>
+        </div>
+        <div className={classes.importantText}>
             It is highly difficult to obtain quantitative data on blast fishing from
             offshore areas out of ear shot from land. Therefore there are great
             advantages of acoustic monitoring to monitor a huge swatch of ocean,
@@ -97,16 +96,15 @@ function AboutImportantHeader({ classes }) {
             fishing off Tanzania’s coast and uses the data (location, time, magnitude
             of blasts) to inform the public and officials through online maps and
             data-driven stories.
-          </div>
-          <div className={classes.highlight}>
+        </div>
+        <div className={classes.highlight}>
           The project is headed by marine scientist, Gill
           Braulik and was granted funding through Code for
           Africa’s innovateAFRICA programme in 2017.
-          </div>
         </div>
-        <div className={classes.gillImage}>
-          <div className={classes.gillBraulik}>Gill Braulik</div>
-        </div>
+      </div>
+      <div className={classes.gillImage}>
+        <div className={classes.gillBraulik}>Gill Braulik</div>
       </div>
     </div>
   );

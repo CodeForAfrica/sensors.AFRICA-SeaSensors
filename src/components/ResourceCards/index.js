@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import MediaCard from './ResourceCards';
 
 
@@ -54,7 +53,6 @@ class ResourceVideos extends Component {
       const { resourceVideos } = this.state;
       return (
         <React.Fragment>
-          <CssBaseline />
           <div className={styles.parentCard}>
             <div style={styles.cardStyle}>
               {resourceVideos
