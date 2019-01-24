@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MediaCard from './ResourceCards';
+import ResourceCards from './ResourceCards';
 
 
 const resourceCardContent = [
@@ -57,7 +57,7 @@ class ResourceVideos extends Component {
             <div style={styles.cardStyle}>
               {resourceVideos
                 .map(resource => (
-                  <MediaCard
+                  <ResourceCards
                     key={resource.title}
                     title={resource.title}
                     text={resource.text}
