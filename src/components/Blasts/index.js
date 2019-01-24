@@ -24,9 +24,9 @@ const styles = {
   blastGrid: {
     position: 'relative',
     top: '3em',
+    right: '38px',
   },
   blastsRecorded: {
-    width: '543.8px',
     height: '102px',
     fontFamily: 'Oswald, sans-serif',
     fontSize: '52px',
@@ -39,8 +39,6 @@ const styles = {
     display: 'inline-block',
   },
   blastDataCollected: {
-    width: '214px',
-    height: '159px',
     opacity: '0.6',
     fontFamily: 'Montserrat',
     fontSize: '15px',
@@ -52,13 +50,11 @@ const styles = {
     textAlign: 'justify',
     color: '#023256',
     marginLeft: 'auto',
-    display: 'inline-block',
   },
   blastImageInfo: {
     position: 'relative',
-    top: '1',
     bottom: '5em',
-    right: '31.65em',
+    right: '21.65em',
   },
   blastGridText: {
     position: 'absolute',
@@ -81,7 +77,7 @@ const styles = {
     height: '69.8px',
     opacity: '0.6',
     fontFamily: 'Oswald',
-    fontSize: '1.3em',
+    fontSize: '1.2em',
     fontWeight: '300',
     fontStyle: 'normal',
     fontStretch: 'normal',
