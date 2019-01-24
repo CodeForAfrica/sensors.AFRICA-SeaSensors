@@ -14,7 +14,6 @@
     "@mdi/font": "^3.0.39",
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
-    "add": "^2.0.6",
     "bootstrap-css-only": "^4.2.1",
     "core-js": "^2.6.1",
     "fg-loadcss": "^2.1.0",
@@ -36,7 +35,7 @@
     "react-jss": "^8.6.1",
     "react-player": "^1.7.0",
     "react-wavesurfer": "^0.8.6",
-    "webfontloader": "^1.6.28",
+    "webfontloader": "^1.6.28"
   },
   "keywords": [
     "SeaSensors",
