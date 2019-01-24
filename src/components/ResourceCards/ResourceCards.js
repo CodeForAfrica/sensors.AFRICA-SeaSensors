@@ -61,6 +61,14 @@ const styles = {
 function ResourceCards({
   classes, title, text, link, link2,
 }) {
+  let SecondaryBtnLink = '';
+  if (link2) {
+    SecondaryBtnLink = (
+      <Button className={classes.linkText}>
+        {link2}
+      </Button>
+    );
+  }
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -78,9 +86,7 @@ function ResourceCards({
           <Button size="small" className={classes.linkText}>
             {link}
           </Button>
-          <Button className={classes.linkText}>
-            {link2}
-          </Button>
+          {SecondaryBtnLink}
         </div>
       </CardActions>
     </Card>
