@@ -9,9 +9,7 @@ import ArrowDown from '../assets/arrow_3.png';
 
 const styles = {
   parentContainer: {
-    flexGrow: 1,
-    width: '100%',
-    height: '1476px',
+    padding: '120px 120px 140px 120px',
   },
   cardInfo: {
     width: '375px',
