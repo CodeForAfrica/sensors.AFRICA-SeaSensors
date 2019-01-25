@@ -5,6 +5,8 @@ import BlastDeployment from '../components/BlastDeployment';
 import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
+import TeamCard from '../components/Team';
+import ViewGallery from '../components/ViewGallery';
 import '../assets/css/main.css';
 
 import withRoot from '../withRoot';
@@ -15,7 +17,9 @@ function AboutPage() {
       <AboutUsHeader />
       <AboutImportantHeader />
       <BlastDeployment />
+      <TeamCard />
       <OurPartners />
+      <ViewGallery />
       <GetInvolved />
       <Footer />
     </div>
