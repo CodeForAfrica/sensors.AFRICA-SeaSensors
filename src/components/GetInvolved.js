@@ -13,7 +13,6 @@ const styles = {
     backgroundColor: '#ffffff',
   },
   moreText: {
-    width: '563.3px',
     height: '174px',
     opacity: '0.6',
     fontFamily: 'Montserrat',
@@ -26,7 +25,7 @@ const styles = {
     textAlign: 'justify',
     color: '#023256',
     marginTop: '38px',
-    marginLeft: '151px',
+    marginLeft: '237px',
   },
   getINvolvedTitle: {
     width: '673.5px',
@@ -41,7 +40,6 @@ const styles = {
     textAlign: 'justify',
     color: '#023256',
     marginTop: '125px',
-    marginLeft: '151px',
   },
   readMore: {
     width: '292.5px',
@@ -75,6 +73,18 @@ const styles = {
   textArrowButtonArrow: {
     marginTop: '1em',
   },
+  line: {
+    width: '75px',
+    height: '0.8px',
+    background: 'lightgrey',
+    borderLeft: 'solid #023256 20px',
+  },
+  involvedParent: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '240px',
+    marginBottom: '52.5px',
+  },
 };
 
 function GetInvolved({ classes }) {
@@ -82,9 +92,12 @@ function GetInvolved({ classes }) {
     <div className={classes.moreContainer}>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Typography component="h2" variant="h1" gutterBottom className={classes.getINvolvedTitle}>
+          <div style={styles.involvedParent}>
+            <Typography component="h2" variant="h1" gutterBottom className={classes.getINvolvedTitle}>
             How to get involved
-          </Typography>
+            </Typography>
+            <div style={styles.line} />
+          </div>
           <Typography variant="body2" className={classes.moreText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore.

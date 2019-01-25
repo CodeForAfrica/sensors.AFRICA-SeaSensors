@@ -7,7 +7,9 @@ const styles = {
     width: '100%',
     height: '1000px',
     display: 'flex',
-    padding: '50px 195px',
+    marginLeft: '116px',
+    paddingTop: '107.5px',
+    paddingLeft: '120px',
   },
   important: {
     width: '396px',
@@ -34,6 +36,7 @@ const styles = {
     letterSpacing: '0.7px',
     textAlign: 'justify',
     color: '#023256',
+    marginLeft: '4px',
   },
   highlight: {
     width: '537.8px',
@@ -50,6 +53,7 @@ const styles = {
     borderLeft: '10px solid #023256',
     paddingTop: '10px',
     paddingLeft: '50px',
+    marginLeft: '4px',
   },
   gillImage: {
     width: '480px',
@@ -57,6 +61,8 @@ const styles = {
     backgroundImage: `url(${Gill})`,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
+    marginTop: '157px',
+    marginLeft: '120px',
   },
   gillBraulik: {
     width: '290px',
