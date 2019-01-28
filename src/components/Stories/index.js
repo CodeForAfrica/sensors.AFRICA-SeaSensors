@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 import MediaCard from './MediaCard';
 import artem from '../../assets/artem.png';
 import scuba from '../../assets/scuba.png';
@@ -26,12 +27,12 @@ const stateStories = [
 const styles = {
   mask: {
     width: '100%',
-    height: 'auto',
+    height: '800px',
     padding: '35px',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: '102.2px',
-    backgroundColor: '#f2f2f2',
+    backgroundColor: 'rgb(242, 242, 242)',
   },
   card: {
     display: 'flex',
@@ -42,7 +43,7 @@ const styles = {
   },
   seaSensorsStories: {
     width: '596.3 px',
-    height: '112.5 px',
+    height: '115 px',
     fontFamily: 'Oswald',
     fontSize: '52 px',
     fontWeight: 'bold',
@@ -51,10 +52,15 @@ const styles = {
     lineHeight: 'normal',
     letterSpacing: '0.7 px',
     color: ' #023256',
-    marginLeft: '10 %',
     marginBottom: '2em',
+    marginLeft: '154px',
   },
-
+  line: {
+    width: '75px',
+    height: '0.8px',
+    background: 'lightgrey',
+    borderLeft: 'solid #023256 20px',
+  },
 };
 
 class Stories extends Component {
@@ -67,9 +73,10 @@ class Stories extends Component {
       return (
         <React.Fragment>
           <div style={styles.mask}>
-            <h1 style={styles.seaSensorsStories}>
+            <Typography component="h2" variant="h2" gutterBottom style={styles.seaSensorsStories}>
               Sea Sensors Stories.
-            </h1>
+              <div style={styles.line} />
+            </Typography>
             <div style={styles.card}>
               {stories
                 .map(story => (

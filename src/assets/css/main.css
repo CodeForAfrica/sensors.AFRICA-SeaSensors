@@ -22,7 +22,7 @@
 }
 
 .carousel {
-  height: 615px;
+  height: 786px;
 }
 
 .carousel-control-prev,
@@ -36,13 +36,21 @@
 }
 
 .carousel-control-prev-icon {
-  display: none;
+  display: none !important;
+}
+.carousel-caption {
+  right:0;
+  left:0 !important;
+  width:100%
 }
 
 .carousel .carousel-control-next-icon {
   background-image: none;
   background-color: #fff;
   padding: 2em;
+  position: relative;
+  top: 7em;
+  left: 7.5em;
 }
 
 .carousel .carousel-control-next-icon::before {
@@ -74,4 +82,18 @@
 
 .carousel-fade .carousel-item {
   transition: none !important;
+}
+
+.carousel-indicators{
+    position: absolute;
+    right: inherit !important;
+    bottom: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    left: 42em !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
 }

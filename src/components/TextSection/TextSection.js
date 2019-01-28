@@ -22,7 +22,7 @@ const styles = {
     letterSpacing: '0.7px',
     color: '#023256',
     marginTop: '125px',
-    marginLeft: '123px',
+    marginLeft: '154px',
   },
   blastFishingText: {
     width: '600.1px ',

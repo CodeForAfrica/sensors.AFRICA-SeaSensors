@@ -1,5 +1,5 @@
 import React from 'react';
-
+import IndexHeaderCarousel from '../components/IndexHeader/HeaderCarousel';
 import withRoot from '../withRoot';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
@@ -10,12 +10,14 @@ import Scuba from '../components/Scuba';
 import More from '../components/More';
 import Stories from '../components/Stories';
 import Partners from '../components/Partners';
+import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
 import '../assets/css/main.css';
 
 function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
+      <IndexHeaderCarousel />
       <Blasts />
       <TopStory />
       <BlastFishing />
@@ -25,6 +27,7 @@ function IndexPage({ location }) {
       <More />
       <Stories />
       <Partners />
+      <GetInvolved />
       <Footer />
     </div>
   );
