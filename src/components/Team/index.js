@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { withStyles, Typography } from '@material-ui/core';
 import CardContainer from './CardContainer';
 import cardImage1 from '../../assets/_MGL0787.png';
-import cardImage2 from '../../assets/_MGL1019.png';
-import cardImage3 from '../../assets/K15_1507.png';
-import cardImage4 from '../../assets/_MGL0805.png';
+import cardImage2 from '../../assets/_MGL0805.png';
+import cardImage3 from '../../assets/_MGL1019.png';
+import cardImage4 from '../../assets/K15_1507.png';
 
 const partnersContent = [
   {

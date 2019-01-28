@@ -53,7 +53,7 @@ const styles = {
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
-    letterSpacing: '3.2px',
+    letterSpacing: '2.5px',
     color: '#023256',
     marginTop: '0.3em',
   },

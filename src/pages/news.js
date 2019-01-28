@@ -10,8 +10,8 @@ function NewsPage() {
   return (
     <div className="main-container-parent">
       <NewsHeader />
-      <GetInvolved />
       <OurPartners />
+      <GetInvolved />
       <Footer />
     </div>
   );

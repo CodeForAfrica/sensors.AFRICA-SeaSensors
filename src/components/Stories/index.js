@@ -55,7 +55,12 @@ const styles = {
     marginBottom: '2em',
     marginLeft: '154px',
   },
-
+  line: {
+    width: '75px',
+    height: '0.8px',
+    background: 'lightgrey',
+    borderLeft: 'solid #023256 20px',
+  },
 };
 
 class Stories extends Component {
@@ -70,6 +75,7 @@ class Stories extends Component {
           <div style={styles.mask}>
             <Typography component="h2" variant="h2" gutterBottom style={styles.seaSensorsStories}>
               Sea Sensors Stories.
+              <div style={styles.line} />
             </Typography>
             <div style={styles.card}>
               {stories
