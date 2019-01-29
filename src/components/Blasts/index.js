@@ -54,7 +54,7 @@ const styles = {
   blastImageInfo: {
     position: 'relative',
     bottom: '5em',
-    right: '21.65em',
+    right: '18.73em',
   },
   blastGridText: {
     position: 'absolute',
