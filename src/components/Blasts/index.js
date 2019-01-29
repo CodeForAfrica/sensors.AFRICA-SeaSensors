@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Typography, withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -176,7 +176,7 @@ const styles = {
   },
 };
 
-class Blasts extends React.Component {
+class Blasts extends Component {
   render() {
     const { classes } = this.props;
     return (

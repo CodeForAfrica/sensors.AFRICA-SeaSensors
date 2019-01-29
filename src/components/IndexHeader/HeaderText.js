@@ -3,11 +3,10 @@ import { withStyles, Typography } from '@material-ui/core';
 
 const styles = {
   content: {
-    width: '750px',
-    padding: '4.5em',
+    padding: '2.5em 6.5em',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    position: 'relative',
-    bottom: '5.8em',
+    position: 'absolute',
+    top: '25%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
