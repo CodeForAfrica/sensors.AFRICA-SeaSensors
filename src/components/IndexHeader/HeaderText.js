@@ -4,15 +4,15 @@ import { withStyles, Typography } from "@material-ui/core";
 
 const styles = {
   content: {
-    padding: "2.5em 6.5em",
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
-    position: "absolute",
-    top: "25%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "left"
+    padding: '2.5em 6.5em',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    position: 'absolute',
+    top: '200px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'left',
   },
   contentHeader: {
     width: "500.3px",
