@@ -31,18 +31,15 @@ const styles = {
     marginLeft: "237px"
   },
   getINvolvedTitle: {
-    width: "673.5px",
-    height: "108px",
-    fontFamily: "Oswald",
-    fontSize: "60px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "0.8px",
-    textAlign: "justify",
-    color: "#023256",
-    marginTop: "125px"
+    fontFamily: 'Oswald',
+    fontSize: '60px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: '0.8px',
+    textAlign: 'justify',
+    color: '#023256',
   },
   readMore: {
     width: "292.5px",
@@ -83,11 +80,12 @@ const styles = {
     borderLeft: "solid #023256 20px"
   },
   involvedParent: {
-    display: "flex",
-    flexDirection: "column",
-    marginLeft: "240px",
-    marginBottom: "52.5px"
-  }
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '240px',
+    marginBottom: '52.5px',
+    marginTop: '50px',
+  },
 };
 
 function GetInvolved({ classes }) {
@@ -107,8 +105,12 @@ function GetInvolved({ classes }) {
             <div style={styles.line} />
           </div>
           <Typography variant="body2" className={classes.moreText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+            Blast fishing explosions can often be heard
+            from the shore, or the water plume they create
+            can be seen from land.  Help us document
+            blasts.  If you hear or see a dynamite blast in
+            Tanzania, please record the date,
+            time and location, by clicking on this link.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
