@@ -41,7 +41,6 @@ const styles = {
     color: '#ffffff',
   },
   mediaResources: {
-    width: '571.5px',
     height: '115.5px',
     fontFamily: 'Oswald',
     fontSize: '88px',

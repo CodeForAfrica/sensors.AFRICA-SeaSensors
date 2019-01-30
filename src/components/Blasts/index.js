@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Typography, withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -54,7 +54,7 @@ const styles = {
   blastImageInfo: {
     position: 'relative',
     bottom: '5em',
-    right: '21.65em',
+    right: '18.73em',
   },
   blastGridText: {
     position: 'absolute',
@@ -176,7 +176,7 @@ const styles = {
   },
 };
 
-class Blasts extends React.Component {
+class Blasts extends Component {
   render() {
     const { classes } = this.props;
     return (

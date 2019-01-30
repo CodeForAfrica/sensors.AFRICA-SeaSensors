@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexHeaderCarousel from '../components/IndexHeader/HeaderCarousel';
+import SliderCarousel from '../components/IndexHeader/SliderCarousel';
 import withRoot from '../withRoot';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
@@ -17,7 +17,7 @@ import '../assets/css/main.css';
 function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
-      <IndexHeaderCarousel />
+      <SliderCarousel />
       <Blasts />
       <TopStory />
       <BlastFishing />

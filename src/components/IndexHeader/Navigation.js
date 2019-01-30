@@ -33,8 +33,8 @@ const styles = {
     position: 'relative',
   },
   parentNav: {
-    position: 'fixed',
-    top: '2em',
+    position: 'absolute',
+    top: '3em',
     width: '100%',
     left: '0',
   },
@@ -45,6 +45,7 @@ const styles = {
   },
   firstChild: {
     marginRight: 'auto',
+    width: '14%',
   },
 
 };
@@ -64,15 +65,13 @@ export default withStyles(styles)((props) => {
   const image = <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />;
 
   return (
-    <div className={classes.parentNav}>
-      <header>
-        <ul className={classes.ulNav}>
-          <ListLink to="/" listClass={classes.firstChild}>{image}</ListLink>
-          <ListLink to="/news/" customClass={classes.liNav}>News.</ListLink>
-          <ListLink to="/about/" customClass={classes.liNav}>About Us.</ListLink>
-          <ListLink to="/resources/" customClass={classes.liNav}>Resources</ListLink>
-        </ul>
-      </header>
-    </div>
+    <header className={classes.parentNav}>
+      <ul className={classes.ulNav}>
+        <ListLink to="/" listClass={classes.firstChild}>{image}</ListLink>
+        <ListLink to="/news/" customClass={classes.liNav}>News.</ListLink>
+        <ListLink to="/about/" customClass={classes.liNav}>About Us.</ListLink>
+        <ListLink to="/resources/" customClass={classes.liNav}>Resources</ListLink>
+      </ul>
+    </header>
   );
 });

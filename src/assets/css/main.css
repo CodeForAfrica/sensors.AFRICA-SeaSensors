@@ -8,92 +8,56 @@
   height: auto;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
 }
 
-.carousel .control-dots .dot {
-  border-radius: 0;
-  width: 8em;
-  height: 0.3em;
+@-moz-document url-prefix() {
+  .main-container-parent {
+    overflow: hidden;
+  }
 }
 
-.carousel .carousel-indicators li {
-  position: relative;
-  right: 34em;
+.carousel .thumbs {
+  display: none;
 }
-
-.carousel {
+.carousel.carousel-slider {
   height: 786px;
 }
 
-.carousel-control-prev,
-.carousel-control-next,
-.carousel-item-prev,
-.carousel-item-next {
-  margin: 18em 2em 0 0;
-  width: 1.250em;
-  height:1.250em;
-  opacity: 1;
+.carousel.carousel-slider .control-arrow {
+  top: 40% !important;
+  bottom: initial !important;
+  background: #fff !important;
+  padding: 20px !important;
 }
 
-.carousel-control-prev-icon {
-  display: none !important;
+.carousel .control-next.control-arrow:before {
+  border-left-color:#000 !important;
 }
-.carousel-caption {
-  right:0;
-  left:0 !important;
-  width:100%
+.carousel .control-prev.control-arrow:before {
+  border-right-color:#000 !important;
 }
 
-.carousel .carousel-control-next-icon {
-  background-image: none;
-  background-color: #fff;
-  padding: 2em;
-  position: relative;
-  top: 7em;
-  left: 7.5em;
+.carousel .control-prev.control-arrow {
+  left: initial !important;
+  right: 0 !important;
 }
 
-.carousel .carousel-control-next-icon::before {
-  content: "\203A";
-  color: #000;
-  font-size: 2em;
-  position: relative;
-  bottom: 0.8em;
-  right: 0.2em;
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow{
+  opacity: 1 !important;
 }
 
-.arrow-left {
-  transform: rotate(180deg);
+.carousel .control-dots {
+  text-align: initial !important;
+  bottom: 54.3px !important;
 }
 
-.clicked > .carousel-control-next-icon {
-  transform: rotate(180deg);
-  filter: grayscale(100%);
+.carousel .control-dots .dot {
+  border-radius: 1px !important;
+  width: 135px !important;
+  height: 4px !important;
 }
 
-.carousel .carousel-indicators li {
-  width: 7.625rem !important;
-  height: 0.25rem !important;
-  cursor: pointer;
-  border-radius: 0% !important;
-  display: flex;
-  align-items: flex-start;
-}
-
-.carousel-fade .carousel-item {
-  transition: none !important;
-}
-
-.carousel-indicators{
-    position: absolute;
-    right: inherit !important;
-    bottom: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    list-style: none;
-    left: 42em !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
+.carousel .control-dots .dot:focus {
+  outline: none !important;
 }
