@@ -27,7 +27,7 @@ const styles = {
   contentSubHeader: {
     width: '500.3px',
     fontFamily: 'Oswald',
-    fontSize: '41px',
+    fontSize: '2.2rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
