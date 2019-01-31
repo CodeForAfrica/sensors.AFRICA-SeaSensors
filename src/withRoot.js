@@ -1,17 +1,17 @@
-import { SheetsRegistry } from 'jss';
-import JssProvider from 'react-jss/lib/JssProvider';
-import React from 'react';
+import { SheetsRegistry } from "jss";
+import JssProvider from "react-jss/lib/JssProvider";
+import React from "react";
 import {
   createMuiTheme,
   createGenerateClassName,
-  MuiThemeProvider,
-} from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+  MuiThemeProvider
+} from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 const THEME = createMuiTheme({
   typography: {
-    useNextVariants: true,
-  },
+    useNextVariants: true
+  }
 });
 
 function createPageContext() {
@@ -25,7 +25,7 @@ function createPageContext() {
     sheetsRegistry: new SheetsRegistry(),
 
     // The standard class name generator.
-    generateClassName: createGenerateClassName(),
+    generateClassName: createGenerateClassName()
   };
 }
 
@@ -56,7 +56,7 @@ export default function withRoot(Component) {
 
     componentDidMount() {
       // Remove the server-side injected CSS.
-      const jssStyles = document.querySelector('#jss-server-side');
+      const jssStyles = document.querySelector("#jss-server-side");
       if (jssStyles && jssStyles.parentNode) {
         jssStyles.parentNode.removeChild(jssStyles);
       }
