@@ -15,7 +15,6 @@
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
     "core-js": "^2.6.1",
-    "fg-loadcss": "^2.1.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
@@ -32,7 +31,6 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
-    "react-player": "^1.7.0",
     "react-responsive-carousel": "^3.1.46",
     "react-wavesurfer": "^0.8.6",
     "webfontloader": "^1.6.28"
