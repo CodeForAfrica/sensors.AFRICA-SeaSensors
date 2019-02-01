@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { withStyles, Typography } from "@material-ui/core";
 
 const styles = {

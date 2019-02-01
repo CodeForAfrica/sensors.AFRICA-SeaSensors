@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Carousel } from "react-responsive-carousel";
 import { withStyles } from "@material-ui/core";
 
 import HeaderImage1 from "../../assets/map.png";
 import HeaderImage2 from "../../assets/HeaderImage2.png";
 import gridImage from "../../assets/grid.png";
+
 import Navigation from "./Navigation";
 import HeaderText from "./HeaderText";
 import "react-responsive-carousel/lib/styles/carousel.min.css";

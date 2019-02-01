@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Typography, withStyles } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
-import BlastsSvg from "./blastSvg";
 import lastUpload from "../../assets/last_upload.png";
 import creatTime from "../../assets/current_time.png";
 import learnMoreArrow from "../../assets/arrow_3.png";
+
+import BlastsSvg from "./blastSvg";
 
 const styles = {
   blast: {

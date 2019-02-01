@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Typography, withStyles } from "@material-ui/core";
 
 import boat from "../assets/boat.png";

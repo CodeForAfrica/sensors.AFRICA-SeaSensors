@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import TextArrowButton from "./TextArrowButton";
 import arrow from "../assets/arrow_4.png";
 import topStoryImage from "../assets/topStory.png";
+
+import TextArrowButton from "./TextArrowButton";
 
 const styles = {
   root: {

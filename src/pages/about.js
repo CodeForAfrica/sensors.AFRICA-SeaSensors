@@ -1,4 +1,5 @@
 import React from "react";
+
 import AboutUsHeader from "../components/AboutUsHeader";
 import AboutImportantHeader from "../components/AboutImportantHeader";
 import BlastDeployment from "../components/BlastDeployment";
@@ -7,9 +8,8 @@ import GetInvolved from "../components/GetInvolved";
 import Footer from "../components/Footer";
 import TeamCard from "../components/Team";
 import ViewGallery from "../components/ViewGallery";
-import "../assets/css/main.css";
-
 import withRoot from "../withRoot";
+import "../assets/css/main.css";
 
 function AboutPage() {
   return (

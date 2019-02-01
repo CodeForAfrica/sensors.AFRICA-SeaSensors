@@ -6,6 +6,12 @@
     "jasmine": true
   },
   "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
