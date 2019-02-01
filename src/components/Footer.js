@@ -1,104 +1,106 @@
-import React from 'react';
-import { Grid, Typography, withStyles } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import PropTypes from "prop-types";
+import { Grid, Typography, withStyles } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
   faFacebookF,
   faYoutube,
   faGithub,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
-import cfaLogo from '../assets/cfa.png';
-import billMelindaImg from '../assets/b-m-gf.png';
-import oNImg from '../assets/on.png';
-import uniStAndrewsImg from '../assets/uo-sa.png';
-import usdoImg from '../assets/us-do-s.png';
-import icfjImg from '../assets/icfj.png';
-import seaLogoImg from '../assets/SeaSensors_Logo-05.png';
-import footerMap from '../assets/footer-map.png';
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
+
+import cfaLogo from "../assets/cfa.png";
+import billMelindaImg from "../assets/b-m-gf.png";
+import oNImg from "../assets/on.png";
+import uniStAndrewsImg from "../assets/uo-sa.png";
+import usdoImg from "../assets/us-do-s.png";
+import icfjImg from "../assets/icfj.png";
+import seaLogoImg from "../assets/SeaSensors_Logo-05.png";
+import footerMap from "../assets/footer-map.png";
 
 const styles = {
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   parentFooter: {
-    position: 'relative',
-    bottom: '0',
-    width: '100%',
-    backgroundBlendMode: 'multiply',
-    backgroundImage: 'linear-gradient(to bottom, #001525, #001525)',
-    paddingLeft: '40px',
-    paddingTop: '8em',
+    position: "relative",
+    bottom: "0",
+    width: "100%",
+    backgroundBlendMode: "multiply",
+    backgroundImage: "linear-gradient(to bottom, #001525, #001525)",
+    paddingLeft: "40px",
+    paddingTop: "8em"
   },
   footerWrapper: {
-    display: 'flex',
-    justifyContent: 'space - evenly',
+    display: "flex",
+    justifyContent: "space - evenly"
   },
   footerText: {
-    fontFamily: 'Montserrat',
-    fontSize: '11px',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: '3.5',
-    letterSpacing: '0.6px',
-    color: '#ffffff',
-    opacity: '0.87',
+    fontFamily: "Montserrat",
+    fontSize: "11px",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "3.5",
+    letterSpacing: "0.6px",
+    color: "#ffffff",
+    opacity: "0.87"
   },
   textStyle: {
-    color: '#00a5dc',
+    color: "#00a5dc"
   },
   logoGrid: {
-    marginBottom: '3em',
+    marginBottom: "3em"
   },
   LogoImg: {
-    width: '89px',
-    height: 'auto',
+    width: "89px",
+    height: "auto"
   },
   seaLogo: {
-    height: '8em',
-    width: 'auto',
+    height: "8em",
+    width: "auto"
   },
   mapImage: {
-    height: '476px',
-    position: 'absolute',
-    bottom: '0',
-    left: '2px',
+    height: "476px",
+    position: "absolute",
+    bottom: "0",
+    left: "2px"
   },
   copyrightParent: {
-    display: 'flex',
+    display: "flex"
   },
   copyright: {
-    marginTop: '2.6em',
-    marginLeft: '-2em',
+    marginTop: "2.6em",
+    marginLeft: "-2em"
   },
   rightsReservedText: {
-    width: '369px',
-    height: '69.8px',
-    fontFamily: 'Montserrat',
-    fontSize: '15px',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: '1.47',
-    letterSpacing: '0.8px',
-    color: ' #ffffff',
+    width: "369px",
+    height: "69.8px",
+    fontFamily: "Montserrat",
+    fontSize: "15px",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "1.47",
+    letterSpacing: "0.8px",
+    color: " #ffffff"
   },
   termsConditionsText: {
-    fontWeight: 'bold',
-    letterSpacing: '0.6px',
-    color: ' #ffffff',
+    fontWeight: "bold",
+    letterSpacing: "0.6px",
+    color: " #ffffff"
   },
   parentSocial: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    position: 'relative',
-    paddingRight: '50px',
-    top: '80px',
+    display: "flex",
+    justifyContent: "space-around",
+    position: "relative",
+    paddingRight: "50px",
+    top: "80px"
   },
   email: {
-    color: '#ffffff',
-  },
+    color: "#ffffff"
+  }
 };
 
 function Footer({ classes }) {
@@ -108,46 +110,35 @@ function Footer({ classes }) {
         <img src={footerMap} alt="Footer Map" className={classes.mapImage} />
         <Grid item xs={8}>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>
-              Sea Sensors
-            </span>
-              is an acoustic data project that collects underwater blast data to help xx
+            <span className={classes.textStyle}>Sea Sensors</span>
+            is an acoustic data project that collects underwater blast data to
+            help xx
           </Typography>
           <Typography className={classes.footerText}>
-              The project is funded through
-            <span className={classes.textStyle}>
-              Code for Africa
-            </span>
-             ’s
-            <span className={classes.textStyle}>
-              innovateAFRICA
-            </span>
-              programme.
+            The project is funded through
+            <span className={classes.textStyle}>Code for Africa</span>
+            ’s
+            <span className={classes.textStyle}>innovateAFRICA</span>
+            programme.
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>
-              Code for Africa
-            </span>
-              (CfAfrica) is Africa&apos;s largest data journalism and civic technology
-              initiative, operating
-            <span className={classes.textStyle}>
-              CitizenLabs
-            </span>
+            <span className={classes.textStyle}>Code for Africa</span>
+            (CfAfrica) is Africa&apos;s largest data journalism and civic
+            technology initiative, operating
+            <span className={classes.textStyle}>CitizenLabs</span>
             <br />
-              across the continent to help fast-track digital innovation to drive social
-              change.
+            across the continent to help fast-track digital innovation to drive
+            social change.
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>
-              innovateAFRICA
-            </span>
-              is the continent’s largest fund for supporting civic media experimentation and
-              digital news
+            <span className={classes.textStyle}>innovateAFRICA</span>
+            is the continent’s largest fund for supporting civic media
+            experimentation and digital news
             <br />
-              startups in everything from data-driven journalism and investigative reporting,
-              to newsroom management,
+            startups in everything from data-driven journalism and investigative
+            reporting, to newsroom management,
             <br />
-              audience engagement, digital convergence, and media business models.
+            audience engagement, digital convergence, and media business models.
           </Typography>
         </Grid>
         <Grid item xs={4}>
@@ -164,7 +155,11 @@ function Footer({ classes }) {
               <img src={usdoImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
             <Grid item xs={6} className={classes.logoGrid}>
-              <img src={billMelindaImg} className={classes.logoImg} alt="logoImgAlt" />
+              <img
+                src={billMelindaImg}
+                className={classes.logoImg}
+                alt="logoImgAlt"
+              />
             </Grid>
           </Grid>
           <Grid container spacing={24}>
@@ -172,11 +167,17 @@ function Footer({ classes }) {
               <img src={icfjImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
             <Grid item xs={6} className={classes.logoGrid}>
-              <img src={uniStAndrewsImg} className={classes.logoImg} alt="logoImgAlt" />
+              <img
+                src={uniStAndrewsImg}
+                className={classes.logoImg}
+                alt="logoImgAlt"
+              />
             </Grid>
           </Grid>
           <Grid container spacing={24} className={classes.parentSocial}>
-            <a href="email.com" className={classes.email}>info@seasensors.org</a>
+            <a href="email.com" className={classes.email}>
+              info@seasensors.org
+            </a>
             <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
             <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
             <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
@@ -189,18 +190,22 @@ function Footer({ classes }) {
         <Grid item xs={8} className={classes.copyrightParent}>
           <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogo" />
           <div className={classes.copyright}>
-            <span
-              className={classes.rightsReservedText}
-            >
+            <span className={classes.rightsReservedText}>
               &copy; Sea Sensors. All rights reserved, 2018.
             </span>
             <br />
-            <span className={classes.termsConditionsText}>Terms & Conditions</span>
+            <span className={classes.termsConditionsText}>
+              Terms &amp; Conditions
+            </span>
           </div>
         </Grid>
       </Grid>
     </div>
   );
 }
+
+Footer.propTypes = {
+  classes: PropTypes.shape().isRequired
+};
 
 export default withStyles(styles)(Footer);

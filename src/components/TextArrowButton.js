@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function TextArrowButton(props) {
   const { className, text, image } = props;
@@ -11,5 +12,11 @@ function TextArrowButton(props) {
     </span>
   );
 }
+
+TextArrowButton.propTypes = {
+  className: PropTypes.shape().isRequired,
+  text: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
+};
 
 export default TextArrowButton;

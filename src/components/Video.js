@@ -1,15 +1,16 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core";
 
 const styles = {
   backgroundVideo: {
-    height: '644px !important',
-    width: '100% !important',
-    float: 'left',
-    top: '0',
-    padding: 'none',
-    background: 'cover',
-  },
+    height: "644px !important",
+    width: "100% !important",
+    float: "left",
+    top: "0",
+    padding: "none",
+    background: "cover"
+  }
 };
 
 function Video({ classes, origin }) {
@@ -27,5 +28,10 @@ function Video({ classes, origin }) {
     />
   );
 }
+
+Video.propTypes = {
+  classes: PropTypes.shape().isRequired,
+  origin: PropTypes.string.isRequired
+};
 
 export default withStyles(styles)(Video);

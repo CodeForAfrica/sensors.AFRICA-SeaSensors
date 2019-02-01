@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const BlastsSvg = () => (
   <svg
@@ -37,7 +37,14 @@ const BlastsSvg = () => (
           <g id="Blasts" transform="translate(12)">
             <g id="Group-2">
               <g id="Group" transform="translate(352 233)" fillRule="nonzero">
-                <circle id="Oval-4" stroke="#77064C" strokeWidth="4" cx="449" cy="449" r="320" />
+                <circle
+                  id="Oval-4"
+                  stroke="#77064C"
+                  strokeWidth="4"
+                  cx="449"
+                  cy="449"
+                  r="320"
+                />
                 <circle
                   id="Oval-4"
                   stroke="#77064C"
@@ -47,7 +54,14 @@ const BlastsSvg = () => (
                   cy="449"
                   r="357"
                 />
-                <circle id="Oval-4" stroke="#77064C" opacity="0.08" cx="450" cy="450" r="450" />
+                <circle
+                  id="Oval-4"
+                  stroke="#77064C"
+                  opacity="0.08"
+                  cx="450"
+                  cy="450"
+                  r="450"
+                />
                 <ellipse
                   id="Oval-5"
                   fill="#77064C"
@@ -75,7 +89,14 @@ const BlastsSvg = () => (
                 strokeLinecap="square"
                 fillRule="nonzero"
               />
-              <circle id="Oval-6" fill="#979797" fillRule="nonzero" cx="799" cy="1327" r="4" />
+              <circle
+                id="Oval-6"
+                fill="#979797"
+                fillRule="nonzero"
+                cx="799"
+                cy="1327"
+                r="4"
+              />
               <path
                 d="M0.5,678.5 L398.5,678.5"
                 id="Line-2-Copy"
