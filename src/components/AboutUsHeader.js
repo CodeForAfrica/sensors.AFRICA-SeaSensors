@@ -18,49 +18,6 @@ const styles = {
     top: "0",
     left: "0"
   },
-  subTitle: {
-    display: "flex",
-    position: "relative",
-    left: "109px"
-  },
-  subtitleRule: {
-    width: "22.5px",
-    height: "0.6px",
-    backgroundColor: "#ffffff",
-    marginTop: "87px"
-  },
-  subtitleText: {
-    width: "500.3px",
-    height: " 24px",
-    fontFamily: "Oswald",
-    fontSize: "16px",
-    fontWeight: "500",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.83",
-    letterSpacing: "4.4px",
-    marginLeft: "50px",
-    marginTop: "70px",
-    color: "#ffffff"
-  },
-  mediaResources: {
-    height: "115.5px",
-    fontFamily: "Oswald",
-    fontSize: "88px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.27",
-    letterSpacing: "0.8px",
-    color: "#ffffff",
-    marginLeft: "109px"
-  },
-  arrowBack: {
-    transform: "rotate(180deg)",
-    position: "absolute",
-    left: "7em",
-    top: "40em"
-  }
 };
 
 function AboutUsHeader({ classes }) {
