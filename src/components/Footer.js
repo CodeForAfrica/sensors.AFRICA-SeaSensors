@@ -48,7 +48,8 @@ const styles = {
     opacity: "0.87"
   },
   textStyle: {
-    color: "#00a5dc"
+    color: '#00a5dc',
+    margin: '0 3px',
   },
   logoGrid: {
     marginBottom: "3em"
@@ -113,7 +114,8 @@ function Footer({ classes }) {
             <span className={classes.textStyle}>
               Sea Sensors
             </span>
-               is an acoustic data project that collects underwater blast data to help provide
+              is an acoustic data project that collects underwater blast data to help provide
+            <br />
               quantitative spatial information on the incidence of the problem over time,
               that will enable targeted enforcement.
           </Typography>
