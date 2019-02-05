@@ -4,6 +4,7 @@ import NewsTopStories from '../components/NewsTopStories';
 import MonthStory from '../components/MonthStory';
 import NewsCards from '../components/NewsCards';
 import AllStoriesButton from '../components/AllStoriesButton';
+import NewsPrintStories from '../components/NewsPrintStories';
 import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
@@ -18,6 +19,7 @@ function NewsPage() {
       <MonthStory />
       <NewsCards />
       <AllStoriesButton />
+      <NewsPrintStories />
       <OurPartners />
       <GetInvolved />
       <Footer />
