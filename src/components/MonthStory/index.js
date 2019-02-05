@@ -6,7 +6,7 @@ import MonthStoryText from './MonthStoryText';
 const styles = {
   monthStoryContainer: {
     position: 'relative',
-    width: '1260px',
+    width: '1350px',
     marginLeft: '89px',
     height: '547.5px',
     backgroundImage: `url(${Snorkel2})`,
