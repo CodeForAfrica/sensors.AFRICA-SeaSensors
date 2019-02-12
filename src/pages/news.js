@@ -23,7 +23,7 @@ function NewsPage() {
       <AllStoriesButton />
       <NewsPrintStories />
       <NewsPrintCards />
-      <VideoAudio />
+      <VideoAudio origin={location.origin}/>
       <OurPartners />
       <GetInvolved />
       <Footer />
