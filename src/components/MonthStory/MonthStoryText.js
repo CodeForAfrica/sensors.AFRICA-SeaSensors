@@ -11,6 +11,7 @@ const styles = {
     position: 'absolute',
     right: '0',
     zIndex: '2',
+    padding: '64px',
   },
   monthStorySubtitle: {
     fontFamily: 'Oswald',
@@ -21,6 +22,7 @@ const styles = {
     lineHeight: '2.14',
     letterSpacing: '5.6px',
     color: '#ffffff',
+    marginBottom: '65px',
   },
   monthStoryTitle: {
     width: '473.3px',
@@ -33,6 +35,7 @@ const styles = {
     lineHeight: '1',
     letterSpacing: '3px',
     color: '#ffffff',
+    marginBottom: '40px',
   },
   contentText: {
     fontFamily: 'Montserrat',
@@ -43,6 +46,7 @@ const styles = {
     lineHeight: '2.15',
     letterSpacing: '1px',
     color: '#ffffff',
+    marginBottom: '62px',
   },
   readStoryParent: {
     display: 'flex',
@@ -56,6 +60,7 @@ const styles = {
     lineHeight: 'normal',
     letterSpacing: '3.2px',
     color: '#ffffff',
+    marginRight: '39px',
   },
 };
 
