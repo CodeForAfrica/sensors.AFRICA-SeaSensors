@@ -144,11 +144,11 @@ function NewsCardContainer(props) {
 
 NewsCardContainer.propTypes = {
   classes: PropTypes.shape().isRequired,
-  image: PropTypes.string().isRequired,
-  name: PropTypes.string().isRequired,
-  titleText: PropTypes.string().isRequired,
-  text: PropTypes.string().isRequired,
-  datePublished: PropTypes.string().isRequired
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  titleText: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  datePublished: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(NewsCardContainer);
