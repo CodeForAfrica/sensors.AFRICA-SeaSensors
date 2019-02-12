@@ -59,15 +59,10 @@ const ListLink = ({ listClass, to, customClass, children }) => (
   </li>
 );
 
-ListLink.defaultProps = {
-  customClass: "",
-  listClass: ""
-};
-
 ListLink.propTypes = {
-  listClass: PropTypes.string,
+  listClass: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-  customClass: PropTypes.string,
+  customClass: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node

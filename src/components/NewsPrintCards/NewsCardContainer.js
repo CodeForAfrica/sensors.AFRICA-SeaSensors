@@ -103,7 +103,7 @@ const styles = {
 };
 
 function NewsCardContainer(props) {
-  const { classes, image, titleText, text, datePublished } = props;
+  const { classes, image, name, titleText, text, datePublished } = props;
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -113,6 +113,14 @@ function NewsCardContainer(props) {
           title="partner Image"
         />
         <CardContent className={classes.cardContent}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.name}
+          >
+            {name}
+          </Typography>
           <Typography variant="body1" className={classes.titleText}>
             {titleText}
           </Typography>
@@ -136,10 +144,11 @@ function NewsCardContainer(props) {
 
 NewsCardContainer.propTypes = {
   classes: PropTypes.shape().isRequired,
-  image: PropTypes.string.isRequired,
-  titleText: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  datePublished: PropTypes.string.isRequired
+  image: PropTypes.string().isRequired,
+  name: PropTypes.string().isRequired,
+  titleText: PropTypes.string().isRequired,
+  text: PropTypes.string().isRequired,
+  datePublished: PropTypes.string().isRequired
 };
 
 export default withStyles(styles)(NewsCardContainer);

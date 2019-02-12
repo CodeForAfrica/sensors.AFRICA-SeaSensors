@@ -68,9 +68,9 @@ function NewsCards({ classes, image, title, text }) {
 
 NewsCards.propTypes = {
   classes: PropTypes.shape().isRequired,
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  image: PropTypes.string().isRequired,
+  title: PropTypes.string().isRequired,
+  text: PropTypes.string().isRequired
 };
 
 export default withStyles(styles)(NewsCards);

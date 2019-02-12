@@ -93,16 +93,12 @@ function ResourceCards({ classes, title, text, link, link2 }) {
   );
 }
 
-ResourceCards.defaultProps = {
-  link2: ""
-};
-
 ResourceCards.propTypes = {
   classes: PropTypes.shape().isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  link2: PropTypes.string
+  link2: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(ResourceCards);
