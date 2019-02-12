@@ -79,9 +79,9 @@ function NewsTitleText(props) {
 
 NewsTitleText.propTypes = {
   classes: PropTypes.shape().isRequired,
-  titleText: PropTypes.string().isRequired,
-  topStoriesTitle: PropTypes.string().isRequired,
-  storiesBody: PropTypes.string().isRequired
+  titleText: PropTypes.string.isRequired,
+  topStoriesTitle: PropTypes.string.isRequired,
+  storiesBody: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(NewsTitleText);
