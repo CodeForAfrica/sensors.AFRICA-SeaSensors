@@ -50,7 +50,8 @@ const styles = {
     display: "flex",
     position: "relative",
     justifyContent: "flex-end"
-  }
+  },
+  resourceImage: {}
 };
 
 function SharedHeader(props) {

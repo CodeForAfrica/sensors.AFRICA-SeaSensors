@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import NewsHeader from "../components/NewsHeader";
 import NewsTopStories from "../components/NewsTopStories";
@@ -13,7 +14,7 @@ import GetInvolved from "../components/GetInvolved";
 import Footer from "../components/Footer";
 import withRoot from "../withRoot";
 
-function NewsPage() {
+function NewsPage({ location }) {
   return (
     <div className="main-container-parent">
       <NewsHeader />
@@ -23,12 +24,16 @@ function NewsPage() {
       <AllStoriesButton />
       <NewsPrintStories />
       <NewsPrintCards />
-      <VideoAudio />
+      <VideoAudio origin={location.origin} />
       <OurPartners />
       <GetInvolved />
       <Footer />
     </div>
   );
 }
+
+NewsPage.propTypes = {
+  location: PropTypes.shape().isRequired
+};
 
 export default withRoot(NewsPage);
