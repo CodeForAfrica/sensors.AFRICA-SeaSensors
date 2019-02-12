@@ -7,28 +7,27 @@ import seaLogoImg from "../assets/SeaSensors_Logo-15.png";
 
 const styles = {
   liNav: {
-    display: 'inline-block',
-    marginRight: '4rem',
-    textDecoration: 'none',
-    fontFamily: 'Oswald',
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '1.1px',
-    textAlign: 'right',
-    color: '#ffffff',
-    borderLeft: '6px solid transparent',
-    left: '3em',
-    padding: '25px',
-    '&:hover': {
-      padding: '25px',
-      background: 'rgba(255, 255, 255, 0.1)',
-      borderLeft: '6px solid white',
-      color: 'white',
-    },
-
+    display: "inline-block",
+    marginRight: "4rem",
+    textDecoration: "none",
+    fontFamily: "Oswald",
+    fontSize: "1.2em",
+    fontWeight: "bold",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "normal",
+    letterSpacing: "1.1px",
+    textAlign: "right",
+    color: "#ffffff",
+    borderLeft: "6px solid transparent",
+    left: "3em",
+    padding: "25px",
+    "&:hover": {
+      padding: "25px",
+      background: "rgba(255, 255, 255, 0.1)",
+      borderLeft: "6px solid white",
+      color: "white"
+    }
   },
   seaLogo: {
     height: "14em",
@@ -36,11 +35,11 @@ const styles = {
     position: "relative"
   },
   parentNav: {
-    position: 'absolute',
-    top: '2em',
-    width: '100%',
-    left: '0',
-    zIndex: '1',
+    position: "absolute",
+    top: "2em",
+    width: "100%",
+    left: "0",
+    zIndex: "1"
   },
   ulNav: {
     listStyle: "none",

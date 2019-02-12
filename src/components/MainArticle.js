@@ -1,15 +1,17 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
-import SnorkelImg from '../assets/Snorkel.png';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core";
+
+import SnorkelImg from "../assets/Snorkel.png";
 
 const styles = {
   imageStyle: {
-    width: '80%',
-    height: '783px',
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
+    width: "80%",
+    height: "783px",
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto"
+  }
 };
 
 function MainArticle({ classes }) {
@@ -19,5 +21,9 @@ function MainArticle({ classes }) {
     </div>
   );
 }
+
+MainArticle.propTypes = {
+  classes: PropTypes.shape().isRequired
+};
 
 export default withStyles(styles)(MainArticle);

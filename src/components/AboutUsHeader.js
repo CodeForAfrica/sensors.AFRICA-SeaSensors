@@ -17,7 +17,7 @@ const styles = {
     backgroundPosition: "50% 35%",
     top: "0",
     left: "0"
-  },
+  }
 };
 
 function AboutUsHeader({ classes }) {

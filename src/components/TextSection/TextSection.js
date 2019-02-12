@@ -4,12 +4,8 @@ import { Grid, Typography, withStyles } from "@material-ui/core";
 
 const styles = {
   root: {
-<<<<<<< HEAD
-    flexGrow: 1
-=======
     flexGrow: 1,
-    height: '700px',
->>>>>>> Add Height to the text section
+    height: "700px"
   },
   textGrid: {
     height: "28em",
