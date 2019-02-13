@@ -98,7 +98,7 @@ function VideoAudioStories(props) {
             storiesBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           />
         </div>
-        <div className="classes.youtubeTextIcon">
+        <div className={classes.youtubeTextIcon}>
           <p className={classes.socialSharing}>
             Visit our
             <span className={classes.youtube}>Youtube</span>
