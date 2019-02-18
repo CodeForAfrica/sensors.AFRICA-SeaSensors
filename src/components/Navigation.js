@@ -19,6 +19,7 @@ const styles = {
     letterSpacing: "1.1px",
     textAlign: "right",
     color: "#ffffff",
+    borderLeft: "6px solid transparent",
     left: "3em",
     padding: "25px",
     "&:hover": {
@@ -34,10 +35,11 @@ const styles = {
     position: "relative"
   },
   parentNav: {
-    position: "relative",
+    position: "absolute",
     top: "2em",
     width: "100%",
-    left: "0"
+    left: "0",
+    zIndex: "1"
   },
   ulNav: {
     listStyle: "none",
@@ -57,10 +59,15 @@ const ListLink = ({ listClass, to, customClass, children }) => (
   </li>
 );
 
+ListLink.defaultProps = {
+  listClass: "",
+  customClass: ""
+};
+
 ListLink.propTypes = {
-  listClass: PropTypes.string.isRequired,
+  listClass: PropTypes.string,
   to: PropTypes.string.isRequired,
-  customClass: PropTypes.string.isRequired,
+  customClass: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node

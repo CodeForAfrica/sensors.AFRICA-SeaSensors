@@ -29,7 +29,7 @@ const styles = {
     textAlign: "justify",
     color: "#023256",
     marginTop: "125px",
-    marginLeft: "113px"
+    marginLeft: "118.8px"
   },
   readMore: {
     width: "292.5px",
@@ -37,15 +37,15 @@ const styles = {
     boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)"
   },
   textArrowButtonParent: {
-    width: "244.5px",
-    height: "45px",
+    width: "250.5px",
+    height: "60px",
     border: "3px #023256 solid",
     paddingLeft: "1rem",
     boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)",
     display: "flex",
     position: "relative",
-    top: "22em",
-    left: "8em"
+    top: "12em",
+    left: "17em"
   },
   textArrowButtonText: {
     width: "144px",
@@ -56,12 +56,12 @@ const styles = {
     fontStyle: "normal",
     fontStretch: "normal",
     lineHeight: "normal",
-    letterSpacing: "2.5px",
+    letterSpacing: "3.2px",
     color: "#023256",
-    marginTop: "0.3em"
+    marginTop: "1em"
   },
   textArrowButtonArrow: {
-    marginTop: "0.3em"
+    marginTop: "1em"
   }
 };
 

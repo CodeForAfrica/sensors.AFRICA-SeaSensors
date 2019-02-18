@@ -1,14 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Carousel } from "react-responsive-carousel";
 import { withStyles } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 import HeaderImage1 from "../../assets/map.png";
 import HeaderImage2 from "../../assets/HeaderImage2.png";
 import gridImage from "../../assets/grid.png";
 
-import Navigation from "./Navigation";
 import HeaderText from "./HeaderText";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const styles = {
@@ -31,6 +31,14 @@ const styles = {
   },
   firstSlider: {
     marginRight: "8.5em"
+  },
+  waving: {
+    display: "block !important",
+    position: "absolute !important",
+    userSelect: "none !important",
+    height: "60% !important",
+    width: "100% !important",
+    bottom: "1em !important"
   }
 };
 
@@ -50,13 +58,13 @@ const Image = () => (
   </div>
 );
 
-function SliderCarousel({ classes }) {
+function SliderCarousel(props) {
+  const { classes } = props;
   const { headerImage, grid, parentSlider, firstSlider } = classes;
   return (
     <Carousel showStatus={false}>
       <div>
         <img src={HeaderImage1} alt="First Slide" className={headerImage} />
-        <Navigation />
         <HeaderText />
         <div className={grid}>
           <Image />
@@ -68,7 +76,6 @@ function SliderCarousel({ classes }) {
       </div>
       <div>
         <img src={HeaderImage2} alt="Second Slide" />
-        <Navigation />
         <div className={parentSlider}>
           <div className={firstSlider}>01</div>
           <div>02</div>

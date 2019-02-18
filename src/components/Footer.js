@@ -48,7 +48,8 @@ const styles = {
     opacity: "0.87"
   },
   textStyle: {
-    color: "#00a5dc"
+    color: "#00a5dc",
+    margin: "0 3px"
   },
   logoGrid: {
     marginBottom: "3em"
@@ -112,7 +113,10 @@ function Footer({ classes }) {
           <Typography className={classes.footerText}>
             <span className={classes.textStyle}>Sea Sensors</span>
             is an acoustic data project that collects underwater blast data to
-            help xx
+            help provide
+            <br />
+            quantitative spatial information on the incidence of the problem
+            over time, that will enable targeted enforcement.
           </Typography>
           <Typography className={classes.footerText}>
             The project is funded through
@@ -178,10 +182,18 @@ function Footer({ classes }) {
             <a href="email.com" className={classes.email}>
               info@seasensors.org
             </a>
-            <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
-            <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
-            <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
-            <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
+            <a href="https://www.facebook.com/CodeForAfrica/">
+              <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
+            </a>
+            <a href="https://twitter.com/Code4Africa">
+              <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCa3qX2AwR9WDWO-7_MBL3Hg">
+              <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
+            </a>
+            <a href=" https://github.com/CodeForAfrica">
+              <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
+            </a>
             <FontAwesomeIcon icon={faInstagram} color="#ffffff" size="2x" />
           </Grid>
         </Grid>

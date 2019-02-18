@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import SliderCarousel from "../components/IndexHeader/SliderCarousel";
+import Navigation from "../components/Navigation";
 import withRoot from "../withRoot";
 import Blasts from "../components/Blasts";
 import TopStory from "../components/TopStory";
@@ -19,6 +20,7 @@ import "../assets/css/main.css";
 function IndexPage({ location }) {
   return (
     <div className="main-container-parent">
+      <Navigation />
       <SliderCarousel />
       <Blasts />
       <TopStory />
