@@ -4,7 +4,6 @@ import {
   Card,
   withStyles,
   CardMedia,
-  CardActionArea,
   CardContent,
   Typography,
   CardActions
@@ -15,10 +14,18 @@ import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 const styles = {
   card: {
     width: "360px",
-    height: "554.8px"
+    height: "554.8px",
+    "&:hover": {
+      transition: "all .1s ease-in-out",
+      transform: "scale(1.1)"
+    },
+    "&:hover $media": {
+      height: 280,
+      transition: "all .1s ease-in-out"
+    }
   },
   media: {
-    height: 300,
+    height: 350,
     backgroundPosition: "top",
     backgroundSize: "cover"
   },
@@ -69,29 +76,27 @@ const styles = {
 function CardContainer({ classes, image, name, title, text }) {
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title="partner Image"
-        />
-        <CardContent className={classes.cardContent}>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.name}
-          >
-            {name}
-          </Typography>
-          <Typography variant="body1" className={classes.title}>
-            {title}
-          </Typography>
-          <Typography variant="body1" className={classes.text}>
-            {text}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        className={classes.media}
+        image={image}
+        title="partner Image"
+      />
+      <CardContent className={classes.cardContent}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={classes.name}
+        >
+          {name}
+        </Typography>
+        <Typography variant="body1" className={classes.title}>
+          {title}
+        </Typography>
+        <Typography variant="body1" className={classes.text}>
+          {text}
+        </Typography>
+      </CardContent>
       <CardActions className={classes.socials}>
         <FontAwesomeIcon icon={faFacebookF} color="#00a5dc" size="lg" />
         <FontAwesomeIcon
