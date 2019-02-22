@@ -20,19 +20,19 @@ const styles = {
     "&:hover": {
       transition: "all .2s ease-in-out",
       transform: "scale(1.1)"
+    },
+    "&:hover $media": {
+      height: 300,
+      transition: "all .1s ease-in-out"
     }
   },
   media: {
     height: 400,
     backgroundPosition: "top",
-    backgroundSize: "cover",
-    "&:hover": {
-      height: 300
-    }
+    backgroundSize: "cover"
   },
   cardContent: {
     borderBottom: "0px",
-    backgroundColor: "none !important",
     "&:hover": {
       paddingBottom: "0"
     }
