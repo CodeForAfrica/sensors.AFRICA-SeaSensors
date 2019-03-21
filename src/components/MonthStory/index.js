@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-import Snorkel2 from "../../assets/Snorkel2.png";
+import Snorkel2 from "../../assets/newsPage/Snorkel2.png";
 
 import MonthStoryText from "./MonthStoryText";
 

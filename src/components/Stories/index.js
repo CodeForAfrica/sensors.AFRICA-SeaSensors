@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
 
-import artem from "../../assets/artem.png";
-import scuba from "../../assets/scuba.png";
-import drone from "../../assets/drone.png";
+import artem from "../../assets/indexPage/artem.png";
+import scuba from "../../assets/indexPage/scuba.png";
+import drone from "../../assets/indexPage/drone.png";
 
 import MediaCard from "./MediaCard";
 

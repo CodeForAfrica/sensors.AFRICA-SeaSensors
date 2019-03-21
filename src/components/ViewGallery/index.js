@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles, Typography } from "@material-ui/core";
 
-import galleryImage1 from "../../assets/_MGL0793.png";
-import galleryImage2 from "../../assets/_MGL0816.png";
-import galleryImage3 from "../../assets/DJI_0002.png";
-import galleryImage4 from "../../assets/GH010004.MP4.09_01_58_09.Still006.png";
+import galleryImage1 from "../../assets/aboutPage/galleryImage1.png";
+import galleryImage2 from "../../assets/aboutPage/galleryImage2.png";
+import galleryImage3 from "../../assets/aboutPage/galleryImage3.png";
+import galleryImage4 from "../../assets/aboutPage/galleryImage4.png";
 
 import GalleryContainer from "./GalleryContainer";
 

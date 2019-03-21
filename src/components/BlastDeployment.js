@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, withStyles } from "@material-ui/core";
 
-import boat from "../assets/boat.png";
-import scubaDive from "../assets/ScubaDive.png";
+import boat from "../assets/aboutPage/boat.png";
+import scubaDive from "../assets/aboutPage/ScubaDive.png";
 
 const styles = {
   parentContainer: {

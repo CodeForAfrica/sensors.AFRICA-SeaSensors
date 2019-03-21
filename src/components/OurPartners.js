@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, withStyles } from "@material-ui/core";
 
-import cfaLogo from "../assets/CFA 2.png";
-import UoSA from "../assets/UoSA.png";
-import Mwambao from "../assets/logo2.png";
-import Bitmap from "../assets/Bitmap.png";
-import MarineParksLogo from "../assets/Tanzania_Marine_Parks_and_Reserves_Unit_Logo.png";
-import ArrowDown from "../assets/arrow_3.png";
+import cfaLogo from "../assets/aboutPage/CFA 2.png";
+import UoSA from "../assets/aboutPage/UoSA.png";
+import Mwambao from "../assets/aboutPage/logo2.png";
+import Bitmap from "../assets/aboutPage/Bitmap.png";
+import MarineParksLogo from "../assets/aboutPage/TanzaniaMarinePark.png";
+import ArrowDown from "../assets/shared/arrowBlueDown.png";
 
 const styles = {
   parentContainer: {

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 
-import Gill from "../assets/gill.png";
+import Gill from "../assets/aboutPage/gill.png";
 
 const styles = {
   parentContainer: {
@@ -93,16 +93,13 @@ function AboutImportantHeader({ classes }) {
           is important.
         </div>
         <div className={classes.importantText}>
-          It is highly difficult to obtain quantitative data on blast fishing
-          from offshore areas out of ear shot from land. Therefore there are
-          great advantages of acoustic monitoring to monitor a huge swatch of
-          ocean, day and night, in good weather and bad over long periods of
-          time. It is the generation of reliable quantitative data on the
-          incidence of the activity especially from remoter parts of tanzania is
-          vital for targeted enforcement. Using underwater microphones, the team
-          records blasts from dynamite fishing off Tanzania’s coast and uses the
-          data (location, time, magnitude of blasts) to inform the public and
-          officials through online maps and data-driven stories.
+          The world’s oceans, perhaps the last frontier of human discovery are
+          still largely unknown, however they are under increasing pressure as
+          humans use and exploit them using increasingly sophisticated methods.
+          In Africa coastal waters are intensively fished to provide valuable
+          source of protein for rapidly expanding populations, but without
+          careful regulation and management fisheries especially in coastal
+          areas often become over harvested and collapse.
         </div>
         <div className={classes.highlight}>
           The project is headed by marine scientist, Gill Braulik and was

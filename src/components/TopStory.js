@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import arrow from "../assets/arrow_4.png";
-import topStoryImage from "../assets/topStory.png";
+import arrow from "../assets/shared/arrowWhite.png";
+import topStoryImage from "../assets/indexPage/topStory.png";
 
 import TextArrowButton from "./TextArrowButton";
 

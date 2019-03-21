@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles, Typography } from "@material-ui/core";
 
-import arrowBack from "../assets/arrow_6.png";
+import arrowBack from "../assets/shared/arrowWhite.png";
 
 import Navigation from "./Navigation";
 

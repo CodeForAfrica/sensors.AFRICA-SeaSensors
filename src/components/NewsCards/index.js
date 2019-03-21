@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import NewsCardImage1 from "../../assets/NewsCardImage1.png";
-import NewsCardImage2 from "../../assets/NewsCardImage2.png";
-import NewsCardImage3 from "../../assets/NewsCardImage3.png";
+import NewsCardImage1 from "../../assets/newsPage/NewsCardImage1.png";
+import NewsCardImage2 from "../../assets/newsPage/NewsCardImage2.png";
+import NewsCardImage3 from "../../assets/newsPage/NewsCardImage3.png";
 
 import NewsCards from "./NewsCards";
 
