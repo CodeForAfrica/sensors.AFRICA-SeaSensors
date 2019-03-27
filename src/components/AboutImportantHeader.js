@@ -93,13 +93,19 @@ function AboutImportantHeader({ classes }) {
           is important.
         </div>
         <div className={classes.importantText}>
-          The world’s oceans, perhaps the last frontier of human discovery are
-          still largely unknown, however they are under increasing pressure as
-          humans use and exploit them using increasingly sophisticated methods.
-          In Africa coastal waters are intensively fished to provide valuable
-          source of protein for rapidly expanding populations, but without
-          careful regulation and management fisheries especially in coastal
-          areas often become over harvested and collapse.
+          The world’s oceans are still largely unknown and humans use and
+          exploit them using increasingly sophisticated methods. In Tanzania, in
+          additional to traditional fishing gear, throughout the coast
+          explosives are used to kill fish. This can have devastating impacts on
+          coastal ecosystems and coastal communities. Monitoring illegal blast
+          fishing activity that often occurs far from shore is challenging, and
+          acoustic monitoring has shown the greatest potential for providing
+          reliable quantitative data on the incidence of the activity,
+          especially from remote parts of Tanzania. This information is vital
+          for monitoring and targeted enforcement. Using underwater microphones,
+          the team records blasts from dynamite fishing off Tanzania’s coast and
+          uses the data to inform the public and officials through online maps
+          and data-driven stories.
         </div>
         <div className={classes.highlight}>
           The project is headed by marine scientist, Gill Braulik and was
