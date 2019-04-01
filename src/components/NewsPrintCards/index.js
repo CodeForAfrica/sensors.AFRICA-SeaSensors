@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 
-import printCardImage1 from "../../assets/newsPage/printCardImage1.png";
-import printCardImage2 from "../../assets/newsPage/printCardImage2.png";
-import printCardImage3 from "../../assets/newsPage/printCardImage3.png";
-import printCardImage4 from "../../assets/newsPage/printCardImage4.png";
+import printCardImage1 from "../../assets/printCardImage1.png";
+import printCardImage2 from "../../assets/printCardImage2.png";
+import printCardImage3 from "../../assets/printCardImage3.png";
+import printCardImage4 from "../../assets/printCardImage4.png";
 
 import NewsCardContainer from "./NewsCardContainer";
 

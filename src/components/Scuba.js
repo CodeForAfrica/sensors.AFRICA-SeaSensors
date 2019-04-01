@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 
-import ScubaImg from "../assets/indexPage/ScubaImg.png";
+import ScubaImg from "../assets/ScubaImg.png";
 
 const styles = {
   imageStyle: {

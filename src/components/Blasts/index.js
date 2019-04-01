@@ -4,9 +4,9 @@ import { Typography, withStyles } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
-import lastUpload from "../../assets/indexPage/lastUpload.png";
-import creatTime from "../../assets/indexPage/currentTime.png";
-import learnMoreArrow from "../../assets/shared/arrowBlueDown.png";
+import lastUpload from "../../assets/lastUpload.png";
+import creatTime from "../../assets/currentTime.png";
+import learnMoreArrow from "../../assets/arrowBlueDown.png";
 
 import BlastsSvg from "./blastSvg";
 

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import partners from "../assets/indexPage/partners.png";
+import partners from "../assets/partners.png";
 
 const styles = {
   partnerParent: {

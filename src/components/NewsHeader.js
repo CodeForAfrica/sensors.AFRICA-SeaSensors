@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 
-import NewsHeaderImage from "../assets/newsPage/NewsHeaderImage.png";
+import NewsHeaderImage from "../assets/NewsHeaderImage.png";
 
 import SharedHeader from "./SharedHeader";
 

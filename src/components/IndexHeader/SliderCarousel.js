@@ -3,9 +3,9 @@ import { Carousel } from "react-responsive-carousel";
 import { withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-import HeaderImage1 from "../../assets/indexPage/HeaderImage1.png";
-import HeaderImage2 from "../../assets/indexPage/HeaderImage2.png";
-import gridImage from "../../assets/indexPage/grid.png";
+import HeaderImage1 from "../../assets/HeaderImage1.png";
+import HeaderImage2 from "../../assets/HeaderImage2.png";
+import gridImage from "../../assets/grid.png";
 
 import HeaderText from "./HeaderText";
 

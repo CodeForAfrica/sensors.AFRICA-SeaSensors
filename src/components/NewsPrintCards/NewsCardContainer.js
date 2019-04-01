@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-import arrow from "../../assets/shared/arrowBlueRight.png";
+import arrow from "../../assets/arrowBlueRight.png";
 
 const styles = {
   card: {

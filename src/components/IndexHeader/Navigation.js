@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from "gatsby";
 
-import seaLogoImg from "../../assets/indexPage/SeaSensors_Logo.png";
+import seaLogoImg from "../../assets/SeaSensors_Logo.png";
 
 const styles = {
   liNav: {

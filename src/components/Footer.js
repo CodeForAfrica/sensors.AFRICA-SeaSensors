@@ -10,14 +10,14 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
-import cfaLogo from "../assets/companyLogos/cfa.png";
-import billMelindaImg from "../assets/companyLogos/billMelinda.png";
-import oNImg from "../assets/companyLogos/on.png";
-import uniStAndrewsImg from "../assets/companyLogos/uniStAndrew.png";
-import usdoImg from "../assets/companyLogos/usDoS.png";
-import icfjImg from "../assets/companyLogos/icfj.png";
-import seaLogoImg from "../assets/companyLogos/SeaSensorsLogoWhite.png";
-import footerMap from "../assets/indexPage/footerMap.png";
+import cfaLogo from "../assets/cfa.png";
+import billMelindaImg from "../assets/billMelinda.png";
+import oNImg from "../assets/on.png";
+import uniStAndrewsImg from "../assets/uniStAndrew.png";
+import usdoImg from "../assets/usDoS.png";
+import icfjImg from "../assets/icfj.png";
+import seaLogoImg from "../assets/SeaSensorsLogoWhite.png";
+import footerMap from "../assets/footerMap.png";
 
 const styles = {
   root: {

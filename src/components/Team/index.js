@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles, Typography } from "@material-ui/core";
 
-import cardImage1 from "../../assets/aboutPage/partnerImage1.png";
-import cardImage2 from "../../assets/aboutPage/partnerImage2.png";
-import cardImage3 from "../../assets/aboutPage/partnerImage3.png";
-import cardImage4 from "../../assets/aboutPage/partnerImage4.png";
+import cardImage1 from "../../assets/partnerImage1.png";
+import cardImage2 from "../../assets/partnerImage2.png";
+import cardImage3 from "../../assets/partnerImage3.png";
+import cardImage4 from "../../assets/partnerImage4.png";
 
 import CardContainer from "./CardContainer";
 
