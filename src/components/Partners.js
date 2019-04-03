@@ -31,8 +31,6 @@ const styles = {
     color: "#023256"
   },
   thankYouText: {
-    width: "506.3px",
-    height: "153px",
     fontFamily: "Oswald",
     fontSize: "52px",
     fontWeight: "bold",
@@ -43,8 +41,6 @@ const styles = {
     color: "#023256"
   },
   seaSensorsText: {
-    width: "600px",
-    height: "306.8px",
     opacity: "0.6",
     fontFamily: "Montserrat",
     fontSize: "15px",
@@ -54,7 +50,9 @@ const styles = {
     lineHeight: "2.5",
     letterSpacing: "0.7px",
     textAlign: "justify",
-    color: "#023256"
+    color: "#023256",
+    paddingRight: "122px",
+    paddingTop: "35px"
   }
 };
 
@@ -69,7 +67,10 @@ function Partners({ classes }) {
           OUR PARTNERS
         </Typography>
         <Typography variant="h4" className={classes.thankYouText}>
-          A big thanks to all our partners involved.
+          A big thanks
+        </Typography>
+        <Typography variant="h4" className={classes.thankYouText}>
+          to all our partners.
         </Typography>
         <Typography className={classes.seaSensorsText}>
           The project is headed by marine scientist, Gill Braulik, supported by

@@ -38,7 +38,7 @@ const styles = {
   },
   footerText: {
     fontFamily: "Montserrat",
-    fontSize: "11px",
+    fontSize: "14px",
     fontWeight: "normal",
     fontStyle: "normal",
     fontStretch: "normal",
@@ -89,7 +89,7 @@ const styles = {
   },
   termsConditionsText: {
     fontWeight: "bold",
-    letterSpacing: "0.6px",
+    letterSpacing: "0.2px",
     color: " #ffffff"
   },
   parentSocial: {
@@ -111,38 +111,47 @@ function Footer({ classes }) {
         <img src={footerMap} alt="Footer Map" className={classes.mapImage} />
         <Grid item xs={8}>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>Sea Sensors</span>
-            is an acoustic data project that collects underwater blast data to
-            help provide
-            <br />
-            quantitative spatial information on the incidence of the problem
-            over time, that will enable targeted enforcement.
+            <p>
+              <span className={classes.textStyle}>Sea Sensors</span>
+              is an acoustic data project that collects underwater blast data to
+              help provide
+              <br />
+              quantitative spatial information on the incidence of the problem
+              over time, that will enable targeted enforcement.
+            </p>
           </Typography>
           <Typography className={classes.footerText}>
-            The project is funded through
-            <span className={classes.textStyle}>Code for Africa</span>
-            ’s
-            <span className={classes.textStyle}>innovateAFRICA</span>
-            programme.
+            <p>
+              The project is funded through
+              <span className={classes.textStyle}>Code for Africa</span>
+              ’s
+              <span className={classes.textStyle}>innovateAFRICA</span>
+              programme.
+            </p>
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>Code for Africa</span>
-            (CfAfrica) is Africa&apos;s largest data journalism and civic
-            technology initiative, operating
-            <span className={classes.textStyle}>CitizenLabs</span>
-            <br />
-            across the continent to help fast-track digital innovation to drive
-            social change.
+            <p>
+              <span className={classes.textStyle}>Code for Africa</span>
+              (CfAfrica) is Africa&apos;s largest data journalism and civic
+              technology initiative, operating
+              <span className={classes.textStyle}>CitizenLabs</span>
+              <br />
+              across the continent to help fast-track digital innovation to
+              drive social change.
+            </p>
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.textStyle}>innovateAFRICA</span>
-            is the continent’s largest fund for supporting civic media
-            experimentation and digital news
-            <br />
-            startups in everything from data-driven journalism and investigative
-            reporting, to newsroom management,
-            <br />
-            audience engagement, digital convergence, and media business models.
+            <p>
+              <span className={classes.textStyle}>innovateAFRICA</span>
+              is the continent’s largest fund for supporting civic media
+              experimentation and digital news
+              <br />
+              startups in everything from data-driven journalism and
+              investigative reporting, to newsroom management,
+              <br />
+              audience engagement, digital convergence, and media business
+              models.
+            </p>
           </Typography>
         </Grid>
         <Grid item xs={4}>
@@ -182,16 +191,16 @@ function Footer({ classes }) {
             <a href="email.com" className={classes.email}>
               info@seasensors.org
             </a>
-            <a href="https://www.facebook.com/CodeForAfrica/">
+            <a href="https://twitter.com/SeaSensors">
               <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
             </a>
-            <a href="https://twitter.com/Code4Africa">
+            <a href="https://www.facebook.com/CodeForAfrica/ ">
               <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
             </a>
             <a href="https://www.youtube.com/channel/UCa3qX2AwR9WDWO-7_MBL3Hg">
               <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
             </a>
-            <a href=" https://github.com/CodeForAfrica">
+            <a href="https://github.com/CodeForAfrica">
               <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
             </a>
             <FontAwesomeIcon icon={faInstagram} color="#ffffff" size="2x" />

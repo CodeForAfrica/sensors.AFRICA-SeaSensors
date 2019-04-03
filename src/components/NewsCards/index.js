@@ -42,7 +42,6 @@ const styles = {
     height: "auto",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "102.2px",
     backgroundColor: "#ffffff"
   }
 };

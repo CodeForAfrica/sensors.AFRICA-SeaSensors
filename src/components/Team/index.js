@@ -47,7 +47,6 @@ const styles = {
     paddingTop: "101.5px",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "102.2px",
     backgroundColor: "rgba(0, 0, 0, 0.05)"
   },
   card: {
