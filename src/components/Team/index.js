@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles, Typography } from "@material-ui/core";
 
-import cardImage1 from "../../assets/_MGL0787.png";
-import cardImage2 from "../../assets/_MGL0805.png";
-import cardImage3 from "../../assets/_MGL1019.png";
-import cardImage4 from "../../assets/K15_1507.png";
+import cardImage1 from "../../assets/partnerImage1.png";
+import cardImage2 from "../../assets/partnerImage2.png";
+import cardImage3 from "../../assets/partnerImage3.png";
+import cardImage4 from "../../assets/partnerImage4.png";
 
 import CardContainer from "./CardContainer";
 
@@ -41,13 +41,11 @@ const partnersContent = [
 
 const styles = {
   parentContainer: {
-    width: "100%",
     height: "1166px",
+    marginTop: "200px",
     paddingLeft: "90px",
-    paddingTop: "101.5px",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "102.2px",
     backgroundColor: "rgba(0, 0, 0, 0.05)"
   },
   card: {
@@ -67,7 +65,8 @@ const styles = {
     lineHeight: "normal",
     letterSpacing: "0.7px",
     color: "#023256",
-    paddingLeft: "29.3px"
+    paddingLeft: "29.3px",
+    paddingTop: "80px"
   },
   meetTeamText: {
     opacity: "0.6",

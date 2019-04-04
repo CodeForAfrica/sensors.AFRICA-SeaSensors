@@ -93,16 +93,19 @@ function AboutImportantHeader({ classes }) {
           is important.
         </div>
         <div className={classes.importantText}>
-          It is highly difficult to obtain quantitative data on blast fishing
-          from offshore areas out of ear shot from land. Therefore there are
-          great advantages of acoustic monitoring to monitor a huge swatch of
-          ocean, day and night, in good weather and bad over long periods of
-          time. It is the generation of reliable quantitative data on the
-          incidence of the activity especially from remoter parts of tanzania is
-          vital for targeted enforcement. Using underwater microphones, the team
-          records blasts from dynamite fishing off Tanzania’s coast and uses the
-          data (location, time, magnitude of blasts) to inform the public and
-          officials through online maps and data-driven stories.
+          The world’s oceans are still largely unknown and humans use and
+          exploit them using increasingly sophisticated methods. In Tanzania, in
+          additional to traditional fishing gear, throughout the coast
+          explosives are used to kill fish. This can have devastating impacts on
+          coastal ecosystems and coastal communities. Monitoring illegal blast
+          fishing activity that often occurs far from shore is challenging, and
+          acoustic monitoring has shown the greatest potential for providing
+          reliable quantitative data on the incidence of the activity,
+          especially from remote parts of Tanzania. This information is vital
+          for monitoring and targeted enforcement. Using underwater microphones,
+          the team records blasts from dynamite fishing off Tanzania’s coast and
+          uses the data to inform the public and officials through online maps
+          and data-driven stories.
         </div>
         <div className={classes.highlight}>
           The project is headed by marine scientist, Gill Braulik and was

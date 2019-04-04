@@ -5,7 +5,7 @@ import { Grid, Typography, withStyles } from "@material-ui/core";
 const styles = {
   root: {
     flexGrow: 1,
-    height: "700px"
+    height: "450px"
   },
   textGrid: {
     height: "28em",

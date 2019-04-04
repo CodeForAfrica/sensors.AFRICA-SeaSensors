@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 
-import ScubaImg from "../assets/ScubaImg.png";
+import ScubaImg from "../assets/equipment.jpg";
 
 const styles = {
   imageStyle: {
     width: "80%",
-    height: "783px",
+    height: "100%",
     display: "block",
     marginLeft: "auto",
     marginRight: "auto"

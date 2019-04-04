@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import arrow from "../assets/arrow_2.png";
+import arrow from "../assets/arrowBlueRight.png";
 
 import TextArrowButton from "./TextArrowButton";
 

@@ -72,8 +72,8 @@ function HeaderText({ classes }) {
         <br />
       </Typography>
       <Typography variant="body1" gutterBottom className={classes.contentText}>
-        Environmentally destructive fishing using explosives has been conducted
-        illegally along the coast of Tanzania for decades.
+        Using cutting-edge underwater acoustic technology to document the
+        occurrence of blast fishing.
       </Typography>
     </div>
   );

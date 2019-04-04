@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles, Typography } from "@material-ui/core";
 
-import ArrowRight from "../../assets/arrow_4.png";
+import ArrowRight from "../../assets/arrowWhite.png";
 
 const styles = {
   monthStoryParent: {

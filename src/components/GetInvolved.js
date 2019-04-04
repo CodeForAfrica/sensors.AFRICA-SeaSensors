@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import arrow from "../assets/arrow_2.png";
+import arrow from "../assets/arrowBlueRight.png";
 
 import TextArrowButton from "./TextArrowButton";
 
@@ -105,10 +105,9 @@ function GetInvolved({ classes }) {
             <div style={styles.line} />
           </div>
           <Typography variant="body2" className={classes.moreText}>
-            Blast fishing explosions can often be heard from the shore, or the
-            water plume they create can be seen from land. Help us document
-            blasts. If you hear or see a dynamite blast in Tanzania, please
-            record the date, time and location, by clicking on this link.
+            Help us document blasts. If you hear or see a dynamite blast in
+            Tanzania, please record the date, time and location, by clicking on
+            this link.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>

@@ -23,8 +23,8 @@ const styles = {
     color: " #ffffff"
   },
   blastDeploymentText: {
-    width: "600px",
     opacity: "0.6",
+    paddingRight: "121px",
     fontFamily: "Montserrat !important",
     fontSize: "15px !important",
     fontWeight: "normal !important",
@@ -104,19 +104,23 @@ function BlastDeployment({ classes }) {
           gutterBottom
           className={classes.blastDeploymentText}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          The acoustic monitoring focuses on the two areas of Tanzania that are
+          well known to have high levels of blasting activity over many years:
+          Dar es Salaam, and Tanga. Equipment was constructed using local
+          materials where possible. A triangular metal frame was welded by local
+          craftsmen in Zanzibar, heavy weights to hold the acoustic equipment to
+          the sea bed were used gerry cans that previously held cooking oil,
+          that were filled with concrete.
         </Typography>
         <Typography
           variant="body1"
           gutterBottom
           className={classes.blastDeploymentText}
         >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim.
+          The metal frame was wrapped in used bicycle inner tubes to prevent
+          abrasion to the sensitive equipment (add photos). Finally the gear was
+          transported via truck, high speed ferry, and boat to the deployment
+          location
         </Typography>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 
-import HeaderImage from "../assets/HeaderImage.png";
+import HeaderImage from "../assets/AboutImage2.jpg";
 
 import ResourceAboutHeader from "./SharedHeader";
 
