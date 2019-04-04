@@ -107,8 +107,7 @@ function GetInvolved({ classes }) {
           <Typography variant="body2" className={classes.moreText}>
             Help us document blasts. If you hear or see a dynamite blast in
             Tanzania, please record the date, time and location, by clicking on
-            this link. record the date, time and location, by clicking on this
-            link.
+            this link.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>

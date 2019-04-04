@@ -23,8 +23,8 @@ const styles = {
     color: " #ffffff"
   },
   blastDeploymentText: {
-    width: "600px",
     opacity: "0.6",
+    paddingRight: "121px",
     fontFamily: "Montserrat !important",
     fontSize: "15px !important",
     fontWeight: "normal !important",

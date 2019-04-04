@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
 import arrow from "../assets/arrowWhite.png";
-import topStoryImage from "../assets/topStory.png";
+import topStoryImage from "../assets/topStory.jpg";
 
 import TextArrowButton from "./TextArrowButton";
 

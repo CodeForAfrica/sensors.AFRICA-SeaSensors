@@ -41,10 +41,9 @@ const partnersContent = [
 
 const styles = {
   parentContainer: {
-    width: "100%",
     height: "1166px",
+    marginTop: "200px",
     paddingLeft: "90px",
-    paddingTop: "101.5px",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.05)"
@@ -66,7 +65,8 @@ const styles = {
     lineHeight: "normal",
     letterSpacing: "0.7px",
     color: "#023256",
-    paddingLeft: "29.3px"
+    paddingLeft: "29.3px",
+    paddingTop: "80px"
   },
   meetTeamText: {
     opacity: "0.6",
