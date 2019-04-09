@@ -2,10 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles, Typography } from "@material-ui/core";
 
+import arrow from "../../assets/arrowWhite.png";
+
 const styles = {
   content: {
     top: "176px",
-    padding: "2.5em 8em 6.5em 5.5em",
+    padding: "2em 2em 1em 3em",
     display: "flex",
     position: "absolute",
     textAlign: "left",
@@ -45,6 +47,27 @@ const styles = {
     letterSpacing: "0.7px",
     marginRight: "5.2em",
     color: "#ffffff"
+  },
+  exploreMapParent: {
+    display: "flex",
+    paddingTop: "4px",
+    marginRight: "20px",
+    justifyContent: "flex-end"
+  },
+  exploreMapArrow: {
+    marginTop: "5px"
+  },
+  exploreMapText: {
+    fontFamily: "Oswald",
+    fontSize: "16px",
+    fontWeight: "bold",
+    letterSpacing: "4.8px",
+    textAlign: "right",
+    color: "#ffffff",
+    paddingRight: "20px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
@@ -75,6 +98,17 @@ function HeaderText({ classes }) {
         and map the occurrence of blasts in hard-to-monitor parts of the country
         to help understand the scale of the blast fishing problem
       </Typography>
+      <a
+        href="https://alpha.seasensors.africa/map/"
+        className={classes.arrowLink}
+      >
+        <span className={classes.exploreMapParent}>
+          <span className={classes.exploreMapText}>Explore map</span>
+          <span className={classes.exploreMapArrow}>
+            <img src={arrow} alt="Arrow" />
+          </span>
+        </span>
+      </a>
     </div>
   );
 }
