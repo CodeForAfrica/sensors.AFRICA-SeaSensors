@@ -22,11 +22,7 @@ const styles = {
 
 function NewsHeader({ classes }) {
   return (
-    <SharedHeader
-      classes={classes}
-      subtitleTexts="Lorem Ipsum Dolor sit."
-      mediaResources="News Showcase Page."
-    />
+    <SharedHeader classes={classes} mediaResources="News Showcase Page." />
   );
 }
 

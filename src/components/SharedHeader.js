@@ -12,27 +12,11 @@ const styles = {
     top: "30%",
     padding: "0 5%"
   },
-  subTitle: {
-    display: "flex",
-    position: "relative",
-    alignItems: "center"
-  },
   subtitleRule: {
     width: "22.5px",
     height: "2px",
     backgroundColor: "#ffffff",
     marginRight: "20px"
-  },
-  subtitleText: {
-    height: " 24px",
-    fontFamily: "Oswald",
-    fontSize: "16px",
-    fontWeight: "500",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.83",
-    letterSpacing: "4.4px",
-    color: "#ffffff"
   },
   mediaResources: {
     height: "115.5px",
@@ -54,21 +38,11 @@ const styles = {
 };
 
 function SharedHeader(props) {
-  const { subtitleTexts, mediaResources, classes } = props;
+  const { mediaResources, classes, link } = props;
   return (
     <div className={classes.resourceImage}>
       <Navigation />
       <div className={classes.parentHeaderText}>
-        <div className={classes.subTitle}>
-          <div className={classes.subtitleRule} />
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.subtitleText}
-          >
-            {subtitleTexts}
-          </Typography>
-        </div>
         <Typography
           variant="body1"
           gutterBottom
@@ -77,7 +51,9 @@ function SharedHeader(props) {
           {mediaResources}
         </Typography>
         <div className={classes.arrowBack}>
-          <img src={arrowBack} alt="Arrow back" />
+          <a href={link}>
+            <img src={arrowBack} alt="Arrow back" />
+          </a>
         </div>
       </div>
     </div>
@@ -86,8 +62,8 @@ function SharedHeader(props) {
 
 SharedHeader.propTypes = {
   classes: PropTypes.shape().isRequired,
-  subtitleTexts: PropTypes.string.isRequired,
-  mediaResources: PropTypes.string.isRequired
+  mediaResources: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(SharedHeader);
