@@ -16,27 +16,20 @@ const styles = {
     backgroundColor: "#ffffff"
   },
   moreText: {
-    height: "174px",
     opacity: "0.6",
     fontFamily: "Montserrat",
     fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
     lineHeight: "2.5",
     letterSpacing: "0.7px",
     textAlign: "justify",
     color: "#023256",
     marginTop: "38px",
-    marginLeft: "237px"
+    marginLeft: "162px"
   },
   getINvolvedTitle: {
     fontFamily: "Oswald",
     fontSize: "60px",
     fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
     letterSpacing: "0.8px",
     textAlign: "justify",
     color: "#023256"
@@ -63,9 +56,6 @@ const styles = {
     fontFamily: "Oswald",
     fontSize: "16px",
     fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
     letterSpacing: "3.2px",
     color: "#023256",
     marginTop: "1em"
@@ -82,7 +72,7 @@ const styles = {
   involvedParent: {
     display: "flex",
     flexDirection: "column",
-    marginLeft: "240px",
+    marginLeft: "162px",
     marginBottom: "52.5px",
     marginTop: "50px"
   }
@@ -105,9 +95,11 @@ function GetInvolved({ classes }) {
             <div style={styles.line} />
           </div>
           <Typography variant="body2" className={classes.moreText}>
-            Help us document blasts. If you hear or see a dynamite blast in
-            Tanzania, please record the date, time and location, by clicking on
-            this link.
+            If you’re interested in the project or the data, please contact us.
+            You can also help us document blasts. If you hear or see a dynamite
+            blast in Tanzania, please record the date, time and location, and
+            send the information to us.ecord the date, time and location, by
+            clicking on this link.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
