@@ -101,6 +101,11 @@ const styles = {
   },
   email: {
     color: "#ffffff"
+  },
+  alignLogos: {
+    float: "right",
+    textAlign: "center",
+    paddingRight: "10px"
   }
 };
 
@@ -155,7 +160,7 @@ function Footer({ classes }) {
           </Typography>
         </Grid>
         <Grid item xs={4}>
-          <Grid container spacing={24}>
+          <Grid container spacing={24} className={classes.alignLogos}>
             <Grid item xs={6} className={classes.logoGrid}>
               <img src={cfaLogo} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
@@ -163,7 +168,7 @@ function Footer({ classes }) {
               <img src={oNImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
           </Grid>
-          <Grid container spacing={24}>
+          <Grid container spacing={24} className={classes.alignLogos}>
             <Grid item xs={6} className={classes.logoGrid}>
               <img src={usdoImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
@@ -175,7 +180,7 @@ function Footer({ classes }) {
               />
             </Grid>
           </Grid>
-          <Grid container spacing={24}>
+          <Grid container spacing={24} className={classes.alignLogos}>
             <Grid item xs={6} className={classes.logoGrid}>
               <img src={icfjImg} className={classes.logoImg} alt="logoImgAlt" />
             </Grid>
@@ -191,16 +196,32 @@ function Footer({ classes }) {
             <a href="email.com" className={classes.email}>
               info@seasensors.org
             </a>
-            <a href="https://twitter.com/SeaSensors">
+            <a
+              href="https://twitter.com/SeaSensors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
             </a>
-            <a href="https://www.facebook.com/CodeForAfrica/ ">
+            <a
+              href="https://www.facebook.com/CodeForAfrica/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} color="#ffffff" size="2x" />
             </a>
-            <a href="https://www.youtube.com/channel/UCa3qX2AwR9WDWO-7_MBL3Hg">
+            <a
+              href="https://www.youtube.com/channel/UCa3qX2AwR9WDWO-7_MBL3Hg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faYoutube} color="#ffffff" size="2x" />
             </a>
-            <a href="https://github.com/CodeForAfrica">
+            <a
+              href="https://github.com/CodeForAfrica"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
             </a>
             <FontAwesomeIcon icon={faInstagram} color="#ffffff" size="2x" />
