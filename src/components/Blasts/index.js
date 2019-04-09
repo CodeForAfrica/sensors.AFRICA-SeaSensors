@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Typography, withStyles } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import lastUpload from "../../assets/lastUpload.png";
 import creatTime from "../../assets/currentTime.png";
@@ -26,8 +27,7 @@ const styles = {
   },
   blastGrid: {
     position: "relative",
-    top: "3em",
-    right: "38px"
+    top: "3em"
   },
   blastsRecorded: {
     height: "102px",
@@ -176,6 +176,12 @@ const styles = {
   socialIcon: {
     marginTop: "20px",
     marginLeft: "20px"
+  },
+  shareIconStyle: {
+    outline: "none",
+    "&:focus": {
+      outline: "none"
+    }
   }
 };
 
@@ -263,18 +269,30 @@ function Blasts({ classes }) {
                   </Typography>
                   <div className={classes.socialsParent}>
                     <div className={classes.socials}>
-                      <FontAwesomeIcon
-                        icon={faTwitter}
-                        color="#00a5dc"
-                        size="2x"
-                      />
+                      <TwitterShareButton
+                        url="https://alpha.seasensors.africa"
+                        title="Sea Sensors Africa"
+                        className={classes.shareIconStyle}
+                      >
+                        <FontAwesomeIcon
+                          icon={faTwitter}
+                          color="#00a5dc"
+                          size="2x"
+                        />
+                      </TwitterShareButton>
                     </div>
                     <div className={classes.socials}>
-                      <FontAwesomeIcon
-                        icon={faFacebookF}
-                        color="#00a5dc"
-                        size="2x"
-                      />
+                      <FacebookShareButton
+                        url="https://alpha.seasensors.africa"
+                        title="Sea Sensors Africa"
+                        className={classes.shareIconStyle}
+                      >
+                        <FontAwesomeIcon
+                          icon={faFacebookF}
+                          color="#00a5dc"
+                          size="2x"
+                        />
+                      </FacebookShareButton>
                     </div>
                   </div>
                 </div>
