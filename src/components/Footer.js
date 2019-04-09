@@ -38,11 +38,11 @@ const styles = {
   },
   footerText: {
     fontFamily: "Montserrat",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "normal",
     fontStyle: "normal",
     fontStretch: "normal",
-    lineHeight: "3.5",
+    lineHeight: "2.2",
     letterSpacing: "0.6px",
     color: "#ffffff",
     opacity: "0.87"
