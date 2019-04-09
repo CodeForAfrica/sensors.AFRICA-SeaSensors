@@ -32,7 +32,7 @@ const styles = {
   mask: {
     width: "100%",
     height: "800px",
-    padding: "35px",
+    paddingTop: "35px",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgb(242, 242, 242)"
@@ -45,18 +45,14 @@ const styles = {
     boxShadow: "none"
   },
   seaSensorsStories: {
-    width: "596.3 px",
-    height: "115 px",
     fontFamily: "Oswald",
-    fontSize: "52 px",
+    fontSize: "52px",
     fontWeight: "bold",
     fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
     letterSpacing: "0.7 px",
     color: " #023256",
     marginBottom: "2em",
-    marginLeft: "154px"
+    marginLeft: "162px"
   },
   line: {
     width: "75px",
