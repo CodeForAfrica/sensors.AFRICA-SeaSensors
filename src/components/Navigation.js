@@ -13,9 +13,6 @@ const styles = {
     fontFamily: "Oswald",
     fontSize: "1.2em",
     fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
     letterSpacing: "1.1px",
     textAlign: "right",
     color: "#ffffff",
@@ -35,19 +32,28 @@ const styles = {
     position: "relative"
   },
   parentNav: {
-    position: "absolute",
-    top: "2em",
+    position: "fixed",
+    height: "100px",
     width: "100%",
-    left: "0",
-    zIndex: "1"
+    zIndex: "3",
+    overflow: "hidden",
+    transition: "0.5s",
+    WebKitTransition: "0.5s"
   },
   ulNav: {
     listStyle: "none",
     display: "flex",
-    zIndex: "3"
+    height: "100px",
+    overflow: "hidden",
+    margin: "0"
   },
   firstChild: {
     marginRight: "auto"
+  },
+  fixedNav: {
+    backgroundColor: "#001525",
+    opacity: "0.95",
+    boxShadow: "0 0 5px rgba(0, 0, 0, .8)"
   }
 };
 
@@ -74,15 +80,50 @@ ListLink.propTypes = {
   ]).isRequired
 };
 
-export default withStyles(styles)(props => {
-  const { classes } = props;
-  const image = (
-    <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />
-  );
+class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className={classes.parentNav}>
-      <header>
+    this.state = {};
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    const el = document.querySelector("nav");
+    this.setState({ top: el.offsetTop });
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    this.setState({ scroll: window.scrollY });
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { scroll, top } = this.state;
+
+    const image = (
+      <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />
+    );
+
+    let scrollClasses;
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        scrollClasses = "fixed-nav";
+      }
+
+      return scrollClasses;
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return (
+      <nav
+        className={`${classes.parentNav} ${
+          scroll > top ? classes.fixedNav : ""
+        }`}
+      >
         <ul className={classes.ulNav}>
           <ListLink to="/" listClass={classes.firstChild}>
             {image}
@@ -97,7 +138,13 @@ export default withStyles(styles)(props => {
             Resources
           </ListLink>
         </ul>
-      </header>
-    </div>
-  );
-});
+      </nav>
+    );
+  }
+}
+
+Navigation.propTypes = {
+  classes: PropTypes.shape().isRequired
+};
+
+export default withStyles(styles)(Navigation);
