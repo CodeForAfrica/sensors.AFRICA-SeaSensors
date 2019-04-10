@@ -2,20 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles, Typography } from "@material-ui/core";
 
+import arrow from "../../assets/arrowWhite.png";
+
 const styles = {
   content: {
-    padding: "2.5em 6.5em",
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
-    position: "absolute",
-    top: "200px",
+    top: "176px",
+    padding: "2em 2em 1em 3em",
     display: "flex",
+    position: "absolute",
+    textAlign: "left",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
-    textAlign: "left"
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    marginRight: "40em"
   },
   contentHeader: {
-    width: "500.3px",
     fontFamily: "Oswald",
     fontSize: "65px",
     fontWeight: "bold",
@@ -26,7 +27,6 @@ const styles = {
     color: "#ffffff"
   },
   contentSubHeader: {
-    width: "500.3px",
     fontFamily: "Oswald",
     fontSize: "2.2rem",
     fontWeight: "bold",
@@ -37,7 +37,6 @@ const styles = {
     color: "#ffffff"
   },
   contentText: {
-    width: "412px",
     opacity: "0.6",
     fontFamily: "Montserrat",
     fontSize: "15px",
@@ -48,6 +47,27 @@ const styles = {
     letterSpacing: "0.7px",
     marginRight: "5.2em",
     color: "#ffffff"
+  },
+  exploreMapParent: {
+    display: "flex",
+    paddingTop: "4px",
+    marginRight: "20px",
+    justifyContent: "flex-end"
+  },
+  exploreMapArrow: {
+    marginTop: "5px"
+  },
+  exploreMapText: {
+    fontFamily: "Oswald",
+    fontSize: "16px",
+    fontWeight: "bold",
+    letterSpacing: "4.8px",
+    textAlign: "right",
+    color: "#ffffff",
+    paddingRight: "20px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
@@ -68,13 +88,27 @@ function HeaderText({ classes }) {
         gutterBottom
         className={classes.contentSubHeader}
       >
-        Mapping fishing with explosives along the coast of East Africa
+        Mapping blast fishing along the coast of East Africa
         <br />
       </Typography>
       <Typography variant="body1" gutterBottom className={classes.contentText}>
-        Using cutting-edge underwater acoustic technology to document the
-        occurrence of blast fishing.
+        Environmentally destructive fishing using explosives has been conducted
+        illegally along the coast of Tanzania for decades. Sea Sensors is a
+        project using cutting edge underwater acoustic technology to document
+        and map the occurrence of blasts in hard-to-monitor parts of the country
+        to help understand the scale of the blast fishing problem
       </Typography>
+      <a
+        href="https://alpha.seasensors.africa/map/"
+        className={classes.arrowLink}
+      >
+        <span className={classes.exploreMapParent}>
+          <span className={classes.exploreMapText}>Explore map</span>
+          <span className={classes.exploreMapArrow}>
+            <img src={arrow} alt="Arrow" />
+          </span>
+        </span>
+      </a>
     </div>
   );
 }

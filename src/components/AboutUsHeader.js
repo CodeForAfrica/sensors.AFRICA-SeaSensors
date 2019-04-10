@@ -24,7 +24,6 @@ function AboutUsHeader({ classes }) {
   return (
     <ResourceAboutHeader
       classes={classes}
-      subtitleTexts="Lorem Ipsum Dolor sit."
       mediaResources="About Sea Sensors."
     />
   );

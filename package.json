@@ -32,6 +32,7 @@
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-responsive-carousel": "^3.1.46",
+    "react-share": "^2.4.0",
     "react-wavesurfer": "^0.8.6",
     "webfontloader": "^1.6.28"
   },

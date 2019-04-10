@@ -13,8 +13,6 @@ const styles = {
     width: "100%"
   },
   blastFishsingTitle: {
-    width: "495.9px",
-    height: "153px",
     fontFamily: "Oswald",
     fontSize: "52px",
     fontWeight: "bold",
@@ -24,7 +22,7 @@ const styles = {
     letterSpacing: "0.7px",
     color: "#023256",
     marginTop: "125px",
-    marginLeft: "154px"
+    marginLeft: "162px"
   },
   blastFishingText: {
     width: "600.1px ",
