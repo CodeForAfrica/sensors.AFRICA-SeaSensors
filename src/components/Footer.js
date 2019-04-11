@@ -45,7 +45,8 @@ const styles = {
     lineHeight: "2.2",
     letterSpacing: "0.6px",
     color: "#ffffff",
-    opacity: "0.87"
+    opacity: "0.87",
+    paddingBottom: "20px"
   },
   textStyle: {
     color: "#00a5dc",
@@ -116,47 +117,38 @@ function Footer({ classes }) {
         <img src={footerMap} alt="Footer Map" className={classes.mapImage} />
         <Grid item xs={8}>
           <Typography className={classes.footerText}>
-            <p>
-              <span className={classes.textStyle}>Sea Sensors</span>
-              is an acoustic data project that collects underwater blast data to
-              help provide
-              <br />
-              quantitative spatial information on the incidence of the problem
-              over time, that will enable targeted enforcement.
-            </p>
+            <span className={classes.textStyle}>Sea Sensors</span>
+            is an acoustic data project that collects underwater blast data to
+            help provide
+            <br />
+            quantitative spatial information on the incidence of the problem
+            over time, that will enable targeted enforcement.
           </Typography>
           <Typography className={classes.footerText}>
-            <p>
-              The project is funded through
-              <span className={classes.textStyle}>Code for Africa</span>
-              ’s
-              <span className={classes.textStyle}>innovateAFRICA</span>
-              programme.
-            </p>
+            The project is funded through
+            <span className={classes.textStyle}>Code for Africa</span>
+            ’s
+            <span className={classes.textStyle}>innovateAFRICA</span>
+            programme.
           </Typography>
           <Typography className={classes.footerText}>
-            <p>
-              <span className={classes.textStyle}>Code for Africa</span>
-              (CfAfrica) is Africa&apos;s largest data journalism and civic
-              technology initiative, operating
-              <span className={classes.textStyle}>CitizenLabs</span>
-              <br />
-              across the continent to help fast-track digital innovation to
-              drive social change.
-            </p>
+            <span className={classes.textStyle}>Code for Africa</span>
+            (CfAfrica) is Africa&apos;s largest data journalism and civic
+            technology initiative, operating
+            <span className={classes.textStyle}>CitizenLabs</span>
+            <br />
+            across the continent to help fast-track digital innovation to drive
+            social change.
           </Typography>
           <Typography className={classes.footerText}>
-            <p>
-              <span className={classes.textStyle}>innovateAFRICA</span>
-              is the continent’s largest fund for supporting civic media
-              experimentation and digital news
-              <br />
-              startups in everything from data-driven journalism and
-              investigative reporting, to newsroom management,
-              <br />
-              audience engagement, digital convergence, and media business
-              models.
-            </p>
+            <span className={classes.textStyle}>innovateAFRICA</span>
+            is the continent’s largest fund for supporting civic media
+            experimentation and digital news
+            <br />
+            startups in everything from data-driven journalism and investigative
+            reporting, to newsroom management,
+            <br />
+            audience engagement, digital convergence, and media business models.
           </Typography>
         </Grid>
         <Grid item xs={4}>

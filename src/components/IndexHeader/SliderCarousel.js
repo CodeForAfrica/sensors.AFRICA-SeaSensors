@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import { withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-import HeaderImage1 from "../../assets/homePage.jpg";
+import HeaderImage1 from "../../assets/mapppp.png";
 import HeaderImage2 from "../../assets/HeaderImage2.png";
 import gridImage from "../../assets/grid.png";
 
@@ -13,7 +13,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const styles = {
   headerImage: {
-    backgroundSize: "contain"
+    background: "no-repeat center center fixed",
+    WebkitBackgroundSize: "cover",
+    MozBackgroundSize: "cover",
+    OBackgroundSize: "cover",
+    backgroundSize: "cover",
+    minHeight: "100%",
+    height: "800px"
   },
   grid: {
     position: "absolute",

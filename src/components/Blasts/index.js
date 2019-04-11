@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
-import lastUpload from "../../assets/lastUpload.png";
 import creatTime from "../../assets/currentTime.png";
 import learnMoreArrow from "../../assets/arrowBlueDown.png";
 
@@ -30,7 +29,6 @@ const styles = {
     top: "3em"
   },
   blastsRecorded: {
-    height: "102px",
     fontFamily: "Oswald, sans-serif",
     fontSize: "52px",
     fontWeight: "bold",
@@ -61,12 +59,10 @@ const styles = {
   },
   blastGridText: {
     position: "absolute",
-    bottom: "15em",
-    left: "11em"
+    bottom: "19em",
+    left: "24em"
   },
   recordedBlastFigures: {
-    width: "598px",
-    height: "85.4px",
     fontFamily: "Oswald",
     fontSize: "71px",
     fontWeight: "bold",
@@ -77,22 +73,28 @@ const styles = {
     color: "#023256"
   },
   blastText: {
-    height: "69.8px",
     opacity: "0.6",
     fontFamily: "Oswald",
     fontSize: "1.2em",
     fontWeight: "300",
-    fontStyle: "normal",
-    fontStretch: "normal",
     lineHeight: "1.2",
     textAlign: "center",
     color: "#023256"
   },
   currentTime: {
-    position: "absolute",
-    bottom: "0.5em",
-    left: "31.8em",
-    display: "flex"
+    left: "19.6em",
+    bottom: "1.5em",
+    display: "flex",
+    position: "absolute"
+  },
+  lastUploadedText: {
+    opacity: "0.6",
+    fontFamily: "Oswald",
+    fontSize: "1.2em",
+    fontWeight: "300",
+    lineHeight: "1.2",
+    textAlign: "left",
+    color: "#023256"
   },
   lastUpload: {
     display: "flex",
@@ -101,12 +103,11 @@ const styles = {
     position: "absolute"
   },
   Timings: {
-    paddingLeft: "0.7em",
-    marginBottom: "45px"
+    right: "6.8em",
+    bottom: "7em",
+    position: "relative"
   },
   dateTime: {
-    width: "102px",
-    height: "47px",
     fontFamily: "Oswald",
     fontSize: "48px",
     fontWeight: "bold",
@@ -124,8 +125,6 @@ const styles = {
   learnMoreText: {
     marginTop: "1.5em",
     marginLeft: "1em",
-    width: "118.5px",
-    height: "36.8px",
     fontFamily: "Oswald",
     fontSize: "16px",
     fontWeight: "600",
@@ -139,7 +138,7 @@ const styles = {
     marginTop: "38px"
   },
   currentTimePointer: {
-    marginTop: "73px"
+    marginTop: "90px"
   },
   socialsParent: {
     display: "flex"
@@ -155,15 +154,19 @@ const styles = {
     border: "1px #00a5dc solid",
     paddingLeft: "24px",
     paddingTop: "24px",
-    marginRight: "13px"
+    marginRight: "13px",
+    color: "#00a5dc",
+    "&:hover": {
+      backgroundColor: "#00a5dc",
+      color: "#fff",
+      cursor: "pointer"
+    }
   },
   twitterIcon: {
     marginTop: "19px",
     marginLeft: "26px"
   },
   shareText: {
-    width: "105px",
-    height: "42px",
     fontFamily: "Oswald",
     fontSize: "20px",
     fontWeight: "normal",
@@ -221,18 +224,10 @@ function Blasts({ classes }) {
           <div className={classes.blastImageInfo}>
             <BlastsSvg />
             <div className={classes.blastGridText}>
-              <Typography
-                variant="body1"
-                gutterBottom
-                className={classes.recordedBlastFigures}
-              >
+              <Typography className={classes.recordedBlastFigures}>
                 12 562
               </Typography>
-              <Typography
-                variant="body1"
-                gutterBottom
-                className={classes.blastText}
-              >
+              <Typography className={classes.blastText}>
                 Recorded Blasts
               </Typography>
               <div className={classes.currentTime}>
@@ -242,22 +237,6 @@ function Blasts({ classes }) {
                     className={classes.currentTimePointer}
                     alt="current time"
                   />
-                </div>
-                <div className={classes.Timings}>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    className={classes.dateTime}
-                  >
-                    16:06
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    className={classes.blastText}
-                  >
-                    Current Time
-                  </Typography>
                 </div>
                 <div className={classes.shareIcons}>
                   <Typography
@@ -271,14 +250,10 @@ function Blasts({ classes }) {
                     <div className={classes.socials}>
                       <TwitterShareButton
                         url="https://alpha.seasensors.africa"
-                        title="Sea Sensors Africa"
+                        title="Mapping blast fishing along the coast of East Africa"
                         className={classes.shareIconStyle}
                       >
-                        <FontAwesomeIcon
-                          icon={faTwitter}
-                          color="#00a5dc"
-                          size="2x"
-                        />
+                        <FontAwesomeIcon icon={faTwitter} size="2x" />
                       </TwitterShareButton>
                     </div>
                     <div className={classes.socials}>
@@ -286,38 +261,18 @@ function Blasts({ classes }) {
                         url="https://alpha.seasensors.africa"
                         title="Sea Sensors Africa"
                         className={classes.shareIconStyle}
+                        quote="Mapping blast fishing along the coast of East Africa"
                       >
-                        <FontAwesomeIcon
-                          icon={faFacebookF}
-                          color="#00a5dc"
-                          size="2x"
-                        />
+                        <FontAwesomeIcon icon={faFacebookF} size="2x" />
                       </FacebookShareButton>
                     </div>
                   </div>
                 </div>
               </div>
               <div className={classes.lastUpload}>
-                <div>
-                  <img
-                    src={lastUpload}
-                    alt="last uploaded"
-                    className={classes.lastUploadPointer}
-                  />
-                </div>
                 <div className={classes.Timings}>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    className={classes.dateTime}
-                  >
-                    01.06.18
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    className={classes.blastText}
-                  >
+                  <Typography className={classes.dateTime}>01.06.18</Typography>
+                  <Typography className={classes.lastUploadedText}>
                     Last Uploaded
                   </Typography>
                 </div>

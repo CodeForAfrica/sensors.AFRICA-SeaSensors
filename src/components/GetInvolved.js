@@ -75,6 +75,9 @@ const styles = {
     marginLeft: "162px",
     marginBottom: "52.5px",
     marginTop: "50px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
@@ -103,11 +106,18 @@ function GetInvolved({ classes }) {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextArrowButton
-            className={classes}
-            text="TAKE ACTION"
-            image={arrow}
-          />
+          <a
+            href="https://forms.gle/c7bZEipCRX5xe4SMA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.arrowLink}
+          >
+            <TextArrowButton
+              className={classes}
+              text="TAKE ACTION"
+              image={arrow}
+            />
+          </a>
         </Grid>
       </Grid>
     </div>
