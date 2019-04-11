@@ -116,7 +116,9 @@ class Navigation extends React.Component {
       return scrollClasses;
     }
 
-    window.addEventListener("scroll", handleScroll);
+    // eslint-disable-next-line no-unused-expressions
+    typeof window !== "undefined" &&
+      window.addEventListener("scroll", handleScroll);
 
     return (
       <nav
