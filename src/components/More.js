@@ -38,19 +38,18 @@ const styles = {
     boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)"
   },
   textArrowButtonParent: {
-    width: "250.5px",
-    height: "60px",
     border: "3px #023256 solid",
     paddingLeft: "1rem",
+    paddingRight: "1rem",
     boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)",
     display: "flex",
     position: "relative",
     top: "12em",
-    left: "17em"
+    left: "17em",
+    width: "252.5px",
+    height: "57px"
   },
   textArrowButtonText: {
-    width: "144px",
-    height: "24px",
     fontFamily: "Oswald",
     fontSize: "16px",
     fontWeight: "bold",
@@ -59,7 +58,8 @@ const styles = {
     lineHeight: "normal",
     letterSpacing: "3.2px",
     color: "#023256",
-    marginTop: "1em"
+    marginTop: "1em",
+    paddingRight: "1rem"
   },
   textArrowButtonArrow: {
     marginTop: "1em"
