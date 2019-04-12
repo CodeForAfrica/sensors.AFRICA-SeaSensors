@@ -40,7 +40,7 @@ const styles = {
     letterSpacing: "0.7px",
     color: "#ffffff",
     marginTop: "0px",
-    marginLeft: "3em "
+    marginLeft: "100px"
   },
   topStoryText: {
     width: "480px",
@@ -95,8 +95,7 @@ const styles = {
     left: "100px"
   },
   titleContainer: {
-    display: "flex",
-    marginLeft: "60px"
+    display: "flex"
   }
 };
 
@@ -108,21 +107,23 @@ function TopStory({ classes }) {
           <div className={classes.titleContainer}>
             <div className={classes.subtitleRule} />
             <Typography variant="caption" className={classes.topStoryTitle}>
-              SEA SENSORS TOP STORY
+              SEA SENSORS
             </Typography>
           </div>
           <Typography variant="h4" className={classes.topStorySubTitle}>
-            The effects of blast fishing
+            Mapping blast fishing along the coast of East Africa
             <br />
             on the local community.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="caption" className={classes.topStoryText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna.
+            Environmentally destructive fishing using explosives has been
+            conducted illegally along the coast of Tanzania for decades. Sea
+            Sensors is a project using cutting edge underwater acoustic
+            technology to document and map the occurrence of blasts in
+            hard-to-monitor parts of the country to help understand the scale of
+            the blast fishing problem
           </Typography>
           <TextArrowButton className={classes} text="READ MORE" image={arrow} />
         </Grid>

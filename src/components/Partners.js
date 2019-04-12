@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import partners from "../assets/partners.png";
+import partners from "../assets/ourPartners.jpg";
 
 const styles = {
   partnerParent: {
@@ -15,7 +15,8 @@ const styles = {
     width: "500px",
     height: "500px",
     display: "inline",
-    marginLeft: "20%"
+    marginLeft: "20%",
+    objectFit: "cover"
   },
   ourPartners: {
     width: "216.8px",

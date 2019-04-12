@@ -7,7 +7,7 @@ import arrow from "../../assets/arrowWhite.png";
 const styles = {
   content: {
     top: "176px",
-    padding: "2em 2em 1em 3em",
+    padding: "4em 12em 2em 2em",
     display: "flex",
     position: "absolute",
     textAlign: "left",
@@ -88,15 +88,12 @@ function HeaderText({ classes }) {
         gutterBottom
         className={classes.contentSubHeader}
       >
-        Mapping blast fishing along the coast of East Africa
+        Mapping fishing with explosives along the coast of East Africa
         <br />
       </Typography>
       <Typography variant="body1" gutterBottom className={classes.contentText}>
-        Environmentally destructive fishing using explosives has been conducted
-        illegally along the coast of Tanzania for decades. Sea Sensors is a
-        project using cutting edge underwater acoustic technology to document
-        and map the occurrence of blasts in hard-to-monitor parts of the country
-        to help understand the scale of the blast fishing problem
+        Using cutting-edge underwater acoustic technology to document the
+        occurrence of blast fishing.
       </Typography>
       <a
         href="https://alpha.seasensors.africa/map/"
