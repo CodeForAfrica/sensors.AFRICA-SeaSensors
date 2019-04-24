@@ -1,32 +1,10 @@
 import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
-
-import artem from "../../assets/artem.png";
-import scuba from "../../assets/scuba.png";
-import drone from "../../assets/drone.png";
+import Tabletop from "tabletop";
 
 import MediaCard from "./MediaCard";
 
-const stateStories = [
-  {
-    title: "Story Title 1",
-    bodyField: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "Launch Site",
-    image: scuba
-  },
-  {
-    title: "Story Title 2",
-    bodyField: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "Launch Site",
-    image: artem
-  },
-  {
-    title: "Story Title 3",
-    bodyField: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "Launch Site",
-    image: drone
-  }
-];
+const stateStories = [];
 
 const styles = {
   mask: {
@@ -69,6 +47,24 @@ class Stories extends Component {
     this.state = { stories: stateStories };
   }
 
+  componentDidMount() {
+    Tabletop.init({
+      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      callback: (data, tabletop) => {
+        this.processData(tabletop.sheets("Sea Sensors Stories").all());
+      }
+    });
+  }
+
+  processData(data) {
+    const newData = [...data];
+
+    for (let i = 0; i < newData.length; i += 1) {
+      newData[i].id = i;
+    }
+    this.setState({ stories: newData });
+  }
+
   render() {
     const { stories } = this.state;
     return (
@@ -86,10 +82,10 @@ class Stories extends Component {
           <div style={styles.card}>
             {stories.map(story => (
               <MediaCard
-                key={story.title}
+                key={story}
                 title={story.title}
                 image={story.image}
-                bodyField={story.bodyField}
+                date={story.date}
                 link={story.link}
               />
             ))}
