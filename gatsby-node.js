@@ -11,4 +11,12 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       }
     });
   }
+
+  actions.setWebpackConfig({
+    node: {
+      fs: "empty",
+      tls: "empty",
+      net: "empty"
+    }
+  });
 };
