@@ -7,7 +7,7 @@ import ArrowRight from "../../assets/arrowWhite.png";
 const styles = {
   monthStoryParent: {
     width: "630px",
-    height: "480px",
+    maxHeight: "500px",
     backgroundColor: " rgb(255,255,255,0.4)",
     bottom: "0",
     position: "absolute",
@@ -17,18 +17,16 @@ const styles = {
   },
   monthStorySubtitle: {
     fontFamily: "Oswald",
-    fontSize: "10.5px",
-    fontWeight: "500",
+    fontSize: "13px",
+    fontWeight: "1000",
     fontStyle: "normal",
     fontStretch: "normal",
     lineHeight: "2.14",
     letterSpacing: "5.6px",
     color: "#ffffff",
-    marginBottom: "65px"
+    marginBottom: "40px"
   },
   monthStoryTitle: {
-    width: "473.3px",
-    height: "66px",
     fontFamily: "Oswald",
     fontSize: "45px",
     fontWeight: "bold",
@@ -36,8 +34,7 @@ const styles = {
     fontStretch: "normal",
     lineHeight: "1",
     letterSpacing: "3px",
-    color: "#ffffff",
-    marginBottom: "40px"
+    color: "#ffffff"
   },
   contentText: {
     fontFamily: "Montserrat",
@@ -63,10 +60,13 @@ const styles = {
     letterSpacing: "3.2px",
     color: "#ffffff",
     marginRight: "39px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
-function MonthStoryText({ classes }) {
+function MonthStoryText({ classes, title, text, link }) {
   return (
     <div className={classes.monthStoryParent}>
       <Typography
@@ -83,24 +83,33 @@ function MonthStoryText({ classes }) {
         gutterBottom
         className={classes.monthStoryTitle}
       >
-        Main Article Title
+        {title}
       </Typography>
       <Typography variant="body1" gutterBottom className={classes.contentText}>
-        Lorem ipsum dolor sit amet, conse ctetur adipis cing elit. Lorem ipsum
-        dolor sit lorem. Conse ctetur adipiscing elit lorem init.
+        {text}
       </Typography>
       <span className={classes.readStoryParent}>
-        <span className={classes.readStoryText}>READ STORY</span>
-        <span className={classes.readStoryArrow}>
-          <img src={ArrowRight} alt="Arrow" />
-        </span>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.arrowLink}
+        >
+          <span className={classes.readStoryText}>READ STORY</span>
+          <span className={classes.readStoryArrow}>
+            <img src={ArrowRight} alt="Arrow" />
+          </span>
+        </a>
       </span>
     </div>
   );
 }
 
 MonthStoryText.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(MonthStoryText);
