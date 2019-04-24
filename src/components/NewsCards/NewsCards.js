@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 const styles = {
   card: {
     width: "390px",
-    height: "380px"
+    height: "405px"
   },
   newsCardTitle: {
     fontFamily: "Oswald",
@@ -43,7 +43,7 @@ const styles = {
   }
 };
 
-function NewsCards({ classes, image, title, text }) {
+function NewsCards({ classes, image, title, date }) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -58,7 +58,7 @@ function NewsCards({ classes, image, title, text }) {
             {title}
           </Typography>
           <Typography component="p" className={classes.newsCardText}>
-            {text}
+            {date}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -70,7 +70,7 @@ NewsCards.propTypes = {
   classes: PropTypes.shape().isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  date: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(NewsCards);
