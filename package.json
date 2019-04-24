@@ -28,12 +28,14 @@
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
+    "react-audio-spectrum": "0.0.9",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-responsive-carousel": "^3.1.46",
     "react-share": "^2.4.0",
     "react-wavesurfer": "^0.8.6",
+    "tabletop": "^1.5.2",
     "webfontloader": "^1.6.28"
   },
   "keywords": [
