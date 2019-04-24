@@ -6,7 +6,6 @@ import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import creatTime from "../../assets/currentTime.png";
-import learnMoreArrow from "../../assets/arrowBlueDown.png";
 
 import BlastsSvg from "./blastSvg";
 
@@ -120,7 +119,15 @@ const styles = {
   learnMoreParent: {
     display: "flex",
     position: "relative",
-    top: "8em"
+    top: "8em",
+    fontFamily: "Oswald",
+    fontSize: "20px",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontStretch: "normal",
+    lineHeight: "1.69",
+    letterSpacing: "1px",
+    color: "#023256"
   },
   learnMoreText: {
     marginTop: "1.5em",
@@ -214,12 +221,7 @@ function Blasts({ classes }) {
               <br />
               and uploaded to the map.
             </Typography>
-            <div className={classes.learnMoreParent}>
-              <span className={classes.learnMoreArrow}>
-                <img src={learnMoreArrow} alt="Arrow" />
-              </span>
-              <span className={classes.learnMoreText}>Learn More</span>
-            </div>
+            <div className={classes.learnMoreParent}>explore data</div>
           </div>
           <div className={classes.blastImageInfo}>
             <BlastsSvg />
