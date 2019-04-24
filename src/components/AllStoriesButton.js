@@ -12,7 +12,8 @@ const styles = {
   },
   allStoriesContainer: {
     height: "292px",
-    position: "relative"
+    position: "relative",
+    paddingTop: "150px"
   },
   textArrowButtonParent: {
     width: "293px",
@@ -42,13 +43,23 @@ const styles = {
   },
   textArrowButtonArrow: {
     marginTop: "22px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
 function AllStoriesButton({ classes }) {
   return (
     <div className={classes.allStoriesContainer}>
-      <TextArrowButton className={classes} text="ALL STORIES" image={arrow} />
+      <a
+        href="https://medium.com/code-for-africa"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.arrowLink}
+      >
+        <TextArrowButton className={classes} text="ALL STORIES" image={arrow} />
+      </a>
     </div>
   );
 }
