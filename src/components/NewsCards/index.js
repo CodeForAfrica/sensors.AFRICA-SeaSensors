@@ -54,6 +54,7 @@ class NewsCardContent extends Component {
                 title={obj.title}
                 image={obj.image}
                 date={obj.date}
+                link={obj.link}
               />
             ))}
           </div>
