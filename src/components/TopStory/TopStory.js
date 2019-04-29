@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, withStyles } from "@material-ui/core";
 
-import arrow from "../assets/arrowWhite.png";
-import topStoryImage from "../assets/topStory.jpg";
-
-import TextArrowButton from "./TextArrowButton";
+import arrow from "../../assets/arrowWhite.png";
+import topStoryImage from "../../assets/topStory.jpg";
+import TextArrowButton from "../TextArrowButton";
 
 const styles = {
   root: {
@@ -96,10 +95,13 @@ const styles = {
   },
   titleContainer: {
     display: "flex"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
-function TopStory({ classes }) {
+function TopStory({ classes, blogTitle, blogText, blogLink }) {
   return (
     <div className={classes.parentContainer}>
       <Grid container spacing={24}>
@@ -111,21 +113,25 @@ function TopStory({ classes }) {
             </Typography>
           </div>
           <Typography variant="h4" className={classes.topStorySubTitle}>
-            Mapping blast fishing along the coast of East Africa
-            <br />
-            on the local community.
+            {blogTitle}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="caption" className={classes.topStoryText}>
-            Environmentally destructive fishing using explosives has been
-            conducted illegally along the coast of Tanzania for decades. Sea
-            Sensors is a project using cutting edge underwater acoustic
-            technology to document and map the occurrence of blasts in
-            hard-to-monitor parts of the country to help understand the scale of
-            the blast fishing problem
+            {blogText}
           </Typography>
-          <TextArrowButton className={classes} text="READ MORE" image={arrow} />
+          <a
+            href={blogLink}
+            className={classes.arrowLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TextArrowButton
+              className={classes}
+              text="READ MORE"
+              image={arrow}
+            />
+          </a>
         </Grid>
       </Grid>
     </div>
@@ -133,7 +139,10 @@ function TopStory({ classes }) {
 }
 
 TopStory.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
+  blogTitle: PropTypes.string.isRequired,
+  blogText: PropTypes.string.isRequired,
+  blogLink: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(TopStory);

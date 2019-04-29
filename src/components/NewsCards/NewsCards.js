@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 const styles = {
   card: {
     width: "390px",
-    height: "380px"
+    height: "405px"
   },
   newsCardTitle: {
     fontFamily: "Oswald",
@@ -40,27 +40,37 @@ const styles = {
   newsCardImage: {
     height: "249.5px",
     width: "390px"
+  },
+  arrowLink: {
+    textDecoration: "none"
   }
 };
 
-function NewsCards({ classes, image, title, text }) {
+function NewsCards({ classes, image, title, date, link }) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia className={classes.newsCardImage} image={image} />
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.newsCardTitle}
-          >
-            {title}
-          </Typography>
-          <Typography component="p" className={classes.newsCardText}>
-            {text}
-          </Typography>
-        </CardContent>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.arrowLink}
+        >
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              className={classes.newsCardTitle}
+            >
+              {title}
+            </Typography>
+            <Typography component="p" className={classes.newsCardText}>
+              {date}
+            </Typography>
+          </CardContent>
+        </a>
       </CardActionArea>
     </Card>
   );
@@ -70,7 +80,8 @@ NewsCards.propTypes = {
   classes: PropTypes.shape().isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  date: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(NewsCards);

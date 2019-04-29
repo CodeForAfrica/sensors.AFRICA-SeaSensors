@@ -21,7 +21,7 @@ const styles = {
 };
 
 function ResourcesHeader({ classes }) {
-  return <SharedHeader classes={classes} mediaResources="Media Resources." />;
+  return <SharedHeader classes={classes} mediaResources="Resources." />;
 }
 
 ResourcesHeader.propTypes = {

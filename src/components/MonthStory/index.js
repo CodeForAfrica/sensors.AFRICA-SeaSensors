@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import Tabletop from "tabletop";
 import { withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 
@@ -28,14 +29,43 @@ const styles = {
     right: "0"
   }
 };
+class MonthStory extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    };
+  }
 
-function MonthStory({ classes }) {
-  return (
-    <div className={classes.monthStoryContainer}>
-      <div className={classes.blur} />
-      <MonthStoryText />
-    </div>
-  );
+  componentDidMount() {
+    Tabletop.init({
+      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      callback: (data, tabletop) => {
+        const sheetData = tabletop.sheets("Month Story").all();
+        this.setState({
+          data: sheetData
+        });
+      }
+    });
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { data } = this.state;
+    return (
+      <div className={classes.monthStoryContainer}>
+        <div className={classes.blur} />
+        {data.map(obj => (
+          <MonthStoryText
+            key={obj.title}
+            title={obj.title}
+            text={obj.text}
+            link={obj.link}
+          />
+        ))}
+      </div>
+    );
+  }
 }
 
 MonthStory.propTypes = {

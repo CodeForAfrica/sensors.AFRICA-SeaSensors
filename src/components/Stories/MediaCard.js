@@ -6,7 +6,6 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Button,
   Typography,
   withStyles
 } from "@material-ui/core";
@@ -21,11 +20,20 @@ const styles = {
     height: 300
   },
   launch: {
-    color: "#12A6DD"
+    textDecoration: "none",
+    fontFamily: "Montserrat",
+    fontSize: "18px",
+    fontWeight: "bold",
+    lineHeight: "1.88",
+    letterSpacing: "0.6px",
+    color: "#00a5dc"
+  },
+  content: {
+    minHeight: "130px"
   }
 };
 
-function MediaCard({ classes, image, title, bodyField, link }) {
+function MediaCard({ classes, image, title, date, link }) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -34,17 +42,17 @@ function MediaCard({ classes, image, title, bodyField, link }) {
           image={image}
           title="Contemplative Reptile"
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography component="p">{bodyField}</Typography>
+          <Typography component="p">{date}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" className={classes.launch}>
-          {link}
-        </Button>
+        <a href={link} className={classes.launch}>
+          Launch Site
+        </a>
       </CardActions>
     </Card>
   );
@@ -54,7 +62,7 @@ MediaCard.propTypes = {
   classes: PropTypes.shape().isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  bodyField: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired
 };
 

@@ -1,31 +1,7 @@
 import React, { Component } from "react";
-
-import NewsCardImage1 from "../../assets/NewsCardImage1.png";
-import NewsCardImage2 from "../../assets/NewsCardImage2.png";
-import NewsCardImage3 from "../../assets/NewsCardImage3.png";
+import Tabletop from "tabletop";
 
 import NewsCards from "./NewsCards";
-
-const newsCardContent = [
-  {
-    cardNumber: 1,
-    image: NewsCardImage1,
-    title: "Dolor Amenr init.",
-    text: "Date Published"
-  },
-  {
-    cardNumber: 2,
-    image: NewsCardImage2,
-    title: "Dolor Amenr init.",
-    text: "Date Published"
-  },
-  {
-    cardNumber: 3,
-    image: NewsCardImage3,
-    title: "Dolor Amenr init.",
-    text: "Date Published"
-  }
-];
 
 const styles = {
   cardStyle: {
@@ -49,21 +25,36 @@ const styles = {
 class NewsCardContent extends Component {
   constructor() {
     super();
-    this.state = { newsCards: newsCardContent };
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    Tabletop.init({
+      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      callback: (data, tabletop) => {
+        const sheetData = tabletop.sheets("News Cards").all();
+        this.setState({
+          data: sheetData
+        });
+      }
+    });
   }
 
   render() {
-    const { newsCards } = this.state;
+    const { data } = this.state;
     return (
       <React.Fragment>
         <div className={styles.parentCard}>
           <div style={styles.cardStyle}>
-            {newsCards.map(newsCard => (
+            {data.map(obj => (
               <NewsCards
-                key={newsCard.cardNumber}
-                image={newsCard.image}
-                title={newsCard.title}
-                text={newsCard.text}
+                key={obj.title}
+                title={obj.title}
+                image={obj.image}
+                date={obj.date}
+                link={obj.link}
               />
             ))}
           </div>
