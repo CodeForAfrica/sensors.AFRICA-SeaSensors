@@ -44,7 +44,10 @@ const styles = {
     lineHeight: "2.15",
     letterSpacing: "1px",
     color: "#ffffff",
-    marginBottom: "62px"
+    marginBottom: "62px",
+    height: "200px",
+    overflow: "hidden",
+    textOverflow: "ellipsis"
   },
   readStoryParent: {
     display: "flex"
