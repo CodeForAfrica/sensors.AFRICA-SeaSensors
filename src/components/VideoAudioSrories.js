@@ -117,19 +117,6 @@ function VideoAudioStories(props) {
               type="text/html"
               width="100%"
               height="100%"
-              src={`https://www.youtube-nocookie.com/embed/pxfIEDxbJdk?origin=${origin}`}
-              frameBorder="0"
-              allowFullScreen
-              className={classes.backgroundVideo}
-            />
-          </div>
-          <div className={classes.cardInfo}>
-            <iframe
-              id="ytplayer"
-              title="Installing acoustic sensors onto the sea bed, Tanzania"
-              type="text/html"
-              width="100%"
-              height="100%"
               src={`https://www.youtube-nocookie.com/embed/gUJqdCq50EE?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
@@ -172,19 +159,6 @@ function VideoAudioStories(props) {
               width="100%"
               height="100%"
               src={`https://www.youtube-nocookie.com/embed/pxfIEDxbJdk?origin=${origin}`}
-              frameBorder="0"
-              allowFullScreen
-              className={classes.backgroundVideo}
-            />
-          </div>
-          <div className={classes.cardInfo}>
-            <iframe
-              id="ytplayer"
-              title="Installing acoustic sensors onto the sea bed, Tanzania"
-              type="text/html"
-              width="100%"
-              height="100%"
-              src={`https://www.youtube-nocookie.com/embed/gUJqdCq50EE?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
               className={classes.backgroundVideo}
