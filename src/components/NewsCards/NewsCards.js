@@ -49,14 +49,14 @@ const styles = {
 function NewsCards({ classes, image, title, date, link }) {
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia className={classes.newsCardImage} image={image} />
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes.arrowLink}
-        >
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.arrowLink}
+      >
+        <CardActionArea>
+          <CardMedia className={classes.newsCardImage} image={image} />
           <CardContent>
             <Typography
               gutterBottom
@@ -70,8 +70,8 @@ function NewsCards({ classes, image, title, date, link }) {
               {date}
             </Typography>
           </CardContent>
-        </a>
-      </CardActionArea>
+        </CardActionArea>
+      </a>
     </Card>
   );
 }
