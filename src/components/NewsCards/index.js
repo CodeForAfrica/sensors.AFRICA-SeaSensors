@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Tabletop from "tabletop";
+import { withStyles } from "@material-ui/core";
 
 import NewsCards from "./NewsCards";
 
@@ -43,11 +45,12 @@ class NewsCardContent extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     const { data } = this.state;
     return (
       <React.Fragment>
-        <div className={styles.parentCard}>
-          <div style={styles.cardStyle}>
+        <div className={classes.parentCard}>
+          <div className={classes.cardStyle}>
             {data.map(obj => (
               <NewsCards
                 key={obj.title}
@@ -64,4 +67,8 @@ class NewsCardContent extends Component {
   }
 }
 
-export default NewsCardContent;
+NewsCardContent.propTypes = {
+  classes: PropTypes.shape().isRequired
+};
+
+export default withStyles(styles)(NewsCardContent);

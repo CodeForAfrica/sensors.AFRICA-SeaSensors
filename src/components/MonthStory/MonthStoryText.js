@@ -69,7 +69,6 @@ function MonthStoryText({ classes, title, text, link }) {
   return (
     <div className={classes.monthStoryParent}>
       <Typography
-        component="body2"
         variant="body2"
         gutterBottom
         className={classes.monthStorySubtitle}
