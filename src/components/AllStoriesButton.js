@@ -53,7 +53,7 @@ function AllStoriesButton({ classes }) {
   return (
     <div className={classes.allStoriesContainer}>
       <a
-        href="https://medium.com/code-for-africa"
+        href="https://medium.com/seasensors-africa"
         target="_blank"
         rel="noopener noreferrer"
         className={classes.arrowLink}
