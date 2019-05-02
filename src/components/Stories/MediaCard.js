@@ -11,9 +11,12 @@ import {
 
 const styles = {
   card: {
-    width: 401,
+    width: "360px",
     paddingLeft: "50px",
-    height: "500px"
+    height: "500px",
+    marginRight: "20px",
+    flexGrow: "0",
+    flexShrink: "0"
   },
   media: {
     height: 300

@@ -8,19 +8,19 @@ const stateStories = [];
 
 const styles = {
   mask: {
-    width: "100%",
-    height: "800px",
-    paddingTop: "35px",
+    height: "760px",
+    paddingLeft: "90px",
+    paddingTop: "30px",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgb(242, 242, 242)"
+    backgroundColor: "rgba(0, 0, 0, 0.05)"
   },
   card: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    backgroundColor: "#f2f2f2",
-    boxShadow: "none"
+    display: "inline-flex",
+    boxShadow: "none",
+    marginTop: "50px",
+    overflowX: "scroll",
+    width: "100%"
   },
   seaSensorsStories: {
     fontFamily: "Oswald",
@@ -29,13 +29,13 @@ const styles = {
     fontStyle: "normal",
     letterSpacing: "0.7 px",
     color: " #023256",
-    marginBottom: "2em",
-    marginLeft: "162px"
+    marginLeft: "70px"
   },
   line: {
-    width: "75px",
-    height: "0.8px",
+    width: "80px",
+    height: "2px",
     background: "lightgrey",
+    marginTop: "20px",
     borderLeft: "solid #023256 20px"
   }
 };
