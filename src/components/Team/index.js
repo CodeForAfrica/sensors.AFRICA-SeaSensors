@@ -105,18 +105,6 @@ class TeamCard extends Component {
           >
             Meet the Team.
           </Typography>
-          <Typography
-            component="body2"
-            variant="body2"
-            gutterBottom
-            style={styles.meetTeamText}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-            <br />
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam.
-          </Typography>
           <div style={styles.card}>
             {partnerCards.map(partner => (
               <div style={styles.cardView}>
