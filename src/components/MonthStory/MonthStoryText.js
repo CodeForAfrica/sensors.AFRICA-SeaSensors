@@ -7,7 +7,6 @@ import ArrowRight from "../../assets/arrowWhite.png";
 const styles = {
   monthStoryParent: {
     width: "630px",
-    maxHeight: "500px",
     backgroundColor: " rgb(255,255,255,0.4)",
     bottom: "0",
     position: "absolute",
