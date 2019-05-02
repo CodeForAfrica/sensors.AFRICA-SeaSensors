@@ -12,7 +12,7 @@ const styles = {
     position: "relative",
     width: "1350px",
     marginLeft: "89px",
-    height: "547.5px",
+    height: "700px",
     backgroundImage: `url(${Snorkel2})`,
     backgroundSize: "cover"
   },

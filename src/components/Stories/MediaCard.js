@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
@@ -36,24 +35,26 @@ const styles = {
 function MediaCard({ classes, image, title, date, link }) {
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title="Contemplative Reptile"
-        />
-        <CardContent className={classes.content}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography component="p">{date}</Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <a href={link} className={classes.launch}>
-          Launch Site
-        </a>
-      </CardActions>
+      <a
+        href={link}
+        className={classes.launch}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={image}
+            title="Contemplative Reptile"
+          />
+          <CardContent className={classes.content}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+            <Typography component="p">{date}</Typography>
+          </CardContent>
+        </CardActionArea>
+      </a>
     </Card>
   );
 }
