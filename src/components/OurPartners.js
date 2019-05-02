@@ -38,19 +38,6 @@ const styles = {
     letterSpacing: "0.7px",
     color: "#023256"
   },
-  partnersubTitle: {
-    width: "778.5px",
-    height: "102px",
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.5",
-    letterSpacing: "0.7px",
-    color: "#023256"
-  },
   titleText: {
     marginLeft: "40px"
   },
@@ -153,13 +140,6 @@ function OurPartners(props) {
           className={classes.partnerTitle}
         >
           Our Partners.
-        </Typography>
-        <Typography
-          variant="body1"
-          gutterBottom
-          className={classes.partnersubTitle}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
       </div>
       <div className={classes.flexGrid}>
