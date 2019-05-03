@@ -12,8 +12,7 @@ const styles = {
   },
   moreContainer: {
     width: "auto",
-    height: "30em",
-    backgroundColor: "#ffffff"
+    height: "30em"
   },
   moreText: {
     opacity: "0.6",

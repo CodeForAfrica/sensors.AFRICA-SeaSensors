@@ -58,7 +58,7 @@ const styles = {
 };
 
 function NewsTitleText(props) {
-  const { classes, titleText, topStoriesTitle, storiesBody } = props;
+  const { classes, titleText, topStoriesTitle } = props;
   return (
     <div>
       <div className={classes.titleContent}>
@@ -70,9 +70,6 @@ function NewsTitleText(props) {
       <Typography variant="h1" gutterBottom className={classes.topStoriesTitle}>
         {topStoriesTitle}
       </Typography>
-      <Typography variant="body1" className={classes.storiesBody}>
-        {storiesBody}
-      </Typography>
     </div>
   );
 }
@@ -80,8 +77,7 @@ function NewsTitleText(props) {
 NewsTitleText.propTypes = {
   classes: PropTypes.shape().isRequired,
   titleText: PropTypes.string.isRequired,
-  topStoriesTitle: PropTypes.string.isRequired,
-  storiesBody: PropTypes.string.isRequired
+  topStoriesTitle: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(NewsTitleText);

@@ -11,11 +11,15 @@ import {
 
 const styles = {
   card: {
-    width: 401,
-    paddingLeft: "50px",
-    height: "500px"
+    width: "360px",
+    height: "500px",
+    marginRight: "20px",
+    flexGrow: "0",
+    flexShrink: "0"
   },
   media: {
+    marginLeft: "50px",
+    width: "310px",
     height: 300
   },
   launch: {
@@ -28,6 +32,7 @@ const styles = {
     color: "#00a5dc"
   },
   content: {
+    paddingLeft: "50px",
     minHeight: "130px"
   }
 };
@@ -42,11 +47,7 @@ function MediaCard({ classes, image, title, date, link }) {
         rel="noopener noreferrer"
       >
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={image}
-            title="Contemplative Reptile"
-          />
+          <CardMedia className={classes.media} image={image} title={title} />
           <CardContent className={classes.content}>
             <Typography gutterBottom variant="h5" component="h2">
               {title}

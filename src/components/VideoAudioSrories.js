@@ -94,8 +94,7 @@ function VideoAudioStories(props) {
         <div className={classes.newsTitleText}>
           <NewsTitleText
             titleText="VIDEO & AUDIO STORIES"
-            topStoriesTitle="Lorem Ipsum Dolor."
-            storiesBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            topStoriesTitle="VIDEO & AUDIO STORIES"
           />
         </div>
         <div className={classes.youtubeTextIcon}>

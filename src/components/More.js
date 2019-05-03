@@ -38,7 +38,7 @@ const styles = {
     boxShadow: "0 23px 60px 0 rgba(0, 0, 0, 0.05)"
   },
   textArrowButtonParent: {
-    width: "250.5px",
+    width: "255px",
     height: "60px",
     border: "3px #023256 solid",
     paddingLeft: "1rem",
