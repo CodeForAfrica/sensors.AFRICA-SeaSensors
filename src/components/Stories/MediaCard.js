@@ -45,11 +45,7 @@ function MediaCard({ classes, image, title, date, link }) {
         rel="noopener noreferrer"
       >
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={image}
-            title="Contemplative Reptile"
-          />
+          <CardMedia className={classes.media} image={image} title={title} />
           <CardContent className={classes.content}>
             <Typography gutterBottom variant="h5" component="h2">
               {title}
