@@ -12,13 +12,14 @@ import {
 const styles = {
   card: {
     width: "360px",
-    paddingLeft: "50px",
     height: "500px",
     marginRight: "20px",
     flexGrow: "0",
     flexShrink: "0"
   },
   media: {
+    marginLeft: "50px",
+    width: "310px",
     height: 300
   },
   launch: {
@@ -31,6 +32,7 @@ const styles = {
     color: "#00a5dc"
   },
   content: {
+    paddingLeft: "50px",
     minHeight: "130px"
   }
 };
