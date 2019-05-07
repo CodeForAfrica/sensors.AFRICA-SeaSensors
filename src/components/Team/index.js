@@ -1,41 +1,39 @@
 import React, { Component } from "react";
 import { withStyles, Typography } from "@material-ui/core";
 
-import cardImage1 from "../../assets/partnerImage1.png";
-import cardImage2 from "../../assets/partnerImage2.png";
-import cardImage3 from "../../assets/partnerImage3.png";
-import cardImage4 from "../../assets/partnerImage4.png";
+import Gill from "../../assets/partnerImage3.png";
+import Jamie from "../../assets/Jamie.jpg";
+import Jason from "../../assets/JasonRubens.jpg";
 
 import CardContainer from "./CardContainer";
 
 const partnersContent = [
   {
     id: 1,
-    name: "Name & Surname",
-    title: "Job Title",
-    image: cardImage1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    name: "Dr Gill Braulik",
+    title: "Project Lead",
+    image: Gill,
+    text:
+      "Gill is a marine biologist and research fellow at the University of St. Andrews in the UK. She lives and works on marine issues in Tanzania. She is currently leading the SeaSensors project.",
+    twitterSocial: "https://twitter.com/GillBraulik"
   },
   {
     id: 2,
-    name: "Name & Surname",
-    title: "Job Title",
-    image: cardImage2,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    name: "Jamie Macaulay",
+    title: "Acoustic Analyst",
+    image: Jamie,
+    text:
+      "Jamie is a specialist on underwater acoustics of whales and dolphins and is responsible for developing the open source software and algorithms to detect bomb blasts.",
+    twitterSocial: "https://twitter.com/jam_machund"
   },
   {
     id: 3,
-    name: "Name & Surname",
-    title: "Job Title",
-    image: cardImage3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: 4,
-    name: "Name & Surname",
-    title: "Job Title",
-    image: cardImage4,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    name: "Jason Rubens",
+    title: "Project Advisor",
+    image: Jason,
+    text:
+      "Jason is an independent  marine environment and fisheries specialist and has been involved in supporting, monitoring, surveillance, and control of blast fishing in Tanzania.",
+    twitterSocial: "jasonrubens2@gmail.com"
   }
 ];
 
