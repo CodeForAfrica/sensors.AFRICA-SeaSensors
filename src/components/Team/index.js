@@ -43,7 +43,7 @@ const styles = {
   parentContainer: {
     height: "1166px",
     marginTop: "200px",
-    paddingLeft: "90px",
+    paddingLeft: "121px",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.05)"
