@@ -20,7 +20,10 @@ const styles = {
     boxShadow: "0 30px 60px 0 rgba(0, 0, 0, 0.05)",
     flex: "1",
     textAlign: "center",
-    margin: "10px 40px"
+    margin: "10px 40px",
+    "&:hover": {
+      transform: "scale(1.1)"
+    }
   },
   flexGrid: {
     display: "flex",
@@ -78,7 +81,7 @@ const styles = {
   },
   bitMapLogo: {
     width: "262px",
-    marginTop: "17px"
+    marginTop: "66px"
   },
   nuktaTitle: {
     fontFamily: "Montserrat",
@@ -112,12 +115,19 @@ const styles = {
     lineHeight: "2.02",
     letterSpacing: "1.1px",
     textAlign: "center",
-    color: "#77064c"
+    color: "#77064c",
+    textDecoration: "none"
   },
   arrowDown: {
     top: "124px",
     position: "relative",
     left: "17px"
+  },
+  cardLink: {
+    textDecoration: "none",
+    "&:hover": {
+      cursor: "pointer"
+    }
   }
 };
 
@@ -137,86 +147,133 @@ function OurPartners(props) {
       </div>
       <div className={classes.flexGrid}>
         <div className={classes.cardInfo}>
-          <img
-            src={cfaLogo}
-            className={classes.cfaLogoImage}
-            alt="logoImgAlt"
-          />
-        </div>
-        <div className={classes.cardInfo}>
-          <img src={UoSA} className={classes.UoSALogo} alt="logoImgAlt" />
-        </div>
-        <div className={classes.cardInfo}>
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.partnerTexts}
+          <a
+            href="https://codeforafrica.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
           >
-            SOUND OCEAN LTD.
-          </Typography>
-        </div>
-      </div>
-      <div className={classes.flexGrid}>
-        <div className={classes.cardInfo}>
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.partnerTexts}
-          >
-            Tanzania Blast Monitoring Network
-          </Typography>
-        </div>
-        <div className={classes.cardInfo}>
-          <img
-            src={Mwambao}
-            className={classes.mwambaoImg}
-            alt="Mwambao Castal"
-          />
-        </div>
-        <div className={classes.cardInfo}>
-          <img
-            src={MarineParksLogo}
-            className={classes.marineParksLogo}
-            alt="Mwambao Castal"
-          />
-        </div>
-      </div>
-      <div className={classes.flexGrid}>
-        <div className={classes.cardInfo}>
-          <img
-            src={MarineParksLogo}
-            className={classes.marineParksLogo}
-            alt="Mwambao Castal"
-          />
-        </div>
-        <div className={classes.cardInfo}>
-          <img
-            src={Bitmap}
-            className={classes.bitMapLogo}
-            alt="Nuka Carousel"
-          />
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.nuktaTitle}
-          >
-            Nukta Africa Ltd{" "}
-          </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.nuktaText}
-          >
-            Lorem ipsum dolor sit amet,
-            <br />
-            consectetur adipiscing elit.
-          </Typography>
-          <a className={classes.email} href="https://nukta.co.tz/">
-            https://nukta.co.tz/
+            <img
+              src={cfaLogo}
+              className={classes.cfaLogoImage}
+              alt="logoImgAlt"
+            />
           </a>
-          <br />
-          <a href="email.com" className={classes.email}>
-            info@nuktaafricaltd
+        </div>
+        <div className={classes.cardInfo}>
+          <a
+            href="http://biology.st-andrews.ac.uk/contact/staffprofile.aspx?sunid=jdjm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <img src={UoSA} className={classes.UoSALogo} alt="logoImgAlt" />
+          </a>
+        </div>
+        <div className={classes.cardInfo}>
+          <a
+            href="https://www.linkedin.com/in/jason-rubens-8013264/?originalSubdomain=tz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <Typography
+              variant="body1"
+              gutterBottom
+              className={classes.partnerTexts}
+            >
+              SOUND OCEAN LTD.
+            </Typography>
+          </a>
+        </div>
+      </div>
+      <div className={classes.flexGrid}>
+        <div className={classes.cardInfo}>
+          <a
+            href="https://tz-blast-monitoring.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <Typography
+              variant="body1"
+              gutterBottom
+              className={classes.partnerTexts}
+            >
+              Tanzania Blast Monitoring Network
+            </Typography>
+          </a>
+        </div>
+        <div className={classes.cardInfo}>
+          <a
+            href="http://www.mwambao.or.tz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <img
+              src={Mwambao}
+              className={classes.mwambaoImg}
+              alt="Mwambao Castal"
+            />
+          </a>
+        </div>
+        <div className={classes.cardInfo}>
+          <a
+            href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <img
+              src={MarineParksLogo}
+              className={classes.marineParksLogo}
+              alt="Mwambao Castal"
+            />
+          </a>
+        </div>
+      </div>
+      <div className={classes.flexGrid}>
+        <div className={classes.cardInfo}>
+          <a
+            href="http://www.mwambao.or.tz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <img
+              src={MarineParksLogo}
+              className={classes.marineParksLogo}
+              alt="Mwambao Castal"
+            />
+          </a>
+        </div>
+        <div className={classes.cardInfo}>
+          <a
+            href="https://corporate.nukta.co.tz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardLink}
+          >
+            <img
+              src={Bitmap}
+              className={classes.bitMapLogo}
+              alt="Nuka Carousel"
+            />
+            <Typography
+              variant="body1"
+              gutterBottom
+              className={classes.nuktaTitle}
+            >
+              Nukta Africa Ltd{" "}
+            </Typography>
+            <a className={classes.email} href="https://nukta.co.tz/">
+              https://nukta.co.tz/
+            </a>
+            <br />
+            <a href="email.com" className={classes.email}>
+              info@nuktaafricaltd
+            </a>
           </a>
         </div>
         <div className={classes.cardInfo}>
