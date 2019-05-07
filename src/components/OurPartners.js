@@ -14,8 +14,8 @@ const styles = {
     padding: "120px 120px 140px 120px"
   },
   cardInfo: {
-    width: "375px",
-    height: "375px",
+    width: "400px",
+    height: "400px",
     backgroundColor: "#ffffff",
     boxShadow: "0 30px 60px 0 rgba(0, 0, 0, 0.05)",
     flex: "1",
@@ -53,8 +53,6 @@ const styles = {
     marginTop: "74px"
   },
   partnerTexts: {
-    width: "295.5px",
-    height: "39px",
     opacity: "0.3",
     fontFamily: "Montserrat",
     fontSize: "22.5px",
@@ -62,11 +60,9 @@ const styles = {
     fontStyle: "normal",
     fontStretch: "normal",
     lineHeight: "1.67",
-    letterSpacing: "1px",
     textAlign: "center",
     color: "#000000",
-    marginTop: "148px",
-    marginLeft: "79px"
+    marginTop: "148px"
   },
   mwambaoImg: {
     height: "auto",
@@ -85,7 +81,6 @@ const styles = {
     marginTop: "17px"
   },
   nuktaTitle: {
-    height: "50.3px",
     fontFamily: "Montserrat",
     fontSize: "22px",
     fontWeight: "bold",
@@ -97,7 +92,6 @@ const styles = {
     color: "#023256"
   },
   nuktaText: {
-    height: "92.3px",
     opacity: "0.6",
     fontFamily: "Montserrat",
     fontSize: "15px",
@@ -110,7 +104,6 @@ const styles = {
     color: "#023256"
   },
   email: {
-    height: "50.3px",
     fontFamily: "Montserrat",
     fontSize: "16px",
     fontWeight: "bold",
