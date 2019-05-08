@@ -41,7 +41,7 @@ const styles = {
   parentContainer: {
     height: "1166px",
     marginTop: "200px",
-    paddingLeft: "121px",
+    paddingLeft: "165px",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.05)"
@@ -75,8 +75,7 @@ const styles = {
     fontStretch: "normal",
     lineHeight: "2.5",
     letterSpacing: "0.7px",
-    color: "#023256",
-    paddingLeft: "29.3px"
+    color: "#023256"
   },
   cardView: {
     marginRight: "30px"

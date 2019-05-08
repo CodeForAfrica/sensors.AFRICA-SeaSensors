@@ -11,7 +11,7 @@ import ArrowDown from "../assets/arrowBlueDown.png";
 
 const styles = {
   parentContainer: {
-    padding: "120px 120px 140px 81px"
+    padding: "120px 120px 140px 124px"
   },
   cardInfo: {
     width: "400px",
