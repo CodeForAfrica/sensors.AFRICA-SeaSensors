@@ -9,7 +9,7 @@ import {
   CardActions
 } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 const styles = {
   card: {
@@ -98,6 +98,7 @@ function CardContainer({ classes, image, name, title, text, twitterSocial }) {
         </Typography>
       </CardContent>
       <CardActions className={classes.socials}>
+        <FontAwesomeIcon icon={faFacebookF} color="#00a5dc" size="lg" />
         <a href={twitterSocial} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
             icon={faTwitter}
