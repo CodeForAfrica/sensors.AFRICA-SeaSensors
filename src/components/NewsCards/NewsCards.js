@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 const styles = {
   card: {
     width: "390px",
-    height: "405px"
+    height: "455px"
   },
   newsCardTitle: {
     fontFamily: "Oswald",
