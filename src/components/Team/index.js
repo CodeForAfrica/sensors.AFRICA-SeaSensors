@@ -51,8 +51,7 @@ const styles = {
     flexDirection: "row",
     justifyContent: "left",
     boxShadow: "none",
-    marginTop: "102px",
-    overflowX: "scroll"
+    marginTop: "102px"
   },
   meetTeamTitle: {
     fontFamily: "Oswald",
