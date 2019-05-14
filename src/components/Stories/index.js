@@ -65,8 +65,27 @@ class Stories extends Component {
     this.setState({ stories: newData });
   }
 
-  render() {
+  sortByDates() {
     const { stories } = this.state;
+    const dateArray = [...stories];
+
+    const compareDates = (firstDate, secondDate) => {
+      let comparison = 0;
+      if (new Date(firstDate.date) > new Date(secondDate.date)) {
+        comparison = -1;
+      } else if (new Date(firstDate.date) < new Date(secondDate.date)) {
+        comparison = 1;
+      }
+      return comparison;
+    };
+
+    const sortedDatesArray = dateArray.sort(compareDates);
+    return sortedDatesArray;
+  }
+
+  render() {
+    const sortedStories = this.sortByDates();
+
     return (
       <React.Fragment>
         <div style={styles.mask}>
@@ -80,9 +99,9 @@ class Stories extends Component {
             <div style={styles.line} />
           </Typography>
           <div style={styles.card}>
-            {stories.map(story => (
+            {sortedStories.map(story => (
               <MediaCard
-                key={story}
+                key={story.id}
                 title={story.title}
                 image={story.image}
                 date={story.date}

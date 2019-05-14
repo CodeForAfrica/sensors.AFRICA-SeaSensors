@@ -11,16 +11,19 @@ import ArrowDown from "../assets/arrowBlueDown.png";
 
 const styles = {
   parentContainer: {
-    padding: "120px 120px 140px 120px"
+    padding: "120px 120px 140px 124px"
   },
   cardInfo: {
-    width: "375px",
-    height: "375px",
+    width: "400px",
+    height: "400px",
     backgroundColor: "#ffffff",
     boxShadow: "0 30px 60px 0 rgba(0, 0, 0, 0.05)",
     flex: "1",
     textAlign: "center",
-    margin: "10px 40px"
+    margin: "10px 40px",
+    "&:hover": {
+      transform: "scale(1.1)"
+    }
   },
   flexGrid: {
     display: "flex",
@@ -53,8 +56,6 @@ const styles = {
     marginTop: "74px"
   },
   partnerTexts: {
-    width: "295.5px",
-    height: "39px",
     opacity: "0.3",
     fontFamily: "Montserrat",
     fontSize: "22.5px",
@@ -62,11 +63,9 @@ const styles = {
     fontStyle: "normal",
     fontStretch: "normal",
     lineHeight: "1.67",
-    letterSpacing: "1px",
     textAlign: "center",
     color: "#000000",
-    marginTop: "148px",
-    marginLeft: "79px"
+    marginTop: "148px"
   },
   mwambaoImg: {
     height: "auto",
@@ -82,10 +81,9 @@ const styles = {
   },
   bitMapLogo: {
     width: "262px",
-    marginTop: "17px"
+    marginTop: "66px"
   },
   nuktaTitle: {
-    height: "50.3px",
     fontFamily: "Montserrat",
     fontSize: "22px",
     fontWeight: "bold",
@@ -97,7 +95,6 @@ const styles = {
     color: "#023256"
   },
   nuktaText: {
-    height: "92.3px",
     opacity: "0.6",
     fontFamily: "Montserrat",
     fontSize: "15px",
@@ -110,7 +107,6 @@ const styles = {
     color: "#023256"
   },
   email: {
-    height: "50.3px",
     fontFamily: "Montserrat",
     fontSize: "16px",
     fontWeight: "bold",
@@ -119,12 +115,19 @@ const styles = {
     lineHeight: "2.02",
     letterSpacing: "1.1px",
     textAlign: "center",
-    color: "#77064c"
+    color: "#77064c",
+    textDecoration: "none"
   },
   arrowDown: {
     top: "124px",
     position: "relative",
     left: "17px"
+  },
+  cardLink: {
+    textDecoration: "none",
+    "&:hover": {
+      cursor: "pointer"
+    }
   }
 };
 
@@ -143,17 +146,32 @@ function OurPartners(props) {
         </Typography>
       </div>
       <div className={classes.flexGrid}>
-        <div className={classes.cardInfo}>
+        <a
+          href="https://codeforafrica.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img
             src={cfaLogo}
             className={classes.cfaLogoImage}
             alt="logoImgAlt"
           />
-        </div>
-        <div className={classes.cardInfo}>
+        </a>
+        <a
+          href="http://biology.st-andrews.ac.uk/contact/staffprofile.aspx?sunid=jdjm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img src={UoSA} className={classes.UoSALogo} alt="logoImgAlt" />
-        </div>
-        <div className={classes.cardInfo}>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jason-rubens-8013264/?originalSubdomain=tz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <Typography
             variant="body1"
             gutterBottom
@@ -161,10 +179,15 @@ function OurPartners(props) {
           >
             SOUND OCEAN LTD.
           </Typography>
-        </div>
+        </a>
       </div>
       <div className={classes.flexGrid}>
-        <div className={classes.cardInfo}>
+        <a
+          href="https://tz-blast-monitoring.net/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <Typography
             variant="body1"
             gutterBottom
@@ -172,31 +195,51 @@ function OurPartners(props) {
           >
             Tanzania Blast Monitoring Network
           </Typography>
-        </div>
-        <div className={classes.cardInfo}>
+        </a>
+        <a
+          href="http://www.mwambao.or.tz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img
             src={Mwambao}
             className={classes.mwambaoImg}
             alt="Mwambao Castal"
           />
-        </div>
-        <div className={classes.cardInfo}>
+        </a>
+        <a
+          href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img
             src={MarineParksLogo}
             className={classes.marineParksLogo}
             alt="Mwambao Castal"
           />
-        </div>
+        </a>
       </div>
       <div className={classes.flexGrid}>
-        <div className={classes.cardInfo}>
+        <a
+          href="http://www.mwambao.or.tz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img
             src={MarineParksLogo}
             className={classes.marineParksLogo}
             alt="Mwambao Castal"
           />
-        </div>
-        <div className={classes.cardInfo}>
+        </a>
+        <a
+          href="https://corporate.nukta.co.tz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${classes.cardLink} ${classes.cardInfo}`}
+        >
           <img
             src={Bitmap}
             className={classes.bitMapLogo}
@@ -209,15 +252,6 @@ function OurPartners(props) {
           >
             Nukta Africa Ltd{" "}
           </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.nuktaText}
-          >
-            Lorem ipsum dolor sit amet,
-            <br />
-            consectetur adipiscing elit.
-          </Typography>
           <a className={classes.email} href="https://nukta.co.tz/">
             https://nukta.co.tz/
           </a>
@@ -225,7 +259,7 @@ function OurPartners(props) {
           <a href="email.com" className={classes.email}>
             info@nuktaafricaltd
           </a>
-        </div>
+        </a>
         <div className={classes.cardInfo}>
           <img src={ArrowDown} alt="Arrow down" className={classes.arrowDown} />
         </div>

@@ -49,14 +49,13 @@ const styles = {
     left: "17em"
   },
   textArrowButtonText: {
-    width: "144px",
-    height: "24px",
     fontFamily: "Oswald",
     fontSize: "16px",
     fontWeight: "bold",
     letterSpacing: "3.2px",
     color: "#023256",
-    marginTop: "1em"
+    marginTop: "1em",
+    paddingRight: "8px"
   },
   textArrowButtonArrow: {
     marginTop: "1em"
