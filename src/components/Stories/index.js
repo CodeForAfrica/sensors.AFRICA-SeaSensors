@@ -72,9 +72,9 @@ class Stories extends Component {
     const compareDates = (firstDate, secondDate) => {
       let comparison = 0;
       if (new Date(firstDate.date) > new Date(secondDate.date)) {
-        comparison = 1;
-      } else if (new Date(firstDate.date) < new Date(secondDate.date)) {
         comparison = -1;
+      } else if (new Date(firstDate.date) < new Date(secondDate.date)) {
+        comparison = 1;
       }
       return comparison;
     };
