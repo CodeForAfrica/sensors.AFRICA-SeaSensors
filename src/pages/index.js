@@ -1,25 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import SliderCarousel from "../components/IndexHeader/SliderCarousel";
-import Navigation from "../components/Navigation";
-import withRoot from "../withRoot";
-import Blasts from "../components/Blasts";
-import TopStory from "../components/TopStory";
-import BlastFishing from "../components/TextSection";
-import Video from "../components/Video";
-import HowItWorks from "../components/TextSection/HowItWorks";
-import Scuba from "../components/Scuba";
-import More from "../components/More";
-import Stories from "../components/Stories";
-import Partners from "../components/Partners";
-import GetInvolved from "../components/GetInvolved";
-import Footer from "../components/Footer";
-import "../assets/css/main.css";
+import SliderCarousel from '../components/IndexHeader/SliderCarousel';
+import Navigation from '../components/Navigation';
+import Blasts from '../components/Blasts';
+import TopStory from '../components/TopStory';
+import BlastFishing from '../components/TextSection';
+import Video from '../components/Video';
+import HowItWorks from '../components/TextSection/HowItWorks';
+import Scuba from '../components/Scuba';
+import More from '../components/More';
+import Stories from '../components/Stories';
+import Partners from '../components/Partners';
+import GetInvolved from '../components/GetInvolved';
+import Footer from '../components/Footer';
+import { Page } from '../components/core';
 
-function IndexPage({ location }) {
+function Index({ location }) {
   return (
-    <div className="main-container-parent">
+    <Page>
       <Navigation />
       <SliderCarousel />
       <Blasts />
@@ -33,12 +32,12 @@ function IndexPage({ location }) {
       <Partners />
       <GetInvolved />
       <Footer />
-    </div>
+    </Page>
   );
 }
 
-IndexPage.propTypes = {
+Index.propTypes = {
   location: PropTypes.shape().isRequired
 };
 
-export default withRoot(IndexPage);
+export default Index;
