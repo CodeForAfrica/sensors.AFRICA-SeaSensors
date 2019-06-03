@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import NewsHeader from "../components/NewsHeader";
-import NewsTopStories from "../components/NewsTopStories";
-import MonthStory from "../components/MonthStory";
-import NewsCards from "../components/NewsCards";
-import AllStoriesButton from "../components/AllStoriesButton";
-import VideoAudio from "../components/VideoAudioSrories";
-import OurPartners from "../components/OurPartners";
-import GetInvolved from "../components/GetInvolved";
-import Footer from "../components/Footer";
-import withRoot from "../withRoot";
+import NewsHeader from '../components/NewsHeader';
+import NewsTopStories from '../components/NewsTopStories';
+import MonthStory from '../components/MonthStory';
+import NewsCards from '../components/NewsCards';
+import AllStoriesButton from '../components/AllStoriesButton';
+import VideoAudio from '../components/VideoAudioSrories';
+import OurPartners from '../components/OurPartners';
+import GetInvolved from '../components/GetInvolved';
+import Footer from '../components/Footer';
+import { Page } from '../components/core';
 
-function NewsPage() {
+function News() {
   return (
-    <div className="main-container-parent">
+    <Page>
       <NewsHeader />
       <NewsTopStories />
       <MonthStory />
@@ -23,8 +23,8 @@ function NewsPage() {
       <OurPartners />
       <GetInvolved />
       <Footer />
-    </div>
+    </Page>
   );
 }
 
-export default withRoot(NewsPage);
+export default News;

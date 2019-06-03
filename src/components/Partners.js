@@ -1,59 +1,59 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Grid, Typography, withStyles } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Grid, Typography, withStyles } from '@material-ui/core';
 
-import partners from "../assets/ourPartners.jpg";
+import partners from '../assets/ourPartners.jpg';
 
 const styles = {
   partnerParent: {
-    width: "auto",
-    height: "750px",
-    backgroundColor: "#ffffff",
-    paddingTop: "112px"
+    width: 'auto',
+    height: '750px',
+    backgroundColor: '#ffffff',
+    paddingTop: '112px'
   },
   partnerImage: {
-    width: "500px",
-    height: "500px",
-    display: "inline",
-    marginLeft: "20%",
-    objectFit: "cover"
+    width: '500px',
+    height: '500px',
+    display: 'inline',
+    marginLeft: '20%',
+    objectFit: 'cover'
   },
   ourPartners: {
-    width: "216.8px",
-    height: "24px",
-    opacity: "0.4",
-    fontFamily: "Oswald",
-    fontSize: "10px",
-    fontWeight: "500",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.65",
-    letterSpacing: "6px",
-    color: "#023256"
+    width: '216.8px',
+    height: '24px',
+    opacity: '0.4',
+    fontFamily: 'Oswald',
+    fontSize: '10px',
+    fontWeight: '500',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.65',
+    letterSpacing: '6px',
+    color: '#023256'
   },
   thankYouText: {
-    fontFamily: "Oswald",
-    fontSize: "52px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.13",
-    letterSpacing: "0.7px",
-    color: "#023256"
+    fontFamily: 'Oswald',
+    fontSize: '52px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.13',
+    letterSpacing: '0.7px',
+    color: '#023256'
   },
   seaSensorsText: {
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.5",
-    letterSpacing: "0.7px",
-    textAlign: "justify",
-    color: "#023256",
-    paddingRight: "122px",
-    paddingTop: "35px"
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.5',
+    letterSpacing: '0.7px',
+    textAlign: 'justify',
+    color: '#023256',
+    paddingRight: '122px',
+    paddingTop: '35px'
   }
 };
 

@@ -1,39 +1,39 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles, Typography } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, Typography } from '@material-ui/core';
 
-import arrowBack from "../assets/arrowWhite.png";
+import arrowBack from '../assets/arrowWhite.png';
 
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 
 const styles = {
   parentHeaderText: {
-    position: "relative",
-    top: "30%",
-    padding: "0 5%"
+    position: 'relative',
+    top: '30%',
+    padding: '0 5%'
   },
   subtitleRule: {
-    width: "22.5px",
-    height: "2px",
-    backgroundColor: "#ffffff",
-    marginRight: "20px"
+    width: '22.5px',
+    height: '2px',
+    backgroundColor: '#ffffff',
+    marginRight: '20px'
   },
   mediaResources: {
-    height: "115.5px",
-    fontFamily: "Oswald",
-    fontSize: "88px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    letterSpacing: "0.8px",
-    color: "#ffffff",
-    marginBottom: "2em"
+    height: '115.5px',
+    fontFamily: 'Oswald',
+    fontSize: '88px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    letterSpacing: '0.8px',
+    color: '#ffffff',
+    marginBottom: '2em'
   },
   arrowBack: {
-    transform: "rotate(180deg)",
-    display: "flex",
-    position: "relative",
-    justifyContent: "flex-end"
+    transform: 'rotate(180deg)',
+    display: 'flex',
+    position: 'relative',
+    justifyContent: 'flex-end'
   }
 };
 

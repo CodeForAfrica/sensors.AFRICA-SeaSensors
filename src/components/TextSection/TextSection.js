@@ -1,43 +1,43 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Grid, Typography, withStyles } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Grid, Typography, withStyles } from '@material-ui/core';
 
 const styles = {
   root: {
     flexGrow: 1,
-    height: "450px"
+    height: '450px'
   },
   textGrid: {
-    height: "28em",
-    backgroundColor: "#ffffff",
-    width: "100%"
+    height: '28em',
+    backgroundColor: '#ffffff',
+    width: '100%'
   },
   blastFishsingTitle: {
-    fontFamily: "Oswald",
-    fontSize: "52px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.13",
-    letterSpacing: "0.7px",
-    color: "#023256",
-    marginTop: "125px",
-    marginLeft: "162px"
+    fontFamily: 'Oswald',
+    fontSize: '52px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.13',
+    letterSpacing: '0.7px',
+    color: '#023256',
+    marginTop: '125px',
+    marginLeft: '162px'
   },
   blastFishingText: {
-    width: "600.1px ",
-    height: "25em",
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "14px ",
-    fontWeight: "normal",
-    fontStyle: " normal",
-    fontStretch: "normal",
-    lineHeight: "2.5",
-    letterSpacing: "0.7px",
-    textAlign: "justify",
-    color: "#023256",
-    marginTop: "5em"
+    width: '600.1px ',
+    height: '25em',
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '14px ',
+    fontWeight: 'normal',
+    fontStyle: ' normal',
+    fontStretch: 'normal',
+    lineHeight: '2.5',
+    letterSpacing: '0.7px',
+    textAlign: 'justify',
+    color: '#023256',
+    marginTop: '5em'
   }
 };
 

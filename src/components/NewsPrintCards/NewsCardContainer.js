@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   withStyles,
@@ -6,99 +6,99 @@ import {
   CardActionArea,
   CardContent,
   Typography
-} from "@material-ui/core";
-import PropTypes from "prop-types";
+} from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import arrow from "../../assets/arrowBlueRight.png";
+import arrow from '../../assets/arrowBlueRight.png';
 
 const styles = {
   card: {
-    width: "360px",
-    height: "554.8px",
-    marginLeft: "40px",
-    position: "relative",
-    "&:hover": {
-      transition: "all .2s ease-in-out",
-      transform: "scale(1.1)"
+    width: '360px',
+    height: '554.8px',
+    marginLeft: '40px',
+    position: 'relative',
+    '&:hover': {
+      transition: 'all .2s ease-in-out',
+      transform: 'scale(1.1)'
     },
-    "&:hover $media": {
+    '&:hover $media': {
       height: 300,
-      transition: "all .1s ease-in-out"
+      transition: 'all .1s ease-in-out'
     }
   },
   media: {
     height: 400,
-    backgroundPosition: "top",
-    backgroundSize: "cover"
+    backgroundPosition: 'top',
+    backgroundSize: 'cover'
   },
   cardContent: {
-    borderBottom: "0px",
-    "&:hover": {
-      paddingBottom: "0"
+    borderBottom: '0px',
+    '&:hover': {
+      paddingBottom: '0'
     }
   },
   name: {
-    fontFamily: "Montserrat",
-    fontSize: "22px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.05",
-    letterSpacing: "1.5px",
-    color: "#023256"
+    fontFamily: 'Montserrat',
+    fontSize: '22px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.05',
+    letterSpacing: '1.5px',
+    color: '#023256'
   },
   titleText: {
-    fontFamily: "Oswald",
-    fontSize: "1.7em",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
+    fontFamily: 'Oswald',
+    fontSize: '1.7em',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
     lineHeight: 2,
-    letterSpacing: "1px",
-    color: "#023256",
-    paddingBottom: "10px"
+    letterSpacing: '1px',
+    color: '#023256',
+    paddingBottom: '10px'
   },
   datePublished: {
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "italic",
-    fontStretch: "normal",
-    lineHeight: "2.15",
-    letterSpacing: "1px",
-    color: "#023256"
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'italic',
+    fontStretch: 'normal',
+    lineHeight: '2.15',
+    letterSpacing: '1px',
+    color: '#023256'
   },
   text: {
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.15",
-    letterSpacing: "1px",
-    color: "#023256",
-    paddingBottom: "27px"
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.15',
+    letterSpacing: '1px',
+    color: '#023256',
+    paddingBottom: '27px'
   },
   readMoreArrow: {
-    color: "#ffffff",
-    marginTop: "0.7em"
+    color: '#ffffff',
+    marginTop: '0.7em'
   },
   readMoreText: {
-    fontFamily: "Oswald",
-    fontSize: "1.2em",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "2px",
-    color: "#023256",
-    paddingRight: "20px"
+    fontFamily: 'Oswald',
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: '2px',
+    color: '#023256',
+    paddingRight: '20px'
   },
   readMoreParent: {
-    display: "flex",
-    position: "relative"
+    display: 'flex',
+    position: 'relative'
   }
 };
 

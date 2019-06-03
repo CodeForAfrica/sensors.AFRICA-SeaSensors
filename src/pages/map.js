@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import mapImage from "../assets/mapppp.png";
-import withRoot from "../withRoot";
+import { Page } from '../components/core';
+import mapImage from '../assets/mapppp.png';
 
-function MapPage() {
+function Map() {
   return (
-    <div className="main-container-parent">
+    <Page>
       <img src={mapImage} alt="Map" />
-    </div>
+    </Page>
   );
 }
 
-export default withRoot(MapPage);
+export default Map;

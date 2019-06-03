@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Tabletop from "tabletop";
+import React, { Component } from 'react';
+import Tabletop from 'tabletop';
 
-import TopStory from "./TopStory";
+import TopStory from './TopStory';
 
 class Storiess extends Component {
   constructor() {
@@ -13,9 +13,9 @@ class Storiess extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      key: '187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0',
       callback: (data, tabletop) => {
-        const sheetData = tabletop.sheets("Top Story").all();
+        const sheetData = tabletop.sheets('Top Story').all();
         this.setState({
           data: sheetData
         });

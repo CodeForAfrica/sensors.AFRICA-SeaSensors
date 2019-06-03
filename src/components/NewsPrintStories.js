@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import NewsTitleText from "./NewsTitleText";
+import NewsTitleText from './NewsTitleText';
 
 function NewsPrintStories() {
   return (

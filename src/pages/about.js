@@ -1,19 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import AboutUsHeader from "../components/AboutUsHeader";
-import AboutImportantHeader from "../components/AboutImportantHeader";
-import BlastDeployment from "../components/BlastDeployment";
-import OurPartners from "../components/OurPartners";
-import GetInvolved from "../components/GetInvolved";
-import Footer from "../components/Footer";
-import TeamCard from "../components/Team";
-import ViewGallery from "../components/ViewGallery";
-import withRoot from "../withRoot";
-import "../assets/css/main.css";
+import AboutUsHeader from '../components/AboutUsHeader';
+import AboutImportantHeader from '../components/AboutImportantHeader';
+import BlastDeployment from '../components/BlastDeployment';
+import OurPartners from '../components/OurPartners';
+import GetInvolved from '../components/GetInvolved';
+import Footer from '../components/Footer';
+import TeamCard from '../components/Team';
+import ViewGallery from '../components/ViewGallery';
+import { Page } from '../components/core';
 
-function AboutPage() {
+function About() {
   return (
-    <div className="main-container-parent">
+    <Page>
       <AboutUsHeader />
       <AboutImportantHeader />
       <BlastDeployment />
@@ -22,8 +21,8 @@ function AboutPage() {
       <ViewGallery />
       <GetInvolved />
       <Footer />
-    </div>
+    </Page>
   );
 }
 
-export default withRoot(AboutPage);
+export default About;

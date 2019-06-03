@@ -1,81 +1,81 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Typography, withStyles } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Typography, withStyles } from '@material-ui/core';
 
-import boat from "../assets/boat.png";
-import scubaDive from "../assets/ScubaDive.png";
+import boat from '../assets/boat.png';
+import scubaDive from '../assets/ScubaDive.png';
 
 const styles = {
   parentContainer: {
-    marginLeft: "90px"
+    marginLeft: '90px'
   },
   date: {
-    width: "229.5px",
-    height: "37.5px",
-    opacity: "0.58",
-    fontFamily: "Oswald",
-    fontSize: "15px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "4.75",
-    letterSpacing: "6px",
-    color: " #ffffff"
+    width: '229.5px',
+    height: '37.5px',
+    opacity: '0.58',
+    fontFamily: 'Oswald',
+    fontSize: '15px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '4.75',
+    letterSpacing: '6px',
+    color: ' #ffffff'
   },
   blastDeploymentText: {
-    opacity: "0.6",
-    paddingRight: "121px",
-    fontFamily: "Montserrat !important",
-    fontSize: "15px !important",
-    fontWeight: "normal !important",
-    fontStyle: "normal !important",
-    fontStretch: "normal",
-    lineHeight: "2.5 !important",
-    letterSpacing: "0.7px !important",
-    textAlign: "justify",
-    color: "#023256 !important",
-    marginLeft: "792px",
-    position: "relative"
+    opacity: '0.6',
+    paddingRight: '121px',
+    fontFamily: 'Montserrat !important',
+    fontSize: '15px !important',
+    fontWeight: 'normal !important',
+    fontStyle: 'normal !important',
+    fontStretch: 'normal',
+    lineHeight: '2.5 !important',
+    letterSpacing: '0.7px !important',
+    textAlign: 'justify',
+    color: '#023256 !important',
+    marginLeft: '792px',
+    position: 'relative'
   },
   recordersText: {
-    width: "216.8px",
-    height: "114.5px",
-    fontFamily: "Oswald",
-    fontSize: "30px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.5",
-    letterSpacing: "1.2px",
-    color: "#ffffff"
+    width: '216.8px',
+    height: '114.5px',
+    fontFamily: 'Oswald',
+    fontSize: '30px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.5',
+    letterSpacing: '1.2px',
+    color: '#ffffff'
   },
   scubaDive: {
-    width: "100%",
-    position: "relative",
-    height: "720px",
-    objectFit: "cover",
-    objectPosition: "0 0"
+    width: '100%',
+    position: 'relative',
+    height: '720px',
+    objectFit: 'cover',
+    objectPosition: '0 0'
   },
   boat: {
-    position: "absolute",
-    bottom: "300px",
-    width: "510px",
-    height: "630px",
-    left: "90px",
-    top: "580.5px"
+    position: 'absolute',
+    bottom: '300px',
+    width: '510px',
+    height: '630px',
+    left: '90px',
+    top: '580.5px'
   },
   recordDeploy: {
-    right: "102px",
-    bottom: "85px",
-    position: "absolute"
+    right: '102px',
+    bottom: '85px',
+    position: 'absolute'
   },
   scubaParent: {
-    position: "relative",
-    paddingLeft: "150px",
-    height: "720px"
+    position: 'relative',
+    paddingLeft: '150px',
+    height: '720px'
   },
   textContainer: {
-    paddingTop: "153px"
+    paddingTop: '153px'
   }
 };
 

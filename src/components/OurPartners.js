@@ -1,132 +1,132 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Typography, withStyles } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Typography, withStyles } from '@material-ui/core';
 
-import cfaLogo from "../assets/CFA-2.png";
-import UoSA from "../assets/UoSA.png";
-import Mwambao from "../assets/logo2.png";
-import Bitmap from "../assets/Bitmap.png";
-import MarineParksLogo from "../assets/TanzaniaMarinePark.png";
-import ArrowDown from "../assets/arrowBlueDown.png";
+import cfaLogo from '../assets/CFA-2.png';
+import UoSA from '../assets/UoSA.png';
+import Mwambao from '../assets/logo2.png';
+import Bitmap from '../assets/Bitmap.png';
+import MarineParksLogo from '../assets/TanzaniaMarinePark.png';
+import ArrowDown from '../assets/arrowBlueDown.png';
 
 const styles = {
   parentContainer: {
-    padding: "120px 120px 140px 124px"
+    padding: '120px 120px 140px 124px'
   },
   cardInfo: {
-    width: "400px",
-    height: "400px",
-    backgroundColor: "#ffffff",
-    boxShadow: "0 30px 60px 0 rgba(0, 0, 0, 0.05)",
-    flex: "1",
-    textAlign: "center",
-    margin: "10px 40px",
-    "&:hover": {
-      transform: "scale(1.1)"
+    width: '400px',
+    height: '400px',
+    backgroundColor: '#ffffff',
+    boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
+    flex: '1',
+    textAlign: 'center',
+    margin: '10px 40px',
+    '&:hover': {
+      transform: 'scale(1.1)'
     }
   },
   flexGrid: {
-    display: "flex",
-    justifyContent: "space-between",
-    margin: "0 0 20px 0"
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '0 0 20px 0'
   },
   partnerTitle: {
-    width: "363px",
-    height: "102px",
-    fontFamily: "Oswald",
-    fontSize: "52px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    letterSpacing: "0.7px",
-    color: "#023256"
+    width: '363px',
+    height: '102px',
+    fontFamily: 'Oswald',
+    fontSize: '52px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    letterSpacing: '0.7px',
+    color: '#023256'
   },
   titleText: {
-    marginLeft: "40px"
+    marginLeft: '40px'
   },
   cfaLogoImage: {
-    width: "272px",
-    height: "auto",
-    paddingTop: "99px",
-    paddingRight: "56px"
+    width: '272px',
+    height: 'auto',
+    paddingTop: '99px',
+    paddingRight: '56px'
   },
   UoSALogo: {
-    width: "136px",
-    height: "auto",
-    marginTop: "74px"
+    width: '136px',
+    height: 'auto',
+    marginTop: '74px'
   },
   partnerTexts: {
-    opacity: "0.3",
-    fontFamily: "Montserrat",
-    fontSize: "22.5px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.67",
-    textAlign: "center",
-    color: "#000000",
-    marginTop: "148px"
+    opacity: '0.3',
+    fontFamily: 'Montserrat',
+    fontSize: '22.5px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.67',
+    textAlign: 'center',
+    color: '#000000',
+    marginTop: '148px'
   },
   mwambaoImg: {
-    height: "auto",
-    width: "290px",
-    marginTop: "96px",
-    marginLeft: "20px"
+    height: 'auto',
+    width: '290px',
+    marginTop: '96px',
+    marginLeft: '20px'
   },
   marineParksLogo: {
-    height: "auto",
-    width: "200px",
-    marginTop: "66px",
-    marginLeft: "6px"
+    height: 'auto',
+    width: '200px',
+    marginTop: '66px',
+    marginLeft: '6px'
   },
   bitMapLogo: {
-    width: "262px",
-    marginTop: "66px"
+    width: '262px',
+    marginTop: '66px'
   },
   nuktaTitle: {
-    fontFamily: "Montserrat",
-    fontSize: "22px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "3.05",
-    letterSpacing: "1.5px",
-    textAlign: "center",
-    color: "#023256"
+    fontFamily: 'Montserrat',
+    fontSize: '22px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '3.05',
+    letterSpacing: '1.5px',
+    textAlign: 'center',
+    color: '#023256'
   },
   nuktaText: {
-    opacity: "0.6",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.75",
-    letterSpacing: "1px",
-    textAlign: "center",
-    color: "#023256"
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.75',
+    letterSpacing: '1px',
+    textAlign: 'center',
+    color: '#023256'
   },
   email: {
-    fontFamily: "Montserrat",
-    fontSize: "16px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.02",
-    letterSpacing: "1.1px",
-    textAlign: "center",
-    color: "#77064c",
-    textDecoration: "none"
+    fontFamily: 'Montserrat',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.02',
+    letterSpacing: '1.1px',
+    textAlign: 'center',
+    color: '#77064c',
+    textDecoration: 'none'
   },
   arrowDown: {
-    top: "124px",
-    position: "relative",
-    left: "17px"
+    top: '124px',
+    position: 'relative',
+    left: '17px'
   },
   cardLink: {
-    textDecoration: "none",
-    "&:hover": {
-      cursor: "pointer"
+    textDecoration: 'none',
+    '&:hover': {
+      cursor: 'pointer'
     }
   }
 };
@@ -250,7 +250,7 @@ function OurPartners(props) {
             gutterBottom
             className={classes.nuktaTitle}
           >
-            Nukta Africa Ltd{" "}
+            Nukta Africa Ltd{' '}
           </Typography>
           <a className={classes.email} href="https://nukta.co.tz/">
             https://nukta.co.tz/

@@ -1,70 +1,70 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles, Typography } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, Typography } from '@material-ui/core';
 
-import ArrowRight from "../../assets/arrowWhite.png";
+import ArrowRight from '../../assets/arrowWhite.png';
 
 const styles = {
   monthStoryParent: {
-    width: "630px",
-    backgroundColor: " rgb(255,255,255,0.4)",
-    bottom: "0",
-    position: "absolute",
-    right: "0",
-    zIndex: "2",
-    padding: "64px"
+    width: '630px',
+    backgroundColor: ' rgb(255,255,255,0.4)',
+    bottom: '0',
+    position: 'absolute',
+    right: '0',
+    zIndex: '2',
+    padding: '64px'
   },
   monthStorySubtitle: {
-    fontFamily: "Oswald",
-    fontSize: "13px",
-    fontWeight: "1000",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.14",
-    letterSpacing: "5.6px",
-    color: "#ffffff",
-    marginBottom: "40px"
+    fontFamily: 'Oswald',
+    fontSize: '13px',
+    fontWeight: '1000',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.14',
+    letterSpacing: '5.6px',
+    color: '#ffffff',
+    marginBottom: '40px'
   },
   monthStoryTitle: {
-    fontFamily: "Oswald",
-    fontSize: "45px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1",
-    letterSpacing: "3px",
-    color: "#ffffff"
+    fontFamily: 'Oswald',
+    fontSize: '45px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1',
+    letterSpacing: '3px',
+    color: '#ffffff'
   },
   contentText: {
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.15",
-    letterSpacing: "1px",
-    color: "#ffffff",
-    marginBottom: "62px",
-    height: "200px",
-    overflow: "hidden",
-    textOverflow: "ellipsis"
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.15',
+    letterSpacing: '1px',
+    color: '#ffffff',
+    marginBottom: '62px',
+    height: '200px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   readStoryParent: {
-    display: "flex"
+    display: 'flex'
   },
   readStoryText: {
-    fontFamily: "Oswald",
-    fontSize: "16px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "3.2px",
-    color: "#ffffff",
-    marginRight: "39px"
+    fontFamily: 'Oswald',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: '3.2px',
+    color: '#ffffff',
+    marginRight: '39px'
   },
   arrowLink: {
-    textDecoration: "none"
+    textDecoration: 'none'
   }
 };
 

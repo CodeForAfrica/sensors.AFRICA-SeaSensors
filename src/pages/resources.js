@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-import ResourcesHeader from "../components/ResourcesHeader";
-import GetInvolved from "../components/GetInvolved";
-import Footer from "../components/Footer";
-import ResourceVideos from "../components/ResourceCards";
-import withRoot from "../withRoot";
-import "../assets/css/main.css";
+import ResourcesHeader from '../components/ResourcesHeader';
+import GetInvolved from '../components/GetInvolved';
+import Footer from '../components/Footer';
+import ResourceVideos from '../components/ResourceCards';
 
-function ResourcesPage() {
+import { Page } from '../components/core';
+
+function Resources() {
   return (
-    <div className="main-container-parent">
+    <Page>
       <ResourcesHeader />
       <ResourceVideos />
       <GetInvolved />
       <Footer />
-    </div>
+    </Page>
   );
 }
 
-export default withRoot(ResourcesPage);
+export default Resources;

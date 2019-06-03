@@ -1,50 +1,50 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import { withStyles } from "@material-ui/core";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import { withStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import HeaderImage1 from "../../assets/mapppp.png";
-import HeaderImage2 from "../../assets/HeaderImage2.png";
-import gridImage from "../../assets/grid.png";
+import HeaderImage1 from '../../assets/mapppp.png';
+import HeaderImage2 from '../../assets/HeaderImage2.png';
+import gridImage from '../../assets/grid.png';
 
-import HeaderText from "./HeaderText";
+import HeaderText from './HeaderText';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const styles = {
   headerImage: {
-    background: "no-repeat center center fixed",
-    WebkitBackgroundSize: "cover",
-    MozBackgroundSize: "cover",
-    OBackgroundSize: "cover",
-    backgroundSize: "cover",
-    minHeight: "100%",
-    height: "800px"
+    background: 'no-repeat center center fixed',
+    WebkitBackgroundSize: 'cover',
+    MozBackgroundSize: 'cover',
+    OBackgroundSize: 'cover',
+    backgroundSize: 'cover',
+    minHeight: '100%',
+    height: '800px'
   },
   grid: {
-    position: "absolute",
-    bottom: "32em",
-    right: "7%"
+    position: 'absolute',
+    bottom: '32em',
+    right: '7%'
   },
   parentSlider: {
-    display: "flex",
-    justifyContent: "flex-start",
-    position: "absolute",
-    color: "#ffffff",
-    top: "43em",
-    zIndex: "999",
-    left: "3.1em"
+    display: 'flex',
+    justifyContent: 'flex-start',
+    position: 'absolute',
+    color: '#ffffff',
+    top: '43em',
+    zIndex: '999',
+    left: '3.1em'
   },
   firstSlider: {
-    marginRight: "8.5em"
+    marginRight: '8.5em'
   },
   waving: {
-    display: "block !important",
-    position: "absolute !important",
-    userSelect: "none !important",
-    height: "60% !important",
-    width: "100% !important",
-    bottom: "1em !important"
+    display: 'block !important',
+    position: 'absolute !important',
+    userSelect: 'none !important',
+    height: '60% !important',
+    width: '100% !important',
+    bottom: '1em !important'
   }
 };
 
@@ -55,9 +55,9 @@ const Image = () => (
       style={{
         height: 164,
         width: 112,
-        position: "fixed",
-        top: "8em",
-        right: "6em"
+        position: 'fixed',
+        top: '8em',
+        right: '6em'
       }}
       alt="grid"
     />
