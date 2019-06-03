@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardActionArea,
@@ -7,33 +7,33 @@ import {
   CardMedia,
   Typography,
   withStyles
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const styles = {
   card: {
-    width: "360px",
-    height: "500px",
-    marginRight: "20px",
-    flexGrow: "0",
-    flexShrink: "0"
+    width: '360px',
+    height: '500px',
+    marginRight: '20px',
+    flexGrow: '0',
+    flexShrink: '0'
   },
   media: {
-    marginLeft: "50px",
-    width: "310px",
+    marginLeft: '50px',
+    width: '310px',
     height: 300
   },
   launch: {
-    textDecoration: "none",
-    fontFamily: "Montserrat",
-    fontSize: "18px",
-    fontWeight: "bold",
-    lineHeight: "1.88",
-    letterSpacing: "0.6px",
-    color: "#00a5dc"
+    textDecoration: 'none',
+    fontFamily: 'Montserrat',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    lineHeight: '1.88',
+    letterSpacing: '0.6px',
+    color: '#00a5dc'
   },
   content: {
-    paddingLeft: "50px",
-    minHeight: "130px"
+    paddingLeft: '50px',
+    minHeight: '130px'
   }
 };
 

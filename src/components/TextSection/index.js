@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import TextSection from "./TextSection";
-import { Blast } from "./data";
+import TextSection from './TextSection';
+import { Blast } from './data';
 
 function BlastFishing() {
   return (

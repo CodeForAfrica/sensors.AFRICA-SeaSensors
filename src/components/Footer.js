@@ -1,112 +1,112 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Grid, Typography, withStyles } from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Grid, Typography, withStyles } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
   faFacebookF,
   faYoutube,
   faGithub,
   faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
-import cfaLogo from "../assets/cfa.png";
-import billMelindaImg from "../assets/billMelinda.png";
-import oNImg from "../assets/on.png";
-import uniStAndrewsImg from "../assets/uniStAndrew.png";
-import usdoImg from "../assets/usDoS.png";
-import icfjImg from "../assets/icfj.png";
-import seaLogoImg from "../assets/SeaSensorsLogoWhite.png";
-import footerMap from "../assets/footerMap.png";
+import cfaLogo from '../assets/cfa.png';
+import billMelindaImg from '../assets/billMelinda.png';
+import oNImg from '../assets/on.png';
+import uniStAndrewsImg from '../assets/uniStAndrew.png';
+import usdoImg from '../assets/usDoS.png';
+import icfjImg from '../assets/icfj.png';
+import seaLogoImg from '../assets/SeaSensorsLogoWhite.png';
+import footerMap from '../assets/footerMap.png';
 
 const styles = {
   root: {
     flexGrow: 1
   },
   parentFooter: {
-    position: "relative",
-    bottom: "0",
-    width: "100%",
-    backgroundBlendMode: "multiply",
-    backgroundImage: "linear-gradient(to bottom, #001525, #001525)",
-    paddingLeft: "40px",
-    paddingTop: "8em"
+    position: 'relative',
+    bottom: '0',
+    width: '100%',
+    backgroundBlendMode: 'multiply',
+    backgroundImage: 'linear-gradient(to bottom, #001525, #001525)',
+    paddingLeft: '40px',
+    paddingTop: '8em'
   },
   footerWrapper: {
-    display: "flex",
-    justifyContent: "space - evenly"
+    display: 'flex',
+    justifyContent: 'space - evenly'
   },
   footerText: {
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "2.2",
-    letterSpacing: "0.6px",
-    color: "#ffffff",
-    opacity: "0.87",
-    paddingBottom: "20px"
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '2.2',
+    letterSpacing: '0.6px',
+    color: '#ffffff',
+    opacity: '0.87',
+    paddingBottom: '20px'
   },
   textStyle: {
-    color: "#00a5dc",
-    margin: "0 3px"
+    color: '#00a5dc',
+    margin: '0 3px'
   },
   logoGrid: {
-    marginBottom: "3em"
+    marginBottom: '3em'
   },
   LogoImg: {
-    width: "89px",
-    height: "auto"
+    width: '89px',
+    height: 'auto'
   },
   seaLogo: {
-    height: "8em",
-    width: "auto"
+    height: '8em',
+    width: 'auto'
   },
   mapImage: {
-    height: "476px",
-    position: "absolute",
-    bottom: "0",
-    left: "2px"
+    height: '476px',
+    position: 'absolute',
+    bottom: '0',
+    left: '2px'
   },
   copyrightParent: {
-    display: "flex"
+    display: 'flex'
   },
   copyright: {
-    marginTop: "2.6em",
-    marginLeft: "-2em"
+    marginTop: '2.6em',
+    marginLeft: '-2em'
   },
   rightsReservedText: {
-    width: "369px",
-    height: "69.8px",
-    fontFamily: "Montserrat",
-    fontSize: "15px",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "1.47",
-    letterSpacing: "0.8px",
-    color: " #ffffff"
+    width: '369px',
+    height: '69.8px',
+    fontFamily: 'Montserrat',
+    fontSize: '15px',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: '1.47',
+    letterSpacing: '0.8px',
+    color: ' #ffffff'
   },
   termsConditionsText: {
-    fontWeight: "bold",
-    letterSpacing: "0.2px",
-    color: " #ffffff"
+    fontWeight: 'bold',
+    letterSpacing: '0.2px',
+    color: ' #ffffff'
   },
   parentSocial: {
-    display: "flex",
-    justifyContent: "space-around",
-    position: "relative",
-    paddingRight: "50px",
-    top: "80px"
+    display: 'flex',
+    justifyContent: 'space-around',
+    position: 'relative',
+    paddingRight: '50px',
+    top: '80px'
   },
   email: {
-    color: "#ffffff"
+    color: '#ffffff'
   },
   alignLogos: {
-    float: "right",
-    textAlign: "center",
-    paddingRight: "10px"
+    float: 'right',
+    textAlign: 'center',
+    paddingRight: '10px'
   }
 };
 

@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import TextSection from "./TextSection";
-import { Works } from "./data";
+import TextSection from './TextSection';
+import { Works } from './data';
 
 function HowItWorks() {
   return (

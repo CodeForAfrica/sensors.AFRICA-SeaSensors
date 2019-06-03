@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Tabletop from "tabletop";
-import { withStyles } from "@material-ui/core";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Tabletop from 'tabletop';
+import { withStyles } from '@material-ui/core';
 
-import NewsCards from "./NewsCards";
+import NewsCards from './NewsCards';
 
 const styles = {
   cardStyle: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    boxShadow: "none",
-    marginTop: "95px",
-    marginBottom: "65px",
-    marginRight: "74px"
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    boxShadow: 'none',
+    marginTop: '95px',
+    marginBottom: '65px',
+    marginRight: '74px'
   },
   parentCard: {
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#ffffff"
+    width: '100%',
+    height: 'auto',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ffffff'
   }
 };
 
@@ -34,9 +34,9 @@ class NewsCardContent extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      key: '187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0',
       callback: (data, tabletop) => {
-        const sheetData = tabletop.sheets("News Cards").all();
+        const sheetData = tabletop.sheets('News Cards').all();
         this.setState({
           data: sheetData
         });

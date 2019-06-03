@@ -1,42 +1,42 @@
-import React, { Component } from "react";
-import { Typography } from "@material-ui/core";
-import Tabletop from "tabletop";
+import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
+import Tabletop from 'tabletop';
 
-import MediaCard from "./MediaCard";
+import MediaCard from './MediaCard';
 
 const stateStories = [];
 
 const styles = {
   mask: {
-    height: "760px",
-    paddingLeft: "90px",
-    paddingTop: "30px",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.05)"
+    height: '760px',
+    paddingLeft: '90px',
+    paddingTop: '30px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.05)'
   },
   card: {
-    display: "inline-flex",
-    boxShadow: "none",
-    marginTop: "50px",
-    overflowX: "scroll",
-    width: "100%"
+    display: 'inline-flex',
+    boxShadow: 'none',
+    marginTop: '50px',
+    overflowX: 'scroll',
+    width: '100%'
   },
   seaSensorsStories: {
-    fontFamily: "Oswald",
-    fontSize: "52px",
-    fontWeight: "bold",
-    fontStyle: "normal",
-    letterSpacing: "0.7 px",
-    color: " #023256",
-    marginLeft: "70px"
+    fontFamily: 'Oswald',
+    fontSize: '52px',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    letterSpacing: '0.7 px',
+    color: ' #023256',
+    marginLeft: '70px'
   },
   line: {
-    width: "80px",
-    height: "2px",
-    background: "lightgrey",
-    marginTop: "20px",
-    borderLeft: "solid #023256 20px"
+    width: '80px',
+    height: '2px',
+    background: 'lightgrey',
+    marginTop: '20px',
+    borderLeft: 'solid #023256 20px'
   }
 };
 
@@ -49,9 +49,9 @@ class Stories extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: "187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0",
+      key: '187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0',
       callback: (data, tabletop) => {
-        this.processData(tabletop.sheets("Sea Sensors Stories").all());
+        this.processData(tabletop.sheets('Sea Sensors Stories').all());
       }
     });
   }

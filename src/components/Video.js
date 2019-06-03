@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core';
 
 const styles = {
   backgroundVideo: {
-    height: "644px !important",
-    width: "100% !important",
-    float: "left",
-    top: "0",
-    padding: "none",
-    background: "cover"
+    height: '644px !important',
+    width: '100% !important',
+    float: 'left',
+    top: '0',
+    padding: 'none',
+    background: 'cover'
   }
 };
 
