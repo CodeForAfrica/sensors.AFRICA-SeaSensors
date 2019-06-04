@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
@@ -68,26 +68,28 @@ function SliderCarousel(props) {
   const { classes } = props;
   const { headerImage, grid, parentSlider, firstSlider } = classes;
   return (
-    <Carousel showStatus={false}>
-      <div>
-        <img src={HeaderImage1} alt="First Slide" className={headerImage} />
-        <HeaderText />
-        <div className={grid}>
-          <Image />
+    <Fragment>
+      <Carousel showStatus={false}>
+        <div>
+          <img src={HeaderImage1} alt="First Slide" className={headerImage} />
+          <HeaderText />
+          <div className={grid}>
+            <Image />
+          </div>
+          <div className={parentSlider}>
+            <div className={firstSlider}>01</div>
+            <div>02</div>
+          </div>
         </div>
-        <div className={parentSlider}>
-          <div className={firstSlider}>01</div>
-          <div>02</div>
+        <div>
+          <img src={HeaderImage2} alt="Second Slide" />
+          <div className={parentSlider}>
+            <div className={firstSlider}>01</div>
+            <div>02</div>
+          </div>
         </div>
-      </div>
-      <div>
-        <img src={HeaderImage2} alt="Second Slide" />
-        <div className={parentSlider}>
-          <div className={firstSlider}>01</div>
-          <div>02</div>
-        </div>
-      </div>
-    </Carousel>
+      </Carousel>
+    </Fragment>
   );
 }
 
