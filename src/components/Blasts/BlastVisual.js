@@ -35,8 +35,8 @@ const styles = theme => ({
   },
   outerRing: {
     marginTop: '0.625rem',
-    width: '19.6875rem',
-    height: '19.6875rem',
+    width: '100%',
+    height: 'calc(100vw - 3.75rem)',
     padding: '4.15%',
     borderRadius: '100%',
     border: '0.0313rem solid #77064c0D',
