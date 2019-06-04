@@ -1,24 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Typography } from '@material-ui/core';
+import { withStyles, Typography, Grid } from '@material-ui/core';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-// import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
 // import creatTime from '../../assets/currentTime.png';
 
 const styles = theme => ({
   root: {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     position: 'relative',
-    height: '33.125rem',
-    '& div': {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    },
+    height: '38.4375rem',
     [theme.breakpoints.up('md')]: {
       height: '62.25rem'
     }
@@ -40,6 +37,16 @@ const styles = theme => ({
     padding: '4.15%',
     borderRadius: '100%',
     border: '0.0313rem solid #77064c0D',
+
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '& div': {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+
     [theme.breakpoints.up('md')]: {
       width: '42.1875rem',
       height: '42.1875rem'
@@ -88,6 +95,32 @@ const styles = theme => ({
       fontSize: '4.4375rem'
     }
   },
+  socialText: {
+    opacity: '0.6',
+    fontFamily: 'Oswald',
+    fontSize: '0.75rem',
+    fontWeight: 300,
+    lineHeight: 1.67,
+    lineSpacing: '0.0375rem',
+    textAlign: 'center',
+    color: '#00a5dc',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.5625rem'
+    }
+  },
+  text: {
+    fontFamily: 'Oswald',
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontStretch: 'condensed',
+    letterSpacing: '0.05rem',
+    textAlign: 'center',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '4.4375rem'
+    }
+  },
   caption: {
     opacity: '0.6',
     fontFamily: 'Oswald',
@@ -98,6 +131,42 @@ const styles = theme => ({
     color: '#023256',
     [theme.breakpoints.up('md')]: {
       fontSize: '1.5625rem'
+    }
+  },
+  outerDetails: {
+    width: '100%',
+
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  timeDetails: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  socialDetails: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  shareIconStyle: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '5.0625rem',
+    height: '5.0625rem',
+    marginRight: '0.8125rem',
+    color: '#00a5dc',
+    outline: 'none',
+    '&:focus': {
+      outline: 'none'
+    },
+    [theme.breakpoints.up('md')]: {
+      border: '0.0625rem #00a5dc solid',
+      '&:hover': {
+        backgroundColor: '#00a5dc',
+        color: '#fff',
+        cursor: 'pointer'
+      }
     }
   }
 });
@@ -111,13 +180,45 @@ function BlastVisual({ classes }) {
           <div className={classes.innerRing}>
             <div className={classes.solidRing}>
               <div className={classes.core}>
-                <Typography className={classes.title}>12 562</Typography>
+                <Typography className={classes.text}>12 562</Typography>
                 <Typography className={classes.caption}>
                   Recorded Blasts
                 </Typography>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={classes.outerDetails}>
+        <div className={classes.socialDetails}>
+          <Typography gutterBottom className={classes.socialText}>
+            Share
+          </Typography>
+          <TwitterShareButton
+            className={classes.shareIconStyle}
+            url="https://alpha.seasensors.africa"
+            title="Mapping blast fishing along the coast of East Africa"
+          >
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
+          </TwitterShareButton>
+          <FacebookShareButton
+            title="Sea Sensors Africa"
+            className={classes.shareIconStyle}
+            url="https://alpha.seasensors.africa"
+            quote="Mapping blast fishing along the coast of East Africa"
+          >
+            <FontAwesomeIcon icon={faFacebookF} size="2x" />
+          </FacebookShareButton>
+        </div>
+        <div className={classes.timeDetails}>
+          <Grid container direction="column" alignItems="flex-start">
+            <Typography className={classes.text}>16:06</Typography>
+            <Typography className={classes.caption}>Current Time</Typography>
+          </Grid>
+          <Grid container direction="column" alignItems="flex-start">
+            <Typography className={classes.text}>20.10.18</Typography>
+            <Typography className={classes.caption}>Last Uploaded</Typography>
+          </Grid>
         </div>
       </div>
     </div>
