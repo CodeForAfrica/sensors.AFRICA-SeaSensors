@@ -23,22 +23,22 @@ import menuIcon from '../assets/icons/menu.svg';
 const styles = theme => ({
   root: {
     position: 'fixed',
-    height: '150px',
+    height: '9.375rem',
     width: '100%',
     zIndex: '3',
     overflow: 'hidden',
-    padding: '30px',
+    padding: '1.875rem',
     [theme.breakpoints.up('md')]: {
-      padding: '35px 60.3px'
+      padding: '2.1875rem 3.7687rem'
     }
   },
   fixedNav: {
     backgroundColor: '#001525',
     opacity: '0.95',
-    boxShadow: '0 0 5px rgba(0, 0, 0, .8)'
+    boxShadow: '0 0 0.3125rem rgba(0, 0, 0, .8)'
   },
   mobileMenuButton: {
-    width: '35px',
+    width: '2.1875rem',
     height: '100%',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -47,7 +47,7 @@ const styles = theme => ({
   seaLogoDesktop: {
     height: '100%',
     // fit images since assets atoo large
-    width: '9.375rem', // Zeplin 150px
+    width: '9.375rem', // Zeplin 9.375rem
     backgroundSize: '140%',
     backgroundPosition: 'center',
     backgroundImage: `url(${seaLogoImg})`
@@ -55,7 +55,7 @@ const styles = theme => ({
   seaLogoMobile: {
     height: '100%',
     // fit images since assets atoo large
-    width: '2.025rem', // Zeplin 32.4px
+    width: '2.025rem', // Zeplin 2.025rem
     backgroundSize: '400%',
     backgroundPosition: 'center',
     backgroundImage: `url(${seaLogoNoTextImg})`
@@ -84,15 +84,15 @@ const styles = theme => ({
     fontFamily: 'Oswald',
     fontSize: '1.2em',
     fontWeight: 'bold',
-    letterSpacing: '1.1px',
+    letterSpacing: '0.0688rem',
     textAlign: 'right',
     color: '#ffffff',
-    borderLeft: '6px solid transparent',
-    padding: '25px',
+    borderLeft: '0.375rem solid transparent',
+    padding: '1.5625rem',
     '&:hover': {
-      padding: '25px',
+      padding: '1.5625rem',
       background: 'rgba(255, 255, 255, 0.1)',
-      borderLeft: '6px solid white'
+      borderLeft: '0.375rem solid white'
     }
   }
 });
