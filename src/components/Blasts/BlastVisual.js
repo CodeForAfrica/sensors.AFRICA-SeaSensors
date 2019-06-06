@@ -35,8 +35,8 @@ const styles = theme => ({
     display: 'none',
     position: 'absolute',
     height: '0.0625rem',
-    width: '100px',
-    marginLeft: '410px',
+    width: '6.25rem',
+    marginLeft: '25.625rem',
     backgroundColor: '#979797',
     [theme.breakpoints.up('md')]: {
       display: 'block'
@@ -45,12 +45,12 @@ const styles = theme => ({
   lastUpdateTimeLine: {
     display: 'none',
     position: 'absolute',
-    height: '50px',
-    width: '50px',
-    marginTop: '100px',
-    marginLeft: '410px',
-    borderBottom: '1px solid #979797',
-    borderLeft: '1px solid #979797',
+    height: '3.125rem',
+    width: '3.125rem',
+    marginTop: '6.25rem',
+    marginLeft: '25.625rem',
+    borderBottom: '0.0625rem solid #979797',
+    borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
     [theme.breakpoints.up('md')]: {
       display: 'block'
@@ -168,7 +168,7 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       flexDirection: 'column',
       position: 'absolute',
-      marginLeft: '600px',
+      marginLeft: '37.5rem',
       top: '40%',
       bottom: 0
     }
@@ -186,6 +186,13 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       alignItems: 'flex-start',
       order: 2
+    }
+  },
+  socialDetailsIcons: {
+    display: 'flex',
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row'
     }
   },
   shareIconStyle: {
@@ -236,7 +243,7 @@ function BlastVisual({ classes }) {
           <Typography gutterBottom className={classes.socialText}>
             Share
           </Typography>
-          <Grid container flexDirection="row">
+          <div className={classes.socialDetailsIcons}>
             <TwitterShareButton
               className={classes.shareIconStyle}
               url="https://alpha.seasensors.africa"
@@ -252,7 +259,7 @@ function BlastVisual({ classes }) {
             >
               <FontAwesomeIcon icon={faFacebookF} size="2x" />
             </FacebookShareButton>
-          </Grid>
+          </div>
         </div>
         <div className={classes.timeDetails}>
           <Grid container direction="column" alignItems="flex-start">
