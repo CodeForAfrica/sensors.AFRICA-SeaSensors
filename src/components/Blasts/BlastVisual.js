@@ -17,6 +17,7 @@ const styles = theme => ({
     position: 'relative',
     height: '38.4375rem',
     [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
       height: '62.25rem'
     }
   },
@@ -28,6 +29,31 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       marginTop: '-9.4375rem',
       height: '62.25rem'
+    }
+  },
+  currentTimeLine: {
+    display: 'none',
+    position: 'absolute',
+    height: '0.0625rem',
+    width: '100px',
+    marginLeft: '410px',
+    backgroundColor: '#979797',
+    [theme.breakpoints.up('md')]: {
+      display: 'block'
+    }
+  },
+  lastUpdateTimeLine: {
+    display: 'none',
+    position: 'absolute',
+    height: '50px',
+    width: '50px',
+    marginTop: '100px',
+    marginLeft: '410px',
+    borderBottom: '1px solid #979797',
+    borderLeft: '1px solid #979797',
+    transform: 'skew(45deg)',
+    [theme.breakpoints.up('md')]: {
+      display: 'block'
     }
   },
   outerRing: {
@@ -48,8 +74,8 @@ const styles = theme => ({
     },
 
     [theme.breakpoints.up('md')]: {
-      width: '42.1875rem',
-      height: '42.1875rem'
+      width: '52.1875rem',
+      height: '52.1875rem'
     }
   },
   dottedRing: {
@@ -92,7 +118,7 @@ const styles = theme => ({
     textAlign: 'center',
     color: '#023256',
     [theme.breakpoints.up('md')]: {
-      fontSize: '4.4375rem'
+      fontSize: '7.5rem'
     }
   },
   socialText: {
@@ -118,7 +144,7 @@ const styles = theme => ({
     textAlign: 'center',
     color: '#023256',
     [theme.breakpoints.up('md')]: {
-      fontSize: '4.4375rem'
+      fontSize: '3.75rem'
     }
   },
   caption: {
@@ -138,15 +164,29 @@ const styles = theme => ({
 
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'column',
+      position: 'absolute',
+      marginLeft: '600px',
+      top: '40%',
+      bottom: 0
+    }
   },
   timeDetails: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      order: 1
+    }
   },
   socialDetails: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      alignItems: 'flex-start',
+      order: 2
+    }
   },
   shareIconStyle: {
     display: 'flex',
@@ -175,12 +215,14 @@ function BlastVisual({ classes }) {
   return (
     <div className={classes.root}>
       <div className={classes.centerLine} />
+      <div className={classes.currentTimeLine} />
+      <div className={classes.lastUpdateTimeLine} />
       <div className={classes.outerRing}>
         <div className={classes.dottedRing}>
           <div className={classes.innerRing}>
             <div className={classes.solidRing}>
               <div className={classes.core}>
-                <Typography className={classes.text}>12 562</Typography>
+                <Typography className={classes.title}>12 562</Typography>
                 <Typography className={classes.caption}>
                   Recorded Blasts
                 </Typography>
@@ -194,21 +236,23 @@ function BlastVisual({ classes }) {
           <Typography gutterBottom className={classes.socialText}>
             Share
           </Typography>
-          <TwitterShareButton
-            className={classes.shareIconStyle}
-            url="https://alpha.seasensors.africa"
-            title="Mapping blast fishing along the coast of East Africa"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="2x" />
-          </TwitterShareButton>
-          <FacebookShareButton
-            title="Sea Sensors Africa"
-            className={classes.shareIconStyle}
-            url="https://alpha.seasensors.africa"
-            quote="Mapping blast fishing along the coast of East Africa"
-          >
-            <FontAwesomeIcon icon={faFacebookF} size="2x" />
-          </FacebookShareButton>
+          <Grid container flexDirection="row">
+            <TwitterShareButton
+              className={classes.shareIconStyle}
+              url="https://alpha.seasensors.africa"
+              title="Mapping blast fishing along the coast of East Africa"
+            >
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
+            </TwitterShareButton>
+            <FacebookShareButton
+              title="Sea Sensors Africa"
+              className={classes.shareIconStyle}
+              url="https://alpha.seasensors.africa"
+              quote="Mapping blast fishing along the coast of East Africa"
+            >
+              <FontAwesomeIcon icon={faFacebookF} size="2x" />
+            </FacebookShareButton>
+          </Grid>
         </div>
         <div className={classes.timeDetails}>
           <Grid container direction="column" alignItems="flex-start">
