@@ -25,6 +25,7 @@ const styles = theme => ({
     position: 'absolute',
     height: '33.125rem',
     width: '0.0625rem',
+    marginTop: '-2.25rem',
     backgroundColor: '#02325626',
     [theme.breakpoints.up('md')]: {
       marginTop: '-3.25rem',
@@ -33,10 +34,9 @@ const styles = theme => ({
   },
   currentTimeLine: {
     display: 'none',
-    position: 'absolute',
     height: '0.0625rem',
     width: '6.25rem',
-    marginLeft: '26.625rem',
+    marginLeft: '-1.5rem',
     backgroundColor: '#979797',
     [theme.breakpoints.up('md')]: {
       display: 'block'
@@ -44,11 +44,10 @@ const styles = theme => ({
   },
   lastUpdateTimeLine: {
     display: 'none',
-    position: 'absolute',
     height: '3.125rem',
     width: '3.125rem',
-    marginTop: '6.25rem',
-    marginLeft: '26.625rem',
+    marginTop: '15.25rem',
+    marginLeft: '-6rem',
     borderBottom: '0.0625rem solid #979797',
     borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
@@ -97,7 +96,20 @@ const styles = theme => ({
     height: '100%',
     borderRadius: '100%',
     padding: '9%',
-    border: '0.0938rem solid #77064c'
+    border: '0.0938rem solid #77064c',
+    '&:before': {
+      content: '""',
+      width: '0.4375rem',
+      height: '0.4375rem',
+      backgroundColor: '#77064c',
+      borderRadius: '100%',
+      marginTop: '75%',
+
+      [theme.breakpoints.up('md')]: {
+        width: '0.925rem',
+        height: '0.925rem'
+      }
+    }
   },
   core: {
     zIndex: 1,
@@ -168,7 +180,7 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       flexDirection: 'column',
       position: 'absolute',
-      marginLeft: '37.5rem',
+      left: '37.5rem',
       top: '40%',
       bottom: 0
     }
@@ -222,8 +234,6 @@ function BlastVisual({ classes }) {
   return (
     <div className={classes.root}>
       <div className={classes.centerLine} />
-      <div className={classes.currentTimeLine} />
-      <div className={classes.lastUpdateTimeLine} />
       <div className={classes.outerRing}>
         <div className={classes.dottedRing}>
           <div className={classes.innerRing}>
@@ -238,6 +248,8 @@ function BlastVisual({ classes }) {
           </div>
         </div>
       </div>
+      <div className={classes.currentTimeLine} />
+      <div className={classes.lastUpdateTimeLine} />
       <div className={classes.outerDetails}>
         <div className={classes.socialDetails}>
           <Typography gutterBottom className={classes.socialText}>
