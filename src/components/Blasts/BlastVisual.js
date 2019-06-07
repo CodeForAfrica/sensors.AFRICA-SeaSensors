@@ -18,7 +18,7 @@ const styles = theme => ({
     height: '38.4375rem',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
-      height: '62.25rem'
+      height: '52.1875rem'
     }
   },
   centerLine: {
@@ -27,7 +27,7 @@ const styles = theme => ({
     width: '0.0625rem',
     backgroundColor: '#02325626',
     [theme.breakpoints.up('md')]: {
-      marginTop: '-9.4375rem',
+      marginTop: '-3.25rem',
       height: '62.25rem'
     }
   },
@@ -36,7 +36,7 @@ const styles = theme => ({
     position: 'absolute',
     height: '0.0625rem',
     width: '6.25rem',
-    marginLeft: '25.625rem',
+    marginLeft: '26.625rem',
     backgroundColor: '#979797',
     [theme.breakpoints.up('md')]: {
       display: 'block'
@@ -48,7 +48,7 @@ const styles = theme => ({
     height: '3.125rem',
     width: '3.125rem',
     marginTop: '6.25rem',
-    marginLeft: '25.625rem',
+    marginLeft: '26.625rem',
     borderBottom: '0.0625rem solid #979797',
     borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
