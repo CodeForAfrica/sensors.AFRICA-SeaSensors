@@ -41,7 +41,7 @@ const styles = {
     height: '249.5px',
     width: '390px'
   },
-  arrowLink: {
+  link: {
     textDecoration: 'none'
   }
 };
@@ -53,7 +53,7 @@ function NewsCards({ classes, image, title, date, link }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={classes.arrowLink}
+        className={classes.link}
       >
         <CardActionArea>
           <CardMedia className={classes.newsCardImage} image={image} />

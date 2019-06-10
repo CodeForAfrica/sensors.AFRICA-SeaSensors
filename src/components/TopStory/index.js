@@ -3,7 +3,7 @@ import Tabletop from 'tabletop';
 
 import TopStory from './TopStory';
 
-class Storiess extends Component {
+class Stories extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,19 +25,15 @@ class Storiess extends Component {
 
   render() {
     const { data } = this.state;
-    return (
-      <div>
-        {data.map(obj => (
-          <TopStory
-            key={obj.blogTitle}
-            blogTitle={obj.blogTitle}
-            blogText={obj.blogText}
-            blogLink={obj.blogLink}
-          />
-        ))}
-      </div>
-    );
+    return data.map(obj => (
+      <TopStory
+        key={obj.blogTitle}
+        blogTitle={obj.blogTitle}
+        blogText={obj.blogText}
+        blogLink={obj.blogLink}
+      />
+    ));
   }
 }
 
-export default Storiess;
+export default Stories;
