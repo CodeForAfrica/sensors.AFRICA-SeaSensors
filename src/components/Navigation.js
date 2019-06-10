@@ -1,61 +1,101 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
 
-import seaLogoImg from '../assets/SeaSensors_Logo.png';
+import {
+  withWidth,
+  ButtonBase,
+  ClickAwayListener,
+  Paper,
+  MenuList,
+  MenuItem,
+  Popper
+} from '@material-ui/core';
+import { isWidthUp } from '@material-ui/core/withWidth';
 
-const styles = {
-  liNav: {
-    display: 'inline-block',
-    marginRight: '4rem',
-    textDecoration: 'none',
-    fontFamily: 'Oswald',
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-    letterSpacing: '1.1px',
-    textAlign: 'right',
-    color: '#ffffff',
-    borderLeft: '6px solid transparent',
-    left: '3em',
-    padding: '25px',
-    '&:hover': {
-      padding: '25px',
-      background: 'rgba(255, 255, 255, 0.1)',
-      borderLeft: '6px solid white',
-      color: 'white'
-    }
-  },
-  seaLogo: {
-    height: '14em',
-    bottom: '4em',
-    position: 'relative'
-  },
-  parentNav: {
+import classNames from 'classnames';
+
+import seaLogoImg from '../assets/SeaSensors_Logo.png';
+import seaLogoNoTextImg from '../assets/SeaSensorsLogoWhite.png';
+import menuIcon from '../assets/icons/menu.svg';
+
+const styles = theme => ({
+  root: {
     position: 'fixed',
-    height: '100px',
+    height: '9.375rem',
     width: '100%',
     zIndex: '3',
     overflow: 'hidden',
-    transition: '0.5s',
-    WebKitTransition: '0.5s'
-  },
-  ulNav: {
-    listStyle: 'none',
-    display: 'flex',
-    height: '100px',
-    overflow: 'hidden',
-    margin: '0'
-  },
-  firstChild: {
-    marginRight: 'auto'
+    padding: '1.875rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '2.1875rem 3.7687rem'
+    }
   },
   fixedNav: {
     backgroundColor: '#001525',
     opacity: '0.95',
-    boxShadow: '0 0 5px rgba(0, 0, 0, .8)'
+    boxShadow: '0 0 0.3125rem rgba(0, 0, 0, .8)'
+  },
+  mobileMenuButton: {
+    width: '2.1875rem',
+    height: '100%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${menuIcon})`
+  },
+  seaLogoDesktop: {
+    height: '100%',
+    // fit images since assets atoo large
+    width: '9.375rem', // Zeplin 9.375rem
+    backgroundSize: '140%',
+    backgroundPosition: 'center',
+    backgroundImage: `url(${seaLogoImg})`
+  },
+  seaLogoMobile: {
+    height: '100%',
+    // fit images since assets atoo large
+    width: '2.025rem', // Zeplin 2.025rem
+    backgroundSize: '400%',
+    backgroundPosition: 'center',
+    backgroundImage: `url(${seaLogoNoTextImg})`
+  },
+  ulNav: {
+    padding: 0,
+    margin: 0,
+    height: '100%',
+    listStyle: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    '& > :first-child': {
+      marginRight: 'auto'
+    },
+    '& > li': {
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      '& > *': {
+        height: '100%'
+      }
+    }
+  },
+  liNav: {
+    textDecoration: 'none',
+    fontFamily: 'Oswald',
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+    letterSpacing: '0.0688rem',
+    textAlign: 'right',
+    color: '#ffffff',
+    borderLeft: '0.375rem solid transparent',
+    padding: '1.5625rem',
+    '&:hover': {
+      padding: '1.5625rem',
+      background: 'rgba(255, 255, 255, 0.1)',
+      borderLeft: '0.375rem solid white'
+    }
   }
-};
+});
 
 const ListLink = ({ listClass, to, customClass, children }) => (
   <li className={listClass}>
@@ -84,9 +124,12 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      anchorEl: null
+    };
 
     this.handleScroll = this.handleScroll.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
 
   componentDidMount() {
@@ -99,13 +142,18 @@ class Navigation extends React.Component {
     this.setState({ scroll: window.scrollY });
   }
 
-  render() {
-    const { classes } = this.props;
-    const { scroll, top } = this.state;
+  toggleMobileMenu(e) {
+    const { anchorEl } = this.state;
+    if (anchorEl === null) {
+      this.setState({ anchorEl: e.target });
+    } else {
+      this.setState({ anchorEl: null });
+    }
+  }
 
-    const image = (
-      <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />
-    );
+  render() {
+    const { classes, width } = this.props;
+    const { scroll, top, anchorEl } = this.state;
 
     let scrollClasses;
     function handleScroll() {
@@ -122,23 +170,58 @@ class Navigation extends React.Component {
 
     return (
       <nav
-        className={`${classes.parentNav} ${
-          scroll > top ? classes.fixedNav : ''
-        }`}
+        className={classNames(classes.root, {
+          [classes.fixedNav]: scroll > top
+        })}
       >
         <ul className={classes.ulNav}>
-          <ListLink to="/" listClass={classes.firstChild}>
-            {image}
-          </ListLink>
-          <ListLink to="/news/" customClass={classes.liNav}>
-            News.
-          </ListLink>
-          <ListLink to="/about/" customClass={classes.liNav}>
-            About Us.
-          </ListLink>
-          <ListLink to="/resources/" customClass={classes.liNav}>
-            Resources
-          </ListLink>
+          {isWidthUp('md', width) ? (
+            <Fragment>
+              <ListLink to="/">
+                <div className={classes.seaLogoDesktop} />
+              </ListLink>
+              <ListLink to="/news/" customClass={classes.liNav}>
+                News.
+              </ListLink>
+              <ListLink to="/about/" customClass={classes.liNav}>
+                About Us.
+              </ListLink>
+              <ListLink to="/resources/" customClass={classes.liNav}>
+                Resources.
+              </ListLink>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <ListLink to="/">
+                <div className={classes.seaLogoMobile} />
+              </ListLink>
+              <ButtonBase
+                className={classes.mobileMenuButton}
+                onClick={this.toggleMobileMenu}
+              />
+              <Popper
+                open={Boolean(anchorEl)}
+                anchorEl={anchorEl}
+                placement="bottom-end"
+              >
+                <ClickAwayListener onClickAway={this.toggleMobileMenu}>
+                  <Paper>
+                    <MenuList>
+                      <MenuItem component="a" href="/news/">
+                        News.
+                      </MenuItem>
+                      <MenuItem component="a" href="/about/">
+                        About Us.
+                      </MenuItem>
+                      <MenuItem component="a" href="/resources/">
+                        Resources.
+                      </MenuItem>
+                    </MenuList>
+                  </Paper>
+                </ClickAwayListener>
+              </Popper>
+            </Fragment>
+          )}
         </ul>
       </nav>
     );
@@ -146,7 +229,8 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
+  width: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(Navigation);
+export default withWidth()(withStyles(styles)(Navigation));
