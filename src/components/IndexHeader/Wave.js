@@ -13,14 +13,18 @@ const styles = theme => ({
     position: 'absolute',
     top: '144px',
     left: '30px',
+    width: '100%',
     [theme.breakpoints.up('md')]: {
       top: '203.3px',
       left: '81px'
     }
   },
   content: {
-    width: '343px',
+    width: '100%',
     [theme.breakpoints.up('md')]: {
+      width: '877px' // .75 of lg
+    },
+    [theme.breakpoints.up('lg')]: {
       width: '1169.3px'
     }
   },
@@ -59,18 +63,18 @@ const styles = theme => ({
   },
   listenNow: {
     fontFamily: 'Oswald',
-    fontSize: 16,
+    fontSize: 14,
+    letterSpacing: '3.1px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
-    letterSpacing: '7.9px',
     textAlign: 'right',
     color: '#ffffff',
     textTransform: 'uppercase',
     [theme.breakpoints.up('md')]: {
-      fontSize: 14,
-      letterSpacing: '3.1px'
+      fontSize: 16,
+      letterSpacing: '7.9px'
     }
   },
   combinedShape: {
