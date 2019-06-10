@@ -5,8 +5,8 @@ import SliderCarousel from '../components/IndexHeader/SliderCarousel';
 import Navigation from '../components/Navigation';
 import Blasts from '../components/Blasts';
 import TopStory from '../components/TopStory';
-import BlastFishing from '../components/TextSection';
 import Video from '../components/Video';
+import WhatIsBlastFishing from '../components/TextSection/WhatIsBlastFishing';
 import HowItWorks from '../components/TextSection/HowItWorks';
 import Scuba from '../components/Scuba';
 import More from '../components/More';
@@ -23,7 +23,7 @@ function Index({ location }) {
       <SliderCarousel />
       <Blasts />
       <TopStory />
-      <BlastFishing />
+      <WhatIsBlastFishing />
       <Video origin={location.origin} />
       <HowItWorks />
       <Scuba />
