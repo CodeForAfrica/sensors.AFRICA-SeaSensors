@@ -1,35 +1,35 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { Grid, withWidth, IconButton } from '@material-ui/core';
+import { isWidthUp } from '@material-ui/core/withWidth';
+import { MenuOutlined } from '@material-ui/icons';
 import { Link } from 'gatsby';
 
 import seaLogoImg from '../assets/SeaSensors_Logo.png';
+import Layout from './Layout';
 
-const styles = {
-  liNav: {
-    display: 'inline-block',
-    marginRight: '4rem',
+const styles = theme => ({
+  link: {
+    color: 'white',
     textDecoration: 'none',
     fontFamily: 'Oswald',
-    fontSize: '1.2em',
+    fontSize: '1.125em',
     fontWeight: 'bold',
     letterSpacing: '1.1px',
-    textAlign: 'right',
-    color: '#ffffff',
+    padding: '24px 20px 25px',
+    margin: '1.375rem 3.25rem',
     borderLeft: '6px solid transparent',
-    left: '3em',
-    padding: '25px',
+    [theme.breakpoints.up('md')]: {
+      margin: '0.625rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      margin: '1.375rem'
+    },
     '&:hover': {
-      padding: '25px',
       background: 'rgba(255, 255, 255, 0.1)',
-      borderLeft: '6px solid white',
-      color: 'white'
+      borderLeft: '6px solid white'
     }
-  },
-  seaLogo: {
-    height: '14em',
-    bottom: '4em',
-    position: 'relative'
   },
   parentNav: {
     position: 'fixed',
@@ -38,7 +38,12 @@ const styles = {
     zIndex: '3',
     overflow: 'hidden',
     transition: '0.5s',
-    WebKitTransition: '0.5s'
+    WebKitTransition: '0.5s',
+    marginTop: '2.25rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'white'
   },
   ulNav: {
     listStyle: 'none',
@@ -55,36 +60,13 @@ const styles = {
     opacity: '0.95',
     boxShadow: '0 0 5px rgba(0, 0, 0, .8)'
   }
-};
-
-const ListLink = ({ listClass, to, customClass, children }) => (
-  <li className={listClass}>
-    <Link to={to} className={customClass}>
-      {children}
-    </Link>
-  </li>
-);
-
-ListLink.defaultProps = {
-  listClass: '',
-  customClass: ''
-};
-
-ListLink.propTypes = {
-  listClass: PropTypes.string,
-  to: PropTypes.string.isRequired,
-  customClass: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
-};
+});
 
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = { top: '' };
 
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -99,26 +81,59 @@ class Navigation extends React.Component {
     this.setState({ scroll: window.scrollY });
   }
 
-  render() {
+  renderMobileNav() {
     const { classes } = this.props;
+    return (
+      <Fragment>
+        <Grid item>
+          <IconButton
+            disableRipple
+            disableTouchRipple
+            color="inherit"
+            className={classes.link}
+          >
+            <MenuOutlined />
+          </IconButton>
+        </Grid>
+      </Fragment>
+    );
+  }
+
+  renderDesktopNav() {
+    const { classes } = this.props;
+    return (
+      <Fragment>
+        <Grid item>
+          <Link color="textSecondary" className={classes.link} to="/news">
+            News.
+          </Link>
+          <Link color="textSecondary" className={classes.link} to="/about">
+            About Us.
+          </Link>
+          <Link color="textSecondary" className={classes.link} to="/resources">
+            Resources.
+          </Link>
+        </Grid>
+      </Fragment>
+    );
+  }
+
+  render() {
+    const { classes, width } = this.props;
     const { scroll, top } = this.state;
 
-    const image = (
-      <img src={seaLogoImg} className={classes.seaLogo} alt="seaLogoImage" />
-    );
-
-    let scrollClasses;
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        scrollClasses = 'fixed-nav';
-      }
-
-      return scrollClasses;
-    }
-
-    // eslint-disable-next-line no-unused-expressions
-    typeof window !== 'undefined' &&
-      window.addEventListener('scroll', handleScroll);
+    // let scrollClasses;
+    // function handleScroll() {
+    //   if (window.scrollY > 0) {
+    //     scrollClasses = 'fixed-nav';
+    //   }
+    //
+    //   return scrollClasses;
+    // }
+    //
+    // // eslint-disable-next-line no-unused-expressions
+    // typeof window !== 'undefined' &&
+    //   window.addEventListener('scroll', handleScroll);
 
     return (
       <nav
@@ -126,27 +141,27 @@ class Navigation extends React.Component {
           scroll > top ? classes.fixedNav : ''
         }`}
       >
-        <ul className={classes.ulNav}>
-          <ListLink to="/" listClass={classes.firstChild}>
-            {image}
-          </ListLink>
-          <ListLink to="/news/" customClass={classes.liNav}>
-            News.
-          </ListLink>
-          <ListLink to="/about/" customClass={classes.liNav}>
-            About Us.
-          </ListLink>
-          <ListLink to="/resources/" customClass={classes.liNav}>
-            Resources
-          </ListLink>
-        </ul>
+        <Layout>
+          <Grid container justify="space-between" alignItems="center">
+            <Grid item>
+              <Link to="/">
+                <img src={seaLogoImg} alt="seaLogoImage" height={250} />
+              </Link>
+            </Grid>
+
+            {isWidthUp('md', width)
+              ? this.renderDesktopNav()
+              : this.renderMobileNav()}
+          </Grid>
+        </Layout>
       </nav>
     );
   }
 }
 
 Navigation.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
+  width: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(Navigation);
+export default withWidth()(withStyles(styles)(Navigation));
