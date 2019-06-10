@@ -14,6 +14,7 @@
     "@mdi/font": "^3.0.39",
     "@mdi/js": "^3.0.39",
     "@mdi/react": "^1.1.0",
+    "classnames": "^2.2.6",
     "core-js": "^2.6.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.0.19",
