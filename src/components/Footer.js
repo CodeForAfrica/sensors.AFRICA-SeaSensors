@@ -38,15 +38,28 @@ const styles = theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundImage: `url(${footerMap})`,
 
-    padding: '1.875rem',
+    borderTop: '0.4688rem solid #00a5dc',
 
     [theme.breakpoints.up('md')]: {
       backgroundSize: '100%'
     }
   },
-  container: {
+  top: {
+    display: 'flex',
     flexDirection: 'column',
+    padding: '1.875rem',
     [theme.breakpoints.up('md')]: {
+      padding: '7.6125rem',
+      flexDirection: 'row'
+    }
+  },
+  bottom: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '1.875rem',
+    borderTop: '0.05rem solid #ffffff4D',
+    [theme.breakpoints.up('md')]: {
+      padding: '7.6125rem',
       flexDirection: 'row'
     }
   },
@@ -66,7 +79,10 @@ const styles = theme => ({
     color: '#00a5dc'
   },
   partnerLogos: {
-    width: `${6.5187 * 4}rem`,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: `${6.5187 * 3}rem`,
     [theme.breakpoints.up('md')]: {
       width: `${6.5187 * 2}rem`
     }
@@ -74,15 +90,14 @@ const styles = theme => ({
   logoImg: {
     padding: '1.25rem',
     objectFit: 'contain',
-    [theme.breakpoints.up('md')]: {
-      width: '6.5187rem',
-      height: '6.5187rem'
-    }
+    width: '6.5187rem',
+    height: '6.5187rem'
   },
   seaLogo: {
     objectFit: 'cover',
     height: '6rem',
-    width: '3.125rem'
+    width: '2.125rem',
+    marginRight: '1rem'
   },
   text: {
     fontFamily: 'Montserrat',
@@ -118,7 +133,7 @@ const styles = theme => ({
 function Footer({ classes }) {
   return (
     <div className={classes.root}>
-      <Grid className={classes.container} container>
+      <div className={classes.top}>
         <Grid item xs={12} md={8}>
           <Typography className={classes.footerText}>
             <span className={classes.highlight}>Sea Sensors</span> is an
@@ -164,8 +179,8 @@ function Footer({ classes }) {
             <img src={uniStAndrewsImg} className={classes.logoImg} alt="" />
           </div>
         </Grid>
-      </Grid>
-      <Grid className={classes.container} container>
+      </div>
+      <div className={classes.bottom}>
         <Grid
           item
           container
@@ -225,7 +240,7 @@ function Footer({ classes }) {
             <FontAwesomeIcon icon={faInstagram} color="#ffffff" size="2x" />
           </A>
         </Grid>
-      </Grid>
+      </div>
     </div>
   );
 }
