@@ -59,7 +59,11 @@ const styles = theme => ({
   },
   arrowStyle: {
     width: '40px',
-    height: '8px'
+    height: '8px',
+    [theme.breakpoints.up('md')]: {
+      width: '62px',
+      height: '16px'
+    }
   },
   subText: {
     textTransform: 'uppercase',
