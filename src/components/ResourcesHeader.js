@@ -18,6 +18,7 @@ function ResourcesHeader({ classes }) {
       classes={classes}
       mediaResources="Resources."
       subTitle="Lorem Ipsum"
+      activeNav={3}
     />
   );
 }

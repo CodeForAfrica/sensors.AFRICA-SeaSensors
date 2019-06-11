@@ -18,6 +18,7 @@ function AboutUsHeader({ classes }) {
       classes={classes}
       mediaResources="About Sea Sensors."
       subTitle="Lorem Ipsum"
+      activeNav={2}
     />
   );
 }

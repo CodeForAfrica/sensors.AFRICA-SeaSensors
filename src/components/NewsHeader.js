@@ -18,6 +18,7 @@ function NewsHeader({ classes }) {
       classes={classes}
       mediaResources="News Showcase Page."
       subTitle="Lorem Ipsum"
+      activeNav={1}
     />
   );
 }
