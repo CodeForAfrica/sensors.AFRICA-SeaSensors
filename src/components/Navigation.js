@@ -7,6 +7,7 @@ import { MenuOutlined } from '@material-ui/icons';
 import { Link } from 'gatsby';
 
 import seaLogoImg from '../assets/SeaSensors_Logo.png';
+import logoImg from '../assets/logo_mobile.png';
 import Layout from './Layout';
 
 const styles = theme => ({
@@ -39,11 +40,13 @@ const styles = theme => ({
     overflow: 'hidden',
     transition: '0.5s',
     WebKitTransition: '0.5s',
-    marginTop: '2.25rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: 'white'
+    color: 'white',
+    [theme.breakpoints.up('md')]: {
+      marginTop: '2.25rem'
+    }
   },
   ulNav: {
     listStyle: 'none',
@@ -92,7 +95,7 @@ class Navigation extends React.Component {
             color="inherit"
             className={classes.link}
           >
-            <MenuOutlined />
+            <MenuOutlined fontSize="large" />
           </IconButton>
         </Grid>
       </Fragment>
@@ -145,7 +148,11 @@ class Navigation extends React.Component {
           <Grid container justify="space-between" alignItems="center">
             <Grid item>
               <Link to="/">
-                <img src={seaLogoImg} alt="seaLogoImage" height={250} />
+                {isWidthUp('md', width) ? (
+                  <img src={seaLogoImg} alt="seaLogoImage" height={250} />
+                ) : (
+                  <img src={logoImg} alt="seaLogoImage" height={150} />
+                )}
               </Link>
             </Grid>
 
