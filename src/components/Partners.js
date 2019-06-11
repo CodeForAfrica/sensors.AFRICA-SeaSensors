@@ -9,10 +9,10 @@ const styles = {
     padding: '1.875rem'
   },
   partnerImage: {
-    width: '31.25rem',
+    width: '100%',
+    padding: '0 10%',
     height: '31.25rem',
     display: 'inline',
-    marginLeft: '20%',
     objectFit: 'cover'
   },
   indentLine: {
