@@ -49,7 +49,7 @@ class Stories extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: '187vzJU3uqHqlyk_UkpQIT2MwRp5tE5eS9UYWo5kf9R0',
+      key: '16EDYidZSNnbGPcxedzWMbjNyQPcKUZuf5PP8LbP5BTY',
       callback: (data, tabletop) => {
         this.processData(tabletop.sheets('Sea Sensors Stories').all());
       }
