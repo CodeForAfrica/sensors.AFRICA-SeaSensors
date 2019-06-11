@@ -23,13 +23,14 @@ import menuIcon from '../assets/icons/menu.svg';
 const styles = theme => ({
   root: {
     position: 'fixed',
-    height: '9.375rem',
+    height: '6rem',
     width: '100%',
     zIndex: '3',
     overflow: 'hidden',
-    padding: '1.875rem',
+    padding: '0 1.875rem',
     [theme.breakpoints.up('md')]: {
-      padding: '2.1875rem 3.7687rem'
+      padding: '2.1875rem 3.7687rem',
+      height: '9.375rem'
     }
   },
   fixedNav: {
