@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
-import arrow from '../assets/arrowBlueRight.png';
-
-import TextArrowButton from './TextArrowButton';
+import TextArrowLink from './TextArrowLink';
 
 const styles = {
   root: {
@@ -38,30 +36,6 @@ const styles = {
     height: '75px',
     boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)'
   },
-  textArrowButtonParent: {
-    width: '250.5px',
-    height: '60px',
-    border: '3px #023256 solid',
-    paddingLeft: '1rem',
-    boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
-    display: 'flex',
-    position: 'relative',
-    top: '12em',
-    left: '17em'
-  },
-  textArrowButtonText: {
-    width: '144px',
-    height: '24px',
-    fontFamily: 'Oswald',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    letterSpacing: '3.2px',
-    color: '#023256',
-    marginTop: '1em'
-  },
-  textArrowButtonArrow: {
-    marginTop: '1em'
-  },
   line: {
     width: '75px',
     height: '0.8px',
@@ -74,9 +48,6 @@ const styles = {
     marginLeft: '162px',
     marginBottom: '52.5px',
     marginTop: '50px'
-  },
-  arrowLink: {
-    textDecoration: 'none'
   }
 };
 
@@ -105,18 +76,11 @@ function GetInvolved({ classes }) {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <a
+          <TextArrowLink
             href="https://forms.gle/c7bZEipCRX5xe4SMA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.arrowLink}
-          >
-            <TextArrowButton
-              className={classes}
-              text="TAKE ACTION"
-              image={arrow}
-            />
-          </a>
+            text="TAKE ACTION"
+            blue
+          />
         </Grid>
       </Grid>
     </div>
