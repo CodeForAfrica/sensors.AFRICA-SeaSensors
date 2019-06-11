@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import Tabletop from 'tabletop';
+
+import PropTypes from 'prop-types';
 
 import Line from '../Line';
 
@@ -8,23 +10,30 @@ import MediaCard from './MediaCard';
 
 const stateStories = [];
 
-const styles = {
-  mask: {
-    height: '760px',
-    paddingLeft: '90px',
-    paddingTop: '30px',
+const styles = theme => ({
+  root: {
     alignItems: 'center',
+    padding: '102.2px 0',
     justifyContent: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.05)'
   },
-  card: {
-    display: 'inline-flex',
-    boxShadow: 'none',
-    marginTop: '50px',
-    overflowX: 'scroll',
-    width: '100%'
+  stories: {
+    width: '100%',
+    padding: '30px',
+    marginTop: '78.5px',
+
+    display: 'flex',
+    flexDirection: 'column',
+
+    alignItems: 'center',
+    scrollbarWidth: 'none',
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: '78.5px',
+      flexDirection: 'row',
+      overflow: 'scroll'
+    }
   },
-  seaSensorsStories: {
+  title: {
     fontFamily: 'Oswald',
     fontSize: '52px',
     fontWeight: 'bold',
@@ -33,7 +42,7 @@ const styles = {
     color: ' #023256',
     marginLeft: '70px'
   }
-};
+});
 
 class Stories extends Component {
   constructor(props) {
@@ -79,35 +88,33 @@ class Stories extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     const sortedStories = this.sortByDates();
 
     return (
-      <React.Fragment>
-        <div style={styles.mask}>
-          <Typography
-            component="h2"
-            variant="h2"
-            gutterBottom
-            style={styles.seaSensorsStories}
-          >
-            Sea Sensors Stories.
-            <Line />
-          </Typography>
-          <div style={styles.card}>
-            {sortedStories.map(story => (
-              <MediaCard
-                key={story.id}
-                title={story.title}
-                image={story.image}
-                date={story.date}
-                link={story.link}
-              />
-            ))}
-          </div>
+      <div className={classes.root}>
+        <Typography variant="h2" gutterBottom className={classes.title}>
+          Sea Sensors Stories.
+          <Line />
+        </Typography>
+        <div className={classes.stories}>
+          {sortedStories.map(story => (
+            <MediaCard
+              key={story.id}
+              title={story.title}
+              image={story.image}
+              date={story.date}
+              link={story.link}
+            />
+          ))}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
 
-export default Stories;
+Stories.propTypes = {
+  classes: PropTypes.shape({}).isRequired
+};
+
+export default withStyles(styles)(Stories);
