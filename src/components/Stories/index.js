@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import Tabletop from 'tabletop';
 
+import Line from '../Line';
+
 import MediaCard from './MediaCard';
 
 const stateStories = [];
@@ -30,13 +32,6 @@ const styles = {
     letterSpacing: '0.7 px',
     color: ' #023256',
     marginLeft: '70px'
-  },
-  line: {
-    width: '80px',
-    height: '2px',
-    background: 'lightgrey',
-    marginTop: '20px',
-    borderLeft: 'solid #023256 20px'
   }
 };
 
@@ -96,7 +91,7 @@ class Stories extends Component {
             style={styles.seaSensorsStories}
           >
             Sea Sensors Stories.
-            <div style={styles.line} />
+            <Line />
           </Typography>
           <div style={styles.card}>
             {sortedStories.map(story => (
