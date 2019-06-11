@@ -95,6 +95,11 @@ const styles = theme => ({
       background: 'rgba(255, 255, 255, 0.1)',
       borderLeft: '0.375rem solid white'
     }
+  },
+  activeNav: {
+    padding: '1.5625rem',
+    background: 'rgba(255, 255, 255, 0.1)',
+    borderLeft: '0.375rem solid white'
   }
 });
 
@@ -153,7 +158,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const { classes, width } = this.props;
+    const { classes, width, activeNav } = this.props;
     const { scroll, top, anchorEl } = this.state;
 
     let scrollClasses;
@@ -181,15 +186,22 @@ class Navigation extends React.Component {
               <ListLink to="/">
                 <div className={classes.seaLogoDesktop} />
               </ListLink>
-              <ListLink to="/news/" customClass={classes.liNav}>
-                News.
-              </ListLink>
-              <ListLink to="/about/" customClass={classes.liNav}>
-                About Us.
-              </ListLink>
-              <ListLink to="/resources/" customClass={classes.liNav}>
-                Resources.
-              </ListLink>
+              {[
+                { link: '/news/', name: 'News.' },
+                { link: '/about/', name: 'About Us.' },
+                { link: '/resources/', name: 'Resources.' }
+              ].map((item, index) => (
+                <li>
+                  <Link
+                    to={item.link}
+                    className={classNames(classes.liNav, {
+                      [classes.activeNav]: index === activeNav - 1
+                    })}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </Fragment>
           ) : (
             <Fragment>
@@ -231,7 +243,8 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   classes: PropTypes.shape().isRequired,
-  width: PropTypes.func.isRequired
+  width: PropTypes.func.isRequired,
+  activeNav: PropTypes.number.isRequired
 };
 
 export default withWidth()(withStyles(styles)(Navigation));
