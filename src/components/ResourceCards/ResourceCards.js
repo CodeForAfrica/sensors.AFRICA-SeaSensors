@@ -12,8 +12,10 @@ import {
 
 const styles = {
   card: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '315px',
-    paddingLeft: '50px',
+    padding: '0 30px',
     height: '450.2px'
   },
   links: {
