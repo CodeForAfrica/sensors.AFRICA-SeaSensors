@@ -20,7 +20,6 @@ const styles = theme => ({
     }
   },
   hud: {
-    width: '100%',
     marginLeft: '-9.375rem',
     position: 'relative',
     display: 'grid',
@@ -133,10 +132,14 @@ const styles = theme => ({
   outerDetails: {
     width: '100%',
 
+    marginTop: '-5rem',
+
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     [theme.breakpoints.up('md')]: {
+      marginTop: 'unset',
+
       flexDirection: 'column',
       position: 'absolute',
       left: '34.5rem',
