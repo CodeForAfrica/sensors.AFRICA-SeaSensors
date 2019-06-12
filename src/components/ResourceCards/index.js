@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core';
 
 import ResourceCards from './ResourceCards';
 
@@ -26,7 +28,7 @@ const resourceCardContent = [
   }
 ];
 
-const styles = {
+const styles = theme => ({
   cardStyle: {
     display: 'flex',
     flexDirection: 'row',
@@ -34,7 +36,11 @@ const styles = {
     backgroundColor: '#ffffff',
     boxShadow: 'none',
     marginTop: '95px',
-    marginBottom: '65px'
+    marginBottom: '65px',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
   },
   parentCard: {
     width: '100%',
@@ -43,7 +49,7 @@ const styles = {
     justifyContent: 'center',
     backgroundColor: '#ffffff'
   }
-};
+});
 
 class ResourceVideos extends Component {
   constructor(props) {
@@ -54,10 +60,11 @@ class ResourceVideos extends Component {
 
   render() {
     const { resourceVideos } = this.state;
+    const { classes } = this.props;
     return (
       <React.Fragment>
-        <div className={styles.parentCard}>
-          <div style={styles.cardStyle}>
+        <div className={classes.parentCard}>
+          <div className={classes.cardStyle}>
             {resourceVideos.map(resource => (
               <ResourceCards
                 key={resource.title}
@@ -74,4 +81,7 @@ class ResourceVideos extends Component {
   }
 }
 
-export default ResourceVideos;
+ResourceVideos.propTypes = {
+  classes: PropTypes.shape().isRequired
+};
+export default withStyles(styles)(ResourceVideos);
