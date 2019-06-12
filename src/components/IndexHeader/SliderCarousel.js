@@ -20,59 +20,32 @@ const styles = theme => ({
       height: '100%'
     },
     [theme.breakpoints.up('md')]: {
-      height: '800px'
+      height: '50rem'
     }
   },
   slide1: {
-    backgroundImage: `url(${map})`,
-    backgroundPosition: '-350px',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
     height: '100%',
-    '& img': {
-      objectFit: 'cover',
-      height: '100%'
-    },
-    [theme.breakpoints.up('md')]: {
-      backgroundPosition: 'unset'
-    }
+    backgroundImage: `url(${map})`,
+    backgroundPosition: '-40.625rem',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed'
   },
   slide2: {
     backgroundImage: `url(${HeaderImage2})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
-    height: '100%',
-    '& img': {
-      objectFit: 'cover',
-      height: '100%'
-    }
+    height: '100%'
   },
-  grid: {
-    position: 'absolute',
-    bottom: '32em',
-    right: '7%'
-  },
-  parentSlider: {
+  indicator: {
     display: 'flex',
-    justifyContent: 'flex-start',
     position: 'absolute',
-    color: '#ffffff',
-    zIndex: '999',
-    top: '40rem',
-    left: '3rem'
-  },
-  firstSlider: {
-    marginRight: '8.5em'
-  },
-  waving: {
-    display: 'block !important',
-    position: 'absolute !important',
-    userSelect: 'none !important',
-    height: '60% !important',
-    width: '100% !important',
-    bottom: '1em !important'
+    color: '#fff',
+    bottom: '5rem',
+    left: '3rem',
+    '& > :first-child': {
+      marginRight: '8.5rem'
+    }
   }
 });
 
@@ -83,8 +56,8 @@ function SliderCarousel(props) {
       {/* First Slide */}
       <div className={classes.slide1}>
         <HeaderText />
-        <div className={classes.parentSlider}>
-          <div className={classes.firstSlider}>01</div>
+        <div className={classes.indicator}>
+          <div>01</div>
           <div>02</div>
         </div>
       </div>
@@ -92,8 +65,8 @@ function SliderCarousel(props) {
       <div className={classes.slide2}>
         <Wave />
         <img alt="" />
-        <div className={classes.parentSlider}>
-          <div className={classes.firstSlider}>01</div>
+        <div className={classes.indicator}>
+          <div>01</div>
           <div>02</div>
         </div>
       </div>
