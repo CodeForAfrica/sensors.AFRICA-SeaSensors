@@ -6,7 +6,7 @@ import arrowBack from '../assets/arrowWhite.png';
 
 import Navigation from './Navigation';
 
-const styles = {
+const styles = theme => ({
   parentHeaderText: {
     position: 'relative',
     top: '30%',
@@ -27,7 +27,12 @@ const styles = {
     fontStretch: 'normal',
     letterSpacing: '0.8px',
     color: '#ffffff',
-    marginBottom: '2em'
+    marginBottom: '2em',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '77px',
+      width: '30px',
+      marginBottom: '4em'
+    }
   },
   arrowBack: {
     transform: 'rotate(180deg)',
@@ -35,7 +40,7 @@ const styles = {
     position: 'relative',
     justifyContent: 'flex-end'
   }
-};
+});
 
 function SharedHeader(props) {
   const { mediaResources, classes, link } = props;
