@@ -14,15 +14,14 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
-    height: '38.4375rem',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
-      height: '52.1875rem'
+      marginTop: '-9.375rem'
     }
   },
   hud: {
     width: '100%',
-    marginLeft: '-150px',
+    marginLeft: '-9.375rem',
     position: 'relative',
     display: 'grid',
     [theme.breakpoints.up('md')]: {
@@ -72,7 +71,7 @@ const styles = theme => ({
     height: '3.125rem',
     width: '3.125rem',
     marginTop: '15.25rem',
-    marginLeft: '-6rem',
+    marginLeft: '-5rem',
     borderBottom: '0.0625rem solid #979797',
     borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
@@ -140,7 +139,7 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       flexDirection: 'column',
       position: 'absolute',
-      left: '37.5rem',
+      left: '34.5rem',
       top: '40%',
       bottom: 0
     }
@@ -148,6 +147,9 @@ const styles = theme => ({
   timeDetails: {
     display: 'flex',
     flexDirection: 'column',
+    '& > :first-child': {
+      marginBottom: '1.25rem'
+    },
     [theme.breakpoints.up('md')]: {
       order: 1
     }
