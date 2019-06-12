@@ -127,6 +127,12 @@ const styles = theme => ({
       // Space the mailto link away from social icons when displaying desktop
       marginRight: '1.875rem'
     }
+  },
+  terms: {
+    textDecoration: 'underline',
+    [theme.breakpoints.up('md')]: {
+      textDecoration: 'none'
+    }
   }
 });
 
@@ -197,9 +203,10 @@ function Footer({ classes }) {
             </span>
             <Grid item container direction="row" justify="space-between">
               <A
-                classes={{ root: className(classes.text, classes.bold) }}
                 href="#"
-                underline="always"
+                classes={{
+                  root: className(classes.terms, classes.text, classes.bold)
+                }}
               >
                 Terms &amp; Conditions
               </A>
