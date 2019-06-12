@@ -28,7 +28,10 @@ const styles = theme => ({
     backgroundImage: `url(${map})`,
     backgroundPosition: '-40.625rem',
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed'
+    backgroundAttachment: 'fixed',
+    [theme.breakpoints.up('md')]: {
+      backgroundPosition: '-18.75rem'
+    }
   },
   slide2: {
     backgroundImage: `url(${HeaderImage2})`,
