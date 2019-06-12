@@ -10,7 +10,10 @@ const styles = theme => ({
   parentHeaderText: {
     position: 'relative',
     top: '30%',
-    padding: '0 5%'
+    padding: '0 5%',
+    [theme.breakpoints.down('xs')]: {
+      padding: '0 3%'
+    }
   },
   subtitleRule: {
     width: '22.5px',
