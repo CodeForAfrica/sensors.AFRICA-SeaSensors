@@ -22,6 +22,10 @@ const styles = theme => ({
 
     textDecoration: 'none',
 
+    '&:hover': {
+      backgroundColor: 'rgba(201, 224, 253, 0.8)'
+    },
+
     [theme.breakpoints.up('sm')]: {
       marginBottom: 0,
       marginRight: '20px'
