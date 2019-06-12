@@ -6,13 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
-// import creatTime from '../../assets/currentTime.png';
+import hud from '../../assets/hud.svg';
 
 const styles = theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
     height: '38.4375rem',
@@ -21,16 +20,42 @@ const styles = theme => ({
       height: '52.1875rem'
     }
   },
-  centerLine: {
-    position: 'absolute',
-    height: '33.125rem',
-    width: '0.0625rem',
-    marginTop: '-2.25rem',
-    backgroundColor: '#02325626',
+  hud: {
+    width: '100%',
+    marginLeft: '-150px',
+    position: 'relative',
+    display: 'grid',
     [theme.breakpoints.up('md')]: {
-      marginTop: '-3.25rem',
-      height: '62.25rem'
+      marginLeft: 'unset',
+      width: '80%'
     }
+  },
+  hudImage: {
+    width: '100%',
+    gridRowStart: 1,
+    gridColumnStart: 1
+  },
+  hudCore: {
+    zIndex: 1,
+    boxShadow: '0 0 2.1875rem 0 rgba(2, 50, 86, 0.1)',
+    backgroundColor: 'white',
+    borderRadius: '100%',
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+
+    alignSelf: 'center',
+    justifySelf: 'center',
+
+    position: 'absolute',
+    top: '32%',
+    left: '43%',
+    right: '15%',
+    bottom: '30%',
+
+    gridRowStart: 1,
+    gridColumnStart: 1
   },
   currentTimeLine: {
     display: 'none',
@@ -54,71 +79,6 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'block'
     }
-  },
-  outerRing: {
-    marginTop: '0.625rem',
-    width: '100%',
-    height: 'calc(100vw - 3.75rem)',
-    padding: '4.15%',
-    borderRadius: '100%',
-    border: '0.0313rem solid #77064c0D',
-
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    '& div': {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    },
-
-    [theme.breakpoints.up('md')]: {
-      width: '52.1875rem',
-      height: '52.1875rem'
-    }
-  },
-  dottedRing: {
-    width: '100%',
-    height: '100%',
-    padding: '4.8%',
-    borderRadius: '100%',
-    border: '0.3125rem dotted #023256'
-  },
-  innerRing: {
-    width: '100%',
-    height: '100%',
-    padding: '5.1%',
-    borderRadius: '100%',
-    border: '0.0313rem solid #77064c33'
-  },
-  solidRing: {
-    width: '100%',
-    height: '100%',
-    borderRadius: '100%',
-    padding: '9%',
-    border: '0.0938rem solid #77064c',
-    '&:before': {
-      content: '""',
-      width: '0.4375rem',
-      height: '0.4375rem',
-      backgroundColor: '#77064c',
-      borderRadius: '100%',
-      marginTop: '75%',
-
-      [theme.breakpoints.up('md')]: {
-        width: '0.925rem',
-        height: '0.925rem'
-      }
-    }
-  },
-  core: {
-    zIndex: 1,
-    width: '100%',
-    height: '100%',
-    boxShadow: '0 0 2.1875rem 0 rgba(2, 50, 86, 0.1)',
-    backgroundColor: 'white',
-    borderRadius: '100%',
-    flexDirection: 'column'
   },
   title: {
     fontFamily: 'Oswald',
@@ -233,19 +193,11 @@ const styles = theme => ({
 function BlastVisual({ classes }) {
   return (
     <div className={classes.root}>
-      <div className={classes.centerLine} />
-      <div className={classes.outerRing}>
-        <div className={classes.dottedRing}>
-          <div className={classes.innerRing}>
-            <div className={classes.solidRing}>
-              <div className={classes.core}>
-                <Typography className={classes.title}>12 562</Typography>
-                <Typography className={classes.caption}>
-                  Recorded Blasts
-                </Typography>
-              </div>
-            </div>
-          </div>
+      <div className={classes.hud}>
+        <img alt="" src={hud} className={classes.hudImage} />
+        <div className={classes.hudCore}>
+          <Typography className={classes.title}>12 562</Typography>
+          <Typography className={classes.caption}>Recorded Blasts</Typography>
         </div>
       </div>
       <div className={classes.currentTimeLine} />
