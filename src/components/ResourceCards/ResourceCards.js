@@ -13,14 +13,16 @@ import {
 const styles = {
   card: {
     display: 'flex',
+    width: '420px',
     flexDirection: 'column',
     padding: '1rem 2rem',
-    height: '420.3px',
+    height: 'auto',
     margin: '1rem',
     borderRadius: 0
   },
   links: {
-    display: 'grid'
+    display: 'grid',
+    paddingBottom: '0.5rem'
   },
   linkText: {
     width: '100%',
@@ -46,7 +48,7 @@ const styles = {
     lineHeight: '0.99',
     letterSpacing: '1.7px',
     color: '#023256',
-    marginTop: '90px'
+    marginTop: '2rem'
   },
   cardText: {
     width: '219.8px',
