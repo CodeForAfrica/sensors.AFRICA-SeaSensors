@@ -29,9 +29,9 @@ const styles = theme => ({
     color: '#ffffff',
     marginBottom: '2em',
     [theme.breakpoints.down('xs')]: {
-      fontSize: '77px',
+      fontSize: '70px',
       width: '30px',
-      marginBottom: '4em'
+      marginBottom: '3.5em'
     }
   },
   arrowBack: {
