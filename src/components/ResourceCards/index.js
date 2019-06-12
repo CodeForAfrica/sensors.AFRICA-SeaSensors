@@ -38,13 +38,14 @@ const styles = theme => ({
     boxShadow: 'none',
     marginTop: '95px',
     marginBottom: '65px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       alignItems: 'center',
       alignContent: 'space-between'
     }
   },
   parentCard: {
+    flexGrow: 1,
     width: '100%',
     height: 'auto',
     alignItems: 'center',
