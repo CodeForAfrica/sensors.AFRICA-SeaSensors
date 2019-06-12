@@ -14,9 +14,10 @@ const styles = {
   card: {
     display: 'flex',
     flexDirection: 'column',
-    width: '315px',
-    padding: '0 30px',
-    height: '450.2px'
+    padding: '1rem 2rem',
+    height: 'auto',
+    margin: '1rem',
+    borderRadius: 0
   },
   links: {
     display: 'grid'
@@ -67,7 +68,7 @@ function ResourceCards({ classes, title, text, link, link2 }) {
     SecondaryBtnLink = <Button className={classes.linkText}>{link2}</Button>;
   }
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} xs={12} sm={6}>
       <CardActionArea>
         <CardContent>
           <Typography

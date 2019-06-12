@@ -31,15 +31,17 @@ const resourceCardContent = [
 const styles = theme => ({
   cardStyle: {
     display: 'flex',
+    flexGrow: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: '#ffffff',
     boxShadow: 'none',
     marginTop: '95px',
     marginBottom: '65px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      alignContent: 'space-between'
     }
   },
   parentCard: {
