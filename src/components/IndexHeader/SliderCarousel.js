@@ -1,13 +1,16 @@
-import React, { Fragment } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import { withStyles } from '@material-ui/core';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import { Carousel } from 'react-responsive-carousel';
+
+import { withStyles } from '@material-ui/core';
+
+import HeaderText from './HeaderText';
+import Wave from './Wave';
 
 import HeaderImage1 from '../../assets/mapppp.png';
 import HeaderImage2 from '../../assets/HeaderImage2.png';
 import gridImage from '../../assets/grid.png';
-
-import HeaderText from './HeaderText';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -68,28 +71,27 @@ function SliderCarousel(props) {
   const { classes } = props;
   const { headerImage, grid, parentSlider, firstSlider } = classes;
   return (
-    <Fragment>
-      <Carousel showStatus={false}>
-        <div>
-          <img src={HeaderImage1} alt="First Slide" className={headerImage} />
-          <HeaderText />
-          <div className={grid}>
-            <Image />
-          </div>
-          <div className={parentSlider}>
-            <div className={firstSlider}>01</div>
-            <div>02</div>
-          </div>
+    <Carousel showStatus={false}>
+      <div>
+        <img src={HeaderImage1} alt="First Slide" className={headerImage} />
+        <HeaderText />
+        <div className={grid}>
+          <Image />
         </div>
-        <div>
-          <img src={HeaderImage2} alt="Second Slide" />
-          <div className={parentSlider}>
-            <div className={firstSlider}>01</div>
-            <div>02</div>
-          </div>
+        <div className={parentSlider}>
+          <div className={firstSlider}>01</div>
+          <div>02</div>
         </div>
-      </Carousel>
-    </Fragment>
+      </div>
+      <div>
+        <Wave />
+        <img src={HeaderImage2} alt="Second Slide" />
+        <div className={parentSlider}>
+          <div className={firstSlider}>01</div>
+          <div>02</div>
+        </div>
+      </div>
+    </Carousel>
   );
 }
 

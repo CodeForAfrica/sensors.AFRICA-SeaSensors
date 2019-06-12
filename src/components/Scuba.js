@@ -2,22 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 
-import ScubaImg from '../assets/equipment.jpg';
+import equipmentImage from '../assets/equipment.jpg';
 
-const styles = {
-  imageStyle: {
-    width: '80%',
+const styles = theme => ({
+  root: {
+    height: '444px',
+    [theme.breakpoints.up('md')]: {
+      padding: '88px',
+      height: '783px'
+    }
+  },
+  image: {
     height: '100%',
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    width: '100%',
+    objectFit: 'cover',
+    [theme.breakpoints.up('md')]: {
+      backgroundPositionX: 'unset'
+    }
   }
-};
+});
 
 function Scuba({ classes }) {
   return (
-    <div>
-      <img className={classes.imageStyle} src={ScubaImg} alt="ScubaImage" />
+    <div className={classes.root}>
+      <img alt="" className={classes.image} src={equipmentImage} />
     </div>
   );
 }

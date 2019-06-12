@@ -2,123 +2,83 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
-import arrow from '../assets/arrowBlueRight.png';
+import TextArrowLink from './TextArrowLink';
+import Line from './Line';
 
-import TextArrowButton from './TextArrowButton';
-
-const styles = {
+const styles = theme => ({
   root: {
-    flexGrow: 1
-  },
-  moreContainer: {
-    width: 'auto',
-    height: '30em'
-  },
-  moreText: {
-    opacity: '0.6',
-    fontFamily: 'Montserrat',
-    fontSize: '15px',
-    lineHeight: '2.5',
-    letterSpacing: '0.7px',
-    textAlign: 'justify',
-    color: '#023256',
-    marginTop: '38px',
-    marginLeft: '162px'
-  },
-  getINvolvedTitle: {
-    fontFamily: 'Oswald',
-    fontSize: '60px',
-    fontWeight: 'bold',
-    letterSpacing: '0.8px',
-    textAlign: 'justify',
-    color: '#023256'
-  },
-  readMore: {
-    width: '292.5px',
-    height: '75px',
-    boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)'
-  },
-  textArrowButtonParent: {
-    width: '250.5px',
-    height: '60px',
-    border: '3px #023256 solid',
-    paddingLeft: '1rem',
-    boxShadow: '0 23px 60px 0 rgba(0, 0, 0, 0.05)',
+    flexGrow: 1,
     display: 'flex',
-    position: 'relative',
-    top: '12em',
-    left: '17em'
+    padding: '3.125rem 1.875rem',
+    paddingBottom: '6.75rem',
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      minHeight: '31.25rem',
+
+      padding: '0 7.425rem',
+      paddingBottom: '5.0187rem',
+
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    }
   },
-  textArrowButtonText: {
-    width: '144px',
-    height: '24px',
-    fontFamily: 'Oswald',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    letterSpacing: '3.2px',
+  text: {
+    opacity: 0.6,
+    fontFamily: 'Montserrat',
+    fontSize: '0.9375rem',
+    lineHeight: 2.5,
+    letterSpacing: '0.0437rem',
+    textAlign: 'justify',
     color: '#023256',
-    marginTop: '1em'
+    marginBottom: '2.5rem'
   },
-  textArrowButtonArrow: {
-    marginTop: '1em'
+  linkText: {
+    fontFamily: 'Montserrat',
+    fontSize: '0.9375rem',
+    color: '#023256',
+    fontWeight: 'bold'
   },
-  line: {
-    width: '75px',
-    height: '0.8px',
-    background: 'lightgrey',
-    borderLeft: 'solid #023256 20px'
+  takeAction: {
+    [theme.breakpoints.up('md')]: {
+      alignSelf: 'flex-end'
+    }
   },
-  involvedParent: {
+  header: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '162px',
-    marginBottom: '52.5px',
-    marginTop: '50px'
+    marginBottom: '1.925rem'
   },
-  arrowLink: {
-    textDecoration: 'none'
+  title: {
+    fontFamily: 'Oswald',
+    fontSize: '3.75rem',
+    fontWeight: 'bold',
+    letterSpacing: '0.05rem',
+    color: '#023256'
   }
-};
+});
 
 function GetInvolved({ classes }) {
   return (
-    <div className={classes.moreContainer}>
-      <Grid container spacing={24}>
-        <Grid item xs={12} sm={6}>
-          <div style={styles.involvedParent}>
-            <Typography
-              component="h2"
-              variant="h1"
-              gutterBottom
-              className={classes.getINvolvedTitle}
-            >
-              How to get involved
-            </Typography>
-            <div style={styles.line} />
-          </div>
-          <Typography variant="body2" className={classes.moreText}>
-            If you’re interested in the project or the data, please contact us.
-            You can also help us document blasts. If you hear or see a dynamite
-            blast in Tanzania, please record the date, time and location, and
-            send the information to us.ecord the date, time and location, by
-            clicking on this link.
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <a
-            href="https://forms.gle/c7bZEipCRX5xe4SMA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.arrowLink}
-          >
-            <TextArrowButton
-              className={classes}
-              text="TAKE ACTION"
-              image={arrow}
-            />
-          </a>
-        </Grid>
+    <div className={classes.root}>
+      <Grid item xs={12} md={6}>
+        <div className={classes.header}>
+          <Typography className={classes.title}>How to get involved</Typography>
+          <Line />
+        </div>
+        <Typography variant="body2" className={classes.text}>
+          If you’re interested in the project or the data, please contact us.
+          You can also help us document blasts. If you hear or see a dynamite
+          blast in Tanzania, please record the date, time and location, and send
+          the information to us.ecord the date, time and location, by clicking
+          on this link.
+        </Typography>
       </Grid>
+      <TextArrowLink
+        classes={{ root: classes.takeAction }}
+        href="https://forms.gle/c7bZEipCRX5xe4SMA"
+        text="TAKE ACTION"
+        blue
+      />
     </div>
   );
 }

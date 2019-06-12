@@ -865,21 +865,6 @@
     prop-types "^15.6.0"
     react-is "^16.6.3"
 
-"@mdi/font@^3.0.39":
-  version "3.6.95"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-3.6.95.tgz#0bbde766ca2d94cfa0e469f25523b23d3112bdd3"
-  integrity sha512-wUbkF/RRCIh51TPzAL9qUeRSUFla9I3x1nGq62HkfWzIebRHbDY5HPaYCQuZO7398dWaLHTu4BwnBA58YbhfEA==
-
-"@mdi/js@^3.0.39":
-  version "3.6.95"
-  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-3.6.95.tgz#0a1e599680d241a2e77635c601fba25a44a635a0"
-  integrity sha512-9ICUom79Gw28Q8Cp6CX0VBd/Zy7NtIZrNolqIoYoKeuQmROhJ+1U54cxTuaGYHx+z62FIdx98IL3buMFAKwA/A==
-
-"@mdi/react@^1.1.0":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@mdi/react/-/react-1.1.1.tgz#73efd8f4d1ba71d6c4925b7bc7226417d2936b0e"
-  integrity sha512-acCA+UaKJeK7QBe6JRc1q7GWzG7phsHoil3i8nJLXvJk27WKDMwJpyySk4F0SREFslSM3j7/iOHJ7F+7+b6M7A==
-
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.9.tgz#b2b85d8ac7bb2797e577050b61aeaf1b26fbd906"
@@ -4106,7 +4091,7 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.6.0:
+eslint@^5.16.0, eslint@^5.6.0:
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.16.0.tgz#a1e3ac1aae4a3fbd8296fcf8f7ab7314cbb6abea"
   integrity sha512-S3Rz11i7c8AA5JPv7xAH+dOyq/Cu/VXHiHXBPOU1k/JAM5dXqQPt3qcrhpHSorXmrpu2g0gkIBVXAqCpzfoZIg==
@@ -9593,15 +9578,6 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-audio-spectrum@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/react-audio-spectrum/-/react-audio-spectrum-0.0.9.tgz#c286e61cf02c6076359e1f97408d472579376b4d"
-  integrity sha512-ZkDQEFqG+rBzgsX9SjKcdZ6pfYSjHALH61FA97SnWCfzDEdFi55gnTs6MbwLe41sIBsGKUiPBTb+dKArG0LP2w==
-  dependencies:
-    prop-types "^15.6.0"
-    react "^16.1.0"
-    react-dom "^16.1.0"
-
 react-dev-utils@^4.2.1:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -9626,7 +9602,7 @@ react-dev-utils@^4.2.1:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.1.0, react-dom@^16.5.1:
+react-dom@^16.5.1:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -9755,12 +9731,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react-wavesurfer@^0.8.6:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/react-wavesurfer/-/react-wavesurfer-0.8.6.tgz#da05f3f501e566a63853f9babec45a5251111538"
-  integrity sha1-2gXz9QHlZqY4U/m6vsRaUlERFTg=
-
-react@^16.1.0, react@^16.5.1, react@^16.8.4:
+react@^16.5.1, react@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -11854,17 +11825,17 @@ watchpack@^1.5.0:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
+wavesurfer.js@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/wavesurfer.js/-/wavesurfer.js-2.2.1.tgz#066ccd85d1ce70b64bd5a5b491e2c797645a6973"
+  integrity sha512-DMrgRN04dUK1YA4MDIMKx1EcIab7wtNcf2OE1Gn3ASnob4JMK3pwph/29ioph8UiHykMTloJIsPurvlC9NZVOQ==
+
 wbuf@^1.1.0, wbuf@^1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.3.tgz#c1d8d149316d3ea852848895cb6a0bfe887b87df"
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
-
-webfontloader@^1.6.28:
-  version "1.6.28"
-  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
-  integrity sha1-23hhKSU8tujq5UwvsF+HCvZnW64=
 
 webpack-dev-middleware@^3.0.1, webpack-dev-middleware@^3.7.0:
   version "3.7.0"
