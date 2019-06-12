@@ -13,7 +13,6 @@ import {
 const styles = {
   card: {
     display: 'flex',
-    width: '420px',
     flexDirection: 'column',
     padding: '1rem 2rem',
     height: 'auto',
