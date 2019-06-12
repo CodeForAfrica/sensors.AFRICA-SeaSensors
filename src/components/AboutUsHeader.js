@@ -8,15 +8,7 @@ import ResourceAboutHeader from './SharedHeader';
 
 const styles = {
   resourceImage: {
-    width: '100%',
-    height: '786px',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${HeaderImage})`,
-    minWidth: '1024px',
-    backgroundPosition: '50% 35%',
-    top: '0',
-    left: '0'
+    backgroundImage: `url(${HeaderImage})`
   }
 };
 
@@ -25,6 +17,8 @@ function AboutUsHeader({ classes }) {
     <ResourceAboutHeader
       classes={classes}
       mediaResources="About Sea Sensors."
+      subTitle="Lorem Ipsum"
+      activeNav={2}
     />
   );
 }
