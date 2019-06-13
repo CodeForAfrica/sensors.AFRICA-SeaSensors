@@ -93,7 +93,7 @@ function VideoAudioStories(props) {
       <div className={classes.parentHeading}>
         <div className={classes.newsTitleText}>
           <NewsTitleText
-            titleText="VIDEO & AUDIO STORIES"
+            subtitle="VIDEO & AUDIO STORIES"
             topStoriesTitle="VIDEO & AUDIO STORIES"
           />
         </div>

@@ -2,32 +2,41 @@ import React from 'react';
 import { withStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const styles = {
-  titleContent: {
+const styles = theme => ({
+  root: {},
+  subtitle: {
     display: 'flex',
-    position: 'relative',
-    left: '163px',
-    marginTop: '145px'
+    alignItems: 'center'
   },
-  titleRule: {
-    width: '22.5px',
+  subtitleRule: {
+    width: '0.9375rem',
     height: '1px',
+    marginRight: '1.5625rem',
     opacity: '0.3',
     background: '#023256',
-    marginRight: '15px'
+    [theme.breakpoints.up('md')]: {
+      width: '1.40625rem',
+      marginRight: '1.40625rem'
+    }
   },
-  titleText: {
-    width: '216.8px',
-    height: '24px',
+  subtitleText: {
     opacity: '0.4',
     fontFamily: 'Oswald',
-    fontSize: '9px',
+    fontSize: '0.5rem',
     fontWeight: '500',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '1.83px',
-    letterSpacing: '5.4px',
-    color: '#023256'
+    lineHeight: 2.75,
+    letterSpacing: '4.8px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '9px',
+      fontWeight: '500',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 1.83,
+      letterSpacing: '5.4px'
+    }
   },
   topStoriesTitle: {
     width: '529.5px',
@@ -42,19 +51,26 @@ const styles = {
     marginLeft: '163px',
     color: '#023256'
   }
-};
+});
 
 function NewsTitleText(props) {
-  const { classes, titleText, topStoriesTitle } = props;
+  const { classes, subtitle, topStoriesTitle } = props;
+
   return (
-    <div>
-      <div className={classes.titleContent}>
-        <div className={classes.titleRule} />
-        <Typography variant="body1" gutterBottom className={classes.titleText}>
-          {titleText}
-        </Typography>
-      </div>
-      <Typography variant="h1" gutterBottom className={classes.topStoriesTitle}>
+    <div className={classes.root}>
+      {subtitle && subtitle.length > 0 && (
+        <div className={classes.subtitle}>
+          <div className={classes.subtitleRule} />
+          <Typography
+            variant="subtitle1"
+            className={classes.subtitleText}
+            component="span"
+          >
+            {subtitle}
+          </Typography>
+        </div>
+      )}
+      <Typography variant="h2" gutterBottom className={classes.topStoriesTitle}>
         {topStoriesTitle}
       </Typography>
     </div>
@@ -63,7 +79,7 @@ function NewsTitleText(props) {
 
 NewsTitleText.propTypes = {
   classes: PropTypes.shape().isRequired,
-  titleText: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   topStoriesTitle: PropTypes.string.isRequired
 };
 
