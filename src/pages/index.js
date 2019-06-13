@@ -8,7 +8,7 @@ import TopStory from '../components/TopStory';
 import Video from '../components/Video';
 import WhatIsBlastFishing from '../components/TextSection/WhatIsBlastFishing';
 import HowItWorks from '../components/TextSection/HowItWorks';
-import Scuba from '../components/Scuba';
+import Equipment from '../components/Equipment';
 import More from '../components/More';
 import Stories from '../components/Stories';
 import Partners from '../components/Partners';
@@ -26,7 +26,7 @@ function Index({ location }) {
       <WhatIsBlastFishing />
       <Video origin={location.origin} />
       <HowItWorks />
-      <Scuba />
+      <Equipment />
       <More />
       <Stories />
       <Partners />
