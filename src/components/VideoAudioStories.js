@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import { withStyles, Grid, Hidden, Typography } from '@material-ui/core';
 
@@ -15,28 +16,6 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       padding: '7.875rem 5.5625rem 12.46875rem'
     }
-  },
-  cardInfo: {
-    width: '390px',
-    height: '337.5px',
-    backgroundColor: '#ffffff',
-    boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
-    flex: '1',
-    textAlign: 'center',
-    margin: '10px 40px'
-  },
-  flexGrid: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    margin: '0 0 20px 0'
-  },
-  backgroundVideo: {
-    height: '337.5px',
-    width: '100%',
-    float: 'left',
-    top: '0',
-    padding: 'none',
-    background: 'cover'
   },
   channel: {
     display: 'flex',
@@ -55,6 +34,53 @@ const styles = theme => ({
   },
   channelName: {
     textDecoration: 'underline'
+  },
+  description: {
+    opacity: 0.6,
+    fontFamily: 'Montserrat',
+    fontSize: '0.525rem',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 2.08,
+    letterSpacing: '0.4px',
+    textAlign: 'center',
+    color: ' #023256',
+    marginBottom: '0.4375rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.9375rem',
+      lineHeight: 2.5,
+      letterSpacing: '0.7px',
+      textAlign: 'left',
+      marginBottom: '0.9375rem'
+    }
+  },
+  iframeContainer: {
+    marginTop: '1.875rem',
+    position: 'relative',
+    overflow: 'hidden',
+    paddingTop: '56.25%',
+    [theme.breakpoints.up('md')]: {
+      marginTop: '2.8125rem'
+    }
+  },
+  iframeContainerLeft: {
+    [theme.breakpoints.up('md')]: {
+      marginRight: '1.40625rem'
+    }
+  },
+  iframeContainerRight: {
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '1.40625rem'
+    }
+  },
+  iframe: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    border: 0
   }
 });
 
@@ -85,9 +111,17 @@ function VideoAudioStories(props) {
           </Grid>
         </Hidden>
       </Grid>
-      <div className={classes.parentContainer}>
-        <div className={classes.flexGrid}>
-          <div className={classes.cardInfo}>
+      <Typography variant="body1" className={classes.description}>
+        Lorem ipsum dolor sit amet, consecong init.
+      </Typography>
+      <Grid container className={classes.stories} spacing={45}>
+        <Grid item xs={12} md={6}>
+          <div
+            className={classNames(
+              classes.iframeContainer,
+              classes.iframeContainerLeft
+            )}
+          >
             <iframe
               id="ytplayer"
               title="Installing acoustic sensors onto the sea bed, Tanzania"
@@ -97,10 +131,17 @@ function VideoAudioStories(props) {
               src={`https://www.youtube-nocookie.com/embed/gUJqdCq50EE?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
-              className={classes.backgroundVideo}
+              className={classes.iframe}
             />
           </div>
-          <div className={classes.cardInfo}>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div
+            className={classNames(
+              classes.iframeContainer,
+              classes.iframeContainerRight
+            )}
+          >
             <iframe
               id="ytplayer"
               title="Installing acoustic sensors onto the sea bed, Tanzania"
@@ -110,12 +151,17 @@ function VideoAudioStories(props) {
               src={`https://www.youtube-nocookie.com/embed/pxfIEDxbJdk?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
-              className={classes.backgroundVideo}
+              className={classes.iframe}
             />
           </div>
-        </div>
-        <div className={classes.flexGrid}>
-          <div className={classes.cardInfo}>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div
+            className={classNames(
+              classes.iframeContainer,
+              classes.iframeContainerLeft
+            )}
+          >
             <iframe
               id="ytplayer"
               title="Installing acoustic sensors onto the sea bed, Tanzania"
@@ -125,10 +171,17 @@ function VideoAudioStories(props) {
               src={`https://www.youtube-nocookie.com/embed/gUJqdCq50EE?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
-              className={classes.backgroundVideo}
+              className={classes.iframe}
             />
           </div>
-          <div className={classes.cardInfo}>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div
+            className={classNames(
+              classes.iframeContainer,
+              classes.iframeContainerRight
+            )}
+          >
             <iframe
               id="ytplayer"
               title="Installing acoustic sensors onto the sea bed, Tanzania"
@@ -138,11 +191,11 @@ function VideoAudioStories(props) {
               src={`https://www.youtube-nocookie.com/embed/pxfIEDxbJdk?origin=${origin}`}
               frameBorder="0"
               allowFullScreen
-              className={classes.backgroundVideo}
+              className={classes.iframe}
             />
           </div>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }
