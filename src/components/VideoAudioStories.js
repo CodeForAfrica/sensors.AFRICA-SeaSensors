@@ -38,27 +38,6 @@ const styles = theme => ({
     padding: 'none',
     background: 'cover'
   },
-  UoSALogo: {
-    width: '136px',
-    height: 'auto',
-    marginTop: '74px'
-  },
-  partnerTexts: {
-    width: '295.5px',
-    height: '39px',
-    opacity: '0.3',
-    fontFamily: 'Montserrat',
-    fontSize: '22.5px',
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: '1.67',
-    letterSpacing: '1px',
-    textAlign: 'center',
-    color: '#000000',
-    marginTop: '148px',
-    marginLeft: '79px'
-  },
   channel: {
     display: 'flex',
     alignItems: 'center'
