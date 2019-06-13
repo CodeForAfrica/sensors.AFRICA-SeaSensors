@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import { withStyles, Typography } from '@material-ui/core';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, Typography, GridList } from '@material-ui/core';
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 
 import Gill from '../../assets/partnerImage3.png';
 import Jamie from '../../assets/Jamie.jpg';
 import Jason from '../../assets/JasonRubens.jpg';
 
 import CardContainer from './CardContainer';
+import Line from '../Line';
 
 const partnersContent = [
   {
@@ -37,33 +40,44 @@ const partnersContent = [
   }
 ];
 
-const styles = {
+const styles = theme => ({
   parentContainer: {
-    height: '1166px',
     marginTop: '200px',
-    paddingLeft: '165px',
+    paddingLeft: '1.875rem',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.05)'
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    [theme.breakpoints.up('md')]: {
+      height: '900px',
+      paddingLeft: '165px'
+    }
   },
   card: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'left',
     boxShadow: 'none',
-    marginTop: '102px'
+    flexWrap: 'nowrap',
+    marginLeft: '-1.88rem !important',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)'
   },
   meetTeamTitle: {
     fontFamily: 'Oswald',
-    fontSize: '52px',
+    fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.7px',
+    lineHeight: '1.29',
+    letterSpacing: '0.4px',
     color: '#023256',
-    paddingLeft: '29.3px',
-    paddingTop: '80px'
+    paddingLeft: '1.875rem',
+    paddingTop: '80px',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.25rem',
+      letterSpacing: '0.7px',
+      lineHeight: 'normal'
+    }
   },
   meetTeamText: {
     opacity: '0.6',
@@ -78,48 +92,55 @@ const styles = {
   },
   cardView: {
     marginRight: '30px'
+  },
+  lineRoot: {
+    marginLeft: '1.875rem',
+    marginBottom: '1.875rem'
   }
-};
+});
 
-class TeamCard extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { partnerCards: partnersContent };
+function TeamCard({ classes, width }) {
+  let cards = 3.5;
+  let cellHeight = 650;
+  if (isWidthDown('md', width)) {
+    cards = 1.25;
+    cellHeight = 550;
   }
-
-  render() {
-    const { partnerCards } = this.state;
-    return (
-      <React.Fragment>
-        <div style={styles.parentContainer}>
-          <Typography
-            component="h2"
-            variant="h1"
-            gutterBottom
-            style={styles.meetTeamTitle}
-          >
-            Meet the Team.
-          </Typography>
-          <div style={styles.card}>
-            {partnerCards.map(partner => (
-              <div style={styles.cardView}>
-                <CardContainer
-                  key={partner.id}
-                  image={partner.image}
-                  name={partner.name}
-                  title={partner.title}
-                  text={partner.text}
-                  facebookSocial={partner.facebookSocial}
-                  twitterSocial={partner.twitterSocial}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </React.Fragment>
-    );
-  }
+  return (
+    <React.Fragment>
+      <div className={classes.parentContainer}>
+        <Typography
+          component="h2"
+          variant="h1"
+          gutterBottom
+          className={classes.meetTeamTitle}
+        >
+          Meet the Team.
+        </Typography>
+        <Line classes={{ root: classes.lineRoot }} />
+        <GridList className={classes.card} cellHeight={cellHeight} cols={cards}>
+          {partnersContent.map(partner => (
+            <div className={classes.cardView}>
+              <CardContainer
+                key={partner.id}
+                image={partner.image}
+                name={partner.name}
+                title={partner.title}
+                text={partner.text}
+                facebookSocial={partner.facebookSocial}
+                twitterSocial={partner.twitterSocial}
+              />
+            </div>
+          ))}
+        </GridList>
+      </div>
+    </React.Fragment>
+  );
 }
 
-export default withStyles(styles)(TeamCard);
+TeamCard.propTypes = {
+  classes: PropTypes.shape().isRequired,
+  width: PropTypes.string.isRequired
+};
+
+export default withWidth()(withStyles(styles)(TeamCard));

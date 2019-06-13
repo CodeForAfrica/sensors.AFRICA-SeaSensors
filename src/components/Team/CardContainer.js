@@ -11,10 +11,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
-const styles = {
+const styles = theme => ({
   card: {
     width: '360px',
-    height: '700px',
     '&:hover': {
       transition: 'all .1s ease-in-out',
       transform: 'scale(1.1)'
@@ -25,9 +24,12 @@ const styles = {
     }
   },
   media: {
-    height: 350,
+    height: 230,
     backgroundPosition: 'top',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    [theme.breakpoints.up('md')]: {
+      height: 350
+    }
   },
   cardContent: {
     padding: '21px 35px 0 44px',
@@ -35,35 +37,49 @@ const styles = {
   },
   name: {
     fontFamily: 'Montserrat',
-    fontSize: '22px',
+    fontSize: '0.9375rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '2.05',
-    letterSpacing: '1.5px',
-    color: '#023256'
+    lineHeight: '2',
+    letterSpacing: '1px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      lineHeight: '2.05',
+      letterSpacing: '1.5px',
+      fontSize: '1.375rem'
+    }
   },
   title: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.625rem',
     fontWeight: 'normal',
     fontStyle: 'italic',
     fontStretch: 'normal',
-    lineHeight: '2.15',
-    letterSpacing: '1px',
-    color: '#023256'
+    lineHeight: '2.05',
+    letterSpacing: 'p0.04375rem',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      letterSpacing: '0.0625rem',
+      fontSize: '0.9375rem'
+    }
   },
   text: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.75rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '2.15',
-    letterSpacing: '1px',
-    color: '#023256'
+    lineHeight: '1.79',
+    letterSpacing: '0.8px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      lineHeight: '2.15',
+      letterSpacing: '1px',
+      fontSize: '0.9375rem'
+    }
   },
   socials: {
     padding: '14.7px 35px 50px 44px'
@@ -71,7 +87,7 @@ const styles = {
   twitter: {
     marginLeft: '20px'
   }
-};
+});
 
 function CardContainer({ classes, image, name, title, text, twitterSocial }) {
   return (
