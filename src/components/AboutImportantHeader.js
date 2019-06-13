@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Grid, ButtonBase } from '@material-ui/core';
+import { withStyles, withWidth, Grid, ButtonBase } from '@material-ui/core';
+import { isWidthDown } from '@material-ui/core/withWidth';
 import classNames from 'classnames';
 
 import Gill from '../assets/gill.png';
@@ -82,7 +83,9 @@ const styles = theme => ({
     fontWeight: 'bold',
     fontSize: '12px',
     lineHeight: '2.25',
-    letterSpacing: '0.4px'
+    letterSpacing: '0.4px',
+    justifyContent: 'left',
+    alignItems: 'left'
   },
   showfullText: {
     maxHeight: '100%',
@@ -104,13 +107,15 @@ const styles = theme => ({
     borderLeft: '10px solid #023256',
     paddingLeft: '30px',
     paddingRight: '30px',
+    marginTop: '49px',
     [theme.breakpoints.up('md')]: {
       width: '537.8px',
       fontSize: '18px',
       lineHeight: '2.08',
       letterSpacing: '0.8px',
       borderLeft: '10px solid #023256',
-      paddingLeft: '50px'
+      paddingLeft: '50px',
+      marginTop: '-70px'
     }
   },
   gillImage: {
@@ -119,6 +124,7 @@ const styles = theme => ({
     backgroundImage: `url(${Gill})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    position: 'relative',
     [theme.breakpoints.up('md')]: {
       width: '40%',
       height: '697.5px',
@@ -126,8 +132,27 @@ const styles = theme => ({
     }
   },
   gillBraulik: {
-    width: '290px',
-    height: '90px',
+    width: '147px',
+    height: '104px',
+    margin: '335px 0 0 57px',
+    opacity: '0.95',
+    WebkitFilter: 'blur(10.5px)',
+    filter: 'blur(10.5px)',
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    // padding: '42.8px 0px 52.3px 66.8px',
+    whiteSpace: 'nowrap',
+    [theme.breakpoints.up('md')]: {
+      margin: '435px 0 0 57px',
+      fontSize: '41.3px',
+      width: '225px',
+      height: '156px'
+      // padding: '42.8px 0px 52.3px 66.8px',
+    }
+  },
+  gillBraulikName: {
+    position: 'absolute',
+    top: '80%',
+    left: '20%',
     fontFamily: 'Oswald',
     fontSize: '26px',
     fontWeight: 'bold',
@@ -136,12 +161,8 @@ const styles = theme => ({
     lineHeight: 'normal',
     letterSpacing: '1.9px',
     color: '#ffffff',
-    margin: '335px 0 0 57px',
-    backgroundColor: '#ffffff57',
-    padding: '15px 20px 15px 41px',
     [theme.breakpoints.up('md')]: {
-      margin: '435px 0 0 57px',
-      fontSize: '41.3px'
+      top: '70%'
     }
   }
 });
@@ -161,7 +182,7 @@ class AboutImportantHeader extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, width } = this.props;
     const { importantFullText } = this.state;
     return (
       <div className={classes.root}>
@@ -197,7 +218,7 @@ class AboutImportantHeader extends React.Component {
               inform the public and officials through online maps and
               data-driven stories.
             </div>
-            {!importantFullText && (
+            {!importantFullText && isWidthDown('md', width) && (
               <ButtonBase
                 className={classes.readMore}
                 onClick={() => this.showfullText()}
@@ -208,7 +229,8 @@ class AboutImportantHeader extends React.Component {
             )}
           </Grid>
           <Grid item className={classes.gillImage}>
-            <div className={classes.gillBraulik}>Gill Braulik</div>
+            <div className={classes.gillBraulik} />
+            <div className={classes.gillBraulikName}>Gill Braulik</div>
           </Grid>
           <div className={classes.highlight}>
             The project is headed by marine scientist, Gill Braulik and was
@@ -222,7 +244,8 @@ class AboutImportantHeader extends React.Component {
 }
 
 AboutImportantHeader.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
+  width: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(AboutImportantHeader);
+export default withWidth()(withStyles(styles)(AboutImportantHeader));
