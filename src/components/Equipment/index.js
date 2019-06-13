@@ -65,15 +65,19 @@ const styles = theme => ({
     }
   },
   hidden: {
-    display: 'none'
+    display: 'none !important'
   },
   details: {
-    position: 'absolute',
     zIndex: 1,
-    top: '1%',
-    bottom: '1%',
+    position: 'absolute',
     left: '35%',
+
+    display: 'flex',
+    alignSelf: 'center',
+
+    height: '31.25rem',
     width: '21.875rem',
+
     overflow: 'hidden',
     '&:before': {
       content: '""',
@@ -92,7 +96,11 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('md')]: {
       left: '10%',
+      height: '31.25rem',
       width: '28.125rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '40.625rem'
     }
   },
   content: {
