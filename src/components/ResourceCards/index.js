@@ -30,18 +30,18 @@ const resourceCardContent = [
 
 const styles = theme => ({
   cardStyle: {
-    display: 'flex',
     flexGrow: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    alignContent: 'space-between',
     backgroundColor: '#ffffff',
     boxShadow: 'none',
     marginTop: '95px',
     marginBottom: '65px',
-    [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      alignContent: 'space-between'
+    [theme.breakpoints.up('lg')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-evenly'
     }
   },
   parentCard: {
