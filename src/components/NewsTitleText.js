@@ -29,11 +29,9 @@ const styles = theme => ({
     lineHeight: 2.75,
     letterSpacing: '4.8px',
     color: '#023256',
+    textTransform: 'uppercase',
     [theme.breakpoints.up('md')]: {
-      fontSize: '9px',
-      fontWeight: '500',
-      fontStyle: 'normal',
-      fontStretch: 'normal',
+      fontSize: '0.5625rem',
       lineHeight: 1.83,
       letterSpacing: '5.4px'
     }
