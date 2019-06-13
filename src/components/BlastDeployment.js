@@ -7,59 +7,59 @@ import scubaDive from '../assets/ScubaDive.png';
 
 const styles = theme => ({
   parentContainer: {
-    marginTop: '68px',
+    marginTop: '4.25rem',
     marginLeft: 0,
     [theme.breakpoints.up('md')]: {
-      marginLeft: '90px',
-      marginTop: '104.3px'
+      marginLeft: '5.625rem',
+      marginTop: '6.51875rem'
     }
   },
   date: {
-    width: '229.5px',
-    height: '37.5px',
+    width: '14.34375rem',
+    height: '2.34375rem',
     opacity: '0.58',
     fontFamily: 'Oswald',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '4.75',
-    letterSpacing: '6px',
+    letterSpacing: '0.375rem',
     color: ' #ffffff',
     marginBottom: '0.6rem'
   },
   blastDeploymentText: {
     opacity: '0.6',
     fontFamily: 'Montserrat !important',
-    fontSize: '15px !important',
+    fontSize: '0.9375rem !important',
     fontWeight: 'normal !important',
     fontStyle: 'normal !important',
     fontStretch: 'normal',
     lineHeight: '2.5 !important',
-    letterSpacing: '0.7px !important',
+    letterSpacing: '0.04375rem !important',
     textAlign: 'justify',
     color: '#023256 !important'
   },
   recordersText: {
-    width: '120.4px',
+    width: '7.525rem',
     fontFamily: 'Oswald',
-    fontSize: '16px',
+    fontSize: '1rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.5',
-    letterSpacing: '0.6px',
+    letterSpacing: '0.0375rem',
     color: '#ffffff',
     [theme.breakpoints.up('md')]: {
-      letterSpacing: '1.2px',
-      fontSize: '30px',
-      width: '225.8px'
+      letterSpacing: '0.075rem',
+      fontSize: '1.875rem',
+      width: '14.1125rem'
     }
   },
   scubaDive: {
     width: '100%',
     position: 'relative',
-    height: '467px',
+    height: '29.1875rem',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '80%',
@@ -67,27 +67,27 @@ const styles = theme => ({
     left: '0',
     backgroundImage: `url(${scubaDive})`,
     [theme.breakpoints.up('md')]: {
-      height: '720px',
+      height: '45rem',
       backgroundPosition: '50% 35%'
     }
   },
   boat: {
     position: 'relative',
-    height: '378px',
+    height: '23.625rem',
     left: 0,
-    width: '306px',
-    marginTop: '-60px',
+    width: '19.125rem',
+    marginTop: '-3.75rem',
     [theme.breakpoints.up('md')]: {
-      height: '630px',
+      height: '39.375rem',
       left: '-150px',
       width: '510px',
       top: '580.5px',
       position: 'absolute',
-      bottom: '300px'
+      bottom: '18.75rem'
     }
   },
   recordDeploy: {
-    right: '30px',
+    right: '1.875rem',
     bottom: '120px',
     position: 'absolute',
     width: '115px',
@@ -107,8 +107,8 @@ const styles = theme => ({
   },
   textContainer: {
     paddingTop: '63px',
-    paddingLeft: '30px',
-    paddingRight: '30px',
+    paddingLeft: '1.875rem',
+    paddingRight: '1.875rem',
     [theme.breakpoints.up('md')]: {
       paddingTop: '153px',
       marginLeft: '480px',

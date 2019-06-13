@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Typography, withStyles } from '@material-ui/core';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import { Typography, withStyles, GridList } from '@material-ui/core';
+import classNames from 'classnames';
 
 import cfaLogo from '../assets/CFA-2.png';
 import UoSA from '../assets/UoSA.png';
@@ -8,8 +10,9 @@ import Mwambao from '../assets/logo2.png';
 import Bitmap from '../assets/Bitmap.png';
 import MarineParksLogo from '../assets/TanzaniaMarinePark.png';
 import ArrowDown from '../assets/arrowBlueDown.png';
+import Fisheries from '../assets/fisheries.png';
 
-const styles = {
+const styles = theme => ({
   parentContainer: {
     padding: '120px 120px 140px 124px'
   },
@@ -34,12 +37,15 @@ const styles = {
     width: '363px',
     height: '102px',
     fontFamily: 'Oswald',
-    fontSize: '52px',
+    fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     letterSpacing: '0.7px',
-    color: '#023256'
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.25rem'
+    }
   },
   titleText: {
     marginLeft: '40px'
@@ -128,12 +134,114 @@ const styles = {
     '&:hover': {
       cursor: 'pointer'
     }
+  },
+  partnerGrid: {
+    flexWrap: 'nowrap',
+    transform: 'translateZ(0)'
   }
+});
+
+function ImageCard({ classes, imageSrc, href, imageClass, alt }) {
+  return (
+    <Fragment>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classNames(classes.cardLink, classes.cardInfo)}
+      >
+        <img src={imageSrc} className={classes[imageClass]} alt={alt} />
+      </a>
+    </Fragment>
+  );
+}
+ImageCard.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imageClass: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
 };
 
-function OurPartners(props) {
-  const { classes } = props;
+const ImageCardItem = withStyles(styles)(ImageCard);
+export { ImageCardItem };
 
+function TextCard({ classes, text, href }) {
+  return (
+    <Fragment>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classNames(classes.cardLink, classes.cardInfo)}
+      >
+        <Typography
+          variant="body1"
+          gutterBottom
+          className={classes.partnerTexts}
+        >
+          {text}
+        </Typography>
+      </a>
+    </Fragment>
+  );
+}
+TextCard.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired
+};
+
+const TextCardItem = withStyles(styles)(TextCard);
+
+export { TextCardItem };
+
+function MultiTypeCard({
+  classes,
+  text,
+  elem,
+  alt,
+  imageSrc,
+  imageClass,
+  href
+}) {
+  return (
+    <Fragment>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classNames(classes.cardLink, classes.cardInfo)}
+      >
+        <img src={imageSrc} className={classes[imageClass]} alt={alt} />
+
+        <Typography
+          variant="body1"
+          gutterBottom
+          className={classes.partnerTexts}
+        >
+          {text}
+        </Typography>
+        {elem}
+      </a>
+    </Fragment>
+  );
+}
+MultiTypeCard.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  imageClass: PropTypes.string.isRequired,
+  elem: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+    .isRequired,
+  alt: PropTypes.string.isRequired
+};
+
+const MultiTypeCardItem = withStyles(styles)(MultiTypeCard);
+export { MultiTypeCardItem };
+
+function OurPartners({ classes, width }) {
   return (
     <div className={classes.parentContainer}>
       <div className={classes.titleText}>
@@ -145,131 +253,156 @@ function OurPartners(props) {
           Our Partners.
         </Typography>
       </div>
-      <div className={classes.flexGrid}>
-        <a
-          href="https://codeforafrica.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img
-            src={cfaLogo}
-            className={classes.cfaLogoImage}
-            alt="logoImgAlt"
+      {isWidthUp('md', width) ? (
+        <Fragment>
+          <div className={classes.flexGrid}>
+            <ImageCardItem
+              href="https://codeforafrica.org/"
+              imageSrc={cfaLogo}
+              imageClass="cfaLogoImage"
+              alt="Code For Africa"
+            />
+            <ImageCardItem
+              href="http://biology.st-andrews.ac.uk/contact/staffprofile.aspx?sunid=jdjm"
+              imageSrc={UoSA}
+              imageClass="UoSALogo"
+              alt="UoSA"
+            />
+            <TextCardItem
+              href="https://www.linkedin.com/in/jason-rubens-8013264/?originalSubdomain=tz"
+              text="SOUND OCEAN LTD."
+              textClass="partnerTexts"
+            />
+          </div>
+          <div className={classes.flexGrid}>
+            <TextCardItem
+              href="https://tz-blast-monitoring.net/"
+              text="Tanzania Blast Monitoring Network"
+            />
+            <ImageCardItem
+              href="http://www.mwambao.or.tz/"
+              imageSrc={Mwambao}
+              imageClass="mwambaoImg"
+              alt="Mwambao Castal"
+            />
+            <ImageCardItem
+              href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+              imageSrc={MarineParksLogo}
+              imageClass="marineParksLogo"
+              alt="Marine Parks"
+            />
+          </div>
+          <div className={classes.flexGrid}>
+            <ImageCardItem
+              href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+              imageSrc={Fisheries}
+              imageClass="marineParksLogo"
+              alt="Tanzania Fisheries"
+            />
+            <MultiTypeCard
+              href="https://corporate.nukta.co.tz/"
+              imageClass="bitMapLogo"
+              alt="Nukta Africa"
+              text="Nukta Africa Ltd"
+              imageSrc={Bitmap}
+              classes={classes}
+            >
+              <Fragment>
+                <a className={classes.email} href="https://nukta.co.tz/">
+                  https://nukta.co.tz/
+                </a>
+                <br />
+                <a href="email.com" className={classes.email}>
+                  info@nuktaafricaltd
+                </a>
+              </Fragment>
+            </MultiTypeCard>
+
+            <div className={classes.cardInfo}>
+              <img
+                src={ArrowDown}
+                alt="Arrow down"
+                className={classes.arrowDown}
+              />
+            </div>
+          </div>
+        </Fragment>
+      ) : (
+        <GridList cols={1.25} cellHeight={450} className={classes.partnerGrid}>
+          <ImageCardItem
+            href="https://codeforafrica.org/"
+            imageSrc={cfaLogo}
+            imageClass="cfaLogoImage"
+            alt="Code For Africa"
           />
-        </a>
-        <a
-          href="http://biology.st-andrews.ac.uk/contact/staffprofile.aspx?sunid=jdjm"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img src={UoSA} className={classes.UoSALogo} alt="logoImgAlt" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/jason-rubens-8013264/?originalSubdomain=tz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.partnerTexts}
-          >
-            SOUND OCEAN LTD.
-          </Typography>
-        </a>
-      </div>
-      <div className={classes.flexGrid}>
-        <a
-          href="https://tz-blast-monitoring.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.partnerTexts}
-          >
-            Tanzania Blast Monitoring Network
-          </Typography>
-        </a>
-        <a
-          href="http://www.mwambao.or.tz/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img
-            src={Mwambao}
-            className={classes.mwambaoImg}
+          <ImageCardItem
+            href="http://biology.st-andrews.ac.uk/contact/staffprofile.aspx?sunid=jdjm"
+            imageSrc={UoSA}
+            imageClass="UoSALogo"
+            alt="UoSA"
+          />
+          <TextCardItem
+            href="https://www.linkedin.com/in/jason-rubens-8013264/?originalSubdomain=tz"
+            text="SOUND OCEAN LTD."
+            textClass="partnerTexts"
+          />
+          <TextCardItem
+            href="https://tz-blast-monitoring.net/"
+            text="Tanzania Blast Monitoring Network"
+          />
+          <ImageCardItem
+            href="http://www.mwambao.or.tz/"
+            imageSrc={Mwambao}
+            imageClass="mwambaoImg"
             alt="Mwambao Castal"
           />
-        </a>
-        <a
-          href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img
-            src={MarineParksLogo}
-            className={classes.marineParksLogo}
-            alt="Mwambao Castal"
+          <ImageCardItem
+            href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+            imageSrc={MarineParksLogo}
+            imageClass="marineParksLogo"
+            alt="Marine Parks"
           />
-        </a>
-      </div>
-      <div className={classes.flexGrid}>
-        <a
-          href="http://www.mwambao.or.tz/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img
-            src={MarineParksLogo}
-            className={classes.marineParksLogo}
-            alt="Mwambao Castal"
+          <ImageCardItem
+            href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+            imageSrc={Fisheries}
+            imageClass="marineParksLogo"
+            alt="Tanzania Fisheries"
           />
-        </a>
-        <a
-          href="https://corporate.nukta.co.tz/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${classes.cardLink} ${classes.cardInfo}`}
-        >
-          <img
-            src={Bitmap}
-            className={classes.bitMapLogo}
-            alt="Nuka Carousel"
-          />
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={classes.nuktaTitle}
+          <MultiTypeCard
+            href="https://corporate.nukta.co.tz/"
+            imageClass="bitMapLogo"
+            alt="Nukta Africa"
+            text="Nukta Africa Ltd"
+            imageSrc={Bitmap}
+            classes={classes}
           >
-            Nukta Africa Ltd{' '}
-          </Typography>
-          <a className={classes.email} href="https://nukta.co.tz/">
-            https://nukta.co.tz/
-          </a>
-          <br />
-          <a href="email.com" className={classes.email}>
-            info@nuktaafricaltd
-          </a>
-        </a>
-        <div className={classes.cardInfo}>
-          <img src={ArrowDown} alt="Arrow down" className={classes.arrowDown} />
-        </div>
-      </div>
+            <Fragment>
+              <a className={classes.email} href="https://nukta.co.tz/">
+                https://nukta.co.tz/
+              </a>
+              <br />
+              <a href="email.com" className={classes.email}>
+                info@nuktaafricaltd
+              </a>
+            </Fragment>
+          </MultiTypeCard>
+
+          <div className={classes.cardInfo}>
+            <img
+              src={ArrowDown}
+              alt="Arrow down"
+              className={classes.arrowDown}
+            />
+          </div>
+        </GridList>
+      )}
     </div>
   );
 }
 
 OurPartners.propTypes = {
-  classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape({}).isRequired,
+  width: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(OurPartners);
+export default withWidth()(withStyles(styles)(OurPartners));

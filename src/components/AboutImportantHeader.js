@@ -20,33 +20,33 @@ const styles = theme => ({
   parentContainer: {
     width: '100%',
     display: 'flex',
-    paddingTop: '85px',
+    paddingTop: '5.3125rem',
     [theme.breakpoints.up('md')]: {
-      paddingTop: '107.5px'
+      paddingTop: '6.71875rem'
     }
   },
   important: {
-    width: '396px',
-    height: '114px',
+    width: '24.75rem',
+    height: '7.125rem',
     fontFamily: 'Oswald',
-    fontSize: '35px',
+    fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.29',
-    letterSpacing: '0.4px',
+    letterSpacing: '0.025rem',
     color: '#023256',
     [theme.breakpoints.up('md')]: {
-      fontSize: '52px',
+      fontSize: '3.25rem',
       lineHeight: '1.13',
-      letterSpacing: '0.7px',
-      height: '153px'
+      letterSpacing: '0.0437rem',
+      height: '9.5625rem'
     }
   },
   importantDiv: {
     width: '100%',
-    paddingLeft: '30px',
-    paddingRight: '30px',
+    paddingLeft: '1.875rem',
+    paddingRight: '1.875rem',
     [theme.breakpoints.up('md')]: {
       width: '60%',
       padding: 0
@@ -54,36 +54,36 @@ const styles = theme => ({
   },
   importantText: {
     opacity: '0.6',
-    marginTop: '45px',
+    marginTop: '2.8125rem',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '2.5',
-    letterSpacing: '0.7px',
+    letterSpacing: '0.04375rem',
     textAlign: 'justify',
     color: '#023256',
-    marginLeft: '4px',
+    marginLeft: '0.25rem',
     [theme.breakpoints.down('md')]: {
-      maxHeight: '220px',
+      maxHeight: '13.75rem',
       overflow: 'hidden',
       background: 'linear-gradient(to bottom, #000000, #ffffff)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
-      fontSize: '12px',
+      fontSize: '0.75rem',
       lineHeight: '2.08',
-      letterSpacing: '0.5px'
+      letterSpacing: '0.03125rem'
     }
   },
   readMore: {
     width: '100%',
-    paddingTop: '20px',
+    paddingTop: '1.25rem',
     color: '#023256',
     fontWeight: 'bold',
-    fontSize: '12px',
+    fontSize: '0.75rem',
     lineHeight: '2.25',
-    letterSpacing: '0.4px',
+    letterSpacing: '0.025rem',
     justifyContent: 'left',
     alignItems: 'left'
   },
@@ -96,45 +96,45 @@ const styles = theme => ({
   highlight: {
     width: '100%',
     fontFamily: 'Montserrat',
-    fontSize: '14px',
+    fontSize: '0.875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.79',
-    letterSpacing: '0.6px',
+    letterSpacing: '0.0375rem',
     textAlign: 'justify',
     color: '#023256',
-    borderLeft: '10px solid #023256',
-    paddingLeft: '30px',
-    paddingRight: '30px',
-    marginTop: '49px',
+    borderLeft: '0.625rem solid #023256',
+    paddingLeft: '1.875rem',
+    paddingRight: '1.875rem',
+    marginTop: '3.0625rem',
     [theme.breakpoints.up('md')]: {
-      width: '537.8px',
-      fontSize: '18px',
+      width: '33.6125rem',
+      fontSize: '1.125rem',
       lineHeight: '2.08',
-      letterSpacing: '0.8px',
+      letterSpacing: '0.05rem',
       borderLeft: '10px solid #023256',
-      paddingLeft: '50px',
-      marginTop: '-70px'
+      paddingLeft: '3.125rem',
+      marginTop: '-4.375rem'
     }
   },
   gillImage: {
     width: '100%',
-    height: '465px',
+    height: '29.0625rem',
     backgroundImage: `url(${Gill})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
     [theme.breakpoints.up('md')]: {
       width: '40%',
-      height: '697.5px',
+      height: '43.59375rem',
       backgroundSize: 'contain'
     }
   },
   gillBraulik: {
-    width: '147px',
-    height: '104px',
-    margin: '335px 0 0 57px',
+    width: '9.1875rem',
+    height: '6.5rem',
+    margin: '20.9375rem 0 0 3.5625rem',
     opacity: '0.95',
     WebkitFilter: 'blur(10.5px)',
     filter: 'blur(10.5px)',
@@ -142,10 +142,10 @@ const styles = theme => ({
     // padding: '42.8px 0px 52.3px 66.8px',
     whiteSpace: 'nowrap',
     [theme.breakpoints.up('md')]: {
-      margin: '435px 0 0 57px',
-      fontSize: '41.3px',
-      width: '225px',
-      height: '156px'
+      margin: '29rem 0 0 3.5625rem',
+      fontSize: '2.58125rem',
+      width: '14.0625rem',
+      height: '9.75rem'
       // padding: '42.8px 0px 52.3px 66.8px',
     }
   },
@@ -154,12 +154,12 @@ const styles = theme => ({
     top: '80%',
     left: '20%',
     fontFamily: 'Oswald',
-    fontSize: '26px',
+    fontSize: '1.625rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
-    letterSpacing: '1.9px',
+    letterSpacing: '0.11875rem',
     color: '#ffffff',
     [theme.breakpoints.up('md')]: {
       top: '70%'
