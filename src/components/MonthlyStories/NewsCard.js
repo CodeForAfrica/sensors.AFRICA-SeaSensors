@@ -7,8 +7,11 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Hidden,
   Typography
 } from '@material-ui/core';
+
+import A from '../A';
 
 import arrow from '../../assets/arrowBlueRight.png';
 
@@ -21,19 +24,21 @@ const styles = theme => ({
     borderRadius: 0,
     boxShadow: 'none',
     [theme.breakpoints.up('md')]: {
-      width: '390px'
+      width: '24.375rem'
     }
   },
   cardMedia: {
     width: '100%',
     height: '8.125rem',
     [theme.breakpoints.up('md')]: {
-      width: '390px',
-      height: '249.5px'
+      height: '11.75rem'
     }
   },
   cardContent: {
-    padding: '2.03125rem 2.54375rem 1.75rem 1.84375rem'
+    padding: '2.03125rem 2.54375rem 1.75rem 1.84375rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '1.625rem 2.75rem 1.9375rem'
+    }
   },
   title: {
     fontFamily: 'Montserrat',
@@ -45,7 +50,8 @@ const styles = theme => ({
     letterSpacing: '1px',
     color: '#023256',
     [theme.breakpoints.up('md')]: {
-      fontSize: '22px',
+      fontFamily: 'Oswald',
+      fontSize: '1.375rem',
       lineHeight: '2.05',
       letterSpacing: '1.5px'
     }
@@ -71,8 +77,8 @@ const styles = theme => ({
     letterSpacing: '0.7px',
     color: '#023256',
     [theme.breakpoints.up('md')]: {
-      fontSize: '22px',
-      lineHeight: '2.05',
+      fontSize: '0.9375rem',
+      lineHeight: '2.15',
       letterSpacing: '1px'
     }
   },
@@ -85,12 +91,7 @@ function NewsCard({ classes, image, title, date, link }) {
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes.link}
-        >
+        <A href={link} className={classes.link}>
           <CardActionArea>
             <CardMedia className={classes.cardMedia} image={image} />
             <CardContent className={classes.cardContent}>
@@ -102,15 +103,17 @@ function NewsCard({ classes, image, title, date, link }) {
               >
                 {title}
               </Typography>
-              <Typography variant="button" className={classes.arrow}>
-                <img src={arrow} alt="Open" />
-              </Typography>
+              <Hidden mdUp>
+                <Typography variant="button" className={classes.arrow}>
+                  <img src={arrow} alt="Open" />
+                </Typography>
+              </Hidden>
               <Typography component="p" className={classes.date}>
                 {date}
               </Typography>
             </CardContent>
           </CardActionArea>
-        </a>
+        </A>
       </Card>
     </div>
   );

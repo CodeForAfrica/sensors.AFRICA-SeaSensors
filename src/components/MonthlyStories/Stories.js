@@ -1,49 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
+
 import { withStyles } from '@material-ui/core';
 
 import NewsCard from './NewsCard';
 
 const styles = theme => ({
-  cardStyle: {
+  root: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  stories: {
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
-      justifyContent: 'space-evenly',
       boxShadow: 'none',
       marginTop: '95px',
       marginBottom: '65px',
       marginRight: '74px'
     }
   },
-  parentCard: {
-    width: '100%',
-    height: 'auto',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ffffff'
+  newsCardMargin: {
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '2.8125rem'
+    }
   }
 });
 
 function Stories({ classes, stories }) {
   return (
-    <React.Fragment>
-      <div className={classes.parentCard}>
-        <div className={classes.cardStyle}>
-          {stories.map(story => (
-            <NewsCard
-              key={story.title}
-              title={story.title}
-              image={story.image}
-              date={story.date}
-              link={story.link}
-            />
-          ))}
-        </div>
+    <div className={classes.root}>
+      <div className={classes.stories}>
+        {stories.slice(0, 3).map((story, index) => (
+          <NewsCard
+            key={story.title}
+            title={story.title}
+            image={story.image}
+            date={story.date}
+            link={story.link}
+            classes={{
+              root: classNames({ [classes.newsCardMargin]: index > 0 })
+            }}
+          />
+        ))}
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 

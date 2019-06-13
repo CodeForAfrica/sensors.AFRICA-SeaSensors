@@ -59,7 +59,10 @@ const styles = theme => ({
   allStories: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '5rem'
+    marginTop: '5rem',
+    [theme.breakpoints.up('md')]: {
+      marginTop: '5.65625rem'
+    }
   }
 });
 
