@@ -39,7 +39,7 @@ const styles = theme => ({
     boxShadow: 'none',
     marginTop: '95px',
     marginBottom: '65px',
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
       justifyContent: 'space-evenly'
     }
