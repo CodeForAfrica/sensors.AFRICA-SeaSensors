@@ -25,35 +25,49 @@ const styles = theme => ({
   text: {
     opacity: 0.6,
     fontFamily: 'Montserrat',
-    fontSize: '0.9375rem',
-    lineHeight: 2.5,
-    letterSpacing: '0.0437rem',
-    textAlign: 'justify',
+    fontSize: '0.75rem',
     color: '#023256',
-    marginBottom: '2.5rem'
+    lineHeight: '2.08',
+    textAlign: 'justify',
+    letterSpacing: '0.03125rem',
+    marginBottom: '2.5rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.9375rem',
+      lineHeight: 2.5,
+      letterSpacing: '0.0437rem'
+    }
   },
   linkText: {
     fontFamily: 'Montserrat',
-    fontSize: '0.9375rem',
+    fontSize: '0.75rem',
     color: '#023256',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    lineHeight: '2.08',
+    letterSpacing: '0.03125rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.9375rem'
+    }
   },
   takeAction: {
     [theme.breakpoints.up('md')]: {
-      alignSelf: 'flex-end'
+      alignSelf: 'center'
     }
   },
   header: {
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: '1.925rem'
+    marginBottom: '3.1875rem'
   },
   title: {
     fontFamily: 'Oswald',
-    fontSize: '3.75rem',
+    fontSize: '2.1875rem',
     fontWeight: 'bold',
-    letterSpacing: '0.05rem',
-    color: '#023256'
+    letterSpacing: '0.025rem',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.75rem',
+      letterSpacing: '0.05rem'
+    }
   }
 });
 

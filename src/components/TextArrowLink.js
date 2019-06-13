@@ -6,7 +6,7 @@ import className from 'classnames';
 import whiteArrow from '../assets/arrowWhite.png';
 import blueArrow from '../assets/arrowBlueRight.png';
 
-const styles = {
+const styles = theme => ({
   root: {
     height: '3.75rem',
     width: 'fit-content',
@@ -28,16 +28,22 @@ const styles = {
   text: {
     height: '1.5rem',
     fontFamily: 'Oswald',
-    fontSize: '1rem',
+    fontSize: '0.8125rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
     letterSpacing: '0.2rem',
-    marginRight: '3.5em'
+    marginRight: '3.5em',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1rem'
+    }
   },
-  arrow: {}
-};
+  arrow: {
+    width: '40px',
+    height: '16px'
+  }
+});
 
 function TextArrowLink({ classes, href, text, blue, border }) {
   return (
