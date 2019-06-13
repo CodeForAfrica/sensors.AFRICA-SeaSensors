@@ -21,13 +21,6 @@
   height: 786px;
 }
 
-.carousel.carousel-slider .control-arrow {
-  top: 40% !important;
-  bottom: initial !important;
-  background: #fff !important;
-  padding: 20px !important;
-}
-
 .carousel .control-next.control-arrow:before {
   border-left-color:#000 !important;
 }
@@ -47,12 +40,6 @@
 .carousel .control-dots {
   text-align: initial !important;
   bottom: 54.3px !important;
-}
-
-.carousel .control-dots .dot {
-  border-radius: 1px !important;
-  width: 135px !important;
-  height: 4px !important;
 }
 
 .carousel .control-dots .dot:focus {
