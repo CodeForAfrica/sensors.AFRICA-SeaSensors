@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import Tabletop from 'tabletop';
 import { withStyles, Typography } from '@material-ui/core';
 
-import SectionTitle from '../SectionTitle';
 import MonthStoryText from './MonthStoryText';
+import SectionTitle from '../SectionTitle';
+import Stories from './Stories';
+import TextArrowLink from '../TextArrowLink';
 
 import Snorkel2 from '../../assets/Snorkel2.png';
 
@@ -53,6 +55,11 @@ const styles = theme => ({
     zIndex: '1',
     bottom: '0',
     right: '0'
+  },
+  allStories: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '5rem'
   }
 });
 
@@ -60,7 +67,8 @@ class MonthlyStories extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      mainStory: [],
+      stories: []
     };
   }
 
@@ -68,17 +76,17 @@ class MonthlyStories extends Component {
     Tabletop.init({
       key: '16EDYidZSNnbGPcxedzWMbjNyQPcKUZuf5PP8LbP5BTY',
       callback: (data, tabletop) => {
-        const sheetData = tabletop.sheets('Month Story').all();
-        this.setState({
-          data: sheetData
-        });
+        const mainStory = tabletop.sheets('Month Story').all();
+        this.setState({ mainStory });
+        const stories = tabletop.sheets('News Cards').all();
+        this.setState({ stories });
       }
     });
   }
 
   render() {
     const { classes } = this.props;
-    const { data } = this.state;
+    const { mainStory, stories } = this.state;
     return (
       <div className={classes.root}>
         <SectionTitle subtitle="Monthly Stories">
@@ -90,7 +98,7 @@ class MonthlyStories extends Component {
         </Typography>
         <div className={classes.monthStoryContainer}>
           <div className={classes.blur} />
-          {data.map(obj => (
+          {mainStory.map(obj => (
             <MonthStoryText
               key={obj.title}
               title={obj.title}
@@ -98,6 +106,14 @@ class MonthlyStories extends Component {
               link={obj.link}
             />
           ))}
+        </div>
+        <Stories stories={stories} />
+        <div className={classes.allStories}>
+          <TextArrowLink
+            blue
+            text="ALL STORIES"
+            href="https://medium.com/seasensors-africa"
+          />
         </div>
       </div>
     );

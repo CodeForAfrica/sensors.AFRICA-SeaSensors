@@ -81,7 +81,7 @@ const styles = theme => ({
   }
 });
 
-function NewsCards({ classes, image, title, date, link }) {
+function NewsCard({ classes, image, title, date, link }) {
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
@@ -116,7 +116,7 @@ function NewsCards({ classes, image, title, date, link }) {
   );
 }
 
-NewsCards.propTypes = {
+NewsCard.propTypes = {
   classes: PropTypes.shape().isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -124,4 +124,4 @@ NewsCards.propTypes = {
   link: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(NewsCards);
+export default withStyles(styles)(NewsCard);
