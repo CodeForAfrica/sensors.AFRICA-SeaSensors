@@ -16,16 +16,18 @@ const styles = theme => ({
     position: 'relative',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
-      marginTop: '-9.375rem'
+      marginTop: '-10%'
     }
   },
   hud: {
-    marginLeft: '-9.375rem',
+    marginTop: '-6.375rem',
     position: 'relative',
     display: 'grid',
+    maxWidth: '43.75rem',
     [theme.breakpoints.up('md')]: {
-      marginLeft: 'unset',
-      width: '80%'
+      minWidth: '37.5rem',
+      marginTop: 'unset',
+      marginLeft: '15%'
     }
   },
   hudImage: {
@@ -39,18 +41,15 @@ const styles = theme => ({
     backgroundColor: 'white',
     borderRadius: '100%',
 
+    width: '60%',
+    height: '40%',
+
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
 
     alignSelf: 'center',
     justifySelf: 'center',
-
-    position: 'absolute',
-    top: '32%',
-    left: '43%',
-    right: '15%',
-    bottom: '30%',
 
     gridRowStart: 1,
     gridColumnStart: 1
@@ -60,6 +59,10 @@ const styles = theme => ({
     height: '0.0625rem',
     width: '6.25rem',
     marginLeft: '-1.5rem',
+
+    marginBottom: '5.625rem',
+    marginTop: '5.625rem',
+
     backgroundColor: '#979797',
     [theme.breakpoints.up('md')]: {
       display: 'block'
@@ -69,8 +72,6 @@ const styles = theme => ({
     display: 'none',
     height: '3.125rem',
     width: '3.125rem',
-    marginTop: '15.25rem',
-    marginLeft: '-5rem',
     borderBottom: '0.0625rem solid #979797',
     borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
@@ -131,20 +132,21 @@ const styles = theme => ({
   },
   outerDetails: {
     width: '100%',
+    maxWidth: '34.375rem',
 
-    marginTop: '-5rem',
+    marginTop: '-30%',
 
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    [theme.breakpoints.up('md')]: {
-      marginTop: 'unset',
 
-      flexDirection: 'column',
-      position: 'absolute',
-      left: '34.5rem',
-      top: '40%',
-      bottom: 0
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '-10rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 'auto',
+      maxWidth: '54.125rem',
+      marginTop: 0
     }
   },
   timeDetails: {
@@ -162,7 +164,10 @@ const styles = theme => ({
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
       alignItems: 'flex-start',
-      order: 2
+      order: 2,
+
+      position: 'absolute',
+      bottom: 0
     }
   },
   socialDetailsIcons: {
@@ -205,8 +210,10 @@ function BlastVisual({ classes }) {
           <Typography className={classes.caption}>Recorded Blasts</Typography>
         </div>
       </div>
-      <div className={classes.currentTimeLine} />
-      <div className={classes.lastUpdateTimeLine} />
+      <div>
+        <div className={classes.currentTimeLine} />
+        <div className={classes.lastUpdateTimeLine} />
+      </div>
       <div className={classes.outerDetails}>
         <div className={classes.socialDetails}>
           <Typography gutterBottom className={classes.socialText}>

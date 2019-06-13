@@ -9,21 +9,15 @@ const styles = theme => ({
     width: '100%',
     margin: '0 auto',
     backgroundColor: '#fff',
-    display: 'grid',
     padding: '1.875rem',
     [theme.breakpoints.up('md')]: {
       padding: '5.8125rem 7.3438rem'
     }
   },
-  info: {
-    gridRowStart: 1,
-    gridColumnStart: 1
-  },
+  info: {},
   visualInfo: {
-    gridRowStart: 2,
-    gridColumnStart: 1,
     [theme.breakpoints.up('md')]: {
-      gridRowStart: 1
+      marginTop: '-250px'
     }
   },
   infoTitle: {

@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1253" height="1331" viewBox="0 0 1253 1331">
+<svg xmlns="http://www.w3.org/2000/svg" width="905" height="1331">
     <g fill="none" fill-rule="evenodd">
-        <g fill-rule="nonzero" transform="translate(352 233)">
+        <g fill-rule="nonzero" transform="translate(0 218)">
             <circle cx="449" cy="449" r="320" stroke="#77064C" stroke-width="4"/>
             <circle cx="449" cy="449" r="357" stroke="#77064C" stroke-width="2" opacity=".2"/>
             <circle cx="450" cy="450" r="450" stroke="#77064C" opacity=".08"/>
             <ellipse cx="338.862" cy="748.952" fill="#77064C" rx="9.862" ry="9.952"/>
         </g>
-        <path stroke="#023256" stroke-dasharray="1,45" stroke-linecap="round" stroke-width="4" d="M800.5 1093C578.205 1093 398 912.797 398 690.501 398 468.207 578.205 288 800.5 288c222.296 0 402.5 180.207 402.5 402.501C1203 912.797 1022.796 1093 800.5 1093z" opacity=".8"/>
-        <path stroke="#023256" stroke-linecap="square" d="M799.208.5v1327" opacity=".2"/>
-        <circle cx="799" cy="1327" r="4" fill="#979797" fill-rule="nonzero"/>
-        <path stroke="#023256" stroke-linecap="square" d="M.5 678.5h398" opacity=".2"/>
+        <path transform="translate(-352 -20)" stroke="#023256" stroke-dasharray="1,45" stroke-linecap="round" stroke-width="4" d="M800.5 1093C578.205 1093 398 912.797 398 690.501 398 468.207 578.205 288 800.5 288c222.296 0 402.5 180.207 402.5 402.501C1203 912.797 1022.796 1093 800.5 1093z" opacity=".8"/>
+        <path transform="translate(-352 0)" stroke="#023256" stroke-linecap="square" d="M799.208.5v1327" opacity=".2"/>
+        <circle transform="translate(-352 0)" cx="799" cy="1327" r="4" fill="#979797" fill-rule="nonzero"/>
+        <!-- <path stroke="#023256" stroke-linecap="square" d="M.5 678.5h398" opacity=".2"/> -->
     </g>
 </svg>
