@@ -17,7 +17,8 @@ const styles = {
     padding: '1rem 2rem',
     height: 'auto',
     margin: '1rem',
-    borderRadius: 0
+    borderRadius: 0,
+    boxShadow: '0 28px 56px 0 rgba(0, 0, 0, 0.05)'
   },
   links: {
     display: 'grid',

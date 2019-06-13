@@ -33,7 +33,6 @@ const styles = theme => ({
     marginBottom: '2em',
     [theme.breakpoints.down('xs')]: {
       fontSize: '70px',
-      width: '30px',
       marginBottom: '3.5em'
     }
   },
