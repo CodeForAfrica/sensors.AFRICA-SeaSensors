@@ -209,8 +209,8 @@ function ViewGallery({ classes, width }) {
           cellHeight={cellHeight}
         >
           {galleryContent.map(picture => (
-            <div className={classes.viewCard}>
-              <GalleryContainer key={picture.id} image={picture.image} />
+            <div className={classes.viewCard} key={picture.id}>
+              <GalleryContainer image={picture.image} />
             </div>
           ))}
         </GridList>

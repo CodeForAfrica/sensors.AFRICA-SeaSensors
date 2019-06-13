@@ -120,9 +120,8 @@ function TeamCard({ classes, width }) {
         <Line classes={{ root: classes.lineRoot }} />
         <GridList className={classes.card} cellHeight={cellHeight} cols={cards}>
           {partnersContent.map(partner => (
-            <div className={classes.cardView}>
+            <div className={classes.cardView} key={partner.id}>
               <CardContainer
-                key={partner.id}
                 image={partner.image}
                 name={partner.name}
                 title={partner.title}
