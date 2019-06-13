@@ -21,6 +21,28 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('md')]: {
       height: '50rem'
+    },
+    '& .control-dots': {
+      display: 'flex',
+      width: '15.625rem',
+      [theme.breakpoints.up('md')]: {
+        width: '21.875rem'
+      }
+    },
+    '& .carousel .control-dots .dot': {
+      borderRadius: '0.0625rem',
+      width: '50%',
+      height: '0.25rem'
+    },
+    '& .carousel.carousel-slider .control-arrow': {
+      top: 'initial',
+      bottom: '9.5%',
+      background: '#fff',
+      padding: '1.25rem',
+      [theme.breakpoints.up('md')]: {
+        top: '40%',
+        bottom: 'initial'
+      }
     }
   },
   slide1: {
@@ -41,13 +63,21 @@ const styles = theme => ({
     height: '100%'
   },
   indicator: {
+    fontFamily: 'Oswald',
+    fontSize: '0.6875rem',
+    fontWeight: 'bold',
+    letterSpacing: '0.0313rem',
+    textAlign: 'justify',
     display: 'flex',
     position: 'absolute',
     color: '#fff',
     bottom: '5rem',
     left: '3rem',
     '& > :first-child': {
-      marginRight: '8.5rem'
+      marginRight: '6rem',
+      [theme.breakpoints.up('md')]: {
+        marginRight: '9rem'
+      }
     }
   }
 });
