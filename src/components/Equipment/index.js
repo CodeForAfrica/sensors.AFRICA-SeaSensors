@@ -37,7 +37,10 @@ const styles = theme => ({
     position: 'absolute',
     right: '15%',
     top: '33%',
-    width: '36.5%'
+    width: '36.5%',
+    '& > img': {
+      width: '100%'
+    }
   },
   hotSpot1: {
     position: 'absolute',
@@ -45,7 +48,10 @@ const styles = theme => ({
     bottom: '5%',
     width: '15%',
 
-    transform: 'scaleX(-1)'
+    transform: 'scaleX(-1)',
+    '& > img': {
+      width: '100%'
+    }
   },
   hotSpot3: {
     position: 'absolute',
@@ -53,7 +59,10 @@ const styles = theme => ({
     top: '5%',
     width: '15%',
 
-    transform: 'scaleX(-1)'
+    transform: 'scaleX(-1)',
+    '& > img': {
+      width: '100%'
+    }
   },
   hidden: {
     display: 'none'
@@ -134,6 +143,9 @@ const styles = theme => ({
     position: 'absolute',
     left: '1.25rem',
     bottom: '1.25rem'
+  },
+  equipmentImage: {
+    width: '100%'
   }
 });
 
@@ -210,7 +222,7 @@ function Scuba({ classes }) {
       >
         <img alt="" src={hotSpot1} />
       </ButtonBase>
-      <img alt="" src={equipmentImage} />
+      <img className={classes.equipmentImage} alt="" src={equipmentImage} />
     </div>
   );
 }
