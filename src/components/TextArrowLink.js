@@ -18,6 +18,9 @@ const styles = {
     textDecoration: 'none',
     color: '#fff'
   },
+  noBorder: {
+    border: 'unset'
+  },
   blue: {
     border: '0.1875rem #023256 solid',
     color: '#023256'
@@ -36,10 +39,13 @@ const styles = {
   arrow: {}
 };
 
-function TextArrowLink({ classes, href, text, blue }) {
+function TextArrowLink({ classes, href, text, blue, border }) {
   return (
     <a
-      className={className(classes.root, { [classes.blue]: blue })}
+      className={className(classes.root, {
+        [classes.blue]: blue,
+        [classes.noBorder]: !border
+      })}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -58,11 +64,13 @@ TextArrowLink.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   text: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  blue: PropTypes.bool
+  blue: PropTypes.bool,
+  border: PropTypes.bool
 };
 
 TextArrowLink.defaultProps = {
-  blue: false
+  blue: false,
+  border: true
 };
 
 export default withStyles(styles)(TextArrowLink);
