@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   Button,
@@ -71,21 +70,19 @@ function ResourceCards({ classes, title, text, link, link2 }) {
   }
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.titleText}
-          >
-            {title}
-          </Typography>
-          <Typography component="p" className={classes.cardText}>
-            {text}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardContent>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={classes.titleText}
+        >
+          {title}
+        </Typography>
+        <Typography component="p" className={classes.cardText}>
+          {text}
+        </Typography>
+      </CardContent>
       <CardActions>
         <div className={classes.links}>
           <Button size="small" className={classes.linkText}>
