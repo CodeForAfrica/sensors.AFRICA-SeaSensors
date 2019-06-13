@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
+
+import { withStyles, Grid, Hidden, Typography } from '@material-ui/core';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import SectionTitle from './SectionTitle';
 
-const styles = {
-  videoAudioStoriesParent: {
+const styles = theme => ({
+  root: {
     backgroundColor: '#F0F0F0',
-    marginTop: '117.5px'
-  },
-  parentContainer: {
-    padding: '20px 120px 119.5px 120px'
-  },
-  newsTitleText: {
-    marginRight: '32.7%'
+    padding: '5.125rem 1.875rem 4.9375rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '7.875rem 5.5625rem 12.46875rem'
+    }
   },
   cardInfo: {
     width: '390px',
@@ -60,52 +59,53 @@ const styles = {
     marginTop: '148px',
     marginLeft: '79px'
   },
-  youtube: {
-    textDecoration: 'underline',
-    marginRight: '3px',
-    marginLeft: '3px'
-  },
-  youtubeTextIcon: {
+  channel: {
     display: 'flex',
     alignItems: 'center'
   },
-  socialSharing: {
+  channelCallToAction: {
     fontFamily: 'Oswald',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     fontWeight: '500',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '4',
+    lineHeight: 4,
     letterSpacing: '0.8px',
     color: ' #023256',
-    marginRight: '29px'
+    marginRight: '1.8125rem'
   },
-  parentHeading: {
-    display: 'flex'
+  channelName: {
+    textDecoration: 'underline'
   }
-};
+});
 
 function VideoAudioStories(props) {
   const { classes, origin } = props;
 
   return (
-    <div className={classes.videoAudioStoriesParent}>
-      <div className={classes.parentHeading}>
-        <div className={classes.newsTitleText}>
-          <SectionTitle subtitle="VIDEO & AUDIO STORIES">
+    <div className={classes.root}>
+      <Grid container justify="space-between" className={classes.title}>
+        <Grid item>
+          <SectionTitle subtitle="Video & Audio Stories">
             Video & Audio Stories
           </SectionTitle>
-        </div>
-        <div className={classes.youtubeTextIcon}>
-          <p className={classes.socialSharing}>
-            Visit our
-            <span className={classes.youtube}>Youtube</span>
-            channel.
-          </p>
-          <FontAwesomeIcon icon={faYoutube} color="#023256" size="2x" />
-          <div />
-        </div>
-      </div>
+        </Grid>
+        <Hidden smDown>
+          <Grid item>
+            <div className={classes.channel}>
+              <Typography
+                variant="subtitle2"
+                className={classes.channelCallToAction}
+              >
+                Visit our <span className={classes.channelName}>Youtube</span>{' '}
+                channel.
+              </Typography>
+              <FontAwesomeIcon icon={faYoutube} color="#023256" size="2x" />
+              <div />
+            </div>
+          </Grid>
+        </Hidden>
+      </Grid>
       <div className={classes.parentContainer}>
         <div className={classes.flexGrid}>
           <div className={classes.cardInfo}>
