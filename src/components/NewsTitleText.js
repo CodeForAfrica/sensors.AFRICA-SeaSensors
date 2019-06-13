@@ -37,22 +37,24 @@ const styles = theme => ({
     }
   },
   topStoriesTitle: {
-    width: '529.5px',
-    height: '102px',
     fontFamily: 'Oswald',
-    fontSize: '52px',
+    fontSize: '2.8125rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.7px',
-    marginLeft: '163px',
-    color: '#023256'
+    lineHeight: 1.11,
+    letterSpacing: '0.6px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.25rem',
+      lineHeight: 'normal',
+      letterSpacing: '0.7px'
+    }
   }
 });
 
 function NewsTitleText(props) {
-  const { classes, subtitle, topStoriesTitle } = props;
+  const { classes, subtitle, children } = props;
 
   return (
     <div className={classes.root}>
@@ -69,7 +71,7 @@ function NewsTitleText(props) {
         </div>
       )}
       <Typography variant="h2" gutterBottom className={classes.topStoriesTitle}>
-        {topStoriesTitle}
+        {children}
       </Typography>
     </div>
   );
@@ -78,7 +80,14 @@ function NewsTitleText(props) {
 NewsTitleText.propTypes = {
   classes: PropTypes.shape().isRequired,
   subtitle: PropTypes.string.isRequired,
-  topStoriesTitle: PropTypes.string.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+};
+
+NewsTitleText.defaultProps = {
+  children: null
 };
 
 export default withStyles(styles)(NewsTitleText);

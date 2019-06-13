@@ -4,10 +4,9 @@ import NewsTitleText from './NewsTitleText';
 
 function NewsTopStories() {
   return (
-    <NewsTitleText
-      subtitle="MONTHLY STORIES"
-      topStoriesTitle="Our Monthly Stories."
-    />
+    <NewsTitleText subtitle="MONTHLY STORIES">
+      Our Monthly Stories.
+    </NewsTitleText>
   );
 }
 

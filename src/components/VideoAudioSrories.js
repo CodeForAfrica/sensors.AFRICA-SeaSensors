@@ -92,10 +92,9 @@ function VideoAudioStories(props) {
     <div className={classes.videoAudioStoriesParent}>
       <div className={classes.parentHeading}>
         <div className={classes.newsTitleText}>
-          <NewsTitleText
-            subtitle="VIDEO & AUDIO STORIES"
-            topStoriesTitle="VIDEO & AUDIO STORIES"
-          />
+          <NewsTitleText subtitle="VIDEO & AUDIO STORIES">
+            Video & Audio Stories
+          </NewsTitleText>
         </div>
         <div className={classes.youtubeTextIcon}>
           <p className={classes.socialSharing}>
