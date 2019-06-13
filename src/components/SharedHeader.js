@@ -10,9 +10,9 @@ const styles = theme => ({
   parentHeaderText: {
     position: 'relative',
     top: '30%',
-    padding: '0 5%',
-    [theme.breakpoints.down('xs')]: {
-      padding: '0 3%'
+    padding: '0 3%',
+    [theme.breakpoints.up('md')]: {
+      padding: '0 5%'
     }
   },
   subtitleRule: {
@@ -24,16 +24,18 @@ const styles = theme => ({
   mediaResources: {
     height: '115.5px',
     fontFamily: 'Oswald',
-    fontSize: '88px',
+    fontSize: '70px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     letterSpacing: '0.8px',
     color: '#ffffff',
-    marginBottom: '2em',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '70px',
-      marginBottom: '3.5em'
+    marginBottom: '3.5em',
+    width: '3rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '88px',
+      marginBottom: '2em',
+      width: 'auto'
     }
   },
   arrowBack: {
