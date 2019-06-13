@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, withStyles, CardMedia, CardActionArea } from '@material-ui/core';
 
-const styles = {
+const styles = theme => ({
   media: {
-    height: '405px',
-    width: '315px'
+    height: '270px',
+    width: '200px',
+    [theme.breakpoints.up('md')]: {
+      height: '405px',
+      width: '315px'
+    }
   }
-};
+});
 
 function GalleryContainer({ classes, image }) {
   return (
