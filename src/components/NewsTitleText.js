@@ -41,19 +41,6 @@ const styles = {
     letterSpacing: '0.7px',
     marginLeft: '163px',
     color: '#023256'
-  },
-  storiesBody: {
-    height: '102px',
-    opacity: '0.6',
-    fontFamily: 'Montserrat',
-    fontSize: '15px',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    letterSpacing: '0.7px',
-    color: '#023256',
-    marginLeft: '163px',
-    lineHeight: 2.5
   }
 };
 
