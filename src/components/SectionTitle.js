@@ -36,7 +36,7 @@ const styles = theme => ({
       letterSpacing: '5.4px'
     }
   },
-  topStoriesTitle: {
+  title: {
     fontFamily: 'Oswald',
     fontSize: '2.8125rem',
     fontWeight: 'bold',
@@ -53,7 +53,7 @@ const styles = theme => ({
   }
 });
 
-function NewsTitleText(props) {
+function SectionTitle(props) {
   const { classes, subtitle, children } = props;
 
   return (
@@ -70,14 +70,14 @@ function NewsTitleText(props) {
           </Typography>
         </div>
       )}
-      <Typography variant="h2" gutterBottom className={classes.topStoriesTitle}>
+      <Typography variant="h2" gutterBottom className={classes.title}>
         {children}
       </Typography>
     </div>
   );
 }
 
-NewsTitleText.propTypes = {
+SectionTitle.propTypes = {
   classes: PropTypes.shape().isRequired,
   subtitle: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -86,8 +86,8 @@ NewsTitleText.propTypes = {
   ])
 };
 
-NewsTitleText.defaultProps = {
+SectionTitle.defaultProps = {
   children: null
 };
 
-export default withStyles(styles)(NewsTitleText);
+export default withStyles(styles)(SectionTitle);

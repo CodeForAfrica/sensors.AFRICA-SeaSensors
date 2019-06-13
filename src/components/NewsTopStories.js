@@ -1,12 +1,10 @@
 import React from 'react';
 
-import NewsTitleText from './NewsTitleText';
+import SectionTitle from './SectionTitle';
 
 function NewsTopStories() {
   return (
-    <NewsTitleText subtitle="MONTHLY STORIES">
-      Our Monthly Stories.
-    </NewsTitleText>
+    <SectionTitle subtitle="MONTHLY STORIES">Our Monthly Stories.</SectionTitle>
   );
 }
 

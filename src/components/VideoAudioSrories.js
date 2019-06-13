@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import NewsTitleText from './NewsTitleText';
+import SectionTitle from './SectionTitle';
 
 const styles = {
   videoAudioStoriesParent: {
@@ -92,9 +92,9 @@ function VideoAudioStories(props) {
     <div className={classes.videoAudioStoriesParent}>
       <div className={classes.parentHeading}>
         <div className={classes.newsTitleText}>
-          <NewsTitleText subtitle="VIDEO & AUDIO STORIES">
+          <SectionTitle subtitle="VIDEO & AUDIO STORIES">
             Video & Audio Stories
-          </NewsTitleText>
+          </SectionTitle>
         </div>
         <div className={classes.youtubeTextIcon}>
           <p className={classes.socialSharing}>
