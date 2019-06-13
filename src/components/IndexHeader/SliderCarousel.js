@@ -8,86 +8,98 @@ import { withStyles } from '@material-ui/core';
 import HeaderText from './HeaderText';
 import Wave from './Wave';
 
-import HeaderImage1 from '../../assets/mapppp.png';
+import map from '../../assets/map.png';
 import HeaderImage2 from '../../assets/HeaderImage2.png';
-import gridImage from '../../assets/grid.png';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const styles = {
-  headerImage: {
-    background: 'no-repeat center center fixed',
-    WebkitBackgroundSize: 'cover',
-    MozBackgroundSize: 'cover',
-    OBackgroundSize: 'cover',
+const styles = theme => ({
+  root: {
+    height: '100vh',
+    '& .carousel-slider, .slider-wrapper, .slider': {
+      height: '100%'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '50rem'
+    },
+    '& .control-dots': {
+      display: 'flex',
+      width: '15.625rem',
+      [theme.breakpoints.up('md')]: {
+        width: '21.875rem'
+      }
+    },
+    '& .carousel .control-dots .dot': {
+      borderRadius: '0.0625rem',
+      width: '50%',
+      height: '0.25rem'
+    },
+    '& .carousel.carousel-slider .control-arrow': {
+      top: 'initial',
+      bottom: '9.5%',
+      background: '#fff',
+      padding: '1.25rem',
+      [theme.breakpoints.up('md')]: {
+        top: '40%',
+        bottom: 'initial'
+      }
+    }
+  },
+  slide1: {
+    height: '100%',
+    backgroundImage: `url(${map})`,
+    backgroundPosition: '-40.625rem',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    [theme.breakpoints.up('md')]: {
+      backgroundPosition: '-18.75rem'
+    }
+  },
+  slide2: {
+    backgroundImage: `url(${HeaderImage2})`,
+    backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    minHeight: '100%',
-    height: '800px'
+    backgroundAttachment: 'fixed',
+    height: '100%'
   },
-  grid: {
-    position: 'absolute',
-    bottom: '32em',
-    right: '7%'
-  },
-  parentSlider: {
+  indicator: {
+    fontFamily: 'Oswald',
+    fontSize: '0.6875rem',
+    fontWeight: 'bold',
+    letterSpacing: '0.0313rem',
+    textAlign: 'justify',
     display: 'flex',
-    justifyContent: 'flex-start',
     position: 'absolute',
-    color: '#ffffff',
-    top: '43em',
-    zIndex: '999',
-    left: '3.1em'
-  },
-  firstSlider: {
-    marginRight: '8.5em'
-  },
-  waving: {
-    display: 'block !important',
-    position: 'absolute !important',
-    userSelect: 'none !important',
-    height: '60% !important',
-    width: '100% !important',
-    bottom: '1em !important'
+    color: '#fff',
+    bottom: '5rem',
+    left: '3rem',
+    '& > :first-child': {
+      marginRight: '6rem',
+      [theme.breakpoints.up('md')]: {
+        marginRight: '9rem'
+      }
+    }
   }
-};
-
-const Image = () => (
-  <div>
-    <img
-      src={gridImage}
-      style={{
-        height: 164,
-        width: 112,
-        position: 'fixed',
-        top: '8em',
-        right: '6em'
-      }}
-      alt="grid"
-    />
-  </div>
-);
+});
 
 function SliderCarousel(props) {
   const { classes } = props;
-  const { headerImage, grid, parentSlider, firstSlider } = classes;
   return (
-    <Carousel showStatus={false}>
-      <div>
-        <img src={HeaderImage1} alt="First Slide" className={headerImage} />
+    <Carousel className={classes.root} showStatus={false}>
+      {/* First Slide */}
+      <div className={classes.slide1}>
         <HeaderText />
-        <div className={grid}>
-          <Image />
-        </div>
-        <div className={parentSlider}>
-          <div className={firstSlider}>01</div>
+        <div className={classes.indicator}>
+          <div>01</div>
           <div>02</div>
         </div>
       </div>
-      <div>
+      {/* Second Slide */}
+      <div className={classes.slide2}>
         <Wave />
-        <img src={HeaderImage2} alt="Second Slide" />
-        <div className={parentSlider}>
-          <div className={firstSlider}>01</div>
+        <img alt="" />
+        <div className={classes.indicator}>
+          <div>01</div>
           <div>02</div>
         </div>
       </div>

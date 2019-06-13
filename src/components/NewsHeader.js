@@ -8,21 +8,18 @@ import SharedHeader from './SharedHeader';
 
 const styles = {
   resourceImage: {
-    width: '100%',
-    height: '786px',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${NewsHeaderImage})`,
-    minWidth: '1024px',
-    backgroundPosition: '50% 35%',
-    top: '0',
-    left: '0'
+    backgroundImage: `url(${NewsHeaderImage})`
   }
 };
 
 function NewsHeader({ classes }) {
   return (
-    <SharedHeader classes={classes} mediaResources="News Showcase Page." />
+    <SharedHeader
+      classes={classes}
+      mediaResources="News Showcase Page."
+      subTitle="Lorem Ipsum"
+      activeNav={1}
+    />
   );
 }
 

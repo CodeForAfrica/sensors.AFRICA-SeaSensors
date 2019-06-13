@@ -24,7 +24,14 @@ const styles = theme => ({
 });
 
 function ResourcesHeader({ classes }) {
-  return <SharedHeader classes={classes} mediaResources="Resources." />;
+  return (
+    <SharedHeader
+      classes={classes}
+      mediaResources="Resources."
+      subTitle="Lorem Ipsum"
+      activeNav={3}
+    />
+  );
 }
 
 ResourcesHeader.propTypes = {

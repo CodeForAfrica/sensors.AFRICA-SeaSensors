@@ -1,18 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, Typography } from '@material-ui/core';
+import classNames from 'classnames';
 
 import arrowBack from '../assets/arrowWhite.png';
 
 import Navigation from './Navigation';
 
 const styles = theme => ({
-  parentHeaderText: {
+  resourceImage: {
+    width: '100%',
+    height: '480px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 35%',
     position: 'relative',
-    top: '30%',
-    padding: '0 3%',
+    top: '0',
+    left: '0',
     [theme.breakpoints.up('md')]: {
-      padding: '0 5%'
+      height: '608px'
+    }
+  },
+
+  parentHeaderText: {
+    position: 'absolute',
+    top: '35%',
+    padding: '0 8%',
+    [theme.breakpoints.up('md')]: {
+      top: '40%',
+      padding: '0 5.3rem'
     }
   },
   subtitleRule: {
@@ -22,20 +38,20 @@ const styles = theme => ({
     marginRight: '20px'
   },
   mediaResources: {
-    height: '115.5px',
+    height: '142px',
     fontFamily: 'Oswald',
-    fontSize: '70px',
+    fontSize: '45px',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    letterSpacing: '0.8px',
+    letterSpacing: '0.6px',
+    lineHeight: '1.1',
     color: '#ffffff',
-    marginBottom: '3.5em',
-    width: '3rem',
+    marginBottom: '1.5em',
     [theme.breakpoints.up('md')]: {
-      fontSize: '88px',
-      marginBottom: '2em',
-      width: 'auto'
+      fontSize: '65px',
+      height: '115.5px',
+      letterSpacing: '0.8px'
     }
   },
   arrowBack: {
@@ -43,15 +59,61 @@ const styles = theme => ({
     display: 'flex',
     position: 'relative',
     justifyContent: 'flex-end'
+  },
+  arrowStyle: {
+    width: '40px',
+    height: '8px',
+    [theme.breakpoints.up('md')]: {
+      width: '62px',
+      height: '13px'
+    }
+  },
+  subText: {
+    textTransform: 'uppercase',
+    color: '#ffffff',
+    fontFamily: 'Oswald',
+    fontSize: '8px',
+    fontWeight: '500',
+    fontStyle: 'normal',
+    lineHeight: '2.75',
+    letterSpacing: '4.8px',
+    display: 'inline-block',
+    marginLeft: '1rem'
+  },
+  lineBar: {
+    display: 'inline-block',
+    borderBottom: '1px solid rgba(255,255,255, 0.5)',
+    marginBottom: '2px',
+    marginLeft: '0.3rem',
+    width: '1.4em'
+  },
+  bars: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+      right: 0,
+      bottom: 0,
+      position: 'absolute',
+      padding: '2.1875rem 3.7687rem'
+    }
+  },
+  activelineBar: {
+    borderBottom: '2px solid rgba(255,255,255)'
   }
 });
 
 function SharedHeader(props) {
-  const { mediaResources, classes, link } = props;
+  const { mediaResources, classes, link, subTitle, activeNav } = props;
   return (
     <div className={classes.resourceImage}>
-      <Navigation />
+      <Navigation activeNav={activeNav} />
       <div className={classes.parentHeaderText}>
+        {subTitle.length > 0 && (
+          <div>
+            <div className={classes.lineBar} />
+            <Typography className={classes.subText}>{subTitle}</Typography>
+          </div>
+        )}
         <Typography
           variant="body1"
           gutterBottom
@@ -61,18 +123,38 @@ function SharedHeader(props) {
         </Typography>
         <div className={classes.arrowBack}>
           <a href={link}>
-            <img src={arrowBack} alt="Arrow back" />
+            <img
+              src={arrowBack}
+              alt="Arrow back"
+              className={classes.arrowStyle}
+            />
           </a>
         </div>
+      </div>
+      <div className={classes.bars}>
+        {[1, 2, 3].map(index => (
+          <div
+            key={index}
+            className={classNames(classes.lineBar, {
+              [classes.activelineBar]: index === activeNav
+            })}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
+SharedHeader.defaultProps = {
+  subTitle: ''
+};
+
 SharedHeader.propTypes = {
   classes: PropTypes.shape().isRequired,
   mediaResources: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  activeNav: PropTypes.number.isRequired,
+  subTitle: PropTypes.string
 };
 
 export default withStyles(styles)(SharedHeader);

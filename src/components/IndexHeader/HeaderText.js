@@ -2,110 +2,115 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, Typography } from '@material-ui/core';
 
-import arrow from '../../assets/arrowWhite.png';
+import TextArrowLink from '../TextArrowLink';
 
-const styles = {
-  content: {
-    top: '176px',
-    padding: '4em 12em 2em 2em',
-    display: 'flex',
+const styles = theme => ({
+  root: {
+    top: '11rem',
+    width: '20.9375rem',
+    height: '21.25rem',
     position: 'absolute',
     textAlign: 'left',
+    overflow: 'hidden',
+    background: 'inherit',
+    '&:before': {
+      content: '""',
+      background: 'inherit',
+      position: 'absolute',
+      left: '-1.5625rem',
+      top: '-1.5625rem',
+      right: 0,
+      bottom: 0,
+      boxShadow: 'inset 0 0 0 187.5rem rgba(255,255,255,0.3)',
+      filter: 'blur(0.25rem)'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '26.25rem',
+      width: '46.875rem'
+    }
+  },
+  content: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    padding: '1.875rem',
+    width: '100%',
+    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    marginRight: '40em'
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: '5.5313rem',
+      paddingTop: '3.0187rem',
+      paddingRight: '3.5125rem'
+    }
   },
-  contentHeader: {
+  title: {
     fontFamily: 'Oswald',
-    fontSize: '65px',
+    fontSize: '2.8125rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '1.27',
-    letterSpacing: '0.8px',
-    color: '#ffffff'
+    lineHeight: 1.11,
+    letterSpacing: '0.0375rem',
+    color: '#ffffff',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '4.0625rem'
+    }
   },
-  contentSubHeader: {
-    fontFamily: 'Oswald',
-    fontSize: '2.2rem',
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: '1.27',
-    letterSpacing: '0.8px',
-    color: '#ffffff'
-  },
-  contentText: {
-    opacity: '0.6',
+  text: {
+    opacity: 0.6,
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.75rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '2.25',
-    letterSpacing: '0.7px',
-    marginRight: '5.2em',
-    color: '#ffffff'
-  },
-  exploreMapParent: {
-    display: 'flex',
-    paddingTop: '4px',
-    marginRight: '20px',
-    justifyContent: 'flex-end'
-  },
-  exploreMapArrow: {
-    marginTop: '5px'
-  },
-  exploreMapText: {
-    fontFamily: 'Oswald',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    letterSpacing: '4.8px',
-    textAlign: 'right',
-    color: '#ffffff',
-    paddingRight: '20px'
+    lineHeight: 2.08,
+    letterSpacing: '0.0313rem',
+    textAlign: 'justify',
+    color: '#fff',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.9375rem'
+    }
   },
   arrowLink: {
-    textDecoration: 'none'
+    display: 'flex',
+    alignSelf: 'flex-end',
+    justifySelf: 'end',
+    marginTop: '1.25rem',
+    boxShadow: 'unset',
+    '& span': {
+      marginRight: '0.625rem'
+    },
+    // Carousel overrides
+    '& img': {
+      width: 'unset !important',
+      verticalAlign: 'unset !important',
+      border: 'unset !important',
+      display: 'unset !important',
+      pointerEvents: 'unset !important'
+    }
   }
-};
+});
 
 function HeaderText({ classes }) {
   return (
-    <div className={classes.content}>
-      <Typography
-        component="h2"
-        variant="h1"
-        gutterBottom
-        className={classes.contentHeader}
-      >
-        Sea Sensors
-      </Typography>
-      <Typography
-        component="h3"
-        variant="h1"
-        gutterBottom
-        className={classes.contentSubHeader}
-      >
-        Mapping fishing with explosives along the coast of East Africa
-        <br />
-      </Typography>
-      <Typography variant="body1" gutterBottom className={classes.contentText}>
-        Using cutting-edge underwater acoustic technology to document the
-        occurrence of blast fishing.
-      </Typography>
-      <a
-        href="https://alpha.seasensors.africa/map/"
-        className={classes.arrowLink}
-      >
-        <span className={classes.exploreMapParent}>
-          <span className={classes.exploreMapText}>Explore map</span>
-          <span className={classes.exploreMapArrow}>
-            <img src={arrow} alt="Arrow" />
-          </span>
-        </span>
-      </a>
+    <div className={classes.root}>
+      <div className={classes.content}>
+        <Typography gutterBottom className={classes.title}>
+          Sea Sensors
+        </Typography>
+        <Typography gutterBottom className={classes.text}>
+          Mapping fishing with explosives along the coast of East Africa Using
+          cutting-edge underwater acoustic technology to document the occurrence
+          of blast fishing.
+        </Typography>
+        <TextArrowLink
+          classes={{ root: classes.arrowLink }}
+          border={false}
+          href="https://alpha.seasensors.africa/map/"
+          text="EXPLORE MAP"
+        />
+      </div>
     </div>
   );
 }
