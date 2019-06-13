@@ -1,78 +1,118 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
+  withStyles,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
-  Typography,
-  withStyles
+  Typography
 } from '@material-ui/core';
-import PropTypes from 'prop-types';
 
-const styles = {
-  card: {
-    width: '390px',
-    height: '455px'
+import arrow from '../../assets/arrowBlueRight.png';
+
+const styles = theme => ({
+  root: {
+    marginTop: '1.875rem'
   },
-  newsCardTitle: {
-    fontFamily: 'Oswald',
-    fontSize: '22px',
+  card: {
+    width: '100%',
+    borderRadius: 0,
+    boxShadow: 'none',
+    [theme.breakpoints.up('md')]: {
+      width: '390px'
+    }
+  },
+  cardMedia: {
+    width: '100%',
+    height: '8.125rem',
+    [theme.breakpoints.up('md')]: {
+      width: '390px',
+      height: '249.5px'
+    }
+  },
+  cardContent: {
+    padding: '2.03125rem 2.54375rem 1.75rem 1.84375rem'
+  },
+  title: {
+    fontFamily: 'Montserrat',
+    fontSize: '0.9375rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '2.05',
-    letterSpacing: '1.5px',
-    color: '#023256'
+    lineHeight: '2',
+    letterSpacing: '1px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '22px',
+      lineHeight: '2.05',
+      letterSpacing: '1.5px'
+    }
   },
-  newsCardText: {
-    width: '280.5px',
-    height: '40.5px',
+  arrow: {
+    fontFamily: 'Montserrat',
+    fontSize: '0rem',
+    lineHeight: '1',
+    textAlign: 'right',
+    '& > img': {
+      width: '2.5rem',
+      height: 'auto'
+    }
+  },
+  date: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.625rem',
     fontWeight: 'normal',
     fontStyle: 'italic',
     fontStretch: 'normal',
     lineHeight: '2.15',
-    letterSpacing: '1px',
-    color: '#023256'
-  },
-  newsCardImage: {
-    height: '249.5px',
-    width: '390px'
+    letterSpacing: '0.7px',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '22px',
+      lineHeight: '2.05',
+      letterSpacing: '1px'
+    }
   },
   link: {
     textDecoration: 'none'
   }
-};
+});
 
 function NewsCards({ classes, image, title, date, link }) {
   return (
-    <Card className={classes.card}>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes.link}
-      >
-        <CardActionArea>
-          <CardMedia className={classes.newsCardImage} image={image} />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              className={classes.newsCardTitle}
-            >
-              {title}
-            </Typography>
-            <Typography component="p" className={classes.newsCardText}>
-              {date}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </a>
-    </Card>
+    <div className={classes.root}>
+      <Card className={classes.card}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.link}
+        >
+          <CardActionArea>
+            <CardMedia className={classes.cardMedia} image={image} />
+            <CardContent className={classes.cardContent}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                className={classes.title}
+              >
+                {title}
+              </Typography>
+              <Typography variant="button" className={classes.arrow}>
+                <img src={arrow} alt="Open" />
+              </Typography>
+              <Typography component="p" className={classes.date}>
+                {date}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </a>
+      </Card>
+    </div>
   );
 }
 

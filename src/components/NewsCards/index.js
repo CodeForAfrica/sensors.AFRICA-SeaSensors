@@ -5,15 +5,18 @@ import { withStyles } from '@material-ui/core';
 
 import NewsCards from './NewsCards';
 
-const styles = {
+const styles = theme => ({
   cardStyle: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    boxShadow: 'none',
-    marginTop: '95px',
-    marginBottom: '65px',
-    marginRight: '74px'
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      boxShadow: 'none',
+      marginTop: '95px',
+      marginBottom: '65px',
+      marginRight: '74px'
+    }
   },
   parentCard: {
     width: '100%',
@@ -22,7 +25,7 @@ const styles = {
     justifyContent: 'center',
     backgroundColor: '#ffffff'
   }
-};
+});
 
 class NewsCardContent extends Component {
   constructor() {

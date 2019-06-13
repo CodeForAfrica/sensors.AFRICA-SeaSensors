@@ -56,7 +56,7 @@ const styles = theme => ({
   }
 });
 
-class MonthStory extends Component {
+class MonthlyStories extends Component {
   constructor() {
     super();
     this.state = {
@@ -104,8 +104,8 @@ class MonthStory extends Component {
   }
 }
 
-MonthStory.propTypes = {
+MonthlyStories.propTypes = {
   classes: PropTypes.shape().isRequired
 };
 
-export default withStyles(styles)(MonthStory);
+export default withStyles(styles)(MonthlyStories);
