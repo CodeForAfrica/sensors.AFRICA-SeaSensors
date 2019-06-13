@@ -5,7 +5,7 @@ import NewsTopStories from '../components/NewsTopStories';
 import MonthStory from '../components/MonthStory';
 import NewsCards from '../components/NewsCards';
 import AllStoriesButton from '../components/AllStoriesButton';
-import VideoAudio from '../components/VideoAudioSrories';
+import VideoAudio from '../components/VideoAudioStories';
 import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
