@@ -151,12 +151,9 @@ function ThirdScuba({ classes }) {
                 <img alt="" src={close} className={classes.close} />
               </ButtonBase>
             </Grid>
-            <Typography className={classes.title}>
-              Battery Part Title
-            </Typography>
+            <Typography className={classes.title}>Triangle Frame</Typography>
             <Typography className={classes.description}>
-              Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Lorem
-              ipsum dolor sit lorem. Conse ctetur adipiscing elit lorem init.
+              Attached to the waterproof microphones and anchored to the seabed
             </Typography>
             <div className={classes.preview}>
               <img alt="" src={battery} />

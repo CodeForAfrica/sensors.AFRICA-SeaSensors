@@ -148,12 +148,10 @@ function SecondScuba({ classes }) {
                 <img alt="" src={close} className={classes.close} />
               </ButtonBase>
             </Grid>
-            <Typography className={classes.title}>
-              Battery Part Title
-            </Typography>
+            <Typography className={classes.title}>Hydrophones</Typography>
             <Typography className={classes.description}>
-              Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Lorem
-              ipsum dolor sit lorem. Conse ctetur adipiscing elit lorem init.
+              Waterproof microphones attached to the triangle frame using zip
+              ties.
             </Typography>
             <div className={classes.preview}>
               <img alt="" src={battery} />

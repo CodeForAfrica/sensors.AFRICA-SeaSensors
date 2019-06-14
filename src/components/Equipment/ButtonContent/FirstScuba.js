@@ -152,11 +152,12 @@ function FirstScuba({ classes }) {
               </ButtonBase>
             </Grid>
             <Typography className={classes.title}>
-              Battery Part Title
+              4 channel SoundTrap acoustic recorder:
             </Typography>
             <Typography className={classes.description}>
-              Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Lorem
-              ipsum dolor sit lorem. Conse ctetur adipiscing elit lorem init.
+              The SoundTrap is attached to a battery pack that extends its
+              underwater monitoring capacity to around 2 months and attached to
+              3 waterproof microphones (hydrophones).
             </Typography>
             <div className={classes.preview}>
               <img alt="" src={battery} />
