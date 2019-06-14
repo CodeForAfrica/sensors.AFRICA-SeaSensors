@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Tabletop from 'tabletop';
 import { withStyles, Typography } from '@material-ui/core';
 
-import MonthStoryText from './MonthStoryText';
 import SectionTitle from '../SectionTitle';
 import Stories from './Stories';
+import StoryOfTheMonth from './StoryOfTheMonth';
 import TextArrowLink from '../TextArrowLink';
 
 import Snorkel2 from '../../assets/Snorkel2.png';
@@ -38,8 +38,7 @@ const styles = theme => ({
   },
   monthStoryContainer: {
     position: 'relative',
-    width: '1350px',
-    marginLeft: '89px',
+    width: '1260px',
     height: '700px',
     backgroundImage: `url(${Snorkel2})`,
     backgroundSize: 'cover'
@@ -70,8 +69,8 @@ class MonthlyStories extends Component {
   constructor() {
     super();
     this.state = {
-      mainStory: [],
-      stories: []
+      monthStories: [],
+      newsCards: []
     };
   }
 
@@ -79,17 +78,25 @@ class MonthlyStories extends Component {
     Tabletop.init({
       key: '16EDYidZSNnbGPcxedzWMbjNyQPcKUZuf5PP8LbP5BTY',
       callback: (data, tabletop) => {
-        const mainStory = tabletop.sheets('Month Story').all();
-        this.setState({ mainStory });
-        const stories = tabletop.sheets('News Cards').all();
-        this.setState({ stories });
+        const monthStories = tabletop.sheets('Month Story').all();
+        this.setState({ monthStories });
+        const newsCards = tabletop.sheets('News Cards').all();
+        this.setState({ newsCards });
       }
     });
   }
 
   render() {
     const { classes } = this.props;
-    const { mainStory, stories } = this.state;
+    const { monthStories, newsCards } = this.state;
+    if (
+      !(monthStories && monthStories.length && newsCards && newsCards.length)
+    ) {
+      return null;
+    }
+
+    const mainStory = monthStories[0];
+    const stories = newsCards.slice(0, 3);
     return (
       <div className={classes.root}>
         <SectionTitle subtitle="Monthly Stories">
@@ -99,17 +106,7 @@ class MonthlyStories extends Component {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore.
         </Typography>
-        <div className={classes.monthStoryContainer}>
-          <div className={classes.blur} />
-          {mainStory.map(obj => (
-            <MonthStoryText
-              key={obj.title}
-              title={obj.title}
-              text={obj.text}
-              link={obj.link}
-            />
-          ))}
-        </div>
+        <StoryOfTheMonth story={mainStory} />
         <Stories stories={stories} />
         <div className={classes.allStories}>
           <TextArrowLink
