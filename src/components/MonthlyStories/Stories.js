@@ -18,14 +18,23 @@ const styles = theme => ({
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
+      justifyContent: 'space-evenly',
       boxShadow: 'none',
-      marginTop: '95px',
-      marginBottom: '65px',
-      marginRight: '74px'
+      marginTop: '5.9375rem',
+      marginBottom: '4.0625rem'
+    }
+  },
+  newsCard: {
+    [theme.breakpoints.up('md')]: {
+      width: '33.1%',
+      flex: '1 1 0'
     }
   },
   newsCardMargin: {
     [theme.breakpoints.up('md')]: {
+      marginLeft: '2.109375rem' // .75 of lg
+    },
+    [theme.breakpoints.up('lg')]: {
       marginLeft: '2.8125rem'
     }
   }
@@ -35,7 +44,7 @@ function Stories({ classes, stories }) {
   return (
     <div className={classes.root}>
       <div className={classes.stories}>
-        {stories.slice(0, 3).map((story, index) => (
+        {stories.map((story, index) => (
           <NewsCard
             key={story.title}
             title={story.title}
@@ -43,7 +52,9 @@ function Stories({ classes, stories }) {
             date={story.date}
             link={story.link}
             classes={{
-              root: classNames({ [classes.newsCardMargin]: index > 0 })
+              root: classNames(classes.newsCard, {
+                [classes.newsCardMargin]: index > 0
+              })
             }}
           />
         ))}

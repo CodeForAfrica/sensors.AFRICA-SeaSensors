@@ -7,15 +7,12 @@ import { withStyles, Grid, Hidden, Typography } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
+import Section from './Section';
 import SectionTitle from './SectionTitle';
 
 const styles = theme => ({
   root: {
-    backgroundColor: '#F0F0F0',
-    padding: '5.125rem 1.875rem 4.9375rem',
-    [theme.breakpoints.up('md')]: {
-      padding: '7.875rem 5.5625rem 12.46875rem'
-    }
+    backgroundColor: '#F0F0F0'
   },
   channel: {
     display: 'flex',
@@ -30,7 +27,10 @@ const styles = theme => ({
     lineHeight: 4,
     letterSpacing: '0.8px',
     color: ' #023256',
-    marginRight: '1.8125rem'
+    marginRight: '1.359375rem', // .75 of lg
+    [theme.breakpoints.up('lg')]: {
+      marginRight: '1.8125rem'
+    }
   },
   channelName: {
     textDecoration: 'underline'
@@ -66,11 +66,17 @@ const styles = theme => ({
   },
   iframeContainerLeft: {
     [theme.breakpoints.up('md')]: {
+      marginRight: '1.0546875rem' // .75 of lg
+    },
+    [theme.breakpoints.up('lg')]: {
       marginRight: '1.40625rem'
     }
   },
   iframeContainerRight: {
     [theme.breakpoints.up('md')]: {
+      marginLeft: '1.0546875rem' // .75 of lg
+    },
+    [theme.breakpoints.up('lg')]: {
       marginLeft: '1.40625rem'
     }
   },
@@ -88,7 +94,7 @@ function VideoAudioStories(props) {
   const { classes, origin } = props;
 
   return (
-    <div className={classes.root}>
+    <Section classes={{ root: classes.root }}>
       <Grid container justify="space-between" className={classes.title}>
         <Grid item>
           <SectionTitle subtitle="Video & Audio Stories">
@@ -180,7 +186,7 @@ function VideoAudioStories(props) {
           </div>
         </Grid>
       </Grid>
-    </div>
+    </Section>
   );
 }
 

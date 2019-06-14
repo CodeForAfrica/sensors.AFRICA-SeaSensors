@@ -17,13 +17,12 @@ const styles = theme => ({
     backgroundPosition: 'center',
     marginTop: '2.9375rem',
     [theme.breakpoints.up('md')]: {
-      width: '78.75rem',
       height: '34.21875rem',
       marginTop: '3.25rem'
     }
   },
   background: {
-    width: '90%',
+    width: '88.9%',
     height: '18.40625rem',
     background: 'inherit',
     '-webkit-filter': 'blur(11.3px)',
@@ -32,12 +31,12 @@ const styles = theme => ({
     right: '0',
     bottom: '0',
     [theme.breakpoints.up('md')]: {
-      width: '39.375rem',
-      height: '30rem'
+      width: '50%',
+      height: '87.7%'
     }
   },
   story: {
-    width: '90%',
+    width: '88.9%',
     height: '18.40625rem',
     backgroundColor: 'rgba(255,255,255,0.2)',
     position: 'absolute',
@@ -46,8 +45,11 @@ const styles = theme => ({
     zIndex: '2',
     padding: '1.96875rem 1.875rem',
     [theme.breakpoints.up('md')]: {
-      width: '39.375rem',
-      height: '30rem',
+      width: '50%',
+      height: '87.7%',
+      padding: '4.5625rem 2.8125rem'
+    },
+    [theme.breakpoints.up('lg')]: {
       padding: '4.5625rem 3.75rem'
     }
   },
@@ -69,7 +71,7 @@ const styles = theme => ({
   summary: {
     height: '8.75rem',
     marginTop: '1.875rem',
-    overflowY: 'scroll',
+    overflowY: 'auto',
 
     // Scrollbar: Firefox
     scrollbarColor: '#023256 #fff',

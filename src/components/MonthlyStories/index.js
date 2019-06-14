@@ -4,18 +4,14 @@ import PropTypes from 'prop-types';
 import Tabletop from 'tabletop';
 import { withStyles, Typography } from '@material-ui/core';
 
+import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Stories from './Stories';
 import StoryOfTheMonth from './StoryOfTheMonth';
 import TextArrowLink from '../TextArrowLink';
 
 const styles = theme => ({
-  root: {
-    padding: '5.125rem 1.875rem 4.9375rem',
-    [theme.breakpoints.up('md')]: {
-      padding: '7.875rem 5.5625rem 12.46875rem'
-    }
-  },
+  root: {},
   description: {
     opacity: 0.6,
     fontFamily: 'Montserrat',
@@ -77,7 +73,7 @@ class MonthlyStories extends Component {
     const mainStory = monthStories[0];
     const stories = newsCards.slice(0, 3);
     return (
-      <div className={classes.root}>
+      <Section classes={{ root: classes.root }}>
         <SectionTitle subtitle="Monthly Stories">
           Our Monthly Stories.
         </SectionTitle>
@@ -94,7 +90,7 @@ class MonthlyStories extends Component {
             href="https://medium.com/seasensors-africa"
           />
         </div>
-      </div>
+      </Section>
     );
   }
 }

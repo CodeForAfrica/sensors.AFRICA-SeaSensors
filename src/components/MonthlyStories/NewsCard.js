@@ -17,15 +17,13 @@ import arrow from '../../assets/arrowBlueRight.png';
 
 const styles = theme => ({
   root: {
-    marginTop: '1.875rem'
+    marginTop: '1.875rem',
+    backgroundColor: '#fff'
   },
   card: {
     width: '100%',
     borderRadius: 0,
-    boxShadow: 'none',
-    [theme.breakpoints.up('md')]: {
-      width: '24.375rem'
-    }
+    boxShadow: 'none'
   },
   cardMedia: {
     width: '100%',
@@ -37,6 +35,9 @@ const styles = theme => ({
   cardContent: {
     padding: '2.03125rem 2.54375rem 1.75rem 1.84375rem',
     [theme.breakpoints.up('md')]: {
+      padding: '1.625rem 2.0625rem 1.9375rem' // .75 of lg
+    },
+    [theme.breakpoints.up('lg')]: {
       padding: '1.625rem 2.75rem 1.9375rem'
     }
   },

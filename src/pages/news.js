@@ -13,7 +13,7 @@ function News() {
     <Page>
       <NewsHeader />
       <MonthlyStories />
-      <VideoAudio />
+      <VideoAudio origin="https://seasensors.africa" />
       <OurPartners />
       <GetInvolved />
       <Footer />
