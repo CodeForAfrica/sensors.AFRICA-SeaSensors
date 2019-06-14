@@ -1,11 +1,8 @@
 import React from 'react';
 
 import NewsHeader from '../components/NewsHeader';
-import NewsTopStories from '../components/NewsTopStories';
-import MonthStory from '../components/MonthStory';
-import NewsCards from '../components/NewsCards';
-import AllStoriesButton from '../components/AllStoriesButton';
-import VideoAudio from '../components/VideoAudioSrories';
+import MonthlyStories from '../components/MonthlyStories';
+import VideoAudio from '../components/VideoAudioStories';
 import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
 import Footer from '../components/Footer';
@@ -15,11 +12,8 @@ function News() {
   return (
     <Page>
       <NewsHeader />
-      <NewsTopStories />
-      <MonthStory />
-      <NewsCards />
-      <AllStoriesButton />
-      <VideoAudio />
+      <MonthlyStories />
+      <VideoAudio origin="https://seasensors.africa" />
       <OurPartners />
       <GetInvolved />
       <Footer />

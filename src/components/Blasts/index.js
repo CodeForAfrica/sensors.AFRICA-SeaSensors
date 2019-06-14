@@ -1,55 +1,66 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Typography, withStyles } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import { Typography, withStyles, ButtonBase } from '@material-ui/core';
 
-import creatTime from '../../assets/currentTime.png';
+import Line from '../Line';
+import BlastVisual from './BlastVisual';
 
-import BlastsSvg from './blastSvg';
+import arrowDown from '../../assets/icons/arrow-down.svg';
 
-const styles = {
-  blast: {
+const styles = theme => ({
+  root: {
     width: '100%',
     margin: '0 auto',
-    background: '#fff',
-    padding: '2em 0'
+    backgroundColor: '#fff',
+    padding: '1.875rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '5.8125rem 7.3438rem'
+    }
   },
-  blastInfo: {
-    width: '80%',
-    margin: '0 auto',
-    display: 'grid',
-    gridTemplateColumns: 'auto 60% auto',
-    gridGap: ' 2em'
-  },
-  blastGrid: {
+  info: {},
+  visualInfo: {
     position: 'relative',
-    top: '3em'
+    [theme.breakpoints.up('md')]: {
+      marginTop: '-14rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '-25.625rem'
+    }
   },
-  blastsRecorded: {
+  infoTitle: {
     fontFamily: 'Oswald, sans-serif',
-    fontSize: '52px',
+    fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1',
-    letterSpacing: '0.7px',
+    letterSpacing: '0.0437rem',
     color: '#023256',
-    display: 'inline-block'
+    display: 'inline-block',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.25rem'
+    }
   },
-  blastDataCollected: {
+  infoDescription: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.75rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '2.5',
-    letterSpacing: '0.7px',
+    letterSpacing: '0.0313rem',
     textAlign: 'justify',
     color: '#023256',
-    marginLeft: 'auto'
+
+    marginTop: '1.5rem',
+    [theme.breakpoints.up('md')]: {
+      marginTop: '3.125rem',
+
+      width: '13.375rem',
+      fontSize: '0.9375rem',
+      letterSpacing: '0.0437rem'
+    }
   },
   blastImageInfo: {
     position: 'relative',
@@ -60,25 +71,6 @@ const styles = {
     position: 'absolute',
     bottom: '19em',
     left: '24em'
-  },
-  recordedBlastFigures: {
-    fontFamily: 'Oswald',
-    fontSize: '71px',
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'semi-condensed',
-    letterSpacing: '1.6px',
-    textAlign: 'center',
-    color: '#023256'
-  },
-  blastText: {
-    opacity: '0.6',
-    fontFamily: 'Oswald',
-    fontSize: '1.2em',
-    fontWeight: '300',
-    lineHeight: '1.2',
-    textAlign: 'center',
-    color: '#023256'
   },
   currentTime: {
     left: '19.6em',
@@ -108,12 +100,12 @@ const styles = {
   },
   dateTime: {
     fontFamily: 'Oswald',
-    fontSize: '48px',
+    fontSize: '3rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'condensed',
     lineHeight: 'normal',
-    letterSpacing: '1.2px',
+    letterSpacing: '0.075rem',
     color: '#023256'
   },
   learnMoreParent: {
@@ -121,31 +113,31 @@ const styles = {
     position: 'relative',
     top: '8em',
     fontFamily: 'Oswald',
-    fontSize: '20px',
+    fontSize: '1.25rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.69',
-    letterSpacing: '1px',
+    letterSpacing: '0.0625rem',
     color: '#023256'
   },
   learnMoreText: {
     marginTop: '1.5em',
     marginLeft: '1em',
     fontFamily: 'Oswald',
-    fontSize: '16px',
+    fontSize: '1rem',
     fontWeight: '600',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.97',
-    letterSpacing: '0.6px',
+    letterSpacing: '0.0375rem',
     color: '#023256'
   },
   lastUploadPointer: {
-    marginTop: '38px'
+    marginTop: '2.375rem'
   },
   currentTimePointer: {
-    marginTop: '90px'
+    marginTop: '5.625rem'
   },
   socialsParent: {
     display: 'flex'
@@ -156,12 +148,12 @@ const styles = {
     top: '20em'
   },
   socials: {
-    width: '81px',
-    height: '81px',
-    border: '1px #00a5dc solid',
-    paddingLeft: '24px',
-    paddingTop: '24px',
-    marginRight: '13px',
+    width: '5.0625rem',
+    height: '5.0625rem',
+    border: '0.0625rem #00a5dc solid',
+    paddingLeft: '1.5rem',
+    paddingTop: '1.5rem',
+    marginRight: '0.8125rem',
     color: '#00a5dc',
     '&:hover': {
       backgroundColor: '#00a5dc',
@@ -170,120 +162,89 @@ const styles = {
     }
   },
   twitterIcon: {
-    marginTop: '19px',
-    marginLeft: '26px'
+    marginTop: '1.1875rem',
+    marginLeft: '1.625rem'
   },
   shareText: {
     fontFamily: 'Oswald',
-    fontSize: '20px',
+    fontSize: '1.25rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.69',
-    letterSpacing: '1px',
+    letterSpacing: '0.0625rem',
     color: '#00a5dc'
   },
   socialIcon: {
-    marginTop: '20px',
-    marginLeft: '20px'
+    marginTop: '1.25rem',
+    marginLeft: '1.25rem'
   },
   shareIconStyle: {
     outline: 'none',
     '&:focus': {
       outline: 'none'
     }
+  },
+  learnMore: {
+    position: 'absolute',
+    display: 'none',
+    bottom: 0,
+
+    '& img': {
+      marginRight: '1.875rem'
+    },
+    '& p': {
+      fontFamily: 'Oswald',
+      fontSize: '1.375rem',
+      fontWeight: 600,
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 1.91,
+      letterSpacing: '0.0563rem',
+      color: '#023256'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex'
+    }
   }
-};
+});
 
 function Blasts({ classes }) {
   return (
-    <React.Fragment>
-      <div className={classes.blast}>
-        {' '}
-        <div className={classes.blastInfo}>
-          <div className={classes.blastGrid}>
-            <Typography
-              component="h3"
-              variant="h3"
-              gutterBottom
-              className={classes.blastsRecorded}
-            >
-              Blasts Recorded.
-            </Typography>
-            <Typography
-              variant="body1"
-              gutterBottom
-              className={classes.blastDataCollected}
-            >
-              Blast data is collected
-              <br />
-              every 4 months, analysed,
-              <br />
-              and uploaded to the map.
-            </Typography>
-            <div className={classes.learnMoreParent}>explore data</div>
-          </div>
-          <div className={classes.blastImageInfo}>
-            <BlastsSvg />
-            <div className={classes.blastGridText}>
-              <Typography className={classes.recordedBlastFigures}>
-                12 562
-              </Typography>
-              <Typography className={classes.blastText}>
-                Recorded Blasts
-              </Typography>
-              <div className={classes.currentTime}>
-                <div>
-                  <img
-                    src={creatTime}
-                    className={classes.currentTimePointer}
-                    alt="current time"
-                  />
-                </div>
-                <div className={classes.shareIcons}>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    className={classes.shareText}
-                  >
-                    Share
-                  </Typography>
-                  <div className={classes.socialsParent}>
-                    <div className={classes.socials}>
-                      <TwitterShareButton
-                        url="https://alpha.seasensors.africa"
-                        title="Mapping blast fishing along the coast of East Africa"
-                        className={classes.shareIconStyle}
-                      >
-                        <FontAwesomeIcon icon={faTwitter} size="2x" />
-                      </TwitterShareButton>
-                    </div>
-                    <div className={classes.socials}>
-                      <FacebookShareButton
-                        url="https://alpha.seasensors.africa"
-                        title="Sea Sensors Africa"
-                        className={classes.shareIconStyle}
-                        quote="Mapping blast fishing along the coast of East Africa"
-                      >
-                        <FontAwesomeIcon icon={faFacebookF} size="2x" />
-                      </FacebookShareButton>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={classes.lastUpload}>
-                <div className={classes.Timings}>
-                  <Typography className={classes.dateTime}>01.06.18</Typography>
-                  <Typography className={classes.lastUploadedText}>
-                    Last Uploaded
-                  </Typography>
-                </div>
-              </div>
-            </div>
-          </div>
+    <Fragment>
+      <div className={classes.root}>
+        <div className={classes.info}>
+          <Typography
+            component="h3"
+            variant="h3"
+            gutterBottom
+            className={classes.infoTitle}
+          >
+            Blasts Recorded.
+          </Typography>
+          <Line />
+          <Typography
+            variant="body1"
+            gutterBottom
+            className={classes.infoDescription}
+          >
+            Blast data is collected every 4 months, analysed, and uploaded to
+            the map.
+          </Typography>
+        </div>
+        <div className={classes.visualInfo}>
+          <BlastVisual />
+          <ButtonBase
+            disableRipple
+            disableTouchRipple
+            className={classes.learnMore}
+          >
+            <img alt="" src={arrowDown} />
+            <Typography>Learn More</Typography>
+          </ButtonBase>
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
