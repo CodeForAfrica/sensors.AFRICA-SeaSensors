@@ -14,7 +14,7 @@ import Fisheries from '../assets/fisheries.png';
 
 const styles = theme => ({
   parentContainer: {
-    padding: '5.0625rem 0',
+    padding: '4.0625rem 0 5.0625rem',
     [theme.breakpoints.up('md')]: {
       padding: '120px 120px 140px 124px'
     }
@@ -96,6 +96,22 @@ const styles = theme => ({
     width: '14.375rem',
     [theme.breakpoints.up('md')]: {
       width: '100%'
+    }
+  },
+  partnerPara: {
+    opacity: '0.6',
+    fontFamily: 'Montserrat',
+    fontSize: '12px',
+    color: '#023256',
+    lineHeight: 2.08,
+    lineSpacing: '0.5px',
+    marginTop: '-2.5rem',
+    marginBottom: '2.5rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '15px',
+      lineHeight: 2.5,
+      lineSpacing: '0.7px',
+      marginBottom: '2rem'
     }
   },
   mwambaoImg: {
@@ -308,7 +324,11 @@ function OurPartners({ classes, width }) {
         >
           Our Partners.
         </Typography>
+        <Typography className={classes.partnerPara}>
+          Lorem ipsum dolor sit amet, consec tetur adipi scing elit lorem init.
+        </Typography>
       </div>
+
       {isWidthUp('md', width) ? (
         <Fragment>
           <div className={classes.flexGrid}>
