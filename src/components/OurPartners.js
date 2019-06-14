@@ -370,10 +370,10 @@ function OurPartners({ classes, width }) {
           </div>
           <div className={classes.flexGrid}>
             <ImageCardItem
-              href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+              href="https://www.tafiri.go.tz/"
               imageSrc={Fisheries}
               imageClass="marineParksLogo"
-              alt="Tanzania Fisheries"
+              alt="Tanzania Fisheries Research Institute"
             />
             <MultiTypeCardItem
               href="https://corporate.nukta.co.tz/"
@@ -440,10 +440,10 @@ function OurPartners({ classes, width }) {
             alt="Marine Parks"
           />
           <ImageCardItem
-            href="https://www.tanzaniatourism.go.tz/en/places-to-go/category/marine-parks-and-reserves"
+            href="https://www.tafiri.go.tz/"
             imageSrc={Fisheries}
             imageClass="marineParksLogo"
-            alt="Tanzania Fisheries"
+            alt="Tanzania Fisheries Research Institute"
           />
           <MultiTypeCardItem
             href="https://corporate.nukta.co.tz/"
