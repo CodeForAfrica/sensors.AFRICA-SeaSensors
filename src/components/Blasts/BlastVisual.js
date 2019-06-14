@@ -202,12 +202,17 @@ const styles = theme => ({
 });
 
 function BlastVisual({ classes }) {
+  function CurrentDate() {
+    const date = new Date();
+    const today = date.toLocaleTimeString();
+    return today;
+  }
   return (
     <div className={classes.root}>
       <div className={classes.hud}>
         <img alt="" src={hud} className={classes.hudImage} />
         <div className={classes.hudCore}>
-          <Typography className={classes.title}>12 562</Typography>
+          <Typography className={classes.title}>26</Typography>
           <Typography className={classes.caption}>Recorded Blasts</Typography>
         </div>
       </div>
@@ -240,11 +245,11 @@ function BlastVisual({ classes }) {
         </div>
         <div className={classes.timeDetails}>
           <Grid container direction="column" alignItems="flex-start">
-            <Typography className={classes.text}>16:06</Typography>
+            <Typography className={classes.text}>{CurrentDate()}</Typography>
             <Typography className={classes.caption}>Current Time</Typography>
           </Grid>
           <Grid container direction="column" alignItems="flex-start">
-            <Typography className={classes.text}>20.10.18</Typography>
+            <Typography className={classes.text}>29.9.18</Typography>
             <Typography className={classes.caption}>Last Uploaded</Typography>
           </Grid>
         </div>
