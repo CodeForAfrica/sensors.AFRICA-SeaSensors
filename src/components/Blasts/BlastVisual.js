@@ -15,15 +15,19 @@ const styles = theme => ({
     alignItems: 'center',
     position: 'relative',
     [theme.breakpoints.up('md')]: {
+      justifyContent: 'center',
       flexDirection: 'row',
       marginTop: '-10%'
     }
   },
   hud: {
-    marginTop: '-6.375rem',
+    marginTop: '-4.375rem',
     position: 'relative',
     display: 'grid',
     maxWidth: '43.75rem',
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '-7.375rem'
+    },
     [theme.breakpoints.up('md')]: {
       minWidth: '37.5rem',
       marginTop: 'unset',
