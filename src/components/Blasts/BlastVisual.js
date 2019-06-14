@@ -16,8 +16,7 @@ const styles = theme => ({
     position: 'relative',
     [theme.breakpoints.up('md')]: {
       justifyContent: 'center',
-      flexDirection: 'row',
-      marginTop: '-10%'
+      flexDirection: 'row'
     }
   },
   hud: {
@@ -31,7 +30,7 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       minWidth: '37.5rem',
       marginTop: 'unset',
-      marginLeft: '15%'
+      marginLeft: '25%'
     }
   },
   hudImage: {
@@ -61,11 +60,11 @@ const styles = theme => ({
   currentTimeLine: {
     display: 'none',
     height: '0.0625rem',
-    width: '6.25rem',
+    width: '4.25rem',
     marginLeft: '-1.5rem',
 
-    marginBottom: '5.625rem',
-    marginTop: '5.625rem',
+    marginBottom: '3.625rem',
+    marginTop: '3.625rem',
 
     backgroundColor: '#979797',
     [theme.breakpoints.up('md')]: {
@@ -74,11 +73,12 @@ const styles = theme => ({
   },
   lastUpdateTimeLine: {
     display: 'none',
-    height: '3.125rem',
-    width: '3.125rem',
+    height: '2.125rem',
+    width: '2.125rem',
     borderBottom: '0.0625rem solid #979797',
     borderLeft: '0.0625rem solid #979797',
     transform: 'skew(45deg)',
+    marginLeft: '-0.5rem',
     [theme.breakpoints.up('md')]: {
       display: 'block'
     }
@@ -103,9 +103,9 @@ const styles = theme => ({
     fontWeight: 300,
     lineHeight: 1.67,
     lineSpacing: '0.0375rem',
-    textAlign: 'center',
     color: '#00a5dc',
     [theme.breakpoints.up('md')]: {
+      textAlign: 'center',
       fontSize: '1.5625rem'
     }
   },
@@ -117,10 +117,7 @@ const styles = theme => ({
     fontStretch: 'condensed',
     letterSpacing: '0.05rem',
     textAlign: 'center',
-    color: '#023256',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '3.75rem'
-    }
+    color: '#023256'
   },
   caption: {
     opacity: '0.6',
@@ -185,15 +182,15 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '5.0625rem',
-    height: '5.0625rem',
     marginRight: '0.8125rem',
     color: '#00a5dc',
     outline: 'none',
     '&:focus': {
       outline: 'none'
     },
+    height: '5.0625rem',
     [theme.breakpoints.up('md')]: {
+      width: '5.0625rem',
       border: '0.0625rem #00a5dc solid',
       '&:hover': {
         backgroundColor: '#00a5dc',

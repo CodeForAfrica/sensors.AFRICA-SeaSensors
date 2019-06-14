@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Typography, withStyles } from '@material-ui/core';
+import { Typography, withStyles, ButtonBase } from '@material-ui/core';
 
+import Line from '../Line';
 import BlastVisual from './BlastVisual';
+
+import arrowDown from '../../assets/icons/arrow-down.svg';
 
 const styles = theme => ({
   root: {
@@ -16,8 +19,12 @@ const styles = theme => ({
   },
   info: {},
   visualInfo: {
+    position: 'relative',
     [theme.breakpoints.up('md')]: {
-      marginTop: '-250px'
+      marginTop: '-14rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '-25.625rem'
     }
   },
   infoTitle: {
@@ -45,7 +52,11 @@ const styles = theme => ({
     letterSpacing: '0.0313rem',
     textAlign: 'justify',
     color: '#023256',
+
+    marginTop: '1.5rem',
     [theme.breakpoints.up('md')]: {
+      marginTop: '3.125rem',
+
       width: '13.375rem',
       fontSize: '0.9375rem',
       letterSpacing: '0.0437rem'
@@ -173,6 +184,28 @@ const styles = theme => ({
     '&:focus': {
       outline: 'none'
     }
+  },
+  learnMore: {
+    position: 'absolute',
+    display: 'none',
+    bottom: 0,
+
+    '& img': {
+      marginRight: '1.875rem'
+    },
+    '& p': {
+      fontFamily: 'Oswald',
+      fontSize: '1.375rem',
+      fontWeight: 600,
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 1.91,
+      letterSpacing: '0.0563rem',
+      color: '#023256'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex'
+    }
   }
 });
 
@@ -189,6 +222,7 @@ function Blasts({ classes }) {
           >
             Blasts Recorded.
           </Typography>
+          <Line />
           <Typography
             variant="body1"
             gutterBottom
@@ -200,6 +234,14 @@ function Blasts({ classes }) {
         </div>
         <div className={classes.visualInfo}>
           <BlastVisual />
+          <ButtonBase
+            disableRipple
+            disableTouchRipple
+            className={classes.learnMore}
+          >
+            <img alt="" src={arrowDown} />
+            <Typography>Learn More</Typography>
+          </ButtonBase>
         </div>
       </div>
     </Fragment>
