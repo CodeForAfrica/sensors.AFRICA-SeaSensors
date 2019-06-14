@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Card, withStyles, CardMedia, CardActionArea } from '@material-ui/core';
 
 const styles = theme => ({
+  root: {
+    borderRadius: 0
+  },
   media: {
     height: '270px',
     width: '200px',
@@ -15,7 +18,7 @@ const styles = theme => ({
 
 function GalleryContainer({ classes, image }) {
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}

@@ -111,16 +111,16 @@ const galleryContent = [
 ];
 const styles = theme => ({
   parentContainer: {
-    paddingLeft: '1.875rem',
+    marginLeft: '1.875rem',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
     [theme.breakpoints.up('md')]: {
-      paddingLeft: '7.5rem',
+      marginLeft: '7.5rem',
       marginBottom: '4rem'
     }
   },
   card: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
     boxShadow: 'none',
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
@@ -172,22 +172,19 @@ const styles = theme => ({
     width: '90%',
     margin: '2.875rem auto 0px'
   },
-
-  viewCard: {
-    marginRight: '30px'
-  }
+  viewCard: {}
 });
 
 function ViewGallery({ classes, width }) {
   let cards = 4;
-  let cellHeight = 470;
+  let cellHeight = 400;
   if (isWidthDown('md', width)) {
-    cards = 2.5;
-    cellHeight = 330;
+    cards = 1.5;
+    cellHeight = 300;
   }
   if (isWidthDown('sm', width)) {
     cards = 1.5;
-    cellHeight = 330;
+    cellHeight = 300;
   }
   return (
     <React.Fragment>
@@ -203,7 +200,12 @@ function ViewGallery({ classes, width }) {
         <Line />
       </div>
       <div className={classes.parentContainer}>
-        <GridList className={classes.card} cols={cards} cellHeight={cellHeight}>
+        <GridList
+          className={classes.card}
+          cols={cards}
+          spacing={12}
+          cellHeight={cellHeight}
+        >
           {galleryContent.map(picture => (
             <div className={classes.viewCard} key={picture.id}>
               <GalleryContainer image={picture.image} />
