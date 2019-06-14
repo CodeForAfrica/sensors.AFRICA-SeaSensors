@@ -1,10 +1,7 @@
 import React from 'react';
 
 import NewsHeader from '../components/NewsHeader';
-import NewsTopStories from '../components/NewsTopStories';
-import MonthStory from '../components/MonthStory';
-import NewsCards from '../components/NewsCards';
-import AllStoriesButton from '../components/AllStoriesButton';
+import MonthlyStories from '../components/MonthlyStories';
 import VideoAudio from '../components/VideoAudioStories';
 import OurPartners from '../components/OurPartners';
 import GetInvolved from '../components/GetInvolved';
@@ -15,10 +12,7 @@ function News() {
   return (
     <Page>
       <NewsHeader />
-      <NewsTopStories />
-      <MonthStory />
-      <NewsCards />
-      <AllStoriesButton />
+      <MonthlyStories />
       <VideoAudio />
       <OurPartners />
       <GetInvolved />

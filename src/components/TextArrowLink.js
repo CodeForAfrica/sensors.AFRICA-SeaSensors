@@ -6,38 +6,56 @@ import className from 'classnames';
 import whiteArrow from '../assets/arrowWhite.png';
 import blueArrow from '../assets/arrowBlueRight.png';
 
-const styles = {
+const styles = theme => ({
   root: {
     height: '3.75rem',
     width: 'fit-content',
-    border: '0.1875rem #fff solid',
     padding: '16px',
-    boxShadow: '0 1.4375rem 3.75rem 0 rgba(0, 0, 0, 0.05)',
+    boxShadow: '0 0.75rem 2rem 0 rgba(0, 0, 0, 0.05)',
+    border: '0.125rem #fff solid',
     display: 'flex',
-    alignItmes: 'center',
+    alignItems: 'center',
     textDecoration: 'none',
-    color: '#fff'
+    color: '#fff',
+    [theme.breakpoints.up('md')]: {
+      height: '4.6875rem',
+      boxShadow: '0 1.4375rem 3.75rem 0 rgba(0, 0, 0, 0.05)',
+      border: '0.1875rem #fff solid'
+    }
   },
   noBorder: {
     border: 'unset'
   },
   blue: {
-    border: '0.1875rem #023256 solid',
-    color: '#023256'
+    border: '0.125rem #023256 solid',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      border: '0.1875rem #023256 solid'
+    }
   },
   text: {
     height: '1.5rem',
     fontFamily: 'Oswald',
-    fontSize: '1rem',
+    fontSize: '0.8125rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
-    letterSpacing: '0.2rem',
-    marginRight: '3.5em'
+    letterSpacing: '3.3px',
+    marginRight: '3.5em',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1rem',
+      letterSpacing: '3.2px'
+    }
   },
-  arrow: {}
-};
+  arrow: {
+    width: '2.5rem',
+    height: 'auto',
+    [theme.breakpoints.up('md')]: {
+      width: 'auto'
+    }
+  }
+});
 
 function TextArrowLink({ classes, href, text, blue, border }) {
   return (
