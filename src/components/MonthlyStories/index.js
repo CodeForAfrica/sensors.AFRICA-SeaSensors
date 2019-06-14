@@ -4,20 +4,14 @@ import PropTypes from 'prop-types';
 import Tabletop from 'tabletop';
 import { withStyles, Typography } from '@material-ui/core';
 
+import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import Stories from './Stories';
 import StoryOfTheMonth from './StoryOfTheMonth';
 import TextArrowLink from '../TextArrowLink';
 
-import Snorkel2 from '../../assets/Snorkel2.png';
-
 const styles = theme => ({
-  root: {
-    padding: '5.125rem 1.875rem 4.9375rem',
-    [theme.breakpoints.up('md')]: {
-      padding: '7.875rem 5.5625rem 12.46875rem'
-    }
-  },
+  root: {},
   description: {
     opacity: 0.6,
     fontFamily: 'Montserrat',
@@ -35,25 +29,6 @@ const styles = theme => ({
       letterSpacing: '0.7px',
       marginBottom: '0.9375rem'
     }
-  },
-  monthStoryContainer: {
-    position: 'relative',
-    width: '1260px',
-    height: '700px',
-    backgroundImage: `url(${Snorkel2})`,
-    backgroundSize: 'cover'
-  },
-  blur: {
-    height: '480px',
-    backgroundImage: `url(${Snorkel2})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'bottom right',
-    width: '630px',
-    position: 'absolute',
-    filter: 'blur(15px)',
-    zIndex: '1',
-    bottom: '0',
-    right: '0'
   },
   allStories: {
     display: 'flex',
@@ -98,7 +73,7 @@ class MonthlyStories extends Component {
     const mainStory = monthStories[0];
     const stories = newsCards.slice(0, 3);
     return (
-      <div className={classes.root}>
+      <Section classes={{ root: classes.root }}>
         <SectionTitle subtitle="Monthly Stories">
           Our Monthly Stories.
         </SectionTitle>
@@ -115,7 +90,7 @@ class MonthlyStories extends Component {
             href="https://medium.com/seasensors-africa"
           />
         </div>
-      </div>
+      </Section>
     );
   }
 }
