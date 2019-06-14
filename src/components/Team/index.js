@@ -47,6 +47,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    height: '750px',
     [theme.breakpoints.up('md')]: {
       height: '900px',
       paddingLeft: '10rem',
