@@ -124,7 +124,23 @@ const styles = theme => ({
     boxShadow: 'none',
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
+    scrollbarColor: '#023256',
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      height: '0.15rem'
+    },
+    '&::-webkit-scrollbar-track': {
+      backgroundColor: 'lightgrey',
+      marginRight: '2rem',
+      color: 'lightgrey'
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#023256',
+      color: '#023256',
+      border: '1px solid #023256',
+      height: '0.2rem'
+    }
   },
   viewGallery: {
     width: '447px',
@@ -157,21 +173,6 @@ const styles = theme => ({
     margin: '2.875rem auto 0px'
   },
 
-  GridListRoot: {
-    // Firefox only
-    scrollbarColor: `white red`,
-    '&::-webkit-scrollbar': {
-      width: '0.563rem'
-    },
-    '&::WebkitScrollbarThumb': {
-      backgroundColor: 'red',
-      borderRadius: '0.281rem'
-    },
-    '&::WebkitScrollbarCorner': {
-      backgroundColor: 'transparent'
-    }
-  },
-
   viewCard: {
     marginRight: '30px'
   }
@@ -202,12 +203,7 @@ function ViewGallery({ classes, width }) {
         <Line />
       </div>
       <div className={classes.parentContainer}>
-        <GridList
-          className={classes.card}
-          classes={{ root: classes.GridListRoot }}
-          cols={cards}
-          cellHeight={cellHeight}
-        >
+        <GridList className={classes.card} cols={cards} cellHeight={cellHeight}>
           {galleryContent.map(picture => (
             <div className={classes.viewCard} key={picture.id}>
               <GalleryContainer image={picture.image} />

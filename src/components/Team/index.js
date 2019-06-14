@@ -42,14 +42,15 @@ const partnersContent = [
 
 const styles = theme => ({
   parentContainer: {
-    marginTop: '200px',
+    marginTop: '6rem',
     paddingLeft: '1.875rem',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.05)',
     [theme.breakpoints.up('md')]: {
       height: '900px',
-      paddingLeft: '165px'
+      paddingLeft: '10rem',
+      marginTop: '12.5rem'
     }
   },
   card: {
@@ -60,7 +61,28 @@ const styles = theme => ({
     flexWrap: 'nowrap',
     marginLeft: '-1.88rem !important',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
+    scrollbarColor: '#023256',
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      height: '0.15rem'
+    },
+    '&::-webkit-scrollbar-track': {
+      backgroundColor: 'lightgrey',
+      marginLeft: '2rem',
+      marginRight: '2rem',
+      color: 'lightgrey'
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#023256',
+      color: '#023256',
+      border: '1px solid #023256',
+      height: '0.2rem'
+    },
+    marginBottom: '4rem',
+    [theme.breakpoints.up('md')]: {
+      marginBottom: '9.25rem'
+    }
   },
   meetTeamTitle: {
     fontFamily: 'Oswald',
@@ -72,11 +94,12 @@ const styles = theme => ({
     letterSpacing: '0.4px',
     color: '#023256',
     paddingLeft: '1.875rem',
-    paddingTop: '80px',
+    paddingTop: '3rem',
     [theme.breakpoints.up('md')]: {
       fontSize: '3.25rem',
       letterSpacing: '0.7px',
-      lineHeight: 'normal'
+      lineHeight: 'normal',
+      paddingTop: '5rem'
     }
   },
   meetTeamText: {
@@ -100,7 +123,7 @@ const styles = theme => ({
 });
 
 function TeamCard({ classes, width }) {
-  let cards = 3.5;
+  let cards = 3;
   let cellHeight = 650;
   if (isWidthDown('md', width)) {
     cards = 1.25;

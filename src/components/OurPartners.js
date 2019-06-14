@@ -7,25 +7,33 @@ import classNames from 'classnames';
 import cfaLogo from '../assets/CFA-2.png';
 import UoSA from '../assets/UoSA.png';
 import Mwambao from '../assets/logo2.png';
-import Bitmap from '../assets/Bitmap.png';
+import Bitmap from '../assets/nukta.png';
 import MarineParksLogo from '../assets/TanzaniaMarinePark.png';
 import ArrowDown from '../assets/arrowBlueDown.png';
 import Fisheries from '../assets/fisheries.png';
 
 const styles = theme => ({
   parentContainer: {
-    padding: '120px 120px 140px 124px'
+    padding: '5.0625rem 0',
+    [theme.breakpoints.up('md')]: {
+      padding: '120px 120px 140px 124px'
+    }
   },
   cardInfo: {
-    width: '400px',
-    height: '400px',
+    width: '240px',
+    height: '360px',
     backgroundColor: '#ffffff',
     boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
     flex: '1',
     textAlign: 'center',
-    margin: '10px 40px',
+    margin: '10px',
     '&:hover': {
       transform: 'scale(1.1)'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '400px',
+      height: '400px',
+      margin: '10px 40px'
     }
   },
   flexGrid: {
@@ -51,15 +59,28 @@ const styles = theme => ({
     marginLeft: '40px'
   },
   cfaLogoImage: {
-    width: '272px',
+    width: '210px',
     height: 'auto',
     paddingTop: '99px',
-    paddingRight: '56px'
+    marginLeft: '0.9375rem',
+    marginRight: '0.9375rem',
+    [theme.breakpoints.up('md')]: {
+      width: '272px',
+      paddingRight: '56px',
+      marginLeft: 0,
+      marginRight: 0
+    }
   },
   UoSALogo: {
-    width: '136px',
+    width: '140px',
     height: 'auto',
-    marginTop: '74px'
+    marginTop: '74px',
+    marginLeft: '50px',
+    marginRight: '50px',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 0,
+      marginRight: 0
+    }
   },
   partnerTexts: {
     opacity: '0.3',
@@ -71,7 +92,11 @@ const styles = theme => ({
     lineHeight: '1.67',
     textAlign: 'center',
     color: '#000000',
-    marginTop: '148px'
+    marginTop: '148px',
+    width: '14.375rem',
+    [theme.breakpoints.up('md')]: {
+      width: '100%'
+    }
   },
   mwambaoImg: {
     height: 'auto',
@@ -83,22 +108,41 @@ const styles = theme => ({
     height: 'auto',
     width: '200px',
     marginTop: '66px',
-    marginLeft: '6px'
+    marginRight: '20px',
+    marginLeft: '20px',
+    [theme.breakpoints.up('md')]: {
+      width: '262px',
+      marginRight: '0px',
+      marginLeft: '6px'
+    }
   },
   bitMapLogo: {
-    width: '262px',
-    marginTop: '66px'
+    width: '12.5rem',
+    marginTop: '66px',
+    marginRight: '1.25rem',
+    marginLeft: '1.25rem',
+    marginBottom: '2.5rem',
+    [theme.breakpoints.up('md')]: {
+      width: '16.375rem',
+      marginRight: '0',
+      marginLeft: '0'
+    }
   },
   nuktaTitle: {
     fontFamily: 'Montserrat',
-    fontSize: '22px',
+    fontSize: '0.9375rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    lineHeight: '3.05',
-    letterSpacing: '1.5px',
+    lineHeight: '2',
+    letterSpacing: '0.0625rem',
     textAlign: 'center',
-    color: '#023256'
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.375rem',
+      lineHeight: '3.05',
+      letterSpacing: '0.09375rem'
+    }
   },
   nuktaText: {
     opacity: '0.6',
@@ -137,7 +181,24 @@ const styles = theme => ({
   },
   partnerGrid: {
     flexWrap: 'nowrap',
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
+    scrollbarColor: '#023256',
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      height: '0.15rem'
+    },
+    '&::-webkit-scrollbar-track': {
+      backgroundColor: 'lightgrey',
+      marginLeft: '2rem',
+      marginRight: '2rem',
+      color: 'lightgrey'
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#023256',
+      color: '#023256',
+      border: '1px solid #023256',
+      height: '0.2rem'
+    }
   }
 });
 
@@ -214,12 +275,7 @@ function MultiTypeCard({
         className={classNames(classes.cardLink, classes.cardInfo)}
       >
         <img src={imageSrc} className={classes[imageClass]} alt={alt} />
-
-        <Typography
-          variant="body1"
-          gutterBottom
-          className={classes.partnerTexts}
-        >
+        <Typography variant="body1" gutterBottom className={classes.nuktaTitle}>
           {text}
         </Typography>
         {elem}
@@ -299,24 +355,25 @@ function OurPartners({ classes, width }) {
               imageClass="marineParksLogo"
               alt="Tanzania Fisheries"
             />
-            <MultiTypeCard
+            <MultiTypeCardItem
               href="https://corporate.nukta.co.tz/"
               imageClass="bitMapLogo"
               alt="Nukta Africa"
               text="Nukta Africa Ltd"
               imageSrc={Bitmap}
               classes={classes}
-            >
-              <Fragment>
-                <a className={classes.email} href="https://nukta.co.tz/">
-                  https://nukta.co.tz/
-                </a>
-                <br />
-                <a href="email.com" className={classes.email}>
-                  info@nuktaafricaltd
-                </a>
-              </Fragment>
-            </MultiTypeCard>
+              elem={
+                <Fragment>
+                  <Typography className={classes.email}>
+                    https://nukta.co.tz/
+                  </Typography>
+
+                  <Typography className={classes.email}>
+                    info@nuktaafricaltd
+                  </Typography>
+                </Fragment>
+              }
+            />
 
             <div className={classes.cardInfo}>
               <img
@@ -368,32 +425,25 @@ function OurPartners({ classes, width }) {
             imageClass="marineParksLogo"
             alt="Tanzania Fisheries"
           />
-          <MultiTypeCard
+          <MultiTypeCardItem
             href="https://corporate.nukta.co.tz/"
             imageClass="bitMapLogo"
             alt="Nukta Africa"
             text="Nukta Africa Ltd"
             imageSrc={Bitmap}
             classes={classes}
-          >
-            <Fragment>
-              <a className={classes.email} href="https://nukta.co.tz/">
-                https://nukta.co.tz/
-              </a>
-              <br />
-              <a href="email.com" className={classes.email}>
-                info@nuktaafricaltd
-              </a>
-            </Fragment>
-          </MultiTypeCard>
+            elem={
+              <Fragment>
+                <Typography className={classes.email}>
+                  https://nukta.co.tz/
+                </Typography>
 
-          <div className={classes.cardInfo}>
-            <img
-              src={ArrowDown}
-              alt="Arrow down"
-              className={classes.arrowDown}
-            />
-          </div>
+                <Typography className={classes.email}>
+                  info@nuktaafricaltd
+                </Typography>
+              </Fragment>
+            }
+          />
         </GridList>
       )}
     </div>
