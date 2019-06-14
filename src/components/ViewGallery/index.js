@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import { withStyles, Typography } from '@material-ui/core';
+import React from 'react';
+import PropTypes from 'prop-types';
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
+import { withStyles, Typography, GridList } from '@material-ui/core';
 
 import galleryImage1 from '../../assets/galleryImage1.jpg';
 import galleryImage2 from '../../assets/galleryImage2.jpg';
@@ -23,6 +25,7 @@ import galleryImage19 from '../../assets/galleryImage19.jpg';
 import galleryImage20 from '../../assets/galleryImage20.jpg';
 
 import GalleryContainer from './GalleryContainer';
+import Line from '../Line';
 
 const galleryContent = [
   {
@@ -106,80 +109,117 @@ const galleryContent = [
     image: galleryImage20
   }
 ];
-
-const styles = {
+const styles = theme => ({
   parentContainer: {
-    padding: '0 0 0 120px'
+    marginLeft: '1.875rem',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '7.5rem',
+      marginBottom: '4rem'
+    }
   },
   card: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
     boxShadow: 'none',
-    overflowX: 'scroll'
+    flexWrap: 'nowrap',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)',
+    scrollbarColor: '#023256',
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      height: '0.15rem'
+    },
+    '&::-webkit-scrollbar-track': {
+      backgroundColor: 'lightgrey',
+      marginRight: '2rem',
+      color: 'lightgrey'
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#023256',
+      color: '#023256',
+      border: '1px solid #023256',
+      height: '0.2rem'
+    }
   },
   viewGallery: {
     width: '447px',
-    height: '66px',
     fontFamily: 'Oswald',
-    fontSize: '15px',
+    fontSize: '0.875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
-    letterSpacing: '16.5px',
-    color: '#023256'
+    letterSpacing: '0.9625rem',
+    color: '#023256',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.9375rem',
+      letterSpacing: '1.03125rem'
+    }
   },
   viewParent: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '240px',
-    marginBottom: '52.5px'
+    paddingLeft: '1.875rem',
+    marginBottom: '3.16rem',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '240px',
+      marginBottom: '5.16rem'
+    }
   },
-  line: {
-    width: '75px',
-    height: '0.8px',
-    background: 'lightgrey',
-    borderLeft: 'solid #023256 20px'
+  bottomLine: {
+    borderLeftWidth: '120px',
+    width: '90%',
+    margin: '2.875rem auto 0px'
   },
-  viewCard: {
-    marginRight: '30px'
-  }
-};
+  viewCard: {}
+});
 
-class ViewGallery extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { galleryCards: galleryContent };
+function ViewGallery({ classes, width }) {
+  let cards = 4;
+  let cellHeight = 400;
+  if (isWidthDown('md', width)) {
+    cards = 1.5;
+    cellHeight = 300;
   }
-
-  render() {
-    const { galleryCards } = this.state;
-    return (
-      <React.Fragment>
-        <div style={styles.viewParent}>
-          <Typography
-            component="h2"
-            variant="body1"
-            gutterBottom
-            style={styles.viewGallery}
-          >
-            VIEW GALLERY
-          </Typography>
-          <div style={styles.line} />
-        </div>
-        <div style={styles.parentContainer}>
-          <div style={styles.card}>
-            {galleryCards.map(picture => (
-              <div style={styles.viewCard}>
-                <GalleryContainer key={picture.id} image={picture.image} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </React.Fragment>
-    );
+  if (isWidthDown('sm', width)) {
+    cards = 1.5;
+    cellHeight = 300;
   }
+  return (
+    <React.Fragment>
+      <div className={classes.viewParent}>
+        <Typography
+          component="h2"
+          variant="body1"
+          gutterBottom
+          className={classes.viewGallery}
+        >
+          VIEW GALLERY
+        </Typography>
+        <Line />
+      </div>
+      <div className={classes.parentContainer}>
+        <GridList
+          className={classes.card}
+          cols={cards}
+          spacing={12}
+          cellHeight={cellHeight}
+        >
+          {galleryContent.map(picture => (
+            <div className={classes.viewCard} key={picture.id}>
+              <GalleryContainer image={picture.image} />
+            </div>
+          ))}
+        </GridList>
+      </div>
+    </React.Fragment>
+  );
 }
 
-export default withStyles(styles)(ViewGallery);
+ViewGallery.propTypes = {
+  classes: PropTypes.shape().isRequired,
+  width: PropTypes.string.isRequired
+};
+
+export default withWidth()(withStyles(styles)(ViewGallery));
