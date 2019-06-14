@@ -20,7 +20,7 @@ const styles = theme => ({
       transform: 'scale(1.1)'
     },
     '&:hover $media': {
-      height: 280,
+      height: 260,
       transition: 'all .1s ease-in-out'
     },
     [theme.breakpoints.up('md')]: {
@@ -32,7 +32,7 @@ const styles = theme => ({
     backgroundPosition: 'top',
     backgroundSize: 'cover',
     [theme.breakpoints.up('md')]: {
-      height: 350
+      height: 250
     }
   },
   cardContent: {
