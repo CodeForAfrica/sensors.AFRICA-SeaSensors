@@ -191,7 +191,7 @@ class Navigation extends React.Component {
                 { link: '/about/', name: 'About Us.' },
                 { link: '/resources/', name: 'Resources.' }
               ].map((item, index) => (
-                <li>
+                <li key={item.link}>
                   <Link
                     to={item.link}
                     className={classNames(classes.liNav, {
@@ -243,7 +243,7 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   classes: PropTypes.shape().isRequired,
-  width: PropTypes.func.isRequired,
+  width: PropTypes.string.isRequired,
   activeNav: PropTypes.number.isRequired
 };
 

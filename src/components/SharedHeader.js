@@ -103,7 +103,7 @@ const styles = theme => ({
 });
 
 function SharedHeader(props) {
-  const { mediaResources, classes, link, subTitle, activeNav } = props;
+  const { mediaResources, classes, subTitle, activeNav } = props;
   return (
     <div className={classes.resourceImage}>
       <Navigation activeNav={activeNav} />
@@ -122,7 +122,7 @@ function SharedHeader(props) {
           {mediaResources}
         </Typography>
         <div className={classes.arrowBack}>
-          <a href={link}>
+          <a href="#link">
             <img
               src={arrowBack}
               alt="Arrow back"
@@ -152,7 +152,7 @@ SharedHeader.defaultProps = {
 SharedHeader.propTypes = {
   classes: PropTypes.shape().isRequired,
   mediaResources: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  // link: PropTypes.string.isRequired,
   activeNav: PropTypes.number.isRequired,
   subTitle: PropTypes.string
 };
