@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  withStyles,
-  ButtonBase,
-  Typography,
-  Grid,
-  ClickAwayListener
-} from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 
-import classNames from 'classnames';
+import FirstScuba from './ButtonContent/FirstScuba';
+import SecondScuba from './ButtonContent/SecondScuba';
+import ThirdScuba from './ButtonContent/ThirdScuba';
 
 import equipmentImage from '../../assets/equipment.jpg';
-import hotSpot1 from '../../assets/icons/hot-spot-1.svg';
-import hotSpot2 from '../../assets/icons/hot-spot-2.svg';
-import close from '../../assets/icons/hot-spot-3.svg';
-import search from '../../assets/icons/plus-2.svg';
-import battery from '../../assets/mgl-0768.png';
 
 const styles = theme => ({
   root: {
@@ -67,42 +58,7 @@ const styles = theme => ({
   hidden: {
     display: 'none !important'
   },
-  details: {
-    zIndex: 1,
-    position: 'absolute',
-    left: '35%',
 
-    display: 'flex',
-    alignSelf: 'center',
-
-    height: '31.25rem',
-    width: '21.875rem',
-
-    overflow: 'hidden',
-    '&:before': {
-      content: '""',
-      background: `url(${equipmentImage})`,
-      backgroundSize: 'cover',
-      position: 'absolute',
-      left: '-1.5625rem',
-      top: '-1.5625rem',
-      right: 0,
-      bottom: 0,
-      boxShadow: 'inset 0 0 0 187.5rem rgba(255,255,255,0.3)',
-      filter: 'blur(0.625rem)'
-    },
-    [theme.breakpoints.up('sm')]: {
-      left: '10%'
-    },
-    [theme.breakpoints.up('md')]: {
-      left: '10%',
-      height: '31.25rem',
-      width: '28.125rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: '40.625rem'
-    }
-  },
   content: {
     position: 'absolute',
     left: 0,
@@ -158,78 +114,11 @@ const styles = theme => ({
 });
 
 function Scuba({ classes }) {
-  const [showDetails, setShowDetails] = useState(false);
   return (
     <div className={classes.root}>
-      <div
-        className={classNames(classes.details, {
-          [classes.hidden]: !showDetails
-        })}
-      >
-        <ClickAwayListener onClickAway={() => setShowDetails(false)}>
-          <div className={classes.content}>
-            <Grid
-              container
-              direction="row"
-              wrap="nowrap"
-              justify="space-between"
-              alignItems="center"
-            >
-              <Typography className={classes.headerTitle}>
-                PART NUMBER 03
-              </Typography>
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                onClick={() => setShowDetails(false)}
-              >
-                <img alt="" src={close} className={classes.close} />
-              </ButtonBase>
-            </Grid>
-            <Typography className={classes.title}>
-              Battery Part Title
-            </Typography>
-            <Typography className={classes.description}>
-              Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Lorem
-              ipsum dolor sit lorem. Conse ctetur adipiscing elit lorem init.
-            </Typography>
-            <div className={classes.preview}>
-              <img alt="" src={battery} />
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                className={classes.search}
-              >
-                <img alt="search" src={search} />
-              </ButtonBase>
-            </div>
-          </div>
-        </ClickAwayListener>
-      </div>
-      <ButtonBase
-        disableRipple
-        disableTouchRipple
-        className={classes.hotSpot2}
-        onClick={() => setShowDetails(true)}
-      >
-        <img alt="" src={hotSpot2} />
-      </ButtonBase>
-      <ButtonBase
-        disableRipple
-        disableTouchRipple
-        className={classes.hotSpot1}
-        onClick={() => setShowDetails(true)}
-      >
-        <img alt="" src={hotSpot1} />
-      </ButtonBase>
-      <ButtonBase
-        disableRipple
-        disableTouchRipple
-        className={classes.hotSpot3}
-        onClick={() => setShowDetails(true)}
-      >
-        <img alt="" src={hotSpot1} />
-      </ButtonBase>
+      <FirstScuba />
+      <SecondScuba />
+      <ThirdScuba />
       <img className={classes.equipmentImage} alt="" src={equipmentImage} />
     </div>
   );
