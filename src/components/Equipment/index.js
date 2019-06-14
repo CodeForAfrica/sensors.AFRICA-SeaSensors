@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 
-// import FirstScuba from './ButtonContent/ThirdScuba';
+import FirstScuba from './ButtonContent/FirstScuba';
 import SecondScuba from './ButtonContent/SecondScuba';
 import ThirdScuba from './ButtonContent/ThirdScuba';
 
@@ -116,6 +116,7 @@ const styles = theme => ({
 function Scuba({ classes }) {
   return (
     <div className={classes.root}>
+      <FirstScuba />
       <SecondScuba />
       <ThirdScuba />
       <img className={classes.equipmentImage} alt="" src={equipmentImage} />

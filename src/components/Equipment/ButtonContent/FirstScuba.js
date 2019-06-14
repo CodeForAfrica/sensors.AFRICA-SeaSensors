@@ -19,8 +19,8 @@ import battery from '../../../assets/mgl-0768.png';
 const styles = theme => ({
   hotSpot3: {
     position: 'absolute',
-    right: '35%',
-    bottom: '5%',
+    right: '35.5%',
+    top: '5%',
     width: '15%',
 
     transform: 'scaleX(-1)',
@@ -122,7 +122,7 @@ const styles = theme => ({
   }
 });
 
-function ThirdScuba({ classes }) {
+function FirstScuba({ classes }) {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <Fragment>
@@ -141,7 +141,7 @@ function ThirdScuba({ classes }) {
               alignItems="center"
             >
               <Typography className={classes.headerTitle}>
-                PART NUMBER 03
+                PART NUMBER 01
               </Typography>
               <ButtonBase
                 disableRipple
@@ -183,8 +183,8 @@ function ThirdScuba({ classes }) {
   );
 }
 
-ThirdScuba.propTypes = {
+FirstScuba.propTypes = {
   classes: PropTypes.shape().isRequired
 };
 
-export default withStyles(styles)(ThirdScuba);
+export default withStyles(styles)(FirstScuba);
