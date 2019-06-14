@@ -103,9 +103,9 @@ const styles = theme => ({
     fontWeight: 300,
     lineHeight: 1.67,
     lineSpacing: '0.0375rem',
-    textAlign: 'center',
     color: '#00a5dc',
     [theme.breakpoints.up('md')]: {
+      textAlign: 'center',
       fontSize: '1.5625rem'
     }
   },
@@ -182,15 +182,15 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '5.0625rem',
-    height: '5.0625rem',
     marginRight: '0.8125rem',
     color: '#00a5dc',
     outline: 'none',
     '&:focus': {
       outline: 'none'
     },
+    height: '5.0625rem',
     [theme.breakpoints.up('md')]: {
+      width: '5.0625rem',
       border: '0.0625rem #00a5dc solid',
       '&:hover': {
         backgroundColor: '#00a5dc',

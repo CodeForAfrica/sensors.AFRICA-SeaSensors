@@ -21,6 +21,9 @@ const styles = theme => ({
   visualInfo: {
     position: 'relative',
     [theme.breakpoints.up('md')]: {
+      marginTop: '-14rem'
+    },
+    [theme.breakpoints.up('lg')]: {
       marginTop: '-25.625rem'
     }
   },
@@ -50,8 +53,9 @@ const styles = theme => ({
     textAlign: 'justify',
     color: '#023256',
 
+    marginTop: '1.5rem',
     [theme.breakpoints.up('md')]: {
-      marginTop: '5.125rem',
+      marginTop: '3.125rem',
 
       width: '13.375rem',
       fontSize: '0.9375rem',
