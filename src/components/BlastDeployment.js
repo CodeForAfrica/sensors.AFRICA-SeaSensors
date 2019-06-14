@@ -112,7 +112,9 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       paddingTop: '153px',
       marginLeft: '480px',
-      position: 'relative'
+      position: 'relative',
+      paddingLeft: '0',
+      paddingRight: '0'
     }
   }
 });
