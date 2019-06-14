@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /mdbreact/,
+            test: /wavesurfer.js/,
             use: loaders.null()
           }
         ]
