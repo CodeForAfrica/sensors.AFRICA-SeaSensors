@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   Button,
@@ -12,12 +11,17 @@ import {
 
 const styles = {
   card: {
-    width: '315px',
-    paddingLeft: '50px',
-    height: '450.2px'
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '1rem 2rem',
+    height: '420px',
+    margin: '1rem',
+    borderRadius: 0,
+    boxShadow: '0 28px 56px 0 rgba(0, 0, 0, 0.05)'
   },
   links: {
-    display: 'grid'
+    display: 'grid',
+    paddingBottom: '0.5rem'
   },
   linkText: {
     width: '100%',
@@ -43,7 +47,7 @@ const styles = {
     lineHeight: '0.99',
     letterSpacing: '1.7px',
     color: '#023256',
-    marginTop: '90px'
+    marginTop: '2rem'
   },
   cardText: {
     width: '219.8px',
@@ -66,21 +70,19 @@ function ResourceCards({ classes, title, text, link, link2 }) {
   }
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.titleText}
-          >
-            {title}
-          </Typography>
-          <Typography component="p" className={classes.cardText}>
-            {text}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardContent>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={classes.titleText}
+        >
+          {title}
+        </Typography>
+        <Typography component="p" className={classes.cardText}>
+          {text}
+        </Typography>
+      </CardContent>
       <CardActions>
         <div className={classes.links}>
           <Button size="small" className={classes.linkText}>
