@@ -204,13 +204,12 @@ const styles = theme => ({
   }
 });
 
-function CurrentDate() {
-  const date = new Date();
-  const today = date.toLocaleTimeString();
-  return today;
-}
-
 function BlastVisual({ classes }) {
+  function CurrentDate() {
+    const date = new Date();
+    const today = date.toLocaleTimeString();
+    return today;
+  }
   return (
     <div className={classes.root}>
       <div className={classes.hud}>
