@@ -107,7 +107,7 @@ function HeaderText({ classes }) {
         <TextArrowLink
           classes={{ root: classes.arrowLink }}
           border={false}
-          href="https://alpha.seasensors.africa/map/"
+          href="https://map.seasensors.africa/"
           text="EXPLORE MAP"
         />
       </div>
