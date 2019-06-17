@@ -18,7 +18,7 @@ function NewsHeader({ classes }) {
       classes={classes}
       mediaResources="News Showcase Page."
       subTitle="Lorem Ipsum"
-      link="/resources"
+      link="/"
       activeNav={1}
     />
   );
