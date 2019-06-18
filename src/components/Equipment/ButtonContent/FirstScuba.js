@@ -36,13 +36,10 @@ const styles = theme => ({
     zIndex: 1,
     position: 'absolute',
     left: '35%',
-
     display: 'flex',
     alignSelf: 'center',
-
-    height: '31.25rem',
+    height: '35.25rem',
     width: '21.875rem',
-
     overflow: 'hidden',
     '&:before': {
       content: '""',
@@ -57,7 +54,8 @@ const styles = theme => ({
       filter: 'blur(0.625rem)'
     },
     [theme.breakpoints.up('sm')]: {
-      left: '10%'
+      left: '10%',
+      height: '35.25rem'
     },
     [theme.breakpoints.up('md')]: {
       left: '10%',
