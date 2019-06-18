@@ -218,9 +218,7 @@ class BlastVisual extends React.Component {
     Tabletop.init({
       key: '1DTK8hyI1sGooGOU-fQh-amYGc7iJk4Bc6QlARfXuE8U',
       callback: googleData => {
-        this.setState({
-          blastData: googleData
-        });
+        this.setState({ blastData: googleData });
       },
       simpleSheet: true
     });
