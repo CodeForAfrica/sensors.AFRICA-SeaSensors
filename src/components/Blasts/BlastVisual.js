@@ -227,7 +227,6 @@ class BlastVisual extends React.Component {
   }
 
   render() {
-    console.log('updated status ---->', this.state);
     const { classes } = this.props;
     const { blastData } = this.state;
 
