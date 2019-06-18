@@ -1,34 +1,23 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  withStyles,
-  ButtonBase,
-  Typography,
-  Grid,
-  ClickAwayListener
-} from '@material-ui/core';
+import { withStyles, ButtonBase } from '@material-ui/core';
 
 import classNames from 'classnames';
+import ContentScuba from '../ContentScuba';
 
 import equipmentImage from '../../../assets/equipment.jpg';
-import hotSpot3 from '../../../assets/icons/hot-spot-1.svg';
-import close from '../../../assets/icons/hot-spot-3.svg';
-import search from '../../../assets/icons/plus-2.svg';
-import battery from '../../../assets/mgl-0768.png';
+import hotSpot2 from '../../../assets/icons/hot-spot-2.svg';
 
 const styles = theme => ({
-  hotSpot3: {
+  hotSpot2: {
     position: 'absolute',
-    right: '35.5%',
-    top: '5%',
-    width: '15%',
-
-    transform: 'scaleX(-1)',
+    right: '15%',
+    top: '33%',
+    width: '36.5%',
     '& > img': {
       width: '100%'
     }
   },
-
   hidden: {
     display: 'none !important'
   },
@@ -38,7 +27,7 @@ const styles = theme => ({
     left: '5%',
     display: 'flex',
     alignSelf: 'center',
-    height: '35.25rem',
+    height: '31.25rem',
     width: '21.875rem',
     overflow: 'hidden',
     '&:before': {
@@ -54,12 +43,11 @@ const styles = theme => ({
       filter: 'blur(0.625rem)'
     },
     [theme.breakpoints.up('sm')]: {
-      left: '10%',
-      height: '35.25rem'
+      left: '10%'
     },
     [theme.breakpoints.up('md')]: {
       left: '10%',
-      height: '36.25rem',
+      height: '31.25rem',
       width: '28.125rem'
     },
     [theme.breakpoints.up('lg')]: {
@@ -120,7 +108,7 @@ const styles = theme => ({
   }
 });
 
-function FirstScuba({ classes }) {
+function SecondScuba({ classes }) {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <Fragment>
@@ -129,61 +117,27 @@ function FirstScuba({ classes }) {
           [classes.hidden]: !showDetails
         })}
       >
-        <ClickAwayListener onClickAway={() => setShowDetails(false)}>
-          <div className={classes.content}>
-            <Grid
-              container
-              direction="row"
-              wrap="nowrap"
-              justify="space-between"
-              alignItems="center"
-            >
-              <Typography className={classes.headerTitle}>
-                PART NUMBER 01
-              </Typography>
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                onClick={() => setShowDetails(false)}
-              >
-                <img alt="" src={close} className={classes.close} />
-              </ButtonBase>
-            </Grid>
-            <Typography className={classes.title}>
-              4 channel SoundTrap acoustic recorder:
-            </Typography>
-            <Typography className={classes.description}>
-              The SoundTrap is attached to a battery pack that extends its
-              underwater monitoring capacity to around 2 months and attached to
-              3 waterproof microphones (hydrophones).
-            </Typography>
-            <div className={classes.preview}>
-              <img alt="" src={battery} />
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                className={classes.search}
-              >
-                <img alt="search" src={search} />
-              </ButtonBase>
-            </div>
-          </div>
-        </ClickAwayListener>
+        <ContentScuba
+          header="PART NUMBER 02"
+          title="Hydrophones"
+          description="Waterproof microphones attached to the triangle frame using zip
+              ties."
+        />
       </div>
       <ButtonBase
         disableRipple
         disableTouchRipple
-        className={classes.hotSpot3}
+        className={classes.hotSpot2}
         onClick={() => setShowDetails(true)}
       >
-        <img alt="" src={hotSpot3} />
+        <img alt="" src={hotSpot2} />
       </ButtonBase>
     </Fragment>
   );
 }
 
-FirstScuba.propTypes = {
+SecondScuba.propTypes = {
   classes: PropTypes.shape().isRequired
 };
 
-export default withStyles(styles)(FirstScuba);
+export default withStyles(styles)(SecondScuba);

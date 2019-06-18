@@ -1,31 +1,27 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  withStyles,
-  ButtonBase,
-  Typography,
-  Grid,
-  ClickAwayListener
-} from '@material-ui/core';
+import { withStyles, ButtonBase } from '@material-ui/core';
 
 import classNames from 'classnames';
 
 import equipmentImage from '../../../assets/equipment.jpg';
-import hotSpot2 from '../../../assets/icons/hot-spot-2.svg';
-import close from '../../../assets/icons/hot-spot-3.svg';
-import search from '../../../assets/icons/plus-2.svg';
-import battery from '../../../assets/mgl-0768.png';
+import hotSpot3 from '../../../assets/icons/hot-spot-1.svg';
+
+import ContentScuba from '../ContentScuba';
 
 const styles = theme => ({
-  hotSpot2: {
+  hotSpot3: {
     position: 'absolute',
-    right: '15%',
-    top: '33%',
-    width: '36.5%',
+    right: '35%',
+    bottom: '5%',
+    width: '15%',
+
+    transform: 'scaleX(-1)',
     '& > img': {
       width: '100%'
     }
   },
+
   hidden: {
     display: 'none !important'
   },
@@ -43,7 +39,7 @@ const styles = theme => ({
       background: `url(${equipmentImage})`,
       backgroundSize: 'cover',
       position: 'absolute',
-      left: '5%',
+      left: '4%',
       top: '-1.5625rem',
       right: 0,
       bottom: 0,
@@ -116,7 +112,7 @@ const styles = theme => ({
   }
 });
 
-function SecondScuba({ classes }) {
+function ThirdScuba({ classes }) {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <Fragment>
@@ -125,58 +121,26 @@ function SecondScuba({ classes }) {
           [classes.hidden]: !showDetails
         })}
       >
-        <ClickAwayListener onClickAway={() => setShowDetails(false)}>
-          <div className={classes.content}>
-            <Grid
-              container
-              direction="row"
-              wrap="nowrap"
-              justify="space-between"
-              alignItems="center"
-            >
-              <Typography className={classes.headerTitle}>
-                PART NUMBER 02
-              </Typography>
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                onClick={() => setShowDetails(false)}
-              >
-                <img alt="" src={close} className={classes.close} />
-              </ButtonBase>
-            </Grid>
-            <Typography className={classes.title}>Hydrophones</Typography>
-            <Typography className={classes.description}>
-              Waterproof microphones attached to the triangle frame using zip
-              ties.
-            </Typography>
-            <div className={classes.preview}>
-              <img alt="" src={battery} />
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                className={classes.search}
-              >
-                <img alt="search" src={search} />
-              </ButtonBase>
-            </div>
-          </div>
-        </ClickAwayListener>
+        <ContentScuba
+          header="PART NUMBER 03"
+          title="Triangle Frame"
+          description="Attached to the waterproof microphones and anchored to the seabed"
+        />
       </div>
       <ButtonBase
         disableRipple
         disableTouchRipple
-        className={classes.hotSpot2}
+        className={classes.hotSpot3}
         onClick={() => setShowDetails(true)}
       >
-        <img alt="" src={hotSpot2} />
+        <img alt="" src={hotSpot3} />
       </ButtonBase>
     </Fragment>
   );
 }
 
-SecondScuba.propTypes = {
+ThirdScuba.propTypes = {
   classes: PropTypes.shape().isRequired
 };
 
-export default withStyles(styles)(SecondScuba);
+export default withStyles(styles)(ThirdScuba);
