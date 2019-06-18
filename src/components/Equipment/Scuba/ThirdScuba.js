@@ -1,20 +1,13 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  withStyles,
-  ButtonBase,
-  Typography,
-  Grid,
-  ClickAwayListener
-} from '@material-ui/core';
+import { withStyles, ButtonBase } from '@material-ui/core';
 
 import classNames from 'classnames';
 
 import equipmentImage from '../../../assets/equipment.jpg';
 import hotSpot3 from '../../../assets/icons/hot-spot-1.svg';
-import close from '../../../assets/icons/hot-spot-3.svg';
-import search from '../../../assets/icons/plus-2.svg';
-import battery from '../../../assets/mgl-0768.png';
+
+import ContentScuba from '../ContentScuba';
 
 const styles = theme => ({
   hotSpot3: {
@@ -131,42 +124,11 @@ function ThirdScuba({ classes }) {
           [classes.hidden]: !showDetails
         })}
       >
-        <ClickAwayListener onClickAway={() => setShowDetails(false)}>
-          <div className={classes.content}>
-            <Grid
-              container
-              direction="row"
-              wrap="nowrap"
-              justify="space-between"
-              alignItems="center"
-            >
-              <Typography className={classes.headerTitle}>
-                PART NUMBER 03
-              </Typography>
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                onClick={() => setShowDetails(false)}
-              >
-                <img alt="" src={close} className={classes.close} />
-              </ButtonBase>
-            </Grid>
-            <Typography className={classes.title}>Triangle Frame</Typography>
-            <Typography className={classes.description}>
-              Attached to the waterproof microphones and anchored to the seabed
-            </Typography>
-            <div className={classes.preview}>
-              <img alt="" src={battery} />
-              <ButtonBase
-                disableRipple
-                disableTouchRipple
-                className={classes.search}
-              >
-                <img alt="search" src={search} />
-              </ButtonBase>
-            </div>
-          </div>
-        </ClickAwayListener>
+        <ContentScuba
+          header="PART NUMBER 03"
+          title="Triangle Frame"
+          description="Attached to the waterproof microphones and anchored to the seabed"
+        />
       </div>
       <ButtonBase
         disableRipple

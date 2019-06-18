@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 
-import FirstScuba from './ButtonContent/FirstScuba';
-import SecondScuba from './ButtonContent/SecondScuba';
-import ThirdScuba from './ButtonContent/ThirdScuba';
+import FirstScuba from './Scuba/FirstScuba';
+import SecondScuba from './Scuba/SecondScuba';
+import ThirdScuba from './Scuba/ThirdScuba';
 
 import equipmentImage from '../../assets/equipment.jpg';
 
