@@ -204,7 +204,10 @@ const styles = theme => ({
 function BlastVisual({ classes }) {
   function CurrentDate() {
     const date = new Date();
-    const today = date.toLocaleTimeString();
+    const today = date.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
     return today;
   }
   return (
