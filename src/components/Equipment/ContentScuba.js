@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  withStyles,
-  ButtonBase,
-  Typography,
-  Grid,
-  ClickAwayListener
-} from '@material-ui/core';
+import { withStyles, ButtonBase, Typography, Grid } from '@material-ui/core';
 
 import equipmentImage from '../../assets/equipment.jpg';
 import close from '../../assets/icons/hot-spot-3.svg';
@@ -51,7 +45,7 @@ const styles = theme => ({
       height: '40.625rem'
     }
   },
-  content: {
+  root: {
     position: 'absolute',
     left: 0,
     top: 0,
@@ -108,38 +102,32 @@ const styles = theme => ({
 function ContentScuba({ classes, header, title, description }) {
   const [setShowDetails] = useState(false);
   return (
-    <ClickAwayListener onClickAway={() => setShowDetails(false)}>
-      <div className={classes.content}>
-        <Grid
-          container
-          direction="row"
-          wrap="nowrap"
-          justify="space-between"
-          alignItems="center"
+    <div className={classes.root}>
+      <Grid
+        container
+        direction="row"
+        wrap="nowrap"
+        justify="space-between"
+        alignItems="center"
+      >
+        <Typography className={classes.headerTitle}>{header}</Typography>
+        <ButtonBase
+          disableRipple
+          disableTouchRipple
+          onClick={() => setShowDetails(false)}
         >
-          <Typography className={classes.headerTitle}>{header}</Typography>
-          <ButtonBase
-            disableRipple
-            disableTouchRipple
-            onClick={() => setShowDetails(false)}
-          >
-            <img alt="" src={close} className={classes.close} />
-          </ButtonBase>
-        </Grid>
-        <Typography className={classes.title}>{title}4</Typography>
-        <Typography className={classes.description}>{description}</Typography>
-        <div className={classes.preview}>
-          <img alt="" src={battery} />
-          <ButtonBase
-            disableRipple
-            disableTouchRipple
-            className={classes.search}
-          >
-            <img alt="search" src={search} />
-          </ButtonBase>
-        </div>
+          <img alt="" src={close} className={classes.close} />
+        </ButtonBase>
+      </Grid>
+      <Typography className={classes.title}>{title}4</Typography>
+      <Typography className={classes.description}>{description}</Typography>
+      <div className={classes.preview}>
+        <img alt="" src={battery} />
+        <ButtonBase disableRipple disableTouchRipple className={classes.search}>
+          <img alt="search" src={search} />
+        </ButtonBase>
       </div>
-    </ClickAwayListener>
+    </div>
   );
 }
 
