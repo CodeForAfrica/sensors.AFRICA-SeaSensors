@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, ButtonBase } from '@material-ui/core';
+import { withStyles, ButtonBase, ClickAwayListener } from '@material-ui/core';
 
 import classNames from 'classnames';
 import ContentScuba from '../ContentScuba';
@@ -53,58 +53,6 @@ const styles = theme => ({
     [theme.breakpoints.up('lg')]: {
       height: '40.625rem'
     }
-  },
-  content: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    right: 0,
-    bottom: 0,
-    padding: '1.875rem'
-  },
-  close: {
-    height: '1.125rem',
-    width: '1.125rem',
-    margin: '0.625rem'
-  },
-  headerTitle: {
-    fontFamily: 'Oswald',
-    fontSize: '0.75rem',
-    fontWeight: 500,
-    lineHeight: 2.14,
-    letterSpacing: '0.4688rem',
-    color: '#fff',
-    opacity: 0.6
-  },
-  title: {
-    fontFamily: 'Oswald',
-    fontSize: '1.875rem',
-    fontWeight: 'bold',
-    lineHeight: 1.5,
-    letterSpacing: '0.1688rem',
-    color: '#fff'
-  },
-  description: {
-    fontFamily: 'Montserrat',
-    fontSize: '0.75rem',
-    lineHeight: 2.15,
-    letterSpacing: '0.0813rem',
-    color: '#fff'
-  },
-  preview: {
-    position: 'relative',
-    marginTop: '1.5625rem',
-    '& > img': {
-      width: '100%'
-    }
-  },
-  search: {
-    position: 'absolute',
-    left: '1.25rem',
-    bottom: '1.25rem'
-  },
-  equipmentImage: {
-    width: '100%'
   }
 });
 
@@ -117,13 +65,16 @@ function SecondScuba({ classes }) {
           [classes.hidden]: !showDetails
         })}
       >
-        <ContentScuba
-          header="PART NUMBER 02"
-          title="Hydrophones"
-          description="Waterproof microphones attached to the triangle frame using zip
+        <ClickAwayListener onClickAway={() => setShowDetails(false)}>
+          <ContentScuba
+            header="PART NUMBER 02"
+            title="Hydrophones"
+            description="Waterproof microphones attached to the triangle frame using zip
               ties."
-        />
+          />
+        </ClickAwayListener>
       </div>
+
       <ButtonBase
         disableRipple
         disableTouchRipple
