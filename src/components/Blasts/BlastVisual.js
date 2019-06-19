@@ -231,6 +231,12 @@ class BlastVisual extends React.Component {
     const { classes } = this.props;
     const { blastData } = this.state;
 
+    const lastArray = blastData[blastData.length - 1];
+    console.log(lastArray);
+    const date = lastArray.Date;
+    const d = date.split(' ')[0];
+    console.log(d);
+
     return (
       <div className={classes.root}>
         <div className={classes.hud}>
