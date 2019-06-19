@@ -280,7 +280,7 @@ class BlastVisual extends React.Component {
               <Typography className={classes.caption}>Current Time</Typography>
             </Grid>
             <Grid container direction="column" alignItems="flex-start">
-              <Typography className={classes.text}>29.9.18</Typography>
+              <Typography className={classes.text}>{d}</Typography>
               <Typography className={classes.caption}>Last Uploaded</Typography>
             </Grid>
           </div>
