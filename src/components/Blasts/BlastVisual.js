@@ -202,14 +202,7 @@ const styles = theme => ({
   }
 });
 
-function CurrentDate() {
-  const date = new Date();
-  const today = date.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit'
-  });
-  return today;
-}
+const currentDate = () => new Date().toTimeString().substring(0, 5);
 
 class BlastVisual extends React.Component {
   constructor(props) {
@@ -230,11 +223,18 @@ class BlastVisual extends React.Component {
   render() {
     const { classes } = this.props;
     const { blastData } = this.state;
+    const defaultDate = '29.9.2018';
 
-    const lastArray = blastData[blastData.length - 1];
-    const date = lastArray.Date;
-    const d = date.split(' ')[0];
-    console.log(d);
+    const lastBlast = blastData[blastData.length - 1];
+
+    function CheckDate() {
+      if (typeof lastBlast !== 'undefined') {
+        const datetime = lastBlast.Date;
+        const date = datetime.split(' ')[0];
+        return date;
+      }
+      return defaultDate;
+    }
 
     return (
       <div className={classes.root}>
@@ -276,11 +276,11 @@ class BlastVisual extends React.Component {
           </div>
           <div className={classes.timeDetails}>
             <Grid container direction="column" alignItems="flex-start">
-              <Typography className={classes.text}>{CurrentDate()}</Typography>
+              <Typography className={classes.text}>{currentDate()}</Typography>
               <Typography className={classes.caption}>Current Time</Typography>
             </Grid>
             <Grid container direction="column" alignItems="flex-start">
-              <Typography className={classes.text}>{d}</Typography>
+              <Typography className={classes.text}>{CheckDate()}</Typography>
               <Typography className={classes.caption}>Last Uploaded</Typography>
             </Grid>
           </div>
