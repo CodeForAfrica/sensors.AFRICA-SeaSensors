@@ -159,7 +159,7 @@ function Footer({ classes }) {
             programme.
           </Typography>
           <Typography className={classes.footerText}>
-            <a href="https://codeforafrica.org">
+            <a href="https://codeforafrica.org" className={classes.link}>
               <span className={classes.highlight}>Code for Africa</span>{' '}
             </a>
             (CfAfrica) is Africa&apos;s largest data journalism and civic
