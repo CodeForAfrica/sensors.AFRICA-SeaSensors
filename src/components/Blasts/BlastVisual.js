@@ -228,7 +228,8 @@ class BlastVisual extends React.Component {
 
     function CheckTime() {
       if (typeof lastBlast !== 'undefined') {
-        const uploadTime = lastBlast.Time;
+        const time = lastBlast.Time;
+        const uploadTime = time.split(' ')[0];
         return uploadTime;
       }
       return defaultTime;
