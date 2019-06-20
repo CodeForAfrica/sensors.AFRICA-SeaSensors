@@ -225,16 +225,6 @@ class BlastVisual extends React.Component {
     const defaultTime = '8:24 AM';
 
     const lastBlast = blastData[blastData.length - 1];
-    console.log(lastBlast);
-
-    function CheckDate() {
-      if (typeof lastBlast !== 'undefined') {
-        const datetime = lastBlast.Date;
-        const date = datetime.split(' ')[0];
-        return date;
-      }
-      return defaultDate;
-    }
 
     function CheckTime() {
       if (typeof lastBlast !== 'undefined') {
@@ -244,8 +234,15 @@ class BlastVisual extends React.Component {
       return defaultTime;
     }
 
-    // const lastUploadTime = lastBlast.Time;
-    // console.log(lastUploadTime);
+    function CheckDate() {
+      if (typeof lastBlast !== 'undefined') {
+        const datetime = lastBlast.Date;
+        const date = datetime.split(' ')[0];
+        const formatDate = date.replace(/\//g, '.');
+        return formatDate;
+      }
+      return defaultDate;
+    }
 
     return (
       <div className={classes.root}>
