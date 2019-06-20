@@ -202,8 +202,6 @@ const styles = theme => ({
   }
 });
 
-const currentDate = () => new Date().toTimeString().substring(0, 5);
-
 class BlastVisual extends React.Component {
   constructor(props) {
     super(props);
@@ -223,9 +221,11 @@ class BlastVisual extends React.Component {
   render() {
     const { classes } = this.props;
     const { blastData } = this.state;
-    const defaultDate = '29.9.2018';
+    const defaultDate = '15.11.2018';
+    const defaultTime = '8:24 AM';
 
     const lastBlast = blastData[blastData.length - 1];
+    console.log(lastBlast);
 
     function CheckDate() {
       if (typeof lastBlast !== 'undefined') {
@@ -235,6 +235,17 @@ class BlastVisual extends React.Component {
       }
       return defaultDate;
     }
+
+    function CheckTime() {
+      if (typeof lastBlast !== 'undefined') {
+        const uploadTime = lastBlast.Time;
+        return uploadTime;
+      }
+      return defaultTime;
+    }
+
+    // const lastUploadTime = lastBlast.Time;
+    // console.log(lastUploadTime);
 
     return (
       <div className={classes.root}>
@@ -276,12 +287,16 @@ class BlastVisual extends React.Component {
           </div>
           <div className={classes.timeDetails}>
             <Grid container direction="column" alignItems="flex-start">
-              <Typography className={classes.text}>{currentDate()}</Typography>
-              <Typography className={classes.caption}>Current Time</Typography>
+              <Typography className={classes.text}>{CheckTime()}</Typography>
+              <Typography className={classes.caption}>
+                Last Upload Time
+              </Typography>
             </Grid>
             <Grid container direction="column" alignItems="flex-start">
               <Typography className={classes.text}>{CheckDate()}</Typography>
-              <Typography className={classes.caption}>Last Uploaded</Typography>
+              <Typography className={classes.caption}>
+                Last Upload Date
+              </Typography>
             </Grid>
           </div>
         </div>
