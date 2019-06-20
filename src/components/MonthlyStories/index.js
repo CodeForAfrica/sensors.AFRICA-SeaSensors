@@ -75,11 +75,11 @@ class MonthlyStories extends Component {
     return (
       <Section classes={{ root: classes.root }}>
         <SectionTitle subtitle="Monthly Stories">
-          Our Monthly Stories.
+          Our Monthly Stories
         </SectionTitle>
         <Typography variant="body1" className={classes.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.
+          Here is a roundup of our month on month sea sensor stories, both media
+          and non-media publications.
         </Typography>
         <StoryOfTheMonth story={mainStory} />
         <Stories stories={stories} />

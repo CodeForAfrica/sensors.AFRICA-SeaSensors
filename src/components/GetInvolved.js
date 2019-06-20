@@ -83,7 +83,7 @@ function GetInvolved({ classes }) {
           If you’re interested in the project or the data, please contact us.
           You can also help us document blasts. If you hear or see a dynamite
           blast in Tanzania, please record the date, time and location, and send
-          the information to us.ecord the date, time and location, by clicking
+          the information to us. Record the date, time and location, by clicking
           on this link.
         </Typography>
       </Grid>

@@ -27,8 +27,8 @@ function ResourcesHeader({ classes }) {
   return (
     <SharedHeader
       classes={classes}
-      mediaResources="Resources."
-      subTitle="Lorem Ipsum"
+      mediaResources="Media Resources"
+      subTitle="Resources"
       link="/about"
       activeNav={3}
     />

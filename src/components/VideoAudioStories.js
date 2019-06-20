@@ -117,9 +117,7 @@ function VideoAudioStories(props) {
           </Grid>
         </Hidden>
       </Grid>
-      <Typography variant="body1" className={classes.description}>
-        Lorem ipsum dolor sit amet, consecong init.
-      </Typography>
+
       <Grid container className={classes.stories} spacing={45}>
         <Grid item xs={12} md={6}>
           <div

@@ -16,8 +16,8 @@ function NewsHeader({ classes }) {
   return (
     <SharedHeader
       classes={classes}
-      mediaResources="News Showcase Page."
-      subTitle="Lorem Ipsum"
+      mediaResources="News Showcase Page"
+      subTitle="News"
       link="/"
       activeNav={1}
     />

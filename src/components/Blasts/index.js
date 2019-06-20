@@ -220,7 +220,7 @@ function Blasts({ classes }) {
             gutterBottom
             className={classes.infoTitle}
           >
-            Blasts Recorded.
+            Blasts Recorded
           </Typography>
           <Line />
           <Typography

@@ -16,8 +16,8 @@ function AboutUsHeader({ classes }) {
   return (
     <ResourceAboutHeader
       classes={classes}
-      mediaResources="About Sea Sensors."
-      subTitle="Lorem Ipsum"
+      mediaResources="About Sea Sensors"
+      subTitle="About"
       link="/news"
       activeNav={2}
     />

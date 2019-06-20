@@ -140,7 +140,7 @@ function TeamCard({ classes, width }) {
           gutterBottom
           className={classes.meetTeamTitle}
         >
-          Meet the Team.
+          Meet the Team
         </Typography>
         <Line classes={{ root: classes.lineRoot }} />
         <GridList className={classes.card} cellHeight={cellHeight} cols={cards}>
