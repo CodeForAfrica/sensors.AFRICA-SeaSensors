@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { withStyles, Grid, Hidden, Typography } from '@material-ui/core';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { withStyles, Grid } from '@material-ui/core';
 
 import Section from './Section';
 import SectionTitle from './SectionTitle';
@@ -101,24 +98,9 @@ function VideoAudioStories(props) {
             Video & Audio Stories
           </SectionTitle>
         </Grid>
-        <Hidden smDown>
-          <Grid item>
-            <div className={classes.channel}>
-              <Typography
-                variant="subtitle2"
-                className={classes.channelCallToAction}
-              >
-                Visit our <span className={classes.channelName}>Youtube</span>{' '}
-                channel.
-              </Typography>
-              <FontAwesomeIcon icon={faYoutube} color="#023256" size="2x" />
-              <div />
-            </div>
-          </Grid>
-        </Hidden>
       </Grid>
 
-      <Grid container className={classes.stories} spacing={45}>
+      <Grid container className={classes.stories} spacing={40}>
         <Grid item xs={12} md={6}>
           <div
             className={classNames(
