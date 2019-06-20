@@ -148,7 +148,7 @@ class Wave extends React.Component {
       <div className={classes.root}>
         <div className={classes.content}>
           <Typography variant="h1" className={classes.title}>
-            Lorem Ipsum Dolora Amet.
+            Listen to a blast here
           </Typography>
           <div id="waveform" className={classes.waveform} />
           <div className={classes.controls}>
