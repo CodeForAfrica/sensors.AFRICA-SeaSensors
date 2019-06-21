@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, Typography, Grid } from '@material-ui/core';
+import Tabletop from 'tabletop';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -201,61 +202,104 @@ const styles = theme => ({
   }
 });
 
-function BlastVisual({ classes }) {
-  function CurrentDate() {
-    const date = new Date();
-    const today = date.toLocaleTimeString();
-    return today;
+class BlastVisual extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { blastData: [] };
   }
-  return (
-    <div className={classes.root}>
-      <div className={classes.hud}>
-        <img alt="" src={hud} className={classes.hudImage} />
-        <div className={classes.hudCore}>
-          <Typography className={classes.title}>26</Typography>
-          <Typography className={classes.caption}>Recorded Blasts</Typography>
-        </div>
-      </div>
-      <div>
-        <div className={classes.currentTimeLine} />
-        <div className={classes.lastUpdateTimeLine} />
-      </div>
-      <div className={classes.outerDetails}>
-        <div className={classes.socialDetails}>
-          <Typography gutterBottom className={classes.socialText}>
-            Share
-          </Typography>
-          <div className={classes.socialDetailsIcons}>
-            <TwitterShareButton
-              className={classes.shareIconStyle}
-              url="https://alpha.seasensors.africa"
-              title="Mapping blast fishing along the coast of East Africa"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="2x" />
-            </TwitterShareButton>
-            <FacebookShareButton
-              title="Sea Sensors Africa"
-              className={classes.shareIconStyle}
-              url="https://alpha.seasensors.africa"
-              quote="Mapping blast fishing along the coast of East Africa"
-            >
-              <FontAwesomeIcon icon={faFacebookF} size="2x" />
-            </FacebookShareButton>
+
+  componentDidMount() {
+    Tabletop.init({
+      key: '1DTK8hyI1sGooGOU-fQh-amYGc7iJk4Bc6QlARfXuE8U',
+      callback: googleData => {
+        this.setState({ blastData: googleData });
+      }
+    });
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { blastData } = this.state;
+    const defaultDate = '15.11.2018';
+    const defaultTime = '8:24 AM';
+
+    const lastBlast = blastData[blastData.length - 1];
+
+    function CheckTime() {
+      if (typeof lastBlast !== 'undefined') {
+        const time = lastBlast.Time;
+        const uploadTime = time.split(' ')[0];
+        return uploadTime;
+      }
+      return defaultTime;
+    }
+
+    function CheckDate() {
+      if (typeof lastBlast !== 'undefined') {
+        const datetime = lastBlast.Date;
+        const date = datetime.split(' ')[0];
+        const formatDate = date.replace(/\//g, '.');
+        return formatDate;
+      }
+      return defaultDate;
+    }
+
+    return (
+      <div className={classes.root}>
+        <div className={classes.hud}>
+          <img alt="" src={hud} className={classes.hudImage} />
+          <div className={classes.hudCore}>
+            <Typography className={classes.title}>
+              {blastData.length}
+            </Typography>
+            <Typography className={classes.caption}>Recorded Blasts</Typography>
           </div>
         </div>
-        <div className={classes.timeDetails}>
-          <Grid container direction="column" alignItems="flex-start">
-            <Typography className={classes.text}>{CurrentDate()}</Typography>
-            <Typography className={classes.caption}>Current Time</Typography>
-          </Grid>
-          <Grid container direction="column" alignItems="flex-start">
-            <Typography className={classes.text}>29.9.18</Typography>
-            <Typography className={classes.caption}>Last Uploaded</Typography>
-          </Grid>
+        <div>
+          <div className={classes.currentTimeLine} />
+          <div className={classes.lastUpdateTimeLine} />
+        </div>
+        <div className={classes.outerDetails}>
+          <div className={classes.socialDetails}>
+            <Typography gutterBottom className={classes.socialText}>
+              Share
+            </Typography>
+            <div className={classes.socialDetailsIcons}>
+              <TwitterShareButton
+                className={classes.shareIconStyle}
+                url="https://alpha.seasensors.africa"
+                title="Mapping blast fishing along the coast of East Africa"
+              >
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </TwitterShareButton>
+              <FacebookShareButton
+                title="Sea Sensors Africa"
+                className={classes.shareIconStyle}
+                url="https://alpha.seasensors.africa"
+                quote="Mapping blast fishing along the coast of East Africa"
+              >
+                <FontAwesomeIcon icon={faFacebookF} size="2x" />
+              </FacebookShareButton>
+            </div>
+          </div>
+          <div className={classes.timeDetails}>
+            <Grid container direction="column" alignItems="flex-start">
+              <Typography className={classes.text}>{CheckTime()}</Typography>
+              <Typography className={classes.caption}>
+                Last Upload Time
+              </Typography>
+            </Grid>
+            <Grid container direction="column" alignItems="flex-start">
+              <Typography className={classes.text}>{CheckDate()}</Typography>
+              <Typography className={classes.caption}>
+                Last Upload Date
+              </Typography>
+            </Grid>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 BlastVisual.propTypes = {
