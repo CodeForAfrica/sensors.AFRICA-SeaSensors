@@ -153,7 +153,17 @@ const styles = theme => ({
     marginLeft: '20px',
     opacity: 0.5,
     [theme.breakpoints.up('lg')]: {
-      // width: '262px',
+      marginRight: '0px',
+      marginLeft: '6px'
+    }
+  },
+  fisheriesLogo: {
+    height: 'auto',
+    width: '200px',
+    marginTop: '66px',
+    marginRight: '20px',
+    marginLeft: '20px',
+    [theme.breakpoints.up('lg')]: {
       marginRight: '0px',
       marginLeft: '6px'
     }
@@ -400,7 +410,7 @@ function OurPartners({ classes, width }) {
             <ImageCardItem
               href="https://www.tafiri.go.tz/"
               imageSrc={Fisheries}
-              imageClass="marineParksLogo"
+              imageClass="fisheriesLogo"
               alt="Tanzania Fisheries Research Institute"
             />
             <MultiTypeCardItem
@@ -470,7 +480,7 @@ function OurPartners({ classes, width }) {
           <ImageCardItem
             href="https://www.tafiri.go.tz/"
             imageSrc={Fisheries}
-            imageClass="marineParksLogo"
+            imageClass="fisheriesLogo"
             alt="Tanzania Fisheries Research Institute"
           />
           <MultiTypeCardItem
