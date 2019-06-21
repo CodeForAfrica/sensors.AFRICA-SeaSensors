@@ -202,7 +202,6 @@ const styles = theme => ({
   }
 });
 
-
 class BlastVisual extends React.Component {
   constructor(props) {
     super(props);
@@ -214,7 +213,8 @@ class BlastVisual extends React.Component {
       key: '1DTK8hyI1sGooGOU-fQh-amYGc7iJk4Bc6QlARfXuE8U',
       callback: googleData => {
         this.setState({ blastData: googleData });
-      }
+      },
+      simpleSheet: true
     });
   }
 
