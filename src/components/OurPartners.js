@@ -26,6 +26,7 @@ const styles = theme => ({
     flex: '1',
     textAlign: 'center',
     margin: '1rem',
+    transition: 'transform 1s',
     '&:hover': {
       transform: 'scale(1.1)'
     },
