@@ -92,13 +92,9 @@ function VideoAudioStories(props) {
 
   return (
     <Section classes={{ root: classes.root }}>
-      <Grid container justify="space-between" className={classes.title}>
-        <Grid item>
-          <SectionTitle subtitle="Video & Audio Stories">
-            Video & Audio Stories
-          </SectionTitle>
-        </Grid>
-      </Grid>
+      <SectionTitle subtitle="Video & Audio Stories">
+        Video & Audio Stories
+      </SectionTitle>
 
       <Grid container className={classes.stories} spacing={40}>
         <Grid item xs={12} md={6}>
