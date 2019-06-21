@@ -15,7 +15,7 @@ import Fisheries from '../assets/fisheries.png';
 const styles = theme => ({
   parentContainer: {
     padding: '4.0625rem 0 5.0625rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       padding: '120px 120px 140px 124px'
     }
   },
@@ -30,7 +30,12 @@ const styles = theme => ({
     '&:hover': {
       transform: 'scale(1.1)'
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
+      width: '23.4375rem',
+      height: '23.4375rem',
+      margin: '1.5rem'
+    },
+    [theme.breakpoints.width('1024')]: {
       width: '23.4375rem',
       height: '23.4375rem',
       margin: '1.5rem'
@@ -45,7 +50,7 @@ const styles = theme => ({
     '&:hover': {
       transform: 'scale(1.1)'
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       width: '23.4375rem',
       height: '23.4375rem',
       margin: '1.5rem'
@@ -66,7 +71,7 @@ const styles = theme => ({
     fontStretch: 'normal',
     letterSpacing: '0.7px',
     color: '#023256',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       fontSize: '3.25rem'
     }
   },
@@ -80,7 +85,7 @@ const styles = theme => ({
     marginLeft: '0.9375rem',
     opacity: 0.3,
     marginRight: '0.9375rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       maxHeight: '100%',
       width: '13.25rem'
     }
@@ -92,9 +97,9 @@ const styles = theme => ({
     marginLeft: '50px',
     marginRight: '50px',
     opacity: 0.3,
-    [theme.breakpoints.up('md')]: {
-      // marginLeft: 0,
-      // marginRight: 0
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: 0,
+      marginRight: 0
     }
   },
   partnerTexts: {
@@ -109,7 +114,7 @@ const styles = theme => ({
     color: '#000000',
     marginTop: '148px',
     width: '14.375rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       width: '100%'
     }
   },
@@ -122,7 +127,7 @@ const styles = theme => ({
     lineSpacing: '0.5px',
     marginTop: '-2.5rem',
     marginBottom: '2.5rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       fontSize: '15px',
       lineHeight: 2.5,
       lineSpacing: '0.7px',
@@ -135,7 +140,7 @@ const styles = theme => ({
     marginTop: '96px',
     marginLeft: '1rem',
     opacity: 0.6,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       maxHeight: '100%',
       width: '15rem'
     }
@@ -147,7 +152,7 @@ const styles = theme => ({
     marginRight: '20px',
     marginLeft: '20px',
     opacity: 0.5,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       // width: '262px',
       marginRight: '0px',
       marginLeft: '6px'
@@ -159,7 +164,7 @@ const styles = theme => ({
     marginRight: '1.25rem',
     marginLeft: '1.25rem',
     marginBottom: '2.5rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       width: '16.375rem',
       marginRight: '0',
       marginLeft: '0'
@@ -175,7 +180,7 @@ const styles = theme => ({
     letterSpacing: '0.0625rem',
     textAlign: 'center',
     color: '#023256',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       fontSize: '1.375rem',
       lineHeight: '3.05',
       letterSpacing: '0.09375rem'
