@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
-import { Typography, withStyles, GridList } from '@material-ui/core';
+import { Grid, Typography, withStyles, GridList } from '@material-ui/core';
 import classNames from 'classnames';
 
 import cfaLogo from '../assets/CFA-2.png';
@@ -20,20 +20,33 @@ const styles = theme => ({
     }
   },
   cardInfo: {
-    width: '240px',
-    height: '360px',
+    height: '19.5rem',
     backgroundColor: '#ffffff',
     boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
     flex: '1',
     textAlign: 'center',
-    margin: '10px',
+    margin: '1rem',
     '&:hover': {
       transform: 'scale(1.1)'
     },
     [theme.breakpoints.up('md')]: {
-      width: '400px',
-      height: '400px',
-      margin: '10px 40px'
+      width: '23.4375rem',
+      height: '23.4375rem',
+      margin: '1.5rem'
+    }
+  },
+  arrowCard: {
+    height: '19.5rem',
+    flex: '1',
+    textAlign: 'center',
+    margin: '2rem',
+    '&:hover': {
+      transform: 'scale(1.1)'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '23.4375rem',
+      height: '23.4375rem',
+      margin: '1.5rem'
     }
   },
   flexGrid: {
@@ -59,27 +72,27 @@ const styles = theme => ({
     marginLeft: '40px'
   },
   cfaLogoImage: {
-    width: '210px',
+    width: '13.125rem',
     height: 'auto',
     paddingTop: '99px',
     marginLeft: '0.9375rem',
+    opacity: 0.3,
     marginRight: '0.9375rem',
     [theme.breakpoints.up('md')]: {
-      width: '272px',
-      paddingRight: '56px',
-      marginLeft: 0,
-      marginRight: 0
+      maxHeight: '100%',
+      width: '13.25rem'
     }
   },
   UoSALogo: {
-    width: '140px',
+    width: '9.125rem',
     height: 'auto',
     marginTop: '74px',
     marginLeft: '50px',
     marginRight: '50px',
+    opacity: 0.3,
     [theme.breakpoints.up('md')]: {
-      marginLeft: 0,
-      marginRight: 0
+      // marginLeft: 0,
+      // marginRight: 0
     }
   },
   partnerTexts: {
@@ -116,9 +129,14 @@ const styles = theme => ({
   },
   mwambaoImg: {
     height: 'auto',
-    width: '290px',
+    width: '15rem',
     marginTop: '96px',
-    marginLeft: '20px'
+    marginLeft: '1rem',
+    opacity: 0.6,
+    [theme.breakpoints.up('md')]: {
+      maxHeight: '100%',
+      width: '15rem'
+    }
   },
   marineParksLogo: {
     height: 'auto',
@@ -126,8 +144,9 @@ const styles = theme => ({
     marginTop: '66px',
     marginRight: '20px',
     marginLeft: '20px',
+    opacity: 0.5,
     [theme.breakpoints.up('md')]: {
-      width: '262px',
+      // width: '262px',
       marginRight: '0px',
       marginLeft: '6px'
     }
@@ -220,7 +239,7 @@ const styles = theme => ({
 
 function ImageCard({ classes, imageSrc, href, imageClass, alt }) {
   return (
-    <Fragment>
+    <Grid className={classes.cardInfo}>
       <a
         href={href}
         target="_blank"
@@ -229,7 +248,7 @@ function ImageCard({ classes, imageSrc, href, imageClass, alt }) {
       >
         <img src={imageSrc} className={classes[imageClass]} alt={alt} />
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 ImageCard.propTypes = {
@@ -283,12 +302,12 @@ function MultiTypeCard({
   href
 }) {
   return (
-    <Fragment>
+    <Grid className={classNames(classes.cardInfo)}>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={classNames(classes.cardLink, classes.cardInfo)}
+        className={classNames(classes.cardLink)}
       >
         <img src={imageSrc} className={classes[imageClass]} alt={alt} />
         <Typography variant="body1" gutterBottom className={classes.nuktaTitle}>
@@ -296,7 +315,7 @@ function MultiTypeCard({
         </Typography>
         {elem}
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 MultiTypeCard.propTypes = {
@@ -397,7 +416,7 @@ function OurPartners({ classes, width }) {
               }
             />
 
-            <div className={classes.cardInfo}>
+            <div className={classes.arrowCard}>
               <img
                 src={ArrowDown}
                 alt="Arrow down"
