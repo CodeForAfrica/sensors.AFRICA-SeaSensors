@@ -16,12 +16,11 @@ const styles = theme => ({
   card: {
     width: '240px',
     '&:hover': {
-      transition: 'all .1s ease-in-out',
+      transition: 'transform 1s',
       transform: 'scale(1.1)'
     },
     '&:hover $media': {
-      height: 260,
-      transition: 'all .1s ease-in-out'
+      height: 260
     },
     [theme.breakpoints.up('md')]: {
       width: '360px'
