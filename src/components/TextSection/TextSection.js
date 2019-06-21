@@ -14,7 +14,7 @@ const styles = theme => ({
 
     padding: '3.8125rem 1.875rem',
     [theme.breakpoints.up('md')]: {
-      padding: '8.0563rem 7.0625rem'
+      padding: '4.0563rem 7.0625rem'
     }
   },
   blastFishsingTitle: {

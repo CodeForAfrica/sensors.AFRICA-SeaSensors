@@ -12,11 +12,10 @@ const styles = theme => ({
     paddingBottom: '6.75rem',
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
-      minHeight: '31.25rem',
-
+      minHeight: '25.25rem',
+      paddingTop: '3rem',
       padding: '0 7.425rem',
       paddingBottom: '5.0187rem',
-
       flexDirection: 'row',
       justifyContent: 'space-between'
     }

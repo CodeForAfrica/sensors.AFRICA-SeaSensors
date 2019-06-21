@@ -21,7 +21,7 @@ const styles = theme => ({
       marginLeft: 'unset'
     },
     [theme.breakpoints.up('md')]: {
-      margin: '1.5rem 5.5rem '
+      margin: '0 5.5rem '
     }
   },
   hotSpot2: {
