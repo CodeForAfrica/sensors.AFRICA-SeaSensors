@@ -322,10 +322,12 @@ function OurPartners({ classes, width }) {
           gutterBottom
           className={classes.partnerTitle}
         >
-          Our Partners.
+          Our Partners
         </Typography>
         <Typography className={classes.partnerPara}>
-          Lorem ipsum dolor sit amet, consec tetur adipi scing elit lorem init.
+          We’ve built strong relationships with quality organisations. These are
+          the partners who helped make this project a reality and continue to
+          support our efforts.
         </Typography>
       </div>
 

@@ -202,6 +202,7 @@ const styles = theme => ({
   }
 });
 
+
 class BlastVisual extends React.Component {
   constructor(props) {
     super(props);

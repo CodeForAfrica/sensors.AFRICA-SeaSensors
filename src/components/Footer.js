@@ -133,6 +133,9 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       textDecoration: 'none'
     }
+  },
+  link: {
+    textDecoration: 'none'
   }
 });
 
@@ -142,30 +145,40 @@ function Footer({ classes }) {
       <div className={classes.top}>
         <Grid item xs={12} md={8}>
           <Typography className={classes.footerText}>
-            <span className={classes.highlight}>Sea Sensors</span> is an
-            acoustic data project that collects underwater blast data to help
-            provide quantitative spatial information on the incidence of the
-            problem over time, that will enable targeted enforcement.
+            <a href="https://alpha.seasensors.africa/" className={classes.link}>
+              <span className={classes.highlight}>Sea Sensors</span>{' '}
+            </a>
+            is an acoustic data project that collects underwater blast data to
+            help provide quantitative spatial information on the incidence of
+            the problem over time, that will enable targeted enforcement.
           </Typography>
           <Typography className={classes.footerText}>
             The project is funded through{' '}
-            <span className={classes.highlight}>Code for Africa</span>’s{' '}
-            <span className={classes.highlight}>innovateAFRICA</span> programme.
+            <span className={classes.highlight}>Code for Africa</span>
+            ’s <span className={classes.highlight}>innovateAFRICA</span>{' '}
+            programme.
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.highlight}>Code for Africa</span>{' '}
+            <a href="https://codeforafrica.org" className={classes.link}>
+              <span className={classes.highlight}>Code for Africa</span>{' '}
+            </a>
             (CfAfrica) is Africa&apos;s largest data journalism and civic
             technology initiative, operating{' '}
-            <span className={classes.highlight}>CitizenLabs</span> across the
-            continent to help fast-track digital innovation to drive social
-            change.
+            <a href="https://citizenlabs.org/" className={classes.link}>
+              <span className={classes.highlight}>CitizenLabs</span>
+            </a>{' '}
+            across the continent to help fast-track digital innovation to drive
+            social change.
           </Typography>
           <Typography className={classes.footerText}>
-            <span className={classes.highlight}>innovateAFRICA</span> is the
-            continent’s largest fund for supporting civic media experimentation
-            and digital news startups in everything from data-driven journalism
-            and investigative reporting, to newsroom management, audience
-            engagement, digital convergence, and media business models.
+            <a href="https://innovateafrica.fund/" className={classes.link}>
+              <span className={classes.highlight}>innovateAFRICA</span>
+            </a>{' '}
+            is the continent’s largest fund for supporting civic media
+            experimentation and digital news startups in everything from
+            data-driven journalism and investigative reporting, to newsroom
+            management, audience engagement, digital convergence, and media
+            business models.
           </Typography>
         </Grid>
         <Grid

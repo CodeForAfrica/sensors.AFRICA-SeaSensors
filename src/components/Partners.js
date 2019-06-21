@@ -78,7 +78,7 @@ function Partners({ classes }) {
             A big thanks
             {/*  br needed since design splits the text in this format */}
             <br />
-            to all our partners.
+            to all our partners
           </Typography>
           <Typography className={classes.seaSensorsText}>
             The project is headed by marine scientist, Gill Braulik, supported

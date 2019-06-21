@@ -94,7 +94,7 @@ class Stories extends Component {
     return (
       <div className={classes.root}>
         <Typography variant="h2" gutterBottom className={classes.title}>
-          Sea Sensors Stories.
+          Sea Sensors Stories
           <Line />
         </Typography>
         <div className={classes.stories}>

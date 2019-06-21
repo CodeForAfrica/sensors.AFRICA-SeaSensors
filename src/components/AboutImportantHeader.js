@@ -196,7 +196,7 @@ class AboutImportantHeader extends React.Component {
             <div className={classes.important}>
               Why we believe it
               <br />
-              is important.
+              is important
             </div>
             <div
               className={classNames(classes.importantText, {
