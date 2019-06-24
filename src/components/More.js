@@ -12,11 +12,11 @@ const styles = theme => ({
     paddingBottom: '6.75rem',
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
-      minHeight: '25.25rem',
+      minHeight: '28.25rem',
       paddingTop: '3rem',
       padding: '0 7.425rem',
       paddingBottom: '5.0187rem',
-      flexDirection: 'column',
+      flexDirection: 'row',
       justifyContent: 'space-between'
     }
   },
@@ -35,6 +35,11 @@ const styles = theme => ({
     fontSize: '0.9375rem',
     color: '#023256',
     fontWeight: 'bold'
+  },
+  findOutMore: {
+    [theme.breakpoints.up('md')]: {
+      alignSelf: 'flex-end'
+    }
   }
 });
 
@@ -60,6 +65,7 @@ function More({ classes }) {
         </Typography>
       </Grid>
       <TextArrowLink
+        classes={{ root: classes.findOutMore }}
         blue
         text="FIND OUT MORE"
         href="https://alpha.seasensors.africa/about/"
