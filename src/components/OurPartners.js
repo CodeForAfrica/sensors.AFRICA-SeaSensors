@@ -27,12 +27,16 @@ const styles = theme => ({
     flex: '1',
     textAlign: 'center',
     margin: '1rem',
-    transition: 'transform 0.5s',
     '&:hover': {
-      transform: 'scaleY(1.1)'
+      height: '22.5rem',
+      marginBottom: '0',
+      transition: 'height 0.3s ease-in, margin-bottom 0.3s ease-in'
     },
     [theme.breakpoints.up('lg')]: {
-      margin: '1.5rem'
+      margin: '1.5rem',
+      '&:hover': {
+        marginBottom: '0.5'
+      }
     }
   },
   arrowCard: {
@@ -40,7 +44,7 @@ const styles = theme => ({
     flex: '1',
     textAlign: 'center',
     margin: '2rem',
-    transition: 'transform 1s',
+    transition: 'transform 0.5s',
     '&:hover': {
       transform: 'scale(1.1)'
     },
