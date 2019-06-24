@@ -29,8 +29,7 @@ const styles = theme => ({
     margin: '1rem',
     transition: 'transform 0.5s',
     '&:hover': {
-      transform: 'scale(1.1)',
-      height: '22.50rem'
+      transform: 'scaleY(1.1)'
     },
     [theme.breakpoints.up('lg')]: {
       margin: '1.5rem'
