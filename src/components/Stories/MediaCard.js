@@ -14,7 +14,7 @@ const styles = theme => ({
     flexShrink: 0,
     borderRadius: 0,
     width: '360px',
-    height: '607.4px',
+    height: '500.4px',
     marginBottom: '20px',
     boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
 
