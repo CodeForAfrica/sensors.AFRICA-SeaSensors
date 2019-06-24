@@ -16,7 +16,7 @@ const styles = theme => ({
   card: {
     width: '240px',
     '&:hover': {
-      transition: 'transform 0.5s',
+      transition: 'transform 0.6s',
       transform: 'scale(1.1)'
     },
     '&:hover $media': {

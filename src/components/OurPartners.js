@@ -20,7 +20,8 @@ const styles = theme => ({
     }
   },
   cardInfo: {
-    height: '19.5rem',
+    height: '21.5rem',
+    width: '21.5rem',
     backgroundColor: '#ffffff',
     boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
     flex: '1',
@@ -28,11 +29,10 @@ const styles = theme => ({
     margin: '1rem',
     transition: 'transform 0.5s',
     '&:hover': {
-      transform: 'scale(1.1)'
+      transform: 'scale(1.1)',
+      height: '22.50rem'
     },
     [theme.breakpoints.up('lg')]: {
-      width: '23.4375rem',
-      height: '23.4375rem',
       margin: '1.5rem'
     }
   },
