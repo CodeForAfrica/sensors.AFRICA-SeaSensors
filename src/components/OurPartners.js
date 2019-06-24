@@ -34,11 +34,6 @@ const styles = theme => ({
       width: '23.4375rem',
       height: '23.4375rem',
       margin: '1.5rem'
-    },
-    [theme.breakpoints.width('1024')]: {
-      width: '23.4375rem',
-      height: '23.4375rem',
-      margin: '1.5rem'
     }
   },
   arrowCard: {
