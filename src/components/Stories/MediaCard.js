@@ -89,9 +89,6 @@ function MediaCard({ classes, image, title, link }) {
         <Typography gutterBottom variant="h5" className={classes.title}>
           {title}
         </Typography>
-        <Typography className={classes.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </Typography>
         <Typography className={classes.launch}>Launch Site</Typography>
       </CardContent>
     </Card>
