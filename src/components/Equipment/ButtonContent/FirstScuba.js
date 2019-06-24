@@ -53,6 +53,9 @@ const styles = theme => ({
       boxShadow: 'inset 0 0 0 187.5rem rgba(255,255,255,0.3)',
       filter: 'blur(0.625rem)'
     },
+    [theme.breakpoints.down('xs')]: {
+      left: '5%'
+    },
     [theme.breakpoints.up('sm')]: {
       left: '10%',
       height: '35.25rem'
