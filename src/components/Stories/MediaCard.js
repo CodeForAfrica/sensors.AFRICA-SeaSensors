@@ -14,7 +14,7 @@ const styles = theme => ({
     flexShrink: 0,
     borderRadius: 0,
     width: '360px',
-    height: '607.4px',
+    height: '500.4px',
     marginBottom: '20px',
     boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
 
@@ -88,9 +88,6 @@ function MediaCard({ classes, image, title, link }) {
       <CardContent className={classes.content}>
         <Typography gutterBottom variant="h5" className={classes.title}>
           {title}
-        </Typography>
-        <Typography className={classes.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
         <Typography className={classes.launch}>Launch Site</Typography>
       </CardContent>
