@@ -16,14 +16,14 @@ const styles = theme => ({
   parentContainer: {
     padding: '4.0625rem 0 5.0625rem',
     [theme.breakpoints.up('lg')]: {
-      padding: '120px 120px 140px 124px'
+      padding: '7.5rem 7.5rem 8.75rem 7.75rem'
     }
   },
   cardInfo: {
     height: '21.5rem',
     width: '21.5rem',
     backgroundColor: '#ffffff',
-    boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
+    boxShadow: '0 1.875rem 3.75rem 0 rgba(0, 0, 0, 0.05)',
     flex: '1',
     textAlign: 'center',
     margin: '1rem',
@@ -57,29 +57,29 @@ const styles = theme => ({
   flexGrid: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '0 0 20px 0'
+    margin: '0 0 1.25rem 0'
   },
   partnerTitle: {
-    width: '363px',
-    height: '102px',
+    width: '22.6875rem',
+    height: '6.375rem',
     fontFamily: 'Oswald',
     fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    letterSpacing: '0.7px',
+    letterSpacing: '0.0437rem',
     color: '#023256',
     [theme.breakpoints.up('lg')]: {
       fontSize: '3.25rem'
     }
   },
   titleText: {
-    marginLeft: '40px'
+    marginLeft: '2.5rem'
   },
   cfaLogoImage: {
     width: '13.125rem',
     height: 'auto',
-    paddingTop: '99px',
+    paddingTop: '6.1875rem',
     marginLeft: '0.9375rem',
     opacity: 0.3,
     marginRight: '0.9375rem',
@@ -91,9 +91,9 @@ const styles = theme => ({
   UoSALogo: {
     width: '9.125rem',
     height: 'auto',
-    marginTop: '74px',
-    marginLeft: '50px',
-    marginRight: '50px',
+    marginTop: '4.625rem',
+    marginLeft: '3.125rem',
+    marginRight: '3.125rem',
     opacity: 0.3,
     [theme.breakpoints.up('lg')]: {
       marginLeft: 0,
@@ -103,14 +103,14 @@ const styles = theme => ({
   partnerTexts: {
     opacity: '0.3',
     fontFamily: 'Montserrat',
-    fontSize: '22.5px',
+    fontSize: '1.4063rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.67',
     textAlign: 'center',
     color: '#000000',
-    marginTop: '148px',
+    marginTop: '9.25rem',
     width: '14.375rem',
     [theme.breakpoints.up('lg')]: {
       width: '100%'
@@ -119,7 +119,7 @@ const styles = theme => ({
   partnerPara: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#023256',
     lineHeight: 2.08,
     lineSpacing: '0.5px',
@@ -128,14 +128,14 @@ const styles = theme => ({
     [theme.breakpoints.up('lg')]: {
       fontSize: '15px',
       lineHeight: 2.5,
-      lineSpacing: '0.7px',
+      lineSpacing: '0.0437rem',
       marginBottom: '2rem'
     }
   },
   mwambaoImg: {
     height: 'auto',
     width: '15rem',
-    marginTop: '96px',
+    marginTop: '6rem',
     marginLeft: '1rem',
     opacity: 0.6,
     [theme.breakpoints.up('lg')]: {
@@ -145,30 +145,30 @@ const styles = theme => ({
   },
   marineParksLogo: {
     height: 'auto',
-    width: '200px',
-    marginTop: '66px',
-    marginRight: '20px',
-    marginLeft: '20px',
+    width: '12.5rem',
+    marginTop: '4.125rem',
+    marginRight: '1.25rem',
+    marginLeft: '1.25rem',
     opacity: 0.5,
     [theme.breakpoints.up('lg')]: {
-      marginRight: '0px',
-      marginLeft: '6px'
+      marginRight: '0rem',
+      marginLeft: '0.375rem'
     }
   },
   fisheriesLogo: {
     height: 'auto',
-    width: '200px',
-    marginTop: '66px',
-    marginRight: '20px',
-    marginLeft: '20px',
+    width: '12.5rem',
+    marginTop: '4.125rem',
+    marginRight: '1.25rem',
+    marginLeft: '1.25rem',
     [theme.breakpoints.up('lg')]: {
-      marginRight: '0px',
-      marginLeft: '6px'
+      marginRight: '0rem',
+      marginLeft: '0.375rem'
     }
   },
   bitMapLogo: {
     width: '12.5rem',
-    marginTop: '66px',
+    marginTop: '4.125rem',
     marginRight: '1.25rem',
     marginLeft: '1.25rem',
     marginBottom: '2.5rem',
@@ -197,31 +197,31 @@ const styles = theme => ({
   nuktaText: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.75',
-    letterSpacing: '1px',
+    letterSpacing: '0.0625rem',
     textAlign: 'center',
     color: '#023256'
   },
   email: {
     fontFamily: 'Montserrat',
-    fontSize: '16px',
+    fontSize: '1rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '2.02',
-    letterSpacing: '1.1px',
+    letterSpacing: '0.0688rem',
     textAlign: 'center',
     color: '#77064c',
     textDecoration: 'none'
   },
   arrowDown: {
-    top: '124px',
+    top: '7.75rem',
     position: 'relative',
-    left: '17px'
+    left: '1.0625rem'
   },
   cardLink: {
     textDecoration: 'none',
