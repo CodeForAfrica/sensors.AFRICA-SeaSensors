@@ -20,7 +20,7 @@ const styles = theme => ({
     }
   },
   cardInfo: {
-    height: '21.5rem',
+    height: '19.5rem',
     width: '21.5rem',
     backgroundColor: '#ffffff',
     boxShadow: '0 1.875rem 3.75rem 0 rgba(0, 0, 0, 0.05)',
@@ -89,7 +89,7 @@ const styles = theme => ({
     }
   },
   UoSALogo: {
-    width: '9.125rem',
+    width: '7.125rem',
     height: 'auto',
     marginTop: '4.625rem',
     marginLeft: '3.125rem',
@@ -110,7 +110,7 @@ const styles = theme => ({
     lineHeight: '1.67',
     textAlign: 'center',
     color: '#000000',
-    marginTop: '9.25rem',
+    marginTop: '8rem',
     width: '14.375rem',
     [theme.breakpoints.up('lg')]: {
       width: '100%'
@@ -173,7 +173,7 @@ const styles = theme => ({
     marginLeft: '1.25rem',
     marginBottom: '2.5rem',
     [theme.breakpoints.up('lg')]: {
-      width: '16.375rem',
+      width: '12.375rem',
       marginRight: '0',
       marginLeft: '0'
     }
@@ -189,7 +189,7 @@ const styles = theme => ({
     textAlign: 'center',
     color: '#023256',
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.375rem',
+      fontSize: '1.075rem',
       lineHeight: '3.05',
       letterSpacing: '0.09375rem'
     }
