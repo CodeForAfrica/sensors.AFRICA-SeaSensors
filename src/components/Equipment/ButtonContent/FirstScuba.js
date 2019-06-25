@@ -35,7 +35,7 @@ const styles = theme => ({
   details: {
     zIndex: 1,
     position: 'absolute',
-    left: '35%',
+    left: '5%',
     display: 'flex',
     alignSelf: 'center',
     height: '35.25rem',
@@ -46,7 +46,7 @@ const styles = theme => ({
       background: `url(${equipmentImage})`,
       backgroundSize: 'cover',
       position: 'absolute',
-      left: '-1.5625rem',
+      left: '5%',
       top: '-1.5625rem',
       right: 0,
       bottom: 0,
@@ -59,7 +59,7 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('md')]: {
       left: '10%',
-      height: '31.25rem',
+      height: '36.25rem',
       width: '28.125rem'
     },
     [theme.breakpoints.up('lg')]: {

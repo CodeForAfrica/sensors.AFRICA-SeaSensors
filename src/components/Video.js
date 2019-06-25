@@ -1,31 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core';
 
-const styles = {
+const styles = theme => ({
+  root: {
+    flexGrow: 1
+  },
   backgroundVideo: {
-    height: '644px !important',
+    height: '250px !important',
     width: '100% !important',
     float: 'left',
     top: '0',
     padding: 'none',
-    background: 'cover'
+    background: 'cover',
+    [theme.breakpoints.up('sm')]: {
+      height: '400px !important'
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '644px !important'
+    }
   }
-};
+});
 
 function Video({ classes, origin }) {
   return (
-    <iframe
-      id="ytplayer"
-      title="Installing acoustic sensors onto the sea bed, Tanzania"
-      type="text/html"
-      width="100%"
-      height="644"
-      src={`https://www.youtube-nocookie.com/embed/mTKAZVcI0P8?origin=${origin}`}
-      frameBorder="0"
-      allowFullScreen
-      className={classes.backgroundVideo}
-    />
+    <div className={classes.root}>
+      <iframe
+        id="ytplayer"
+        title="Installing acoustic sensors onto the sea bed, Tanzania"
+        type="text/html"
+        width="100%"
+        src={`https://www.youtube-nocookie.com/embed/mTKAZVcI0P8?origin=${origin}`}
+        frameBorder="0"
+        allowFullScreen
+        className={classes.backgroundVideo}
+      />
+    </div>
   );
 }
 
