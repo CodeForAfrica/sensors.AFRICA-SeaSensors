@@ -14,7 +14,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: '-12.5rem',
+    // marginLeft: '-12.5rem',
     height: 'fit-content',
     backgroundPosition: 'center',
     margin: '0 0.5rem',

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Grid, withStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 
 const styles = theme => ({
   root: {
@@ -25,7 +25,7 @@ const styles = theme => ({
 
 function Video({ classes, origin }) {
   return (
-    <Grid className={classes.root}>
+    <div className={classes.root}>
       <iframe
         id="ytplayer"
         title="Installing acoustic sensors onto the sea bed, Tanzania"
@@ -36,7 +36,7 @@ function Video({ classes, origin }) {
         allowFullScreen
         className={classes.backgroundVideo}
       />
-    </Grid>
+    </div>
   );
 }
 
