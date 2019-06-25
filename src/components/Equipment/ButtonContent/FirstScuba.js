@@ -59,7 +59,7 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('md')]: {
       left: '10%',
-      height: '31.25rem',
+      height: '36.25rem',
       width: '28.125rem'
     },
     [theme.breakpoints.up('lg')]: {
