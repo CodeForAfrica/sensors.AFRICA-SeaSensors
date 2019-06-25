@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
-import { Typography, withStyles, GridList } from '@material-ui/core';
+import { Grid, Typography, withStyles, GridList } from '@material-ui/core';
 import classNames from 'classnames';
 
 import cfaLogo from '../assets/CFA-2.png';
@@ -15,69 +15,90 @@ import Fisheries from '../assets/fisheries.png';
 const styles = theme => ({
   parentContainer: {
     padding: '4.0625rem 0 5.0625rem',
-    [theme.breakpoints.up('md')]: {
-      padding: '120px 120px 140px 124px'
+    [theme.breakpoints.up('lg')]: {
+      padding: '7.5rem 7.5rem 8.75rem 7.75rem'
     }
   },
   cardInfo: {
-    width: '240px',
-    height: '360px',
+    height: '19.5rem',
+    width: '21.5rem',
     backgroundColor: '#ffffff',
-    boxShadow: '0 30px 60px 0 rgba(0, 0, 0, 0.05)',
+    boxShadow: '0 1.875rem 3.75rem 0 rgba(0, 0, 0, 0.05)',
     flex: '1',
     textAlign: 'center',
-    margin: '10px',
+    margin: '1rem',
+    '&:hover': {
+      height: '22.5rem',
+      marginBottom: '0',
+      transition: 'height 0.3s ease-in, margin-bottom 0.3s ease-in'
+    },
+    [theme.breakpoints.up('lg')]: {
+      margin: '1.5rem',
+      '&:hover': {
+        marginBottom: '0.5'
+      }
+    }
+  },
+  arrowCard: {
+    height: '19.5rem',
+    flex: '1',
+    textAlign: 'center',
+    margin: '2rem',
+    transition: 'transform 0.5s',
     '&:hover': {
       transform: 'scale(1.1)'
     },
-    [theme.breakpoints.up('md')]: {
-      width: '400px',
-      height: '400px',
-      margin: '10px 40px'
+    [theme.breakpoints.up('lg')]: {
+      width: '23.4375rem',
+      height: '23.4375rem',
+      margin: '1.5rem'
     }
+  },
+  textRoot: {
+    flexGrow: 1
   },
   flexGrid: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '0 0 20px 0'
+    margin: '0 0 1.25rem 0'
   },
   partnerTitle: {
-    width: '363px',
-    height: '102px',
+    width: '22.6875rem',
+    height: '6.375rem',
     fontFamily: 'Oswald',
     fontSize: '2.1875rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
-    letterSpacing: '0.7px',
+    letterSpacing: '0.0437rem',
     color: '#023256',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       fontSize: '3.25rem'
     }
   },
   titleText: {
-    marginLeft: '40px'
+    marginLeft: '2.5rem'
   },
   cfaLogoImage: {
-    width: '210px',
+    width: '13.125rem',
     height: 'auto',
-    paddingTop: '99px',
+    paddingTop: '6.1875rem',
     marginLeft: '0.9375rem',
+    opacity: 0.3,
     marginRight: '0.9375rem',
-    [theme.breakpoints.up('md')]: {
-      width: '272px',
-      paddingRight: '56px',
-      marginLeft: 0,
-      marginRight: 0
+    [theme.breakpoints.up('lg')]: {
+      maxHeight: '100%',
+      width: '13.25rem'
     }
   },
   UoSALogo: {
-    width: '140px',
+    width: '7.125rem',
     height: 'auto',
-    marginTop: '74px',
-    marginLeft: '50px',
-    marginRight: '50px',
-    [theme.breakpoints.up('md')]: {
+    marginTop: '4.625rem',
+    marginLeft: '3.125rem',
+    marginRight: '3.125rem',
+    opacity: 0.3,
+    [theme.breakpoints.up('lg')]: {
       marginLeft: 0,
       marginRight: 0
     }
@@ -85,61 +106,82 @@ const styles = theme => ({
   partnerTexts: {
     opacity: '0.3',
     fontFamily: 'Montserrat',
-    fontSize: '22.5px',
+    fontSize: '1.4063rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.67',
     textAlign: 'center',
     color: '#000000',
-    marginTop: '148px',
     width: '14.375rem',
-    [theme.breakpoints.up('md')]: {
-      width: '100%'
+    marginRight: '2rem',
+    marginLeft: '2rem',
+    marginTop: '8rem',
+    [theme.breakpoints.up('lg')]: {
+      width: '100%',
+      marginRight: '2rem',
+      marginLeft: '0.5rem',
+      marginTop: '8rem'
     }
   },
   partnerPara: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#023256',
     lineHeight: 2.08,
     lineSpacing: '0.5px',
     marginTop: '-2.5rem',
     marginBottom: '2.5rem',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       fontSize: '15px',
       lineHeight: 2.5,
-      lineSpacing: '0.7px',
+      lineSpacing: '0.0437rem',
       marginBottom: '2rem'
     }
   },
   mwambaoImg: {
     height: 'auto',
-    width: '290px',
-    marginTop: '96px',
-    marginLeft: '20px'
+    width: '15rem',
+    marginTop: '6rem',
+    marginLeft: '1rem',
+    opacity: 0.6,
+    [theme.breakpoints.up('lg')]: {
+      maxHeight: '100%',
+      width: '15rem'
+    }
   },
   marineParksLogo: {
     height: 'auto',
-    width: '200px',
-    marginTop: '66px',
-    marginRight: '20px',
-    marginLeft: '20px',
-    [theme.breakpoints.up('md')]: {
-      width: '262px',
-      marginRight: '0px',
-      marginLeft: '6px'
+    width: '12.5rem',
+    marginTop: '4.125rem',
+    marginRight: '1.25rem',
+    marginLeft: '1.25rem',
+    opacity: 0.5,
+    [theme.breakpoints.up('lg')]: {
+      marginRight: '0rem',
+      marginLeft: '0.375rem'
+    }
+  },
+  fisheriesLogo: {
+    height: 'auto',
+    width: '12.5rem',
+    marginTop: '4.125rem',
+    marginRight: '1.25rem',
+    marginLeft: '1.25rem',
+    [theme.breakpoints.up('lg')]: {
+      marginRight: '0rem',
+      marginLeft: '0.375rem'
     }
   },
   bitMapLogo: {
     width: '12.5rem',
-    marginTop: '66px',
+    marginTop: '4.125rem',
     marginRight: '1.25rem',
     marginLeft: '1.25rem',
     marginBottom: '2.5rem',
-    [theme.breakpoints.up('md')]: {
-      width: '16.375rem',
+    [theme.breakpoints.up('lg')]: {
+      width: '12.375rem',
       marginRight: '0',
       marginLeft: '0'
     }
@@ -154,8 +196,8 @@ const styles = theme => ({
     letterSpacing: '0.0625rem',
     textAlign: 'center',
     color: '#023256',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.375rem',
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.075rem',
       lineHeight: '3.05',
       letterSpacing: '0.09375rem'
     }
@@ -163,31 +205,31 @@ const styles = theme => ({
   nuktaText: {
     opacity: '0.6',
     fontFamily: 'Montserrat',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '1.75',
-    letterSpacing: '1px',
+    letterSpacing: '0.0625rem',
     textAlign: 'center',
     color: '#023256'
   },
   email: {
     fontFamily: 'Montserrat',
-    fontSize: '16px',
+    fontSize: '1rem',
     fontWeight: 'bold',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: '2.02',
-    letterSpacing: '1.1px',
+    letterSpacing: '0.0688rem',
     textAlign: 'center',
     color: '#77064c',
     textDecoration: 'none'
   },
   arrowDown: {
-    top: '124px',
+    top: '7.75rem',
     position: 'relative',
-    left: '17px'
+    left: '1.0625rem'
   },
   cardLink: {
     textDecoration: 'none',
@@ -220,7 +262,7 @@ const styles = theme => ({
 
 function ImageCard({ classes, imageSrc, href, imageClass, alt }) {
   return (
-    <Fragment>
+    <Grid className={classes.cardInfo}>
       <a
         href={href}
         target="_blank"
@@ -229,7 +271,7 @@ function ImageCard({ classes, imageSrc, href, imageClass, alt }) {
       >
         <img src={imageSrc} className={classes[imageClass]} alt={alt} />
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 ImageCard.propTypes = {
@@ -245,12 +287,12 @@ export { ImageCardItem };
 
 function TextCard({ classes, text, href }) {
   return (
-    <Fragment>
+    <Grid item className={classes.cardInfo}>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={classNames(classes.cardLink, classes.cardInfo)}
+        className={classNames(classes.cardLink)}
       >
         <Typography
           variant="body1"
@@ -260,7 +302,7 @@ function TextCard({ classes, text, href }) {
           {text}
         </Typography>
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 TextCard.propTypes = {
@@ -283,12 +325,12 @@ function MultiTypeCard({
   href
 }) {
   return (
-    <Fragment>
+    <Grid className={classNames(classes.cardInfo)}>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={classNames(classes.cardLink, classes.cardInfo)}
+        className={classNames(classes.cardLink)}
       >
         <img src={imageSrc} className={classes[imageClass]} alt={alt} />
         <Typography variant="body1" gutterBottom className={classes.nuktaTitle}>
@@ -296,7 +338,7 @@ function MultiTypeCard({
         </Typography>
         {elem}
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 MultiTypeCard.propTypes = {
@@ -374,7 +416,7 @@ function OurPartners({ classes, width }) {
             <ImageCardItem
               href="https://www.tafiri.go.tz/"
               imageSrc={Fisheries}
-              imageClass="marineParksLogo"
+              imageClass="fisheriesLogo"
               alt="Tanzania Fisheries Research Institute"
             />
             <MultiTypeCardItem
@@ -397,7 +439,7 @@ function OurPartners({ classes, width }) {
               }
             />
 
-            <div className={classes.cardInfo}>
+            <div className={classes.arrowCard}>
               <img
                 src={ArrowDown}
                 alt="Arrow down"
@@ -444,7 +486,7 @@ function OurPartners({ classes, width }) {
           <ImageCardItem
             href="https://www.tafiri.go.tz/"
             imageSrc={Fisheries}
-            imageClass="marineParksLogo"
+            imageClass="fisheriesLogo"
             alt="Tanzania Fisheries Research Institute"
           />
           <MultiTypeCardItem
