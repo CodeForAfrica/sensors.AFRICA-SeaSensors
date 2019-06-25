@@ -46,15 +46,12 @@ const styles = theme => ({
       background: `url(${equipmentImage})`,
       backgroundSize: 'cover',
       position: 'absolute',
-      left: '-1.5625rem',
+      left: '5%',
       top: '-1.5625rem',
       right: 0,
       bottom: 0,
       boxShadow: 'inset 0 0 0 187.5rem rgba(255,255,255,0.3)',
       filter: 'blur(0.625rem)'
-    },
-    [theme.breakpoints.down('xs')]: {
-      left: '5%'
     },
     [theme.breakpoints.up('sm')]: {
       left: '10%'

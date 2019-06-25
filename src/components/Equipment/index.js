@@ -17,9 +17,7 @@ const styles = theme => ({
     marginLeft: '-12.5rem',
     height: 'fit-content',
     backgroundPosition: 'center',
-    [theme.breakpoints.down('xs')]: {
-      margin: '0 0.5rem'
-    },
+    margin: '0 0.5rem',
     [theme.breakpoints.up('sm')]: {
       marginLeft: 'unset'
     },
