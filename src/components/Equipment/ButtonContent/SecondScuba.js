@@ -32,14 +32,11 @@ const styles = theme => ({
   details: {
     zIndex: 1,
     position: 'absolute',
-    left: '35%',
-
+    left: '5%',
     display: 'flex',
     alignSelf: 'center',
-
     height: '31.25rem',
     width: '21.875rem',
-
     overflow: 'hidden',
     '&:before': {
       content: '""',
