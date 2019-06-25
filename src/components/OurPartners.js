@@ -54,6 +54,9 @@ const styles = theme => ({
       margin: '1.5rem'
     }
   },
+  textRoot: {
+    flexGrow: 1
+  },
   flexGrid: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -110,10 +113,15 @@ const styles = theme => ({
     lineHeight: '1.67',
     textAlign: 'center',
     color: '#000000',
-    marginTop: '8rem',
     width: '14.375rem',
+    marginRight: '2rem',
+    marginLeft: '2rem',
+    marginTop: '8rem',
     [theme.breakpoints.up('lg')]: {
-      width: '100%'
+      width: '100%',
+      marginRight: '2rem',
+      marginLeft: '0.5rem',
+      marginTop: '8rem'
     }
   },
   partnerPara: {
@@ -279,12 +287,12 @@ export { ImageCardItem };
 
 function TextCard({ classes, text, href }) {
   return (
-    <Fragment>
+    <Grid item className={classes.cardInfo}>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={classNames(classes.cardLink, classes.cardInfo)}
+        className={classNames(classes.cardLink)}
       >
         <Typography
           variant="body1"
@@ -294,7 +302,7 @@ function TextCard({ classes, text, href }) {
           {text}
         </Typography>
       </a>
-    </Fragment>
+    </Grid>
   );
 }
 TextCard.propTypes = {
