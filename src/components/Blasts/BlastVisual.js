@@ -222,7 +222,7 @@ class BlastVisual extends React.Component {
     const { classes } = this.props;
     const { blastData } = this.state;
     const defaultDate = '15.11.2018';
-    const defaultTime = '8:24 AM';
+    const defaultTime = '8:54:54 AM';
 
     const lastBlast = blastData[blastData.length - 1];
 
