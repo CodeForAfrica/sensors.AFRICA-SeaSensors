@@ -39,13 +39,16 @@ export default function HTML({
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.shape().isRequired,
-  headComponents: PropTypes.shape().isRequired,
+  headComponents: PropTypes.instanceOf(Array),
   bodyAttributes: PropTypes.shape().isRequired,
-  preBodyComponents: PropTypes.shape().isRequired,
+  preBodyComponents: PropTypes.instanceOf(Array),
   body: PropTypes.string,
-  postBodyComponents: PropTypes.shape().isRequired
+  postBodyComponents: PropTypes.instanceOf(Array)
 };
 
 HTML.defaultProps = {
-  body: ''
+  body: '',
+  headComponents: '',
+  preBodyComponents: '',
+  postBodyComponents: ''
 };
