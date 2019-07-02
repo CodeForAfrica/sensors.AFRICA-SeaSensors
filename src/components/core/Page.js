@@ -25,6 +25,7 @@ function Page({ children, ...props }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#606060" />
         <meta name="msapplication-TileColor" content="#2b5797" />
       </Helmet>
+
       {children}
     </div>
   );
